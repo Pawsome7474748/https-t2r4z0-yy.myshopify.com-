@@ -1,0 +1,173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "pp_image_with_text_Mwp9Hi": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_GVL4Hb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Join the PawPatrol family<\/strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_juioQH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PawPatrol is a friendly pet shop made for real pet owners. We build safe, comfy, and fun products so pets feel loved. Join our community for tips, new drops, and special deals. We treat every pet like family and every owner like a friend.<\/p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "button_zWUYxa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now 👉🏻",
+            "button_link": "\/collections\/all",
+            "button_link_newtab": false,
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "link",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_GVL4Hb",
+        "text_juioQH",
+        "button_zWUYxa"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/theme_image_139_5_4.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_image_with_text_ttLHQy": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_pnf3ak": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our little secret<\/strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_tfexQH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We test every item with real pets before we sell it. That means durable, safe, and pet-approved gear for your home. Be part of the club — get early access, special discounts, and pet care tips. Start today and give your pet the best with PawPatrol.<\/p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pnf3ak",
+        "text_tfexQH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/theme_image_666_5_25.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.68), #ffd4c7 100%)",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 52,
+        "margin_bottom": 52
+      }
+    },
+    "pp_image_with_text_xd44KG": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_hH8Xcf": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our mission<\/strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_qzgWdQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We make pet life easier with smart, loving designs. PawPatrol helps pets stay comfy, healthy, and happy through quality products and caring service.<\/p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hH8Xcf",
+        "text_qzgWdQ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/theme_image_660_5_19.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_text_Mwp9Hi",
+    "pp_image_with_text_ttLHQy",
+    "pp_image_with_text_xd44KG"
+  ]
+}

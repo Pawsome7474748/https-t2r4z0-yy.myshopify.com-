@@ -1,0 +1,1329 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "reviews_number_wmFXyt": {
+          "type": "reviews-number",
+          "settings": {
+            "reviews_text": "189 Reviews",
+            "reviews_text_style": "body",
+            "reviews_text_color": "#000000",
+            "reviews_stars_size": "sm",
+            "reviews_stars_color": "#facc15",
+            "reviews_stars_number": 5,
+            "reviews_alignment": "start",
+            "reviews_mobilealignment": "start",
+            "reviews_border_top": 0,
+            "reviews_padding_top": 0,
+            "reviews_padding_bottom": 0
+          }
+        },
+        "product_title_DXtTRC": {
+          "type": "product-title",
+          "settings": {
+            "product_title_heading_size": "h1",
+            "product_title_heading_alignment": "left",
+            "product_title_heading_mobilealignment": "left",
+            "product_title_heading_color": "#000000",
+            "product_title_padding_top": 0,
+            "product_title_padding_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#000000",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": false
+          }
+        },
+        "pp_text_VLf9ic": {
+          "type": "pp-text",
+          "settings": {
+            "pp_text": "<strong>Effortlessly transport your furry friends with comfort and ease</strong>",
+            "pp_text_size": "body",
+            "pp_text_color": "#000000",
+            "pp_text_alignment": "left",
+            "pp_text_mobilealignment": "left",
+            "pp_text_border_top": 0,
+            "pp_text_border_bottom": 1,
+            "pp_text_border_color": "#e8e8e1",
+            "pp_text_padding_top": 0,
+            "pp_text_padding_bottom": 16
+          }
+        },
+        "pp_benefits_Lfapdf": {
+          "type": "pp-benefits",
+          "settings": {
+            "pp_benefits_text1": "✔️ Built-in wheels for easy travel",
+            "pp_benefits_text2": "✔️ Spacious interior for pet comfort",
+            "pp_benefits_text3": "✔️ Designed for small dogs and cats",
+            "pp_benefits_text4": "✔️ Perfect for hassle-free outings and trips",
+            "pp_benefits_text_size": "body",
+            "pp_benefits_text_color": "#000000",
+            "pp_benefits_text_alignment": "left",
+            "pp_benefits_text_mobilealignment": "left",
+            "pp_benefits_border_top": 0,
+            "pp_benefits_border_bottom": 1,
+            "pp_benefits_border_color": "#e8e8e1",
+            "pp_benefits_padding_top": 0,
+            "pp_benefits_padding_bottom": 12
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_text": "Add To Cart👉🏻",
+            "sold_out_text": "Sold Out😭",
+            "unavailable_text": "Unavailable",
+            "button_color": "#f8663b",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 20,
+            "button_padding_horizontal": 15
+          }
+        },
+        "pp_guarantees_JzRPwy": {
+          "type": "pp-guarantees",
+          "settings": {
+            "pp_guarantees_icon1": "truck",
+            "pp_guarantees_text1": "Worldwide Shipping",
+            "pp_guarantees_icon2": "heart",
+            "pp_guarantees_text2": "100% Money Back Guarantee",
+            "pp_guarantees_icon3": "box",
+            "pp_guarantees_text3": "Free Returns",
+            "pp_guarantees_icon_size": 28,
+            "pp_guarantees_icon_color": "#000000",
+            "pp_guarantees_text_size": "small",
+            "pp_guarantees_text_color": "#000000",
+            "pp_guarantees_border_top": 0,
+            "pp_guarantees_border_bottom": 1,
+            "pp_guarantees_border_color": "#e8e8e1",
+            "pp_guarantees_padding_top": 0,
+            "pp_guarantees_padding_bottom": 16
+          }
+        },
+        "pp_review_DzipVt": {
+          "type": "pp-review",
+          "settings": {
+            "pp_review_image": "shopify://shop_images/media_avatar_130_women_36.webp",
+            "pp_review_image_border_radius": "full",
+            "pp_review_stars_size": "sm",
+            "pp_review_stars_color": "#facc15",
+            "pp_review_stars_number": 5,
+            "pp_review_stars_alignment": "start",
+            "pp_review_stars_mobilealignment": "start",
+            "pp_review_text": "\"OMG, this pet trolley is a lifesaver! Perfect for my cats when we go on weekend trips. They have enough space and it's so easy to maneuver. Totally worth it👍\"",
+            "pp_review_text_style": "small",
+            "pp_review_text_alignment": "left",
+            "pp_review_text_mobilealignment": "left",
+            "pp_review_text_color": "#000000",
+            "pp_review_author_badge_text": "<p>Hannah M.</p>",
+            "pp_review_author_badge_text_style": "small",
+            "pp_review_author_badge_text_color": "#000000",
+            "pp_review_author_badge_color": "#2993f1",
+            "pp_review_border_top": 0,
+            "pp_review_border_bottom": 0,
+            "pp_review_border_color": "#e8e8e1",
+            "pp_review_padding_top": 0,
+            "pp_review_padding_bottom": 0
+          }
+        },
+        "pp_expandable_r43w6T": {
+          "type": "pp-expandable",
+          "settings": {
+            "pp_expandable_title1": "🚚 Shipping",
+            "pp_expandable_content1": "<p><p>Enjoy insured shipping on all orders. We process orders within 1-3 business days before dispatching. Upon shipment, the anticipated delivery times are as follows:</p><ul><li>USA: 3-7 business days</li><li>UK: 7-18 business days</li><li>Australia: 7-18 business days</li><li>Canada: 7-18 business days</li><li>Europe: 7-18 business days</li><li>Rest of world: 14-20 business days</li></ul></p>",
+            "pp_expandable_title2": "📦 Returns",
+            "pp_expandable_content2": "<p><p>We are certain you wll adore our products, just as we do! If, however, things don not work out as expected, our return and refund policy is crafted to simplify the process for you. You can return the product for a full refund within 30 days of purchase.</p></p>",
+            "pp_expandable_title3": "🏅 Money Back Guarantee",
+            "pp_expandable_content3": "<p><p>You can try our products risk-free with our 30-day Money-Back Guarantee. If you are not completely satisfied, simply return it for a full refund.</p></p>",
+            "pp_expandable_text_size": "medium",
+            "pp_expandable_answer_size": "small",
+            "pp_expandable_text_color": "#000000",
+            "pp_expandable_arrow_color": "#000000",
+            "pp_expandable_text_border_color": "#e8e8e1",
+            "pp_expandable_border_top": 1,
+            "pp_expandable_border_bottom": 0,
+            "pp_expandable_border_color": "#e8e8e1",
+            "pp_expandable_padding_top": 12,
+            "pp_expandable_padding_bottom": 0
+          }
+        },
+        "pp_partners_7B3bAx": {
+          "type": "pp-partners",
+          "settings": {
+            "pp_partners_heading": "<strong>As Seen On</strong>",
+            "pp_partners_heading_size": "medium",
+            "pp_partners_heading_color": "#000000",
+            "pp_partners_gradient": "radial-gradient(rgba(255, 255, 255, 0.93) 34%, rgba(255, 255, 255, 0.17) 77%)",
+            "pp_partners_border_top": 0,
+            "pp_partners_border_bottom": 0,
+            "pp_partners_border_color": "#e8e8e1",
+            "pp_partners_padding_top": 0,
+            "pp_partners_padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "reviews_number_wmFXyt",
+        "product_title_DXtTRC",
+        "price",
+        "pp_text_VLf9ic",
+        "pp_benefits_Lfapdf",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pp_guarantees_JzRPwy",
+        "pp_review_DzipVt",
+        "pp_expandable_r43w6T",
+        "pp_partners_7B3bAx"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1abe165f-834c-4397-80e1-165dc6524d44",
+        "media_size": "medium",
+        "image_rounded_corners": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "pp_image_with_benefits_gkXTTj": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7CB6Bn": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🚙",
+            "emoji_size": "medium",
+            "heading": "Mobility",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Smooth wheels make travels with your pet effortless</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_7HpQgA": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🛌",
+            "emoji_size": "medium",
+            "heading": "Comfort",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Spacious design offers a cozy sanctuary on the go</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_erNb6q": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🐶",
+            "emoji_size": "medium",
+            "heading": "Multi-Pet",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Suitable for both small dogs and cats</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_gJWaeR": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🔧",
+            "emoji_size": "medium",
+            "heading": "Durability",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Sturdy construction ensures reliable use during travel</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7CB6Bn",
+        "benefit_7HpQgA",
+        "benefit_erNb6q",
+        "benefit_gJWaeR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_900_166_main-image-9_c2a7c9b3-876c-4e9b-ad5b-899b16c23884.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 100,
+        "heading": "<strong>Adventure Awaits Your Pets</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Explore the world with ease, providing comfort and safety for your furry companions</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "linear-gradient(176deg, rgba(255, 255, 255, 0), #ffe8e1 100%)",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 20,
+        "margin_bottom": 36
+      }
+    },
+    "pp_image_with_text_BVEaDq": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_aFxCRe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Transform Traveling with Your Pet into a Joyful Experience",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "text_ifpgzE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Traveling with pets can be challenging. Long queues, crowded places, and endless walking can make it tiresome. The Portable Pet Trolley Carrier addresses all these issues, providing a comfortable and smooth ride for both you and your pet. It’s lightweight yet sturdy, ensuring your pet stays safe while you enjoy stress-free outings. Elevate your pet’s travel experience and turn every trip into an adventure. With the Portable Pet Trolley Carrier, your furry friend will feel the love and care they deserve.</p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_cPWTPH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aFxCRe",
+        "text_ifpgzE",
+        "button_cPWTPH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_901_166_main-image-8_283ef141-1b37-4151-a3cc-e9346d24508f.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_image_with_percentage_fLf47C": {
+      "type": "pp-image-with-percentage",
+      "blocks": {
+        "heading_UYwMbc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Upgrade Your Pet's Travel Now</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "percent_MDgdzN": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 98,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Highly recommend the easy maneuverability</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_DNwFD7": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 97,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Praised the comfort of their pets on trips</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_Wh6UWW": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 94,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Appreciated the stylish design and durability</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "button_zpmLYc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Yours Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Satisfaction Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UYwMbc",
+        "percent_MDgdzN",
+        "percent_DNwFD7",
+        "percent_Wh6UWW",
+        "button_zpmLYc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_902_166_main-image-1_528e9d47-fd59-480b-beb2-033146fb6bca.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 44
+      }
+    },
+    "pp_reviews_dqQHmw": {
+      "type": "pp-reviews",
+      "blocks": {
+        "review_WqjlO3": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3095_166_A647f9e3567f8416292d76fdab5a4d47bC_png.webp",
+            "image_border_radius": "low",
+            "author_text": "John D.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Great product!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_cVFdzb": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3096_166_Sf4595bc594d24c549fe644c11512eb64Q_png.webp",
+            "image_border_radius": "low",
+            "author_text": "Lisa K.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "My cat loves it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_VtqR5N": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3097_166_Af1df4f41c7844e978c23e9c8e2fb5369X_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Mark B.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "So glad I got this carrier. Makes travel with my dog a breeze.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_EVcrn8": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Sarah P.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Loved how easy it was to bring my pets along on trips with this! Wouldn't look back.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_OzHXnA": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Brian J.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "The trolley is excellent! Had a long weekend trip and my little fur buddy was completely at ease throughout the journey. Really enjoyed using it.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_2GZIyW": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Cathy A.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Awesome! 😁",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_uDwodI": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Kevin R.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Perfect for outings.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_CYiJfK": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Samantha N.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Excellent quality, definitely worth the investment for any pet owner!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_xEKVSj": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Tom H.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Fantastic! This carrier is super handy for our frequent park visits.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_AcaAm8": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Diana L.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "As a pet mom, I'm thrilled with how easy this makes our travel days. It's both practical and comfy for my pets. Great buy!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_00f1aI": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "George W.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Love it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_oFLQ9y": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Rebecca T.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Exactly what I needed.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_2xk6ez": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Chris G.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Good value for money. Love the wheels.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_ygcDf9": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Nancy S.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Can't imagine traveling without it. It's a lifesaver for my pets.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_DfeeWL": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Simon E.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "This trolley has changed how we travel. No more heavy lifting or juggling bags. Highly recommended for pet owners.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_rbGGkL": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Alice M.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Great!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_0oggwk": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Donna R.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Pets love the space!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_HHRhBE": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Jason F.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Hassle-free travel now. Excellent build and quality.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_xOMSu6": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Helen O.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Amazing for road trips. Keeps my pet safe and happy.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_dVpLTm": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Eric Q.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Best purchase for those who love to travel with pets! My dog loves the space and comfort. They’ve even made friends during our outings.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        }
+      },
+      "block_order": [
+        "review_WqjlO3",
+        "review_cVFdzb",
+        "review_VtqR5N",
+        "review_EVcrn8",
+        "review_OzHXnA",
+        "review_2GZIyW",
+        "review_uDwodI",
+        "review_CYiJfK",
+        "review_xEKVSj",
+        "review_AcaAm8",
+        "review_00f1aI",
+        "review_oFLQ9y",
+        "review_2xk6ez",
+        "review_ygcDf9",
+        "review_DfeeWL",
+        "review_rbGGkL",
+        "review_0oggwk",
+        "review_HHRhBE",
+        "review_xOMSu6",
+        "review_dVpLTm"
+      ],
+      "settings": {
+        "heading_stars_size": "lg",
+        "heading_stars_color": "#facc15",
+        "stars_alignment": "center",
+        "stars_mobilealignment": "center",
+        "heading_stars_number": 5,
+        "heading": "What Pet Owners Are Saying",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Rated 4.8/5 by 1,200 Happy Customers</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "radial-gradient(rgba(255, 255, 255, 1), #ffe8e1 100%)",
+        "button_label": "",
+        "button_link": "",
+        "button_link_newtab": false,
+        "button_text_color": "#ffffff",
+        "button_background_color": "#f8663b",
+        "button_border_width": 0,
+        "button_border_color": "#000000",
+        "button_width": "fit",
+        "button_alignment": "center",
+        "button_mobilealignment": "center",
+        "button_rounded_corners": "medium",
+        "button_padding_vertical": 15,
+        "button_padding_horizontal": 15,
+        "button_subtext": "Fast Worldwide Shipping",
+        "button_subtext_style": "body",
+        "button_subtext_color": "#000000",
+        "button_action": "scroll",
+        "button_action_scroll_element": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_comparison_table_ttamEN": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_Wjx9pp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Portable Pet Trolley Carrier Stands Out</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4ad9ba": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unlike others, our trolley combines comfort with convenience, including wheels for easy mobility, a spacious interior for pet relaxation, and sturdy construction for peace of mind. Choose quality, comfort, and reliability with our Portable Pet Trolley Carrier.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_6hMT9z": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Comfort",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_KNWAfa": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Mobility",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_jB68ak": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Durability",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_CVBp68": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Convenience",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_6Crhhq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Affordable",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wjx9pp",
+        "text_4ad9ba",
+        "tableitem_6hMT9z",
+        "tableitem_KNWAfa",
+        "tableitem_jB68ak",
+        "tableitem_CVBp68",
+        "tableitem_6Crhhq"
+      ],
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#ffb6a0",
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_faq_TtURdM": {
+      "type": "pp-faq",
+      "blocks": {
+        "question_UUEbPG": {
+          "type": "question",
+          "settings": {
+            "heading": "Is the carrier suitable for both cats and dogs?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Absolutely! The Portable Pet Trolley Carrier is designed to comfortably fit small dogs and cats, ensuring ease of transport for both.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_iwgzRn": {
+          "type": "question",
+          "settings": {
+            "heading": "How do the wheels perform on various surfaces?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>The wheels are sturdy and smooth, ensuring seamless travel across multiple surfaces, from sidewalks to grassy parks.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_gNmdPq": {
+          "type": "question",
+          "settings": {
+            "heading": "Does the interior have enough space for pets to relax?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>The spacious interior allows your pets to comfortably rest and move, making it ideal for longer trips and journeys.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_NpRfRa": {
+          "type": "question",
+          "settings": {
+            "heading": "What makes this carrier durable for travel?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Constructed with high-quality materials, the trolley is sturdy and reliable, providing excellent protection and longevity for frequent travels.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "Is it easy to clean the carrier after use?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Yes, the carrier is made from easy-to-clean materials, allowing for hassle-free maintenance after those adventurous outings.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#ffd4c7",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#000000",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_guarantee_NNKyJ6": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_tVTcmU": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "heart",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#f8663b"
+          }
+        },
+        "heading_jfhp4z": {
+          "type": "heading",
+          "settings": {
+            "heading": "Risk-Free with Portable Pet Trolley Carrier",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_N44eGB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try our Portable Pet Trolley Carrier without worry – we offer a 30-day money-back guarantee, so you can experience the difference firsthand. Designed with high-quality materials, it's perfect for hassle-free pet travel. Enjoy peace of mind knowing you can return it if it doesn't meet your expectations. Prioritize your pet's comfort and make your travels stress-free today!</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_8tJzYX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_tVTcmU",
+        "heading_jfhp4z",
+        "text_N44eGB",
+        "button_8tJzYX"
+      ],
+      "settings": {
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "gradient": ""
+      }
+    },
+    "featured_collection_pkU6gk": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Frequently Bought Together",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_rounded_corners": "medium",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_benefits_gkXTTj",
+    "pp_image_with_text_BVEaDq",
+    "pp_image_with_percentage_fLf47C",
+    "pp_reviews_dqQHmw",
+    "pp_comparison_table_ttamEN",
+    "pp_faq_TtURdM",
+    "pp_guarantee_NNKyJ6",
+    "related-products",
+    "featured_collection_pkU6gk"
+  ]
+}

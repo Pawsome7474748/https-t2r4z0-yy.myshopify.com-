@@ -1,0 +1,1027 @@
+{% assign section_padding = 'padding-top: ' | append: section.settings.padding_top | append: 'px; padding-bottom: ' | append: section.settings.padding_bottom | append: 'px; margin-top: ' | append: section.settings.margin_top | append: 'px; margin-bottom: ' | append: section.settings.margin_bottom | append: 'px;' %}
+
+{% assign gradient_style = '' %}
+
+{% if section.settings.gradient != blank %}
+  {% assign gradient_style = 'background: ' | append: section.settings.gradient | append: ';' %}
+{% endif %}
+
+{% assign heading_stars_size = 24 %}
+
+{% case section.settings.heading_stars_size %}
+  {% when 'sm' %}
+    {% assign heading_stars_size = 14 %}
+  {% when 'md' %}
+    {% assign heading_stars_size = 24 %}
+  {% when 'lg' %}
+    {% assign heading_stars_size = 30 %}
+  {% when 'xl' %}
+    {% assign heading_stars_size = 40 %}
+{% endcase %}
+
+
+<div class="pagepilot-layout" style="{{ section_padding }}{{ gradient_style }}" id="pp-reviews">
+  <div class="pp-container pp-mx-auto pp-w-full pp-justify-center">
+    <div class="pp-flex pp-flex-col pp-gap-14 pp-p-4 pp-text-center">
+      <div class="pp-flex pp-flex-col pp-gap-8">
+        <div class="pp-flex pp-gap-1 pp-justify-{{ section.settings.stars_mobilealignment }} sm:pp-justify-{{ section.settings.stars_alignment }}">
+          {% if section.settings.heading_stars_number > 0 %}
+            {% for i in (1..section.settings.heading_stars_number) %}
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: {{ heading_stars_size }}px; height: {{ heading_stars_size }}px; fill: {{ section.settings.heading_stars_color }}; ">
+                <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+              </svg>
+            {% endfor %}
+          {% endif %}
+        </div>
+
+        {% if section.settings.heading != blank %}
+          <h2 class="{{ section.settings.heading_size }} pp-text-{{ section.settings.heading_mobilealignment }} sm:pp-text-{{ section.settings.heading_alignment }}" style="color: {{ section.settings.heading_color }};">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.text != blank %}
+          <div class="pp-w-full {% if section.settings.text_alignment == 'center' %}pp-max-w-4xl pp-mx-auto{% endif %}">
+            <div class="{{ section.settings.text_style }} pp-text-{{ section.settings.text_mobilealignment }} sm:pp-text-{{ section.settings.text_alignment }}" style="color: {{ section.settings.text_color }};" {{ section.shopify_attributes }}>
+              {{ section.settings.text }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="pp-relative pp-w-full">
+        {% if request.design_mode %}
+          <div class="pp-reviews-container pp-grid pp-grid-cols-2 sm:pp-grid-cols-5 pp-gap-4">
+        {% else %}
+          <div id="pp-reviews" class="pp-reviews-container pp-flex" data-masonry='{ "itemSelector": ".pp-review"  }'>
+        {% endif %}
+
+          {% for block in section.blocks %}
+
+          {% assign review_border_radius = 10 %}
+          {% case block.settings.review_border_radius %}
+            {% when 'none' %}
+              {% assign review_border_radius = 0 %}
+            {% when 'medium' %}
+              {% assign review_border_radius = 20 %}
+            {% when 'high' %}
+              {% assign review_border_radius = 25 %}
+          {% endcase %}
+
+          <div class="pp-review pp-h-fit pp-flex pp-flex-col pp-text-left {% unless request.design_mode %}pp-w-1/2 sm:pp-w-1/3 md:pp-w-1/4 lg:pp-w-1/5{% endunless %}">
+            <div class="pp-p-4">
+              <div class="pp-border-solid pp-border pp-border-gray-200 pp-shadow-black/7 pp-shadow pp-p-4" style="border-radius: {{ review_border_radius }}px;background-color:{{ block.settings.review_background_color }};">
+
+              {% if block.settings.image %}
+
+                {% assign image_width_class = '' %}
+
+
+              {% assign image_class = 'pp-w-full pp-h-full pp-max-w-full ' | append: image_width_class | append: ' ' %}
+
+              {% assign image_border_radius = 10 %}
+              {% case block.settings.image_border_radius %}
+                {% when 'none' %}
+                  {% assign image_border_radius = 0 %}
+                {% when 'medium' %}
+                  {% assign image_border_radius = 20 %}
+                {% when 'high' %}
+                  {% assign image_border_radius = 30 %}
+              {% endcase %}
+
+              <img src="{{ block.settings.image | img_url: 'master' }}"
+                   alt="{{ block.settings.image.alt | escape }}"
+                   loading="lazy"
+                   class="{{ image_class }}"
+                   style="border-radius: {{ image_border_radius }}px;"
+                   width="{{ block.settings.image.width }}"
+                   height="{{ block.settings.image.height }}" />
+
+              {% endif %}
+
+
+                <div class="pp-mt-4 pp-font-semibold {{ block.settings.author_style }}" style="color: {{ block.settings.author_color }};">
+                  {{ block.settings.author_text }}
+                </div>
+
+                {% if block.settings.author_badge_text != blank %}
+                <div class="pp-flex pp-gap-2 pp-items-center pp-font-medium pp-mt-2 {{ block.settings.author_badge_text_style }}" style="color: {{ block.settings.author_badge_text_color }};">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="{% if block.settings.author_badge_text_style == 'body' %}width: 18px; height: 18px;{% else %}width: 21px; height: 21px;{% endif %} fill: {{ block.settings.author_badge_color }};">
+                    <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm45.66,85.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path>
+                  </svg>
+                  {{ block.settings.author_badge_text }}
+                </div>
+                {% endif %}
+
+                {% assign block_stars_size = 14 %}
+
+                {% case block.settings.stars_size %}
+                  {% when 'sm' %}
+                    {% assign block_stars_size = 18 %}
+                  {% when 'lg' %}
+                    {% assign block_stars_size = 24 %}
+                {% endcase %}
+
+                {% if block.settings.stars_number > 0 %}
+                <div class="pp-mt-4 pp-flex pp-justify-{{ block.settings.stars_mobilealignment }} sm:pp-justify-{{ block.settings.stars_alignment }}">
+                  {% for i in (1..block.settings.stars_number) %}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="width: {{ block_stars_size }}px; height: {{ block_stars_size }}px; fill: {{ block.settings.stars_color }}; ">
+                      <path d="M234.29,114.85l-45,38.83L203,211.75a16.4,16.4,0,0,1-24.5,17.82L128,198.49,77.47,229.57A16.4,16.4,0,0,1,53,211.75l13.76-58.07-45-38.83A16.46,16.46,0,0,1,31.08,86l59-4.76,22.76-55.08a16.36,16.36,0,0,1,30.27,0l22.75,55.08,59,4.76a16.46,16.46,0,0,1,9.37,28.86Z"></path>
+                    </svg>
+                  {% endfor %}
+                </div>
+                {% endif %}
+
+                <div class="pp-mt-4 {{ block.settings.review_text_style }} pp-text-{{ block.settings.review_text_mobilealignment }} sm:pp-text-{{ block.settings.review_text_alignment }}" style="color: {{ block.settings.review_text_color }};">
+                  {{ block.settings.review_text }}
+                </div>
+
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+
+        </div>
+      </div>
+
+      {%- if section.settings.button_label != blank -%}
+        {% capture button_style %}
+          color: {{ section.settings.button_text_color }};
+          background-color: {{ section.settings.button_background_color }};
+          {% if section.settings.button_border_width > 0 %}
+            border: {{ section.settings.button_border_width }}px solid {{ section.settings.button_border_color }};
+          {% endif %}
+          padding: {{ section.settings.button_padding_vertical }}px {{ section.settings.button_padding_horizontal }}px;
+          display: inline-block;
+          text-align: center;
+        {% endcapture %}
+        {% assign rounded_class = '' %}
+        {% case section.settings.button_rounded_corners %}
+          {% when 'low' %}
+            {% assign rounded_class = 'pp-rounded-2xl' %}
+          {% when 'medium' %}
+            {% assign rounded_class = 'pp-rounded-3xl' %}
+          {% when 'high' %}
+            {% assign rounded_class = 'pp-rounded-full' %}
+        {% endcase %}
+        <div class="pp-w-full pp-text-{{ section.settings.button_mobilealignment }} sm:pp-text-{{ section.settings.button_alignment }}">
+
+
+          {% if section.settings.button_action == 'scroll' %}
+            <button
+              onclick="pagepilot.scrollToElement({% if section.settings.button_action_scroll_element != blank %}'{{ section.settings.button_action_scroll_element }}'{% endif %});"
+              class="{% if section.settings.button_width == 'full' %}pp-w-full{% else %}pp-w-fit{% endif %} {{ rounded_class }}"
+              style="{{ button_style | strip_newlines }}"
+              {{ block.shopify_attributes }}
+            >
+              {{ section.settings.button_label }}
+            </button>
+          {% else %}
+            <a
+              {% if section.settings.button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ section.settings.button_link }}"
+                {% if section.settings.button_link_newtab %}
+                  target="_blank" rel="noopener noreferrer"
+                {% endif %}
+              {% endif %}
+              class="{% if section.settings.button_width == 'full' %}pp-w-full{% else %}pp-w-fit{% endif %} {{ rounded_class }}"
+              style="{{ button_style | strip_newlines }}"
+              {{ block.shopify_attributes }}
+            >
+              {{ section.settings.button_label }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.button_subtext != blank %}
+            <div class="{% if section.settings.button_width_mobile == 'full' %}pp-flex{% else %}pp-hidden{% endif %} {% if section.settings.button_width == 'full' %}sm:pp-flex{% else %}sm:pp-hidden{% endif %}  pp-justify-center pp-text-center pp-mt-4 {{ section.settings.button_subtext_style }}" style="color: {{ section.settings.button_subtext_color }};">{{ section.settings.button_subtext }}</div>
+          {% endif %}
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+</div>
+
+{% unless request.design_mode %}
+  <script src="{{ 'pp-reviews.min.js' | asset_url }}" defer></script>
+{% endunless %}
+
+
+{% schema %}
+{
+  "name": "PP - Reviews",
+  "max_blocks": 30,
+  "settings": [
+    {
+      "type": "header",
+      "content": "Stars"
+    },
+    {
+      "type": "select",
+      "id": "heading_stars_size",
+      "options": [
+        {
+          "value": "sm",
+          "label": "Small"
+        },
+        {
+          "value": "md",
+          "label": "Medium"
+        },
+        {
+          "value": "lg",
+          "label": "Large"
+        },
+        {
+          "value": "xl",
+          "label": "Extra large"
+        }
+      ],
+      "default": "lg",
+      "label": "Stars size"
+    },
+    {
+      "type": "color",
+      "id": "heading_stars_color",
+      "label": "Stars color",
+      "default": "#facc15"
+    },
+    {
+      "type": "select",
+      "id": "stars_alignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "stars_mobilealignment",
+      "options": [
+        {
+          "value": "start",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "end",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "range",
+      "id": "heading_stars_number",
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "default": 5,
+      "label": "Number of stars"
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "This section was made using PagePilot AI",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "Extra extra large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "heading_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Enter your text here. This section was made using PagePilot AI. Create high-converting product pages with just a few clicks on pagepilot.ai</p>",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Small"
+        },
+        {
+          "value": "subtitle",
+          "label": "Large"
+        }
+      ],
+      "default": "subtitle",
+      "label": "Text size"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient",
+      "label": "Background color"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "button_label",
+      "default": "Shop Now",
+      "label": "Text",
+      "info": "Leave the label blank to hide the button."
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Link"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_link_newtab",
+      "label": "Open link in new tab",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Text color",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Background color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_border_width",
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "unit": "px",
+      "label": "Border width",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "button_border_color",
+      "label": "Border color",
+      "default": "#000000"
+    },
+    {
+      "type": "select",
+      "id": "button_width",
+      "options": [
+        {
+          "value": "fit",
+          "label": "Fit content"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "fit",
+      "label": "Button width"
+    },
+    {
+      "type": "select",
+      "id": "button_width_mobile",
+      "options": [
+        {
+          "value": "fit",
+          "label": "Fit content"
+        },
+        {
+          "value": "full",
+          "label": "Full width"
+        }
+      ],
+      "default": "full",
+      "label": "Mobile button width"
+    },
+    {
+      "type": "select",
+      "id": "button_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment",
+    },
+    {
+      "type": "select",
+      "id": "button_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment",
+    },
+    {
+      "type": "select",
+      "id": "button_rounded_corners",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "low",
+          "label": "Low"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "high",
+          "label": "High"
+        }
+      ],
+      "default": "medium",
+      "label": "Rounded Corners"
+    },
+    {
+      "type": "range",
+      "id": "button_padding_vertical",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding vertical",
+      "default": 15
+    },
+    {
+      "type": "range",
+      "id": "button_padding_horizontal",
+      "min": 0,
+      "max": 25,
+      "step": 1,
+      "unit": "px",
+      "label": "Padding horizontal",
+      "default": 15
+    },
+    {
+      "type": "header",
+      "content": "Sub-text"
+    },
+    {
+      "type": "text",
+      "id": "button_subtext",
+      "default": "30-Day Money Back Guarantee",
+      "label": "Sub-text",
+      "info": "Visible only when button width is full."
+    },
+    {
+      "type": "select",
+      "id": "button_subtext_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Small"
+        },
+        {
+          "value": "subtitle",
+          "label": "Large"
+        }
+      ],
+      "default": "body",
+      "label": "Sub-text size"
+    },
+    {
+      "type": "color",
+      "id": "button_subtext_color",
+      "label": "Sub-text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Action"
+    },
+    {
+      "type": "select",
+      "id": "button_action",
+      "options": [
+        {
+          "value": "link",
+          "label": "Link"
+        },
+        {
+          "value": "scroll",
+          "label": "Scroll top"
+        }
+      ],
+      "default": "scroll",
+      "label": "Button action",
+      "info": "If you want to use it with a link, choose none here."
+    },
+    {
+      "type": "text",
+      "id": "button_action_scroll_element",
+      "label": "Button scroll element",
+      "info": "Set the scroll to element, example #test or .test"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "limit": 30,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image_border_radius",
+          "options": [
+            {
+              "value": "low",
+              "label": "Low"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "high",
+              "label": "High"
+            }
+          ],
+          "default": "low",
+          "label": "Rounded Corners"
+        },
+        {
+          "type": "header",
+          "content": "Author"
+        },
+        {
+          "type": "text",
+          "id": "author_text",
+          "default": "Author's Name",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "author_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Small"
+            },
+            {
+              "value": "subtitle",
+              "label": "Large"
+            }
+          ],
+          "default": "subtitle",
+          "label": "Size"
+        },
+        {
+          "type": "color",
+          "id": "author_color",
+          "label": "Author Color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Badge"
+        },
+        {
+          "type": "text",
+          "id": "author_badge_text",
+          "default": "Verified Buyer",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "author_badge_text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Small"
+            },
+            {
+              "value": "subtitle",
+              "label": "Large"
+            }
+          ],
+          "default": "body",
+          "label": "Badge Text Size"
+        },
+        {
+          "type": "color",
+          "id": "author_badge_text_color",
+          "label": "Badge text color ",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "author_badge_color",
+          "label": "Badge Color",
+          "default": "#2993f1"
+        },
+        {
+          "type": "header",
+          "content": "Stars"
+        },
+        {
+          "type": "select",
+          "id": "stars_size",
+          "options": [
+            {
+              "value": "sm",
+              "label": "Small"
+            },
+            {
+              "value": "lg",
+              "label": "Large"
+            }
+          ],
+          "default": "sm",
+          "label": "Stars size"
+        },
+        {
+          "type": "color",
+          "id": "stars_color",
+          "label": "Stars color",
+          "default": "#facc15"
+        },
+        {
+          "type": "range",
+          "id": "stars_number",
+          "min": 0,
+          "max": 5,
+          "step": 1,
+          "default": 5,
+          "label": "Number of stars"
+        },
+        {
+          "type": "select",
+          "id": "stars_alignment",
+          "options": [
+            {
+              "value": "start",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "end",
+              "label": "Right"
+            }
+          ],
+          "default": "start",
+          "label": "Alignment"
+        },
+        {
+          "type": "select",
+          "id": "stars_mobilealignment",
+          "options": [
+            {
+              "value": "start",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "end",
+              "label": "Right"
+            }
+          ],
+          "default": "start",
+          "label": "Mobile alignment"
+        },
+        {
+          "type": "header",
+          "content": "Review"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "review_text",
+          "default": "Enter the review here.",
+          "label": "Review text"
+        },
+        {
+          "type": "select",
+          "id": "review_text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Small"
+            },
+            {
+              "value": "subtitle",
+              "label": "Large"
+            }
+          ],
+          "default": "body",
+          "label": "Review text size"
+        },
+        {
+          "type": "color",
+          "id": "review_text_color",
+          "label": "Review text color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Block"
+        },
+        {
+          "type": "color",
+          "id": "review_background_color",
+          "label": "Background color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "select",
+          "id": "review_border_radius",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "low",
+              "label": "Low"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "high",
+              "label": "High"
+            }
+          ],
+          "default": "low",
+          "label": "Rounded Corners"
+        },
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "PP - Reviews",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

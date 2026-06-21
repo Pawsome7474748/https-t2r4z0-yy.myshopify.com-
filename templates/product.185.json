@@ -1,0 +1,1331 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "reviews_number_wmFXyt": {
+          "type": "reviews-number",
+          "settings": {
+            "reviews_text": "151 Reviews",
+            "reviews_text_style": "body",
+            "reviews_text_color": "#000000",
+            "reviews_stars_size": "sm",
+            "reviews_stars_color": "#facc15",
+            "reviews_stars_number": 5,
+            "reviews_alignment": "start",
+            "reviews_mobilealignment": "start",
+            "reviews_border_top": 0,
+            "reviews_padding_top": 0,
+            "reviews_padding_bottom": 0
+          }
+        },
+        "product_title_DXtTRC": {
+          "type": "product-title",
+          "settings": {
+            "product_title_heading_size": "h1",
+            "product_title_heading_alignment": "left",
+            "product_title_heading_mobilealignment": "left",
+            "product_title_heading_color": "#000000",
+            "product_title_padding_top": 0,
+            "product_title_padding_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#000000",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": false
+          }
+        },
+        "pp_text_VLf9ic": {
+          "type": "pp-text",
+          "settings": {
+            "pp_text": "<strong>Bundle your pup in warmth and style this winter with our trendy hoodie for small breeds</strong>",
+            "pp_text_size": "body",
+            "pp_text_color": "#000000",
+            "pp_text_alignment": "left",
+            "pp_text_mobilealignment": "left",
+            "pp_text_border_top": 0,
+            "pp_text_border_bottom": 1,
+            "pp_text_border_color": "#e8e8e1",
+            "pp_text_padding_top": 0,
+            "pp_text_padding_bottom": 16
+          }
+        },
+        "pp_benefits_Lfapdf": {
+          "type": "pp-benefits",
+          "settings": {
+            "pp_benefits_text1": "✔️ Keeps pets warm and cozy",
+            "pp_benefits_text2": "✔️ Stylish design for pets",
+            "pp_benefits_text3": "✔️ Perfect for small breeds",
+            "pp_benefits_text4": "✔️ Soft fabric ensures comfort",
+            "pp_benefits_text_size": "body",
+            "pp_benefits_text_color": "#000000",
+            "pp_benefits_text_alignment": "left",
+            "pp_benefits_text_mobilealignment": "left",
+            "pp_benefits_border_top": 0,
+            "pp_benefits_border_bottom": 1,
+            "pp_benefits_border_color": "#e8e8e1",
+            "pp_benefits_padding_top": 0,
+            "pp_benefits_padding_bottom": 12
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_text": "Add To Cart👉🏻",
+            "sold_out_text": "Sold Out😭",
+            "unavailable_text": "Unavailable",
+            "button_color": "#f8663b",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 20,
+            "button_padding_horizontal": 15
+          }
+        },
+        "pp_guarantees_JzRPwy": {
+          "type": "pp-guarantees",
+          "settings": {
+            "pp_guarantees_icon1": "truck",
+            "pp_guarantees_text1": "Worldwide Shipping",
+            "pp_guarantees_icon2": "heart",
+            "pp_guarantees_text2": "100% Money Back Guarantee",
+            "pp_guarantees_icon3": "box",
+            "pp_guarantees_text3": "Free Returns",
+            "pp_guarantees_icon_size": 28,
+            "pp_guarantees_icon_color": "#000000",
+            "pp_guarantees_text_size": "small",
+            "pp_guarantees_text_color": "#000000",
+            "pp_guarantees_border_top": 0,
+            "pp_guarantees_border_bottom": 1,
+            "pp_guarantees_border_color": "#e8e8e1",
+            "pp_guarantees_padding_top": 0,
+            "pp_guarantees_padding_bottom": 16
+          }
+        },
+        "pp_review_DzipVt": {
+          "type": "pp-review",
+          "settings": {
+            "pp_review_image": "shopify://shop_images/media_avatar_21_men_27.webp",
+            "pp_review_image_border_radius": "full",
+            "pp_review_stars_size": "sm",
+            "pp_review_stars_color": "#facc15",
+            "pp_review_stars_number": 5,
+            "pp_review_stars_alignment": "start",
+            "pp_review_stars_mobilealignment": "start",
+            "pp_review_text": "\"OMG, this hoodie is the cutest thing ever! Bought it for my Chihuahua and it fits perfectly. Keeps her warm and she looks super adorable. Great for chilly walks. Highly recommend for small dog owners.\"",
+            "pp_review_text_style": "small",
+            "pp_review_text_alignment": "left",
+            "pp_review_text_mobilealignment": "left",
+            "pp_review_text_color": "#000000",
+            "pp_review_author_badge_text": "<p>Owen Y.</p>",
+            "pp_review_author_badge_text_style": "small",
+            "pp_review_author_badge_text_color": "#000000",
+            "pp_review_author_badge_color": "#2993f1",
+            "pp_review_border_top": 0,
+            "pp_review_border_bottom": 0,
+            "pp_review_border_color": "#e8e8e1",
+            "pp_review_padding_top": 0,
+            "pp_review_padding_bottom": 0
+          }
+        },
+        "pp_expandable_r43w6T": {
+          "type": "pp-expandable",
+          "settings": {
+            "pp_expandable_title1": "🚚 Shipping",
+            "pp_expandable_content1": "<p><p>Enjoy insured shipping on all orders. We process orders within 1-3 business days before dispatching. Upon shipment, the anticipated delivery times are as follows:</p><ul><li>USA: 3-7 business days</li><li>UK: 7-18 business days</li><li>Australia: 7-18 business days</li><li>Canada: 7-18 business days</li><li>Europe: 7-18 business days</li><li>Rest of world: 14-20 business days</li></ul></p>",
+            "pp_expandable_title2": "📦 Returns",
+            "pp_expandable_content2": "<p><p>We are certain you wll adore our products, just as we do! If, however, things don not work out as expected, our return and refund policy is crafted to simplify the process for you. You can return the product for a full refund within 30 days of purchase.</p></p>",
+            "pp_expandable_title3": "🏅 Money Back Guarantee",
+            "pp_expandable_content3": "<p><p>You can try our products risk-free with our 30-day Money-Back Guarantee. If you are not completely satisfied, simply return it for a full refund.</p></p>",
+            "pp_expandable_text_size": "medium",
+            "pp_expandable_answer_size": "small",
+            "pp_expandable_text_color": "#000000",
+            "pp_expandable_arrow_color": "#000000",
+            "pp_expandable_text_border_color": "#e8e8e1",
+            "pp_expandable_border_top": 1,
+            "pp_expandable_border_bottom": 0,
+            "pp_expandable_border_color": "#e8e8e1",
+            "pp_expandable_padding_top": 12,
+            "pp_expandable_padding_bottom": 0
+          }
+        },
+        "pp_partners_7B3bAx": {
+          "type": "pp-partners",
+          "settings": {
+            "pp_partners_heading": "<strong>As Seen On</strong>",
+            "pp_partners_heading_size": "medium",
+            "pp_partners_heading_color": "#000000",
+            "pp_partners_gradient": "radial-gradient(rgba(255, 255, 255, 0.93) 34%, rgba(255, 255, 255, 0.17) 77%)",
+            "pp_partners_border_top": 0,
+            "pp_partners_border_bottom": 0,
+            "pp_partners_border_color": "#e8e8e1",
+            "pp_partners_padding_top": 0,
+            "pp_partners_padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "reviews_number_wmFXyt",
+        "product_title_DXtTRC",
+        "price",
+        "pp_text_VLf9ic",
+        "pp_benefits_Lfapdf",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pp_guarantees_JzRPwy",
+        "pp_review_DzipVt",
+        "pp_expandable_r43w6T",
+        "pp_partners_7B3bAx"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1abe165f-834c-4397-80e1-165dc6524d44",
+        "media_size": "medium",
+        "image_rounded_corners": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "pp_image_with_benefits_gkXTTj": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7CB6Bn": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🐶",
+            "emoji_size": "medium",
+            "heading": "Warmth",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Keeps small breeds warm during winter days</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_7HpQgA": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "👗",
+            "emoji_size": "medium",
+            "heading": "Fashion",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Trendy design with a cute hood for style</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_erNb6q": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "👌",
+            "emoji_size": "medium",
+            "heading": "Fit",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Available sizes perfect for Chihuahuas, Bulldogs</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_gJWaeR": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🧵",
+            "emoji_size": "medium",
+            "heading": "Comfort",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Soft, high-quality fabric for maximum comfort</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7CB6Bn",
+        "benefit_7HpQgA",
+        "benefit_erNb6q",
+        "benefit_gJWaeR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_1004_185_main-image-1_0c3fe0d2-19b5-4f7a-8719-da89325d1769.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 100,
+        "heading": "<strong>Stylish Warmth for Your Pet</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Elevate your pet's winter wardrobe with our cozy, fashionable hoodie designed for comfort and style in the cold season</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "linear-gradient(176deg, rgba(255, 255, 255, 0), #ffe8e1 100%)",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 20,
+        "margin_bottom": 36
+      }
+    },
+    "pp_image_with_text_BVEaDq": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_aFxCRe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why Your Pet Needs This Cozy Hoodie This Winter Season",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "text_ifpgzE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Cold weather can be uncomfortable for small dog breeds. But, this cozy hooded sweatshirt is here to solve that problem! Designed with style in mind, it keeps your pet warm and cozy throughout the winter months. Whether it's a walk in the park or a day at home, your pet will love snuggling up in this adorable outfit. Perfect fit for Chihuahuas and French Bulldogs, this hoodie ensures a snug, fashionable look that's hard to resist.</p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_cPWTPH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aFxCRe",
+        "text_ifpgzE",
+        "button_cPWTPH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_1005_185_main-image-2_86e01369-5182-48f6-87ce-aa658ec905e9.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_image_with_percentage_fLf47C": {
+      "type": "pp-image-with-percentage",
+      "blocks": {
+        "heading_UYwMbc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Upgrade with Cozy Hoodie Today</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "percent_MDgdzN": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 95,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Said their small dogs love the fit and style</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_DNwFD7": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 95,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Reported significant warmth improvement</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_Wh6UWW": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 93,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Would recommend it to other pet owners</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "button_zpmLYc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Yours Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Satisfaction Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UYwMbc",
+        "percent_MDgdzN",
+        "percent_DNwFD7",
+        "percent_Wh6UWW",
+        "button_zpmLYc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_1006_185_main-image-7_87909be9-9184-4586-b4d5-04647bb72682.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 44
+      }
+    },
+    "pp_reviews_dqQHmw": {
+      "type": "pp-reviews",
+      "blocks": {
+        "review_YZnOSb": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3463_185_A9648c6610b354f5b9ca116a25717cab08_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Jessica L",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "love it! 😊",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_W0psLe": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3464_185_Ac2cda99af6d044b89971b0b495bd162d2_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Tom H",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Perfect fit for my pup!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_Y90BLE": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3465_185_A53609b6f8a2740e29d717021b43ff2401_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Sarah K",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "This hoodie is a lifesaver! My French Bulldog gets cold easily, so this was perfect. She looks stylish too!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_gO4NKb": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3466_185_A3629f1f4c718437195aae8fec1f16506C_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Mike T",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Tbh, I was skeptical at first. But this hoodie is gr8! My Chihuahua feels warm, and it's so stylish. Really a must-have for small dogs.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_d4526O": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3467_185_A30dc3f8100bb4c76860a895c880521c3r_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Laura M",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "OMG, I can't believe how much my Pomeranian loves this hoodie! She used to shiver all the time, but now she's super cozy. And let me tell u, she looks absolutely adorable in it. It's high-quality, soft, fits perfectly, and the hood is a nice touch. I'm so happy with this purchase. If you care about your pet's comfort, you won't regret buying this!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_pYp9W2": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Chris I",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "wow :)",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_hJIwDx": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Nina A",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Super cute and warm",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_fcmY8n": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Daniel J",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "My Chihuahua looks amazing in it! Warm and stylish, totally recommend.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_4zON3w": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Rachel P",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "I got two for my pups. They adore them! Perfect for winter walks.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_I0mfON": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Lucas V",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Absolutely in love with this hoodie. My little buddy used to shiver during our morning walks, not anymore. The material is top-notch and doesn't irritate his skin. It's easy to wash, and the hood adds an extra flair. I'm thinking of getting a couple more. Totally recommend it to all small dog owners.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_UHLxSk": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Amy F",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Fits like a dream.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_vKjjHF": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Derek W",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Kudos! My Frenchie looks so cute and stays warm.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_XOjnt9": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Ella N",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Adorable!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_tCtGof": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Oscar P",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Just wow, it's perfect.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_33HQvY": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Tara Q",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "My Chihuahua stopped shivering, loves it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_WO2kJ3": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Will D",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Srsly, this hoodie is legit. Keeps my Pug warm and looking fab. It's like his fave now.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_kSxuSH": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Zoe E",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Luv this hoodie so much! We live in a cold climate, and it's perfect for that. My terrier used to hate going for walks, but now he's excited. The fit is perfect, and the fabric is so soft. It washes well too.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_eiEkAt": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "John F",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Nice quality, worth buying.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_RHgk61": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Vicky S",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Stylish & comfy! My Bulldog adores it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_9sFPQw": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Brian M",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "This hoodie is top-tier quality. I was impressed by the softness and fit. Ideal for small breeds.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        }
+      },
+      "block_order": [
+        "review_YZnOSb",
+        "review_W0psLe",
+        "review_Y90BLE",
+        "review_gO4NKb",
+        "review_d4526O",
+        "review_pYp9W2",
+        "review_hJIwDx",
+        "review_fcmY8n",
+        "review_4zON3w",
+        "review_I0mfON",
+        "review_UHLxSk",
+        "review_vKjjHF",
+        "review_XOjnt9",
+        "review_tCtGof",
+        "review_33HQvY",
+        "review_WO2kJ3",
+        "review_kSxuSH",
+        "review_eiEkAt",
+        "review_RHgk61",
+        "review_9sFPQw"
+      ],
+      "settings": {
+        "heading_stars_size": "lg",
+        "heading_stars_color": "#facc15",
+        "stars_alignment": "center",
+        "stars_mobilealignment": "center",
+        "heading_stars_number": 5,
+        "heading": "Charming Feedback from Pet Lovers",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Rated 4.8/5 by 1,100 Happy Customers</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "radial-gradient(rgba(255, 255, 255, 1), #ffe8e1 100%)",
+        "button_label": "",
+        "button_link": "",
+        "button_link_newtab": false,
+        "button_text_color": "#ffffff",
+        "button_background_color": "#f8663b",
+        "button_border_width": 0,
+        "button_border_color": "#000000",
+        "button_width": "fit",
+        "button_alignment": "center",
+        "button_mobilealignment": "center",
+        "button_rounded_corners": "medium",
+        "button_padding_vertical": 15,
+        "button_padding_horizontal": 15,
+        "button_subtext": "Fast Worldwide Shipping",
+        "button_subtext_style": "body",
+        "button_subtext_color": "#000000",
+        "button_action": "scroll",
+        "button_action_scroll_element": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_comparison_table_ttamEN": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_Wjx9pp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>What Makes Cozy Dog Hooded Sweatshirt Special</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4ad9ba": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Our hoodie stands out with its adorable design and cozy warmth, perfect for small dog breeds during winter. Unlike others, it offers a snug fit and is crafted from soft, high-quality fabric, keeping your furry friend both stylish and comfortable</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_6hMT9z": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Warmth",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_KNWAfa": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Fashion",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_jB68ak": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Fit",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_CVBp68": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Comfort",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_6Crhhq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Affordable",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wjx9pp",
+        "text_4ad9ba",
+        "tableitem_6hMT9z",
+        "tableitem_KNWAfa",
+        "tableitem_jB68ak",
+        "tableitem_CVBp68",
+        "tableitem_6Crhhq"
+      ],
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#ffb6a0",
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_faq_TtURdM": {
+      "type": "pp-faq",
+      "blocks": {
+        "question_UUEbPG": {
+          "type": "question",
+          "settings": {
+            "heading": "Is this hoodie suitable for all dog breeds?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>It's perfect for small to medium dog breeds, especially those like Chihuahuas and French Bulldogs. Ensure to check the size guide for the best fit.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_iwgzRn": {
+          "type": "question",
+          "settings": {
+            "heading": "How do I wash the dog hoodie?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>You can machine wash the hoodie with cold water and like colors. Use mild detergent. It retains its shape and softness after washing.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_gNmdPq": {
+          "type": "question",
+          "settings": {
+            "heading": "What sizes are available for the hoodie?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>We offer various sizes suitable for small and medium breeds. Check our size guide for precise measurements and ensure a snug fit.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_NpRfRa": {
+          "type": "question",
+          "settings": {
+            "heading": "Is the fabric comfortable for my dog?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Absolutely! The hoodie is made from soft, high-quality material that ensures your pet's comfort and warmth throughout all activities.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "Will this hoodie fit both dogs and cats?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Yes, while designed for dogs, this hoodie can also fit cats. Ensure to check the size chart for the best fit for your pet.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#ffd4c7",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#000000",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_guarantee_NNKyJ6": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_tVTcmU": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "heart",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#f8663b"
+          }
+        },
+        "heading_jfhp4z": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try Cozy Dog Hooded Sweatshirt Risk-Free",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_N44eGB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience the ultimate warmth and style for your pet, completely risk-free! With our 30-day money-back guarantee, you can let your furry friend enjoy the comforts of the Cozy Dog Hooded Sweatshirt without worries. If for any reason you're not completely satisfied, simply return it within 30 days for a full refund. We prioritize your pet's happiness and comfort, so try it today and see the transformative effect!</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_8tJzYX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_tVTcmU",
+        "heading_jfhp4z",
+        "text_N44eGB",
+        "button_8tJzYX"
+      ],
+      "settings": {
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "gradient": ""
+      }
+    },
+    "featured_collection_pkU6gk": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Frequently Bought Together",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_rounded_corners": "medium",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_benefits_gkXTTj",
+    "pp_image_with_text_BVEaDq",
+    "pp_image_with_percentage_fLf47C",
+    "pp_reviews_dqQHmw",
+    "pp_comparison_table_ttamEN",
+    "pp_faq_TtURdM",
+    "pp_guarantee_NNKyJ6",
+    "related-products",
+    "featured_collection_pkU6gk"
+  ]
+}

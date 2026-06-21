@@ -1,0 +1,1139 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "reviews_number_wmFXyt": {
+          "type": "reviews-number",
+          "settings": {
+            "reviews_text": "88 Reviews",
+            "reviews_text_style": "body",
+            "reviews_text_color": "#000000",
+            "reviews_stars_size": "sm",
+            "reviews_stars_color": "#facc15",
+            "reviews_stars_number": 5,
+            "reviews_alignment": "start",
+            "reviews_mobilealignment": "start",
+            "reviews_border_top": 0,
+            "reviews_padding_top": 0,
+            "reviews_padding_bottom": 0
+          }
+        },
+        "product_title_DXtTRC": {
+          "type": "product-title",
+          "settings": {
+            "product_title_heading_size": "h1",
+            "product_title_heading_alignment": "left",
+            "product_title_heading_mobilealignment": "left",
+            "product_title_heading_color": "#000000",
+            "product_title_padding_top": 0,
+            "product_title_padding_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#000000",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": false
+          }
+        },
+        "pp_text_VLf9ic": {
+          "type": "pp-text",
+          "settings": {
+            "pp_text": "<strong>Provide your pet with a plush sanctuary where they can unwind and relax in style</strong>",
+            "pp_text_size": "body",
+            "pp_text_color": "#000000",
+            "pp_text_alignment": "left",
+            "pp_text_mobilealignment": "left",
+            "pp_text_border_top": 0,
+            "pp_text_border_bottom": 1,
+            "pp_text_border_color": "#e8e8e1",
+            "pp_text_padding_top": 0,
+            "pp_text_padding_bottom": 16
+          }
+        },
+        "pp_benefits_Lfapdf": {
+          "type": "pp-benefits",
+          "settings": {
+            "pp_benefits_text1": "✔️ Offers a sense of security",
+            "pp_benefits_text2": "✔️ Perfect for any cat size",
+            "pp_benefits_text3": "✔️ Stylish and functional",
+            "pp_benefits_text4": "✔️ Ensures utmost comfort",
+            "pp_benefits_text_size": "body",
+            "pp_benefits_text_color": "#000000",
+            "pp_benefits_text_alignment": "left",
+            "pp_benefits_text_mobilealignment": "left",
+            "pp_benefits_border_top": 0,
+            "pp_benefits_border_bottom": 1,
+            "pp_benefits_border_color": "#e8e8e1",
+            "pp_benefits_padding_top": 0,
+            "pp_benefits_padding_bottom": 12
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_text": "Add To Cart👉🏻",
+            "sold_out_text": "Sold Out😭",
+            "unavailable_text": "Unavailable",
+            "button_color": "#f8663b",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 20,
+            "button_padding_horizontal": 15
+          }
+        },
+        "pp_guarantees_JzRPwy": {
+          "type": "pp-guarantees",
+          "settings": {
+            "pp_guarantees_icon1": "truck",
+            "pp_guarantees_text1": "Worldwide Shipping",
+            "pp_guarantees_icon2": "heart",
+            "pp_guarantees_text2": "100% Money Back Guarantee",
+            "pp_guarantees_icon3": "box",
+            "pp_guarantees_text3": "Free Returns",
+            "pp_guarantees_icon_size": 28,
+            "pp_guarantees_icon_color": "#000000",
+            "pp_guarantees_text_size": "small",
+            "pp_guarantees_text_color": "#000000",
+            "pp_guarantees_border_top": 0,
+            "pp_guarantees_border_bottom": 1,
+            "pp_guarantees_border_color": "#e8e8e1",
+            "pp_guarantees_padding_top": 0,
+            "pp_guarantees_padding_bottom": 16
+          }
+        },
+        "pp_review_DzipVt": {
+          "type": "pp-review",
+          "settings": {
+            "pp_review_image": "shopify://shop_images/media_avatar_86_men_86.webp",
+            "pp_review_image_border_radius": "full",
+            "pp_review_stars_size": "sm",
+            "pp_review_stars_color": "#facc15",
+            "pp_review_stars_number": 5,
+            "pp_review_stars_alignment": "start",
+            "pp_review_stars_mobilealignment": "start",
+            "pp_review_text": "\"I never thought my cat would love a bed so much! She used to sleep anywhere but now she won't leave this bed. It’s super soft and looks lovely in my living room. Great buy!👍\"",
+            "pp_review_text_style": "small",
+            "pp_review_text_alignment": "left",
+            "pp_review_text_mobilealignment": "left",
+            "pp_review_text_color": "#000000",
+            "pp_review_author_badge_text": "<p>Leonardo P.</p>",
+            "pp_review_author_badge_text_style": "small",
+            "pp_review_author_badge_text_color": "#000000",
+            "pp_review_author_badge_color": "#2993f1",
+            "pp_review_border_top": 0,
+            "pp_review_border_bottom": 0,
+            "pp_review_border_color": "#e8e8e1",
+            "pp_review_padding_top": 0,
+            "pp_review_padding_bottom": 0
+          }
+        },
+        "pp_expandable_r43w6T": {
+          "type": "pp-expandable",
+          "settings": {
+            "pp_expandable_title1": "🚚 Shipping",
+            "pp_expandable_content1": "<p><p>Enjoy insured shipping on all orders. We process orders within 1-3 business days before dispatching. Upon shipment, the anticipated delivery times are as follows:</p><ul><li>USA: 3-7 business days</li><li>UK: 7-18 business days</li><li>Australia: 7-18 business days</li><li>Canada: 7-18 business days</li><li>Europe: 7-18 business days</li><li>Rest of world: 14-20 business days</li></ul></p>",
+            "pp_expandable_title2": "📦 Returns",
+            "pp_expandable_content2": "<p><p>We are certain you wll adore our products, just as we do! If, however, things don not work out as expected, our return and refund policy is crafted to simplify the process for you. You can return the product for a full refund within 30 days of purchase.</p></p>",
+            "pp_expandable_title3": "🏅 Money Back Guarantee",
+            "pp_expandable_content3": "<p><p>You can try our products risk-free with our 30-day Money-Back Guarantee. If you are not completely satisfied, simply return it for a full refund.</p></p>",
+            "pp_expandable_text_size": "medium",
+            "pp_expandable_answer_size": "small",
+            "pp_expandable_text_color": "#000000",
+            "pp_expandable_arrow_color": "#000000",
+            "pp_expandable_text_border_color": "#e8e8e1",
+            "pp_expandable_border_top": 1,
+            "pp_expandable_border_bottom": 0,
+            "pp_expandable_border_color": "#e8e8e1",
+            "pp_expandable_padding_top": 12,
+            "pp_expandable_padding_bottom": 0
+          }
+        },
+        "pp_partners_7B3bAx": {
+          "type": "pp-partners",
+          "settings": {
+            "pp_partners_heading": "<strong>As Seen On</strong>",
+            "pp_partners_heading_size": "medium",
+            "pp_partners_heading_color": "#000000",
+            "pp_partners_gradient": "radial-gradient(rgba(255, 255, 255, 0.93) 34%, rgba(255, 255, 255, 0.17) 77%)",
+            "pp_partners_border_top": 0,
+            "pp_partners_border_bottom": 0,
+            "pp_partners_border_color": "#e8e8e1",
+            "pp_partners_padding_top": 0,
+            "pp_partners_padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "reviews_number_wmFXyt",
+        "product_title_DXtTRC",
+        "price",
+        "pp_text_VLf9ic",
+        "pp_benefits_Lfapdf",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pp_guarantees_JzRPwy",
+        "pp_review_DzipVt",
+        "pp_expandable_r43w6T",
+        "pp_partners_7B3bAx"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1abe165f-834c-4397-80e1-165dc6524d44",
+        "media_size": "medium",
+        "image_rounded_corners": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "pp_image_with_benefits_gkXTTj": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7CB6Bn": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🐾",
+            "emoji_size": "medium",
+            "heading": "Security",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Tent-like design gives your pet a safe spot.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_7HpQgA": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "✨",
+            "emoji_size": "medium",
+            "heading": "Style",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Modern aesthetic enhances your home decor.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_erNb6q": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🌟",
+            "emoji_size": "medium",
+            "heading": "Versatile",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Suitable for small and large cats alike.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_gJWaeR": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "😊",
+            "emoji_size": "medium",
+            "heading": "Comfort",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Made with soft, high-quality materials for ultimate relaxation.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7CB6Bn",
+        "benefit_7HpQgA",
+        "benefit_erNb6q",
+        "benefit_gJWaeR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_852_157_main-image-2_2b4e9e6c-df54-47e0-a432-392784aa99cf.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 100,
+        "heading": "<strong>Ultimate Comfort for Pets</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>This plush cat bed is designed to envelop your pet in warmth and security, offering a perfect place to wind down.</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "linear-gradient(176deg, rgba(255, 255, 255, 0), #ffe8e1 100%)",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 20,
+        "margin_bottom": 36
+      }
+    },
+    "pp_image_with_text_BVEaDq": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_aFxCRe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Pamper Your Pet with Superior Comfort and Design",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "text_ifpgzE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Give your cat the ultimate pampering experience with our Cozy Cat Cuddle Bed. It's not just a pet bed; it's a style statement. The high-quality materials provide superior comfort, which means happy naps for your furry friend. Plus, its tent-like design adds an extra layer of coziness and security. Your cat deserves the best, so choose a bed that combines luxury and functionality.</p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_cPWTPH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aFxCRe",
+        "text_ifpgzE",
+        "button_cPWTPH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_853_157_main-image-1_7b456600-0235-49a7-a6b8-99ed1f21b9c9.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_image_with_percentage_fLf47C": {
+      "type": "pp-image-with-percentage",
+      "blocks": {
+        "heading_UYwMbc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Adopt the Cozy Cat Cuddle Bed today</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "percent_MDgdzN": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 93,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Said their cats find it super cozy and relaxing</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_DNwFD7": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 94,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Reported improved pet's sleep quality</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_Wh6UWW": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 97,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Enjoyed the stylish look in their living spaces</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "button_zpmLYc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Yours Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Satisfaction Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UYwMbc",
+        "percent_MDgdzN",
+        "percent_DNwFD7",
+        "percent_Wh6UWW",
+        "button_zpmLYc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_854_157_main-image-4_e553318d-f4a0-4a84-a9c6-d1f2f279ac01.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 44
+      }
+    },
+    "pp_reviews_dqQHmw": {
+      "type": "pp-reviews",
+      "blocks": {
+        "review_GOG0m7": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_2937_157_Aaff8bd8b1a0e4da1bb1cde1fe5374dafT.jpg_1d433be3-9e32-4102-9cf4-90b8a5dc3497.webp",
+            "image_border_radius": "low",
+            "author_text": "James L.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "A must-have! 😺",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_Z1BY5v": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_2938_157_A8dd3d00b1c9943c1b6fadd6761b2a710p.jpg_06943601-ed5b-4904-b437-c60b56e2c489.webp",
+            "image_border_radius": "low",
+            "author_text": "Olivia M.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Total hit with my furry babies! 😻",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_7iIxFg": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_2939_157_A495e92b6ace04b369d65b8cf43b996e7x.jpg_ac56b109-8807-4a13-909a-9b43435152e4.webp",
+            "image_border_radius": "low",
+            "author_text": "Liam H.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Wow, this bed is a game-changer. My cat is so much happier and relaxed. It's become her favorite spot in the house. Thanks!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_nxpBqd": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_2940_157_Ae5fa6669f99944529afad23e73d80f680.jpg_6e91bfb5-377e-476f-bcd1-501f7645b8e6.webp",
+            "image_border_radius": "low",
+            "author_text": "Sophia W.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "It's so plush and cozy, my cat dives straight into it every time. Can't believe I waited this long to get it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_u2Nb3Z": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_2941_157_Ab438bb77a2f2413c91b6067339712dd2s.jpg_16f2f41c-8a4b-41b9-b978-aac46894d456.webp",
+            "image_border_radius": "low",
+            "author_text": "Emma G.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Super chic bed! 🌟",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_BoX96P": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Noah P.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "The quality of the materials is top-notch. My cat loves it and I appreciate how it looks in my home. Win-win!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_3SlsWE": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Chloe S.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Best. Purchase. Ever.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_dAEFY0": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Aiden J.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Ok, so usually my pets are cautious about new things, but not with this bed! From the moment I assembled it (super easy btw), my little furball couldn't wait to jump right in. It's amazing seeing her this comfortable. Plus, it's way cuter than I imagined it would be!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_wPTHRe": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Mia D.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Great for any size cat. Even my lazy big guy loves it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_7eTq7r": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Lucas R.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "I was skeptical at first, but wow, this really is the ultimate pet bed. Go for it even if you have a bigger cat.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_77i0Iu": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Isabella B.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Sooo soft & lovely!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_3gyPdt": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Ethan F.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Really adds to my living room aesthetics! And Salem approves. 😺",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        }
+      },
+      "block_order": [
+        "review_GOG0m7",
+        "review_Z1BY5v",
+        "review_7iIxFg",
+        "review_nxpBqd",
+        "review_u2Nb3Z",
+        "review_BoX96P",
+        "review_3SlsWE",
+        "review_dAEFY0",
+        "review_wPTHRe",
+        "review_7eTq7r",
+        "review_77i0Iu",
+        "review_3gyPdt"
+      ],
+      "settings": {
+        "heading_stars_size": "lg",
+        "heading_stars_color": "#facc15",
+        "stars_alignment": "center",
+        "stars_mobilealignment": "center",
+        "heading_stars_number": 5,
+        "heading": "See What Cat Parents Are Saying",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Rated 4.8/5 by 1,100 Happy Customers</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "radial-gradient(rgba(255, 255, 255, 1), #ffe8e1 100%)",
+        "button_label": "",
+        "button_link": "",
+        "button_link_newtab": false,
+        "button_text_color": "#ffffff",
+        "button_background_color": "#f8663b",
+        "button_border_width": 0,
+        "button_border_color": "#000000",
+        "button_width": "fit",
+        "button_alignment": "center",
+        "button_mobilealignment": "center",
+        "button_rounded_corners": "medium",
+        "button_padding_vertical": 15,
+        "button_padding_horizontal": 15,
+        "button_subtext": "Fast Worldwide Shipping",
+        "button_subtext_style": "body",
+        "button_subtext_color": "#000000",
+        "button_action": "scroll",
+        "button_action_scroll_element": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_comparison_table_ttamEN": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_Wjx9pp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Why Cozy Cat Cuddle Bed Stands Out</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4ad9ba": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Cozy Cat Cuddle Bed outshines others with its plush materials, chic design, and universal fit, offering unmatched comfort and aesthetic excellence. It's the perfect choice for households with multiple cats.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_6hMT9z": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Plushness",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_KNWAfa": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Design",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_jB68ak": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Fit",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_CVBp68": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Comfort",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_6Crhhq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Affordable",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wjx9pp",
+        "text_4ad9ba",
+        "tableitem_6hMT9z",
+        "tableitem_KNWAfa",
+        "tableitem_jB68ak",
+        "tableitem_CVBp68",
+        "tableitem_6Crhhq"
+      ],
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#ffb6a0",
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_faq_TtURdM": {
+      "type": "pp-faq",
+      "blocks": {
+        "question_UUEbPG": {
+          "type": "question",
+          "settings": {
+            "heading": "Is the Cozy Cat Cuddle Bed suitable for large cats?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Absolutely! The Cozy Cat Cuddle Bed is designed to accommodate cats of all sizes, providing the same superior comfort and style for every furry friend.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_iwgzRn": {
+          "type": "question",
+          "settings": {
+            "heading": "How easy is it to clean the Cozy Cat Cuddle Bed?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>The Cozy Cat Cuddle Bed features removable and washable components, making it incredibly easy to maintain cleanliness and hygiene for your pet.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_gNmdPq": {
+          "type": "question",
+          "settings": {
+            "heading": "Is this bed safe for kittens as well?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Of course! The tent-like design ensures kittens have a secure and cozy spot to relax, encouraging peaceful sleep and comfort.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_NpRfRa": {
+          "type": "question",
+          "settings": {
+            "heading": "What materials is the Cozy Cat Cuddle Bed made from?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Crafted with high-quality, soft fabrics, the bed offers a plush, durable experience for your pets, ensuring long-lasting comfort.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "Can this bed be used for other small pets?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Yes, this versatile bed can be perfect for small dogs or even rabbits, offering the same level of comfort and security.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#ffd4c7",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#000000",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_guarantee_NNKyJ6": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_tVTcmU": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "heart",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#f8663b"
+          }
+        },
+        "heading_jfhp4z": {
+          "type": "heading",
+          "settings": {
+            "heading": "Experience Peace of Mind with Cozy Cat Cuddle Bed",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_N44eGB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are confident that your furry friend will love the Cozy Cat Cuddle Bed, but if you're not completely satisfied, we offer a full 30-day money-back guarantee. Try it out risk-free, and see the difference in your pet's comfort and relaxation. With high-quality materials and charming design, this bed blends seamlessly into your home while offering the cozy retreat your pet deserves. Trust in the quality and let your pets enjoy a plush sanctuary today.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_8tJzYX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_tVTcmU",
+        "heading_jfhp4z",
+        "text_N44eGB",
+        "button_8tJzYX"
+      ],
+      "settings": {
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "gradient": ""
+      }
+    },
+    "featured_collection_pkU6gk": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Frequently Bought Together",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_rounded_corners": "medium",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_benefits_gkXTTj",
+    "pp_image_with_text_BVEaDq",
+    "pp_image_with_percentage_fLf47C",
+    "pp_reviews_dqQHmw",
+    "pp_comparison_table_ttamEN",
+    "pp_faq_TtURdM",
+    "pp_guarantee_NNKyJ6",
+    "related-products",
+    "featured_collection_pkU6gk"
+  ]
+}

@@ -1,0 +1,445 @@
+{% assign section_padding = 'padding-top: ' | append: section.settings.padding_top | append: 'px; padding-bottom: ' | append: section.settings.padding_bottom | append: 'px; margin-top: ' | append: section.settings.margin_top | append: 'px; margin-bottom: ' | append: section.settings.margin_bottom | append: 'px;' %}
+
+{% assign gradient_style = '' %}
+
+{% if section.settings.gradient != blank %}
+  {% assign gradient_style = 'background: ' | append: section.settings.gradient | append: ';' %}
+{% endif %}
+
+<div class="pagepilot-layout" style="{{ section_padding }}{{ gradient_style }}">
+  <div class="pp-container pp-p-4 pp-mx-auto pp-flex pp-flex-col pp-gap-10">
+
+    <div class="pp-flex pp-flex-col pp-gap-8">
+
+      {% if section.settings.heading != blank %}
+        <h2 class="{{ section.settings.heading_size }} pp-text-{{ section.settings.heading_mobilealignment }} sm:pp-text-{{ section.settings.heading_alignment }}" style="color: {{ section.settings.heading_color }};">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+        <div class="pp-w-full pp-max-w-4xl pp-mx-auto">
+          <div class="{{ section.settings.text_style }} pp-text-{{ section.settings.text_mobilealignment }} sm:pp-text-{{ section.settings.text_alignment }}" style="color: {{ section.settings.text_color }};" {{ section.shopify_attributes }}>
+            {{ section.settings.text }}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+
+
+    {% assign rounded_class = '' %}
+    {% case section.settings.rounded_corners %}
+      {% when 'low' %}
+        {% assign rounded_class = 'pp-rounded-xl' %}
+      {% when 'medium' %}
+        {% assign rounded_class = 'pp-rounded-2xl' %}
+      {% when 'high' %}
+        {% assign rounded_class = 'pp-rounded-3xl' %}
+      {% when 'full' %}
+        {% assign rounded_class = 'pp-rounded-full' %}
+    {% endcase %}
+
+    <div class="pp-flex pp-flex-col pp-gap-6">
+      {% for block in section.blocks %}
+      <details class="pp-group pp-appearance-none pp-outline-none pp-transition pp-duration-300 hover:pp-cursor-pointer hover:pp-bg-black/5 {{ rounded_class }}" style="background-color: {{ section.settings.question_background_color}}; {% if section.settings.border_size == 'small' %}border: 1px solid {{ section.settings.border_color }};{% endif %}">
+        <summary class="pp-flex pp-w-full pp-appearance-none pp-items-center pp-justify-between  pp-py-6 pp-relative">
+          <div class="pp-px-6">
+            <div class="pp-pr-10 pp-text {{ block.settings.heading_size }}" style="color: {{ block.settings.heading_color }};">{{ block.settings.heading }}</div>
+
+            <svg class="h-[22px] pp-w-[22px] pp-min-w-[22px] pp-absolute pp-right-6 pp-top-6 pp-transition-transform pp-duration-500 group-open:pp-rotate-180" style="fill: {{ section.settings.arrow_color }};" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+              <path d="M216.49,104.49l-80,80a12,12,0,0,1-17,0l-80-80a12,12,0,0,1,17-17L128,159l71.51-71.52a12,12,0,0,1,17,17Z"></path>
+            </svg>
+          </div>
+        </summary>
+        <article class="pp-w-full pp-break-words pp-px-6 pp-pb-6 {{ block.settings.text_style }}" style="color: {{ block.settings.text_color }};">
+           {{ block.settings.text }}
+        </article>
+      </details>
+    {% endfor %}
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "PP - FAQ",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Frequently Asked Questions",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "Extra extra large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "heading_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Enter your text here. This section was made using PagePilot AI. Create high-converting product pages with just a few clicks on pagepilot.ai</p>",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Small"
+        },
+        {
+          "value": "subtitle",
+          "label": "Large"
+        }
+      ],
+      "default": "subtitle",
+      "label": "Text size"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Q&A"
+    },
+    {
+      "type": "select",
+      "id": "border_size",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "small",
+          "label": "Small"
+        }
+      ],
+      "default": "small",
+      "label": "Border size"
+    },
+    {
+      "type": "select",
+      "id": "rounded_corners",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "low",
+          "label": "Low"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "high",
+          "label": "High"
+        },
+        {
+          "value": "full",
+          "label": "Full"
+        }
+      ],
+      "default": "medium",
+      "label": "Rounded Corners"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Border color",
+      "default": "#d0d5dd"
+    },
+    {
+      "type": "color",
+      "id": "question_background_color",
+      "label": "Background color",
+      "default": "#FAFAFA"
+    },
+    {
+      "type": "color",
+      "id": "arrow_color",
+      "label": "Arrow color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient",
+      "label": "Background color",
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "question",
+      "name": "Question",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Question",
+          "label": "Question"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "Small"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h2",
+              "label": "Large"
+            }
+          ],
+          "default": "h3",
+          "label": "Question size"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Question color",
+          "default": "#000000"
+        },
+        {
+          "type": "header",
+          "content": "Answer"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Answer goes here.</p>",
+          "label": "Answer"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Small"
+            },
+            {
+              "value": "subtitle",
+              "label": "Large"
+            }
+          ],
+          "default": "body",
+          "label": "Answer size"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Answer color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PP - FAQ",
+      "blocks": [
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        },
+        {
+          "type": "question"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

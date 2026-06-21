@@ -1,0 +1,503 @@
+{% assign section_padding = 'padding-top: ' | append: section.settings.padding_top | append: 'px; padding-bottom: ' | append: section.settings.padding_bottom | append: 'px; margin-top: ' | append: section.settings.margin_top | append: 'px; margin-bottom: ' | append: section.settings.margin_bottom | append: 'px;' %}
+
+{% assign gradient_style = '' %}
+
+{% if section.settings.gradient != blank %}
+  {% assign gradient_style = 'background: ' | append: section.settings.gradient | append: ';' %}
+{% endif %}
+
+
+<div class="pagepilot-layout" style="{{ section_padding }}{{ gradient_style }}">
+
+  <div class="pp-container pp-mx-auto pp-w-full pp-p-4">
+    <div class="pp-flex pp-flex-col pp-gap-8">
+
+      {% if section.settings.heading != blank %}
+        <h2 class="{{ section.settings.heading_size }} pp-text-{{ section.settings.heading_mobilealignment }} sm:pp-text-{{ section.settings.heading_alignment }}" style="color: {{ section.settings.heading_color }};">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.text != blank %}
+        <div class="pp-w-full {% if section.settings.text_alignment == 'center' %}pp-max-w-4xl pp-mx-auto{% endif %}">
+          <div class="{{ section.settings.text_style }} pp-text-{{ section.settings.text_mobilealignment }} sm:pp-text-{{ section.settings.text_alignment }}" style="color: {{ section.settings.text_color }};" {{ section.shopify_attributes }}>
+            {{ section.settings.text }}
+          </div>
+        </div>
+      {% endif %}
+
+    </div>
+
+    <div class="pp-w-full pp-items-center pp-justify-center pp-flex pp-flex-col sm:pp-grid pp-grid-cols-1 md:pp-grid-cols-4 pp-gap-y-10 md:pp-gap-10 pp-mt-10">
+      <div class="pp-w-full pp-px-6 pp-grid pp-grid-cols-2 pp-justify-normal pp-items-start md:pp-flex md:pp-flex-col pp-mx-auto md:pp-items-center md:pp-justify-center pp-gap-12 sm:pp-order-1 pp-order-3">
+        {% for block in section.blocks limit:2 %}
+          <div class="pp-flex pp-flex-col pp-items-center pp-justify-center pp-text-center pp-gap-2" {{ block.shopify_attributes }}>
+            <div class="
+              {% if block.settings.emoji_size == 'small' %}pp-text-4xl
+              {% elsif block.settings.emoji_size == 'medium' %}pp-text-5xl
+              {% else %}pp-text-6xl{% endif %}
+            ">
+              {{ block.settings.emoji }}
+            </div>
+            <div class="{{ block.settings.heading_size }}" style="color: {{ block.settings.heading_color }};">
+              {{ block.settings.heading }}
+            </div>
+            <div class="pp-w-full pp-break-words {{ block.settings.text_style }}" style="color: {{ block.settings.text_color }};">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="pp-px-6 pp-col-span-2 pp-flex pp-items-center pp-justify-center pp-order-2">
+
+          {% assign image_width_class = '' %}
+
+          {% case section.settings.desktop_image_width %}
+            {% when 'small' %}
+              {% assign image_width_class = 'pp-max-w-lg' %}
+            {% when 'medium' %}
+              {% assign image_width_class = 'pp-max-w-2xl' %}
+            {% when 'large' %}
+              {% assign image_width_class = 'pp-max-w-4xl' %}
+          {% endcase %}
+
+        {% assign image_class = 'pp-w-full ' | append: image_width_class | append: ' ' | append: rounded_class %}
+
+        {% assign border_radius = section.settings.image_border_radius | times: 1 %}
+
+        {% if border_radius == 100 %}
+          {% assign border_radius = 99999 %}
+        {% endif %}
+
+        {% if section.settings.image %}
+        <img src="{{ section.settings.image | img_url: 'master' }}"
+              alt="{{ section.settings.image.alt | escape }}"
+              loading="lazy"
+              class="{{ image_class }}"
+            style="border-radius: {{ border_radius }}px;"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}">
+        {% else %}
+        <div class="pp-w-full pp-h-full {{ image_width_class }}">
+          <img src="{{ 'pp-image-placeholder.svg' | asset_url }}" alt="PagePilot AI Shopify Product" class="pp-w-full pp-h-full" style="border-radius: {{ border_radius }}px; border: 1px solid #d1d5db;" />
+        </div>
+        {% endif %}
+
+      </div>
+      <div class="pp-w-full pp-px-6 pp-grid pp-grid-cols-2 pp-justify-normal pp-items-start md:pp-flex md:pp-flex-col pp-mx-auto md:pp-items-center md:pp-justify-center pp-gap-12 pp-order-3">
+        {% for block in section.blocks offset:2 limit:2 %}
+          <div class="pp-flex pp-flex-col pp-items-center pp-justify-center pp-text-center pp-gap-2" {{ block.shopify_attributes }}>
+            <div class="
+              {% if block.settings.emoji_size == 'small' %}pp-text-4xl
+              {% elsif block.settings.emoji_size == 'medium' %}pp-text-5xl
+              {% else %}pp-text-6xl{% endif %}
+            ">
+              {{ block.settings.emoji }}
+            </div>
+            <div class="{{ block.settings.heading_size }}" style="color: {{ block.settings.heading_color }};">
+              {{ block.settings.heading }}
+            </div>
+            <div class="pp-w-full pp-break-words {{ block.settings.text_style }}" style="color: {{ block.settings.text_color }};">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PP - Image With Benefits",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "select",
+      "id": "desktop_image_width",
+      "options": [
+        {
+          "value": "small",
+          "label": "Small"
+        },
+        {
+          "value": "medium",
+          "label": "Medium"
+        },
+        {
+          "value": "large",
+          "label": "Large"
+        }
+      ],
+      "default": "large",
+      "label": "Image size",
+      "info": "Image is automatically optimized for mobile."
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 100,
+      "step": 25,
+      "unit": "%",
+      "label": "Rounded Corners",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "This section was made using PagePilot AI",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        },
+        {
+          "value": "hxl",
+          "label": "Extra large"
+        },
+        {
+          "value": "hxxl",
+          "label": "Extra extra large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "heading_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "default": "<p>Enter your text here. This section was made using PagePilot AI. Create high-converting product pages with just a few clicks on pagepilot.ai</p>",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_style",
+      "options": [
+        {
+          "value": "body",
+          "label": "Small"
+        },
+        {
+          "value": "subtitle",
+          "label": "Large"
+        }
+      ],
+      "default": "subtitle",
+      "label": "Text size"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
+    },
+    {
+      "type": "select",
+      "id": "text_mobilealignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Mobile alignment"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient",
+      "label": "Background color",
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "text",
+          "id": "emoji",
+          "label": "Emoji",
+          "default": "🔥"
+        },
+        {
+          "type": "select",
+          "id": "emoji_size",
+          "options": [
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "medium",
+          "label": "Emoji size"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "Benefit Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h4",
+              "label": "Small"
+            },
+            {
+              "value": "h3",
+              "label": "Medium"
+            },
+            {
+              "value": "h2",
+              "label": "Large"
+            }
+          ],
+          "default": "h3",
+          "label": "Heading size"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading color",
+          "default": "#000000"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Describe the benefit here.</p>",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Small"
+            },
+            {
+              "value": "subtitle",
+              "label": "Large"
+            }
+          ],
+          "default": "body",
+          "label": "Text size"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text color",
+          "default": "#000000"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PP - Image With Benefits",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🔥",
+            "heading": "First Benefit",
+            "text": "<p>Awesome benefit goes here</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "emoji": "❤️",
+            "heading": "Second Benefit",
+            "text": "<p>Awesome benefit goes here</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "emoji": "😎",
+            "heading": "Third Benefit",
+            "text": "<p>Awesome benefit goes here</p>"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "emoji": "⭐️",
+            "heading": "Fourth Benefit",
+            "text": "<p>Awesome benefit goes here</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

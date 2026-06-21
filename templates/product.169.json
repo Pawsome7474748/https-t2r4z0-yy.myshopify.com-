@@ -1,0 +1,1283 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "reviews_number_wmFXyt": {
+          "type": "reviews-number",
+          "settings": {
+            "reviews_text": "158 Reviews",
+            "reviews_text_style": "body",
+            "reviews_text_color": "#000000",
+            "reviews_stars_size": "sm",
+            "reviews_stars_color": "#facc15",
+            "reviews_stars_number": 5,
+            "reviews_alignment": "start",
+            "reviews_mobilealignment": "start",
+            "reviews_border_top": 0,
+            "reviews_padding_top": 0,
+            "reviews_padding_bottom": 0
+          }
+        },
+        "product_title_DXtTRC": {
+          "type": "product-title",
+          "settings": {
+            "product_title_heading_size": "h1",
+            "product_title_heading_alignment": "left",
+            "product_title_heading_mobilealignment": "left",
+            "product_title_heading_color": "#000000",
+            "product_title_padding_top": 0,
+            "product_title_padding_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#000000",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": false
+          }
+        },
+        "pp_text_VLf9ic": {
+          "type": "pp-text",
+          "settings": {
+            "pp_text": "<strong>Say goodbye to scattered litter and messy floors with our innovative double-layer design</strong>",
+            "pp_text_size": "body",
+            "pp_text_color": "#000000",
+            "pp_text_alignment": "left",
+            "pp_text_mobilealignment": "left",
+            "pp_text_border_top": 0,
+            "pp_text_border_bottom": 1,
+            "pp_text_border_color": "#e8e8e1",
+            "pp_text_padding_top": 0,
+            "pp_text_padding_bottom": 16
+          }
+        },
+        "pp_benefits_Lfapdf": {
+          "type": "pp-benefits",
+          "settings": {
+            "pp_benefits_text1": "✔️ Keeps floors litter-free",
+            "pp_benefits_text2": "✔️ Waterproof for easy cleaning",
+            "pp_benefits_text3": "✔️ Durable and long-lasting",
+            "pp_benefits_text4": "✔️ Eco-friendly, safe for pets",
+            "pp_benefits_text_size": "body",
+            "pp_benefits_text_color": "#000000",
+            "pp_benefits_text_alignment": "left",
+            "pp_benefits_text_mobilealignment": "left",
+            "pp_benefits_border_top": 0,
+            "pp_benefits_border_bottom": 1,
+            "pp_benefits_border_color": "#e8e8e1",
+            "pp_benefits_padding_top": 0,
+            "pp_benefits_padding_bottom": 12
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_text": "Add To Cart👉🏻",
+            "sold_out_text": "Sold Out😭",
+            "unavailable_text": "Unavailable",
+            "button_color": "#f8663b",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 20,
+            "button_padding_horizontal": 15
+          }
+        },
+        "pp_guarantees_JzRPwy": {
+          "type": "pp-guarantees",
+          "settings": {
+            "pp_guarantees_icon1": "truck",
+            "pp_guarantees_text1": "Worldwide Shipping",
+            "pp_guarantees_icon2": "heart",
+            "pp_guarantees_text2": "100% Money Back Guarantee",
+            "pp_guarantees_icon3": "box",
+            "pp_guarantees_text3": "Free Returns",
+            "pp_guarantees_icon_size": 28,
+            "pp_guarantees_icon_color": "#000000",
+            "pp_guarantees_text_size": "small",
+            "pp_guarantees_text_color": "#000000",
+            "pp_guarantees_border_top": 0,
+            "pp_guarantees_border_bottom": 1,
+            "pp_guarantees_border_color": "#e8e8e1",
+            "pp_guarantees_padding_top": 0,
+            "pp_guarantees_padding_bottom": 16
+          }
+        },
+        "pp_review_DzipVt": {
+          "type": "pp-review",
+          "settings": {
+            "pp_review_image": "shopify://shop_images/media_avatar_96_men_95.webp",
+            "pp_review_image_border_radius": "full",
+            "pp_review_stars_size": "sm",
+            "pp_review_stars_color": "#facc15",
+            "pp_review_stars_number": 5,
+            "pp_review_stars_alignment": "start",
+            "pp_review_stars_mobilealignment": "start",
+            "pp_review_text": "\"Wow, this mat works wonders! My cat used to track litter everywhere, but now it's all contained on this mat. So easy to clean too, just shake out the litter and done! I love that it's safe for my furry buddy and the earth. Totally worth it!\"",
+            "pp_review_text_style": "small",
+            "pp_review_text_alignment": "left",
+            "pp_review_text_mobilealignment": "left",
+            "pp_review_text_color": "#000000",
+            "pp_review_author_badge_text": "<p>Evan Y.</p>",
+            "pp_review_author_badge_text_style": "small",
+            "pp_review_author_badge_text_color": "#000000",
+            "pp_review_author_badge_color": "#2993f1",
+            "pp_review_border_top": 0,
+            "pp_review_border_bottom": 0,
+            "pp_review_border_color": "#e8e8e1",
+            "pp_review_padding_top": 0,
+            "pp_review_padding_bottom": 0
+          }
+        },
+        "pp_expandable_r43w6T": {
+          "type": "pp-expandable",
+          "settings": {
+            "pp_expandable_title1": "🚚 Shipping",
+            "pp_expandable_content1": "<p><p>Enjoy insured shipping on all orders. We process orders within 1-3 business days before dispatching. Upon shipment, the anticipated delivery times are as follows:</p><ul><li>USA: 3-7 business days</li><li>UK: 7-18 business days</li><li>Australia: 7-18 business days</li><li>Canada: 7-18 business days</li><li>Europe: 7-18 business days</li><li>Rest of world: 14-20 business days</li></ul></p>",
+            "pp_expandable_title2": "📦 Returns",
+            "pp_expandable_content2": "<p><p>We are certain you wll adore our products, just as we do! If, however, things don not work out as expected, our return and refund policy is crafted to simplify the process for you. You can return the product for a full refund within 30 days of purchase.</p></p>",
+            "pp_expandable_title3": "🏅 Money Back Guarantee",
+            "pp_expandable_content3": "<p><p>You can try our products risk-free with our 30-day Money-Back Guarantee. If you are not completely satisfied, simply return it for a full refund.</p></p>",
+            "pp_expandable_text_size": "medium",
+            "pp_expandable_answer_size": "small",
+            "pp_expandable_text_color": "#000000",
+            "pp_expandable_arrow_color": "#000000",
+            "pp_expandable_text_border_color": "#e8e8e1",
+            "pp_expandable_border_top": 1,
+            "pp_expandable_border_bottom": 0,
+            "pp_expandable_border_color": "#e8e8e1",
+            "pp_expandable_padding_top": 12,
+            "pp_expandable_padding_bottom": 0
+          }
+        },
+        "pp_partners_7B3bAx": {
+          "type": "pp-partners",
+          "settings": {
+            "pp_partners_heading": "<strong>As Seen On</strong>",
+            "pp_partners_heading_size": "medium",
+            "pp_partners_heading_color": "#000000",
+            "pp_partners_gradient": "radial-gradient(rgba(255, 255, 255, 0.93) 34%, rgba(255, 255, 255, 0.17) 77%)",
+            "pp_partners_border_top": 0,
+            "pp_partners_border_bottom": 0,
+            "pp_partners_border_color": "#e8e8e1",
+            "pp_partners_padding_top": 0,
+            "pp_partners_padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "reviews_number_wmFXyt",
+        "product_title_DXtTRC",
+        "price",
+        "pp_text_VLf9ic",
+        "pp_benefits_Lfapdf",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pp_guarantees_JzRPwy",
+        "pp_review_DzipVt",
+        "pp_expandable_r43w6T",
+        "pp_partners_7B3bAx"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1abe165f-834c-4397-80e1-165dc6524d44",
+        "media_size": "medium",
+        "image_rounded_corners": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "pp_image_with_benefits_gkXTTj": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7CB6Bn": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🧹",
+            "emoji_size": "medium",
+            "heading": "Clean",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Traps litter effectively so your floors stay pristine.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_7HpQgA": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "💧",
+            "emoji_size": "medium",
+            "heading": "Waterproof",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Easily washable and quick-drying for convenience.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_erNb6q": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🐾",
+            "emoji_size": "medium",
+            "heading": "Comfort",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Gentle on cat paws and pleasant to walk on.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_gJWaeR": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🌿",
+            "emoji_size": "medium",
+            "heading": "Eco-safe",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Made from environmentally-friendly, pet-safe materials.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7CB6Bn",
+        "benefit_7HpQgA",
+        "benefit_erNb6q",
+        "benefit_gJWaeR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_915_169_S727564762c2843d6ad4058efb5c24061b.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 100,
+        "heading": "<strong>Traps Litter Efficiently</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Enjoy a tidy home with our effective litter-trapping mat, safeguarding your floors from spills and messiness</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "linear-gradient(176deg, rgba(255, 255, 255, 0), #ffe8e1 100%)",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 20,
+        "margin_bottom": 36
+      }
+    },
+    "pp_image_with_text_BVEaDq": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_aFxCRe": {
+          "type": "heading",
+          "settings": {
+            "heading": "End Litter Tracking Woes with Our Double Layer Mat",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "text_ifpgzE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tired of finding stray litter grains all over your home? Our mat uses a double-layer design to catch every bit of litter that escapes the box. With a waterproof backing, cleaning is simple and hassle-free. Save time and keep your home spotless with this eco-conscious and durable solution built to last.</p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_cPWTPH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aFxCRe",
+        "text_ifpgzE",
+        "button_cPWTPH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_916_169_S078f9d9b22504eac8ea592deb0e73aefM.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_image_with_percentage_fLf47C": {
+      "type": "pp-image-with-percentage",
+      "blocks": {
+        "heading_UYwMbc": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Get Your EVA Double Layer Cat Litter Mat Today</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "percent_MDgdzN": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 95,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Noticed cleaner floors after use</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_DNwFD7": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 95,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Agree that cleaning is much easier</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_Wh6UWW": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 94,
+            "percent_filled_color": "#f8663b",
+            "percent_unfilled_color": "#ffd4c7",
+            "percent_text_color": "#f8663b",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Love its durable and eco-friendly design</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "button_zpmLYc": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get Yours Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Satisfaction Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_UYwMbc",
+        "percent_MDgdzN",
+        "percent_DNwFD7",
+        "percent_Wh6UWW",
+        "button_zpmLYc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/media_image_917_169_S9cebff5169214b7f80b14df1ad84b19bP.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 44
+      }
+    },
+    "pp_reviews_dqQHmw": {
+      "type": "pp-reviews",
+      "blocks": {
+        "review_qDkscz": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3157_169_A4b2f28b6682d4356b25fd74ea67ece20e_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Jessica R.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Love it!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_S80MVU": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3158_169_Ab3ca113984704b3cbdf4976360d90aab1_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Mark D.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "No more litter mess!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_cO4Cll": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3159_169_A7240a4752299409384bbbf68b74adf64O_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Samantha L.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Loving how simple it is to clean. Keeps the litter where it belongs. Highly recommend!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_i3NSKD": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3160_169_Aa0a6a28f0c084777bf79f0a5fd626c11U_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Tom H.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "We've tried multiple mats, but this one's a game changer! Efficient and eco-friendly.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_rnLYSS": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/media_review_3161_169_Acfd57dc2a8d744fbb8aec3cbbd64dd7bI_jpg.webp",
+            "image_border_radius": "low",
+            "author_text": "Emily K.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "OMG, can't even express how awesome this mat is! It completely catches all the litter my cats track out of the box. Floors are actually clean now! Plus, it's waterproof, so cleaning is as easy as it gets. Gone through many mats but this is THE one. Would buy again in a heartbeat. xD",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_Cqtql8": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Michael B.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Keeps my floor neat 😊",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_2bJkwy": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Olivia P.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Happy with this purchase! Litter stays off my floor.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_mwb5RI": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Chris J.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Finally, a solution to litter scatter. Easy maintenance and eco-friendly.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_gKDmnU": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Rachel N.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Fantastic!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_3BTcGj": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "David S.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Neat & tidy, love it 😍",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_e3YGNL": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Megan V.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Great investment for my kitty's litter box area.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_wmXlPu": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Luke T.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Best I've found! Cats don't mind stepping on it, and it's easy to wash.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_tW2EH9": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Lisa B.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "This mat has been fantastic. At first, I wasn't sure if I needed another litter mat, but boy, am I glad I got it! It seriously cuts down on the mess around my litter boxes. Plus, no more cleaning litter off my floors everyday. Just lift, shake and done! Love that it's eco-friendly too. 😊",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_ydcjKv": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Charlie C.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "WOW :)",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_AV1ANY": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Nina F.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Easy to clean, no fuss!",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_sZoYwS": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Ryan W.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "So happy to finally find a mat that works. Highly recommend for cat lovers.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_Wnm0AV": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Sophia M.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "A fantastic addition to my cat's litter routine. Grateful for its durability and cleanliness benefits.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_VY3BJi": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Jason K.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Highly recommend this mat. It's a lifesaver for those tired of scattered litter. The double-layer is smart and catches all the stray bits. Waterproof and eco-friendly were icing on the cake. Cats seem to like it too. Never going back to any other product.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        }
+      },
+      "block_order": [
+        "review_qDkscz",
+        "review_S80MVU",
+        "review_cO4Cll",
+        "review_i3NSKD",
+        "review_rnLYSS",
+        "review_Cqtql8",
+        "review_2bJkwy",
+        "review_mwb5RI",
+        "review_gKDmnU",
+        "review_3BTcGj",
+        "review_e3YGNL",
+        "review_wmXlPu",
+        "review_tW2EH9",
+        "review_ydcjKv",
+        "review_AV1ANY",
+        "review_sZoYwS",
+        "review_Wnm0AV",
+        "review_VY3BJi"
+      ],
+      "settings": {
+        "heading_stars_size": "lg",
+        "heading_stars_color": "#facc15",
+        "stars_alignment": "center",
+        "stars_mobilealignment": "center",
+        "heading_stars_number": 5,
+        "heading": "Read What Cat Lovers Say",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Rated 4.8/5 by 1,200 Happy Customers</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "radial-gradient(rgba(255, 255, 255, 1), #ffe8e1 100%)",
+        "button_label": "",
+        "button_link": "",
+        "button_link_newtab": false,
+        "button_text_color": "#ffffff",
+        "button_background_color": "#f8663b",
+        "button_border_width": 0,
+        "button_border_color": "#000000",
+        "button_width": "fit",
+        "button_alignment": "center",
+        "button_mobilealignment": "center",
+        "button_rounded_corners": "medium",
+        "button_padding_vertical": 15,
+        "button_padding_horizontal": 15,
+        "button_subtext": "Fast Worldwide Shipping",
+        "button_subtext_style": "body",
+        "button_subtext_color": "#000000",
+        "button_action": "scroll",
+        "button_action_scroll_element": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_comparison_table_ttamEN": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_Wjx9pp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>What Makes EVA Double Layer Cat Litter Mat Special</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4ad9ba": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Experience superior litter trapping with our EVA double layer mat. Unlike others, it offers eco-friendly materials, dual-layer design, and effortless cleaning. Ideal for keeping your home neat and pet-safe.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_6hMT9z": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Efficient",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_KNWAfa": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Waterproof",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_jB68ak": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Comfort",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_CVBp68": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Eco-safe",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_6Crhhq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Affordable",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wjx9pp",
+        "text_4ad9ba",
+        "tableitem_6hMT9z",
+        "tableitem_KNWAfa",
+        "tableitem_jB68ak",
+        "tableitem_CVBp68",
+        "tableitem_6Crhhq"
+      ],
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#ffb6a0",
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_faq_TtURdM": {
+      "type": "pp-faq",
+      "blocks": {
+        "question_UUEbPG": {
+          "type": "question",
+          "settings": {
+            "heading": "How does the litter mat trap litter effectively?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>The unique double-layer design captures litter as your cat exits the box, keeping your floors clean. Just shake out the collected litter when needed.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_iwgzRn": {
+          "type": "question",
+          "settings": {
+            "heading": "Is the litter mat easy to clean?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Absolutely! The waterproof EVA material allows for quick cleaning. Simply shake off litter and rinse with water when necessary.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_gNmdPq": {
+          "type": "question",
+          "settings": {
+            "heading": "Is this mat safe for my cat's paws?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Yes, the mat is designed with soft and gentle surfaces that are comfortable for your cat to walk on, ensuring a safe and pleasant experience.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_NpRfRa": {
+          "type": "question",
+          "settings": {
+            "heading": "Can I use this mat for multiple cats?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Definitely. The durable and large design accommodates households with multiple cats, effectively trapping litter in high-traffic areas.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "What makes this mat eco-friendly?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Made from EVA, a non-toxic and recyclable material, this litter mat offers an environmentally conscious option to traditional litter mats.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#ffd4c7",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#000000",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_guarantee_NNKyJ6": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_tVTcmU": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "heart",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#f8663b"
+          }
+        },
+        "heading_jfhp4z": {
+          "type": "heading",
+          "settings": {
+            "heading": "Start Using EVA Double Layer Cat Litter Mat Risk-Free!",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_N44eGB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Try our revolutionary cat litter mat today with confidence. We're offering a 30-day money-back guarantee to ensure you love it. Discover the eco-friendly design, effective litter trapping, and convenience that cat lovers rave about. If you're not satisfied, simply return it for a full refund. Elevate your cat's litter routine with a mess-free solution today.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_8tJzYX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now👉🏻",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#f8663b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_tVTcmU",
+        "heading_jfhp4z",
+        "text_N44eGB",
+        "button_8tJzYX"
+      ],
+      "settings": {
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "gradient": ""
+      }
+    },
+    "featured_collection_pkU6gk": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Frequently Bought Together",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "frontpage",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_rounded_corners": "medium",
+        "color_scheme": "",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_benefits_gkXTTj",
+    "pp_image_with_text_BVEaDq",
+    "pp_image_with_percentage_fLf47C",
+    "pp_reviews_dqQHmw",
+    "pp_comparison_table_ttamEN",
+    "pp_faq_TtURdM",
+    "pp_guarantee_NNKyJ6",
+    "related-products",
+    "featured_collection_pkU6gk"
+  ]
+}

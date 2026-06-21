@@ -1,0 +1,486 @@
+{% assign section_padding = 'padding-top: ' | append: section.settings.padding_top | append: 'px; padding-bottom: ' | append: section.settings.padding_bottom | append: 'px; margin-top: ' | append: section.settings.margin_top | append: 'px; margin-bottom: ' | append: section.settings.margin_bottom | append: 'px;' %}
+
+{% assign gradient_style = '' %}
+
+{% if section.settings.gradient != blank %}
+  {% assign gradient_style = 'background: ' | append: section.settings.gradient | append: ';' %}
+{% endif %}
+
+<div class="pagepilot-layout" style="{{ section_padding }}{{ gradient_style }}">
+  <div class="pp-container pp-mx-auto pp-w-full pp-grid lg:pp-grid-cols-2 pp-gap-4 lg:pp-gap-10 pp-justify-center pp-items-center pp-p-4">
+    <div class="pp-flex pp-flex-col pp-items-center pp-justify-center pp-gap-8">
+
+      {%- for block in section.blocks -%}
+        {% case block.type %}
+            {%- when 'heading' -%}
+            {% if block.settings.heading != blank %}
+              <h2
+                class="{{ block.settings.heading_size }} pp-text-{{ block.settings.heading_mobilealignment }} sm:pp-text-{{ block.settings.heading_alignment }}"
+                style="color: {{ block.settings.heading_color }};"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.heading }}
+              </h2>
+            {% endif %}
+
+            {%- when 'text' -%}
+
+            {% if block.settings.text != blank %}
+              <div class="{{ block.settings.text_style }} pp-text-{{ block.settings.text_mobilealignment }} sm:pp-text-{{ block.settings.text_alignment }}" style="color: {{ block.settings.text_color }};" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {% endif %}
+
+
+              {%- if block.settings.button_label != blank -%}
+                {% capture button_style %}
+                  color: {{ block.settings.button_text_color }};
+                  background-color: {{ block.settings.button_background_color }};
+                  {% if block.settings.button_border_width > 0 %}
+                    border: {{ block.settings.button_border_width }}px solid {{ block.settings.button_border_color }};
+                  {% endif %}
+                  padding: {{ block.settings.button_padding_vertical }}px {{ block.settings.button_padding_horizontal }}px;
+                  display: inline-block;
+                  text-align: center;
+                {% endcapture %}
+                {% assign rounded_class = '' %}
+                {% case block.settings.button_rounded_corners %}
+                  {% when 'low' %}
+                    {% assign rounded_class = 'pp-rounded-2xl' %}
+                  {% when 'medium' %}
+                    {% assign rounded_class = 'pp-rounded-3xl' %}
+                  {% when 'high' %}
+                    {% assign rounded_class = 'pp-rounded-full' %}
+                {% endcase %}
+                <div class="pp-w-full pp-text-{{ block.settings.button_mobilealignment }} sm:pp-text-{{ block.settings.button_alignment }}">
+
+
+                  {% if block.settings.button_action == 'scroll' %}
+                    <button
+                      onclick="pagepilot.scrollToProductTitle();"
+                      class="{% if block.settings.button_width == 'full' %}pp-w-full{% else %}pp-w-fit{% endif %} {{ rounded_class }}"
+                      style="{{ button_style | strip_newlines }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.button_label }}
+                    </button>
+                  {% else %}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                        {% if block.settings.button_link_newtab %}
+                          target="_blank" rel="noopener noreferrer"
+                        {% endif %}
+                      {% endif %}
+                      class="{% if block.settings.button_width == 'full' %}pp-w-full{% else %}pp-w-fit{% endif %} {{ rounded_class }}"
+                      style="{{ button_style | strip_newlines }}"
+                      {{ block.shopify_attributes }}
+                    >
+                      {{ block.settings.button_label }}
+                    </a>
+                  {% endif %}
+
+                  {% if block.settings.button_subtext != blank and block.settings.button_width == 'full' %}
+                    <div class="pp-text-center pp-mt-4 {{ block.settings.button_subtext_style }}" style="color: {{ block.settings.button_subtext_color }};">{{ block.settings.button_subtext }}</div>
+                  {% endif %}
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+          {% else %}
+            {% continue %}
+      {%- endfor -%}
+
+    </div>
+
+    <div class="pp-mt-10 lg:pp-mt-0">
+
+      <div class="pp-w-full pp-max-w-[550px] pp-grid pp-grid-cols-4 pp-mx-auto pp-mb-6">
+        <div class="pp-flex pp-flex-col pp-col-span-2">
+        </div>
+        <div class="pp-flex pp-items-center pp-justify-center pp-font-semibold pp-text-center body" style="color: {{ section.settings.table_headline_color }};">
+          {{ product.title | truncate: 35 }}
+        </div>
+        <div class="pp-flex pp-items-center pp-justify-center pp-font-semibold pp-text-center body" style="color: {{ section.settings.table_headline_color }};">
+          {{ section.settings.table_headline_secondary | truncate: 13 }}
+        </div>
+      </div>
+
+      <div class="pp-w-full pp-max-w-[550px] pp-mx-auto pp-grid pp-grid-cols-4 pp-border pp-rounded-2xl pp-shadow-xl pp-shadow-black/5 pp-bg-white">
+        <div class="pp-flex pp-flex-col pp-col-span-2 pp-rounded-l-2xl" style="background-color: {{ section.settings.table_color }};">
+          {%- for block in section.blocks -%}
+            {% if block.type == 'tableitem' %}
+              <div class="pp-flex pp-justify-center pp-items-center pp-h-[55px] pp-text-wrap pp-border-solid pp-border-x-0 pp-border-t-0 pp-border-b-[1px] pp-border-b-white/15 pp-px-6">
+                <div class="w-full h-full pp-text-{{ block.settings.text_mobilealignment }} sm:pp-text-{{ block.settings.text_alignment }}" style="color: {{ section.settings.text_color }};">{{ block.settings.text | truncate: 15 }}</div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="pp-flex pp-flex-col">
+          {%- for block in section.blocks -%}
+            {% if block.type == 'tableitem' %}
+              <div class="pp-flex pp-justify-center pp-items-center pp-h-[55px]">
+                {% if block.settings.checkmark == 'us' %}
+                <svg class="pp-w-[25px] pp-h-[25px]" viewBox="0 0 32 27" xmlns="http://www.w3.org/2000/svg" style="fill: {{ block.settings.button_checkmark_color }};">
+                  <path d="M11.1803 26.4678C10.6803 26.4678 0.68034 13.9678 0.18034 12.9678C-0.31966 11.9678 0.18034 10.4678 2.18034 10.9678C4.18034 11.4678 10.1803 15.4678 11.1803 15.4678C12.1803 15.4678 27.1803 1.96777 29.1803 0.467774C31.1803 -1.03223 32.6803 1.46777 31.6803 2.46777C30.6803 3.46777 11.6803 26.4678 11.1803 26.4678Z"></path>
+                </svg>
+                {% else %}
+                <svg class="pp-w-[25px] pp-h-[25px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="fill: {{ block.settings.button_x_color }};">
+                  <path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path>
+                </svg>
+              {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <div class="pp-flex pp-flex-col pp-rounded-r-2xl">
+          {%- for block in section.blocks -%}
+            {% if block.type == 'tableitem' %}
+              <div class="pp-flex pp-justify-center pp-items-center pp-h-[55px]">
+                {% if block.settings.checkmark == 'us' %}
+                  <svg class="pp-w-[25px] pp-h-[25px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" style="fill: {{ block.settings.button_x_color }};">
+                    <path d="M208.49,191.51a12,12,0,0,1-17,17L128,145,64.49,208.49a12,12,0,0,1-17-17L111,128,47.51,64.49a12,12,0,0,1,17-17L128,111l63.51-63.52a12,12,0,0,1,17,17L145,128Z"></path>
+                  </svg>
+                {% else %}
+                <svg class="pp-w-[25px] pp-h-[25px]" viewBox="0 0 32 27" xmlns="http://www.w3.org/2000/svg" style="fill: {{ block.settings.button_checkmark_color }};">
+                  <path d="M11.1803 26.4678C10.6803 26.4678 0.68034 13.9678 0.18034 12.9678C-0.31966 11.9678 0.18034 10.4678 2.18034 10.9678C4.18034 11.4678 10.1803 15.4678 11.1803 15.4678C12.1803 15.4678 27.1803 1.96777 29.1803 0.467774C31.1803 -1.03223 32.6803 1.46777 31.6803 2.46777C30.6803 3.46777 11.6803 26.4678 11.1803 26.4678Z"></path>
+                </svg>
+              {% endif %}
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "PP - Comparison Table",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Table"
+    },
+    {
+      "type": "text",
+      "id": "table_headline_secondary",
+      "default": "Others",
+      "label": "Secondary Text"
+    },
+    {
+      "type": "color",
+      "id": "table_headline_color",
+      "label": "Table Headline color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "table_color",
+      "label": "Table color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient",
+      "label": "Background color",
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Section margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "Heading",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "inline_richtext",
+          "id": "heading",
+          "default": "This section was made using PagePilot AI",
+          "label": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "options": [
+            {
+              "value": "h2",
+              "label": "Small"
+            },
+            {
+              "value": "h1",
+              "label": "Medium"
+            },
+            {
+              "value": "h0",
+              "label": "Large"
+            },
+            {
+              "value": "hxl",
+              "label": "Extra large"
+            },
+            {
+              "value": "hxxl",
+              "label": "Extra extra large"
+            }
+          ],
+          "default": "h1",
+          "label": "Size"
+        },
+        {
+          "type": "select",
+          "id": "heading_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "left",
+          "label": "Alignment"
+        },
+        {
+          "type": "select",
+          "id": "heading_mobilealignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Mobile alignment"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Color",
+          "default": "#000000"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "Text",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "default": "<p>Enter your text here. This section was made using PagePilot AI. Create high-converting product pages with just a few clicks on pagepilot.ai</p>",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "text_style",
+          "options": [
+            {
+              "value": "body",
+              "label": "Small"
+            },
+            {
+              "value": "subtitle",
+              "label": "Large"
+            }
+          ],
+          "default": "subtitle",
+          "label": "Size"
+        },
+        {
+          "type": "select",
+          "id": "text_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Alignment"
+        },
+        {
+          "type": "select",
+          "id": "text_mobilealignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Mobile alignment"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Color",
+          "default": "#000000"
+        }
+      ]
+    },
+    {
+      "type": "tableitem",
+      "name": "Table Item",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Benefit",
+          "label": "Text"
+        },
+        {
+          "type": "select",
+          "id": "checkmark",
+          "options": [
+            {
+              "value": "us",
+              "label": "Our"
+            },
+            {
+              "value": "others",
+              "label": "Others"
+            }
+          ],
+          "default": "us",
+          "label": "Checkmark"
+        },
+        {
+          "type": "color",
+          "id": "button_checkmark_color",
+          "label": "Checkmark color",
+          "default": "#23c55e"
+        },
+        {
+          "type": "color",
+          "id": "button_x_color",
+          "label": "X color",
+          "default": "#000000"
+        },
+      ]
+    },
+  ],
+  "presets": [
+    {
+      "name": "PP - Comparison Table",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "tableitem"
+        },
+        {
+          "type": "tableitem"
+        },
+        {
+          "type": "tableitem"
+        },
+        {
+          "type": "tableitem"
+        },
+        {
+          "type": "tableitem"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,879 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "{{ product.vendor }}",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#000000",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": false
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": true,
+            "button_text": "Add to cart 👉🏻",
+            "sold_out_text": "Sold Out 😭",
+            "unavailable_text": "Unavailable",
+            "button_color": "#000000",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "large",
+        "image_rounded_corners": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28,
+        "gradient": ""
+      }
+    },
+    "pp_image_with_benefits_7jKKKP": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7DWPAB": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "👁️",
+            "emoji_size": "medium",
+            "heading": "Bubble Window",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Your Pet Can See Outside</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_hxwCgx": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "💨",
+            "emoji_size": "medium",
+            "heading": "Breathable",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Keep Pets Cool & Comfy</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_6KDDhQ": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🎒",
+            "emoji_size": "medium",
+            "heading": "Hands-Free Carry",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Awesome benefit goes here</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_rBnLP7": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "✨",
+            "emoji_size": "medium",
+            "heading": "Fashionable",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Trendy Astronaut Design</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7DWPAB",
+        "benefit_hxwCgx",
+        "benefit_6KDDhQ",
+        "benefit_rBnLP7"
+      ],
+      "name": "PP - Image With Benefits",
+      "settings": {
+        "desktop_image_width": "large",
+        "image_border_radius": 100,
+        "heading": "Why Pet Parents Love This!",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "margin_top": 20,
+        "margin_bottom": 20
+      }
+    },
+    "pp_image_with_text_aVCYVi": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_EYKJby": {
+          "type": "heading",
+          "settings": {
+            "heading": "Perfect For Traveling",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_36RU9f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you're taking a road trip, visiting the vet, or exploring new places, this carrier makes travel easy and comfortable for both you and your pet. The lightweight design and hands-free backpack style mean you can keep your hands free for whatever adventure awaits.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "button_mmXMxG": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#000000",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_EYKJby",
+        "text_36RU9f",
+        "button_mmXMxG"
+      ],
+      "name": "PP - Image With Text",
+      "settings": {
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "text_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_image_with_percentage_bWi6Ak": {
+      "type": "pp-image-with-percentage",
+      "blocks": {
+        "heading_HWEeMN": {
+          "type": "heading",
+          "settings": {
+            "heading": "Built for durability",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "percent_FqjgK3": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 99,
+            "percent_filled_color": "#000000",
+            "percent_unfilled_color": "#C7C7C7",
+            "percent_text_color": "#000000",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Scratch-resistant bubble window stays clear and crack-free, even with daily paws-on curiosity.<br/><br/></p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_6yArKQ": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 97,
+            "percent_filled_color": "#000000",
+            "percent_unfilled_color": "#C7C7C7",
+            "percent_text_color": "#000000",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Weatherproof PU leather shell keeps your pet dry and comfortable, rain or shine, all seasons.<br/><br/></p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "percent_fVWfEm": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 96,
+            "percent_filled_color": "#000000",
+            "percent_unfilled_color": "#C7C7C7",
+            "percent_text_color": "#000000",
+            "percent_background_color": "#ffffff",
+            "text": "<p>Reinforced stitching at every stress point holds firm under your pet's full weight, trip after trip.<br/><br/></p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000",
+            "border_size": 1,
+            "border_color": "#d0d5dd"
+          }
+        },
+        "button_rwbHf9": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#000000",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_HWEeMN",
+        "percent_FqjgK3",
+        "percent_6yArKQ",
+        "percent_fVWfEm",
+        "button_rwbHf9"
+      ],
+      "name": "PP - Image With Percent",
+      "settings": {
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_reviews_Mb9Ney": {
+      "type": "pp-reviews",
+      "blocks": {
+        "review_YgdzNx": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Sarah M.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "My cat actually likes getting in it now. The window keeps her calm on car rides.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_9pbDiT": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Daniel R.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Sturdy build and surprisingly comfortable to wear on long airport walks.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_3TWFaK": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Priya K.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Great airflow, no overheating even on warmer days. Highly recommend.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_qGNrUR": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Tom H.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Zippers feel premium and the straps are padded enough for a full day out.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_GjjMPQ": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Megan L.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Looks even better in person. My vet asked where I got it.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_9czTLt": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Alex P.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Fits my 5kg cat with room to spare. Easy to clean inside too.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_XP4GAR": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Jess W.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Held up great through a 6-hour road trip. No complaints from my dog either.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_Ajy4wY": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Carlos B.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Shipping was fast and packaging was solid. Backpack itself feels premium.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_TRFHip": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Nina F.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Bought one for each cat. Worth every dollar for stress-free vet visits.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_xcCHyH": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Owen T.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Buyer",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "Comfortable straps and the bubble window is clearer than I expected.",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        }
+      },
+      "block_order": [
+        "review_YgdzNx",
+        "review_9pbDiT",
+        "review_3TWFaK",
+        "review_qGNrUR",
+        "review_GjjMPQ",
+        "review_9czTLt",
+        "review_XP4GAR",
+        "review_Ajy4wY",
+        "review_TRFHip",
+        "review_xcCHyH"
+      ],
+      "name": "PP - Reviews",
+      "settings": {
+        "heading_stars_size": "lg",
+        "heading_stars_color": "#facc15",
+        "stars_alignment": "center",
+        "stars_mobilealignment": "center",
+        "heading_stars_number": 5,
+        "heading": "Loved by pet parents everywhere",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Real reviews from real customers who travel everywhere with their cats and small dogs in the Astronaut Pet Carrier Backpack.<br/><br/></p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "",
+        "button_label": "Shop Now",
+        "button_link": "",
+        "button_link_newtab": true,
+        "button_text_color": "#FFFFFF",
+        "button_background_color": "#000000",
+        "button_border_width": 0,
+        "button_border_color": "#000000",
+        "button_width": "fit",
+        "button_width_mobile": "full",
+        "button_alignment": "center",
+        "button_mobilealignment": "center",
+        "button_rounded_corners": "medium",
+        "button_padding_vertical": 15,
+        "button_padding_horizontal": 15,
+        "button_subtext": "30-Day Money Back Guarantee",
+        "button_subtext_style": "body",
+        "button_subtext_color": "#000000",
+        "button_action": "scroll",
+        "button_action_scroll_element": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_comparison_table_zkkEGP": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_DCqkDF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why ours is the better carrier",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_aitc8f": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A clear bubble window, padded straps, and breathable airflow set the Astronaut Pet Carrier Backpack apart from generic carriers that leave your pet hidden and uncomfortable.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_DnKtRB": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Bubble window visibility",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_LwzwAp": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Breathable mesh airflow",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_TUBVYV": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Padded, adjustable straps",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_9JfJGq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Reinforced stitching",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_y3Pja9": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Weatherproof exterior",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DCqkDF",
+        "text_aitc8f",
+        "tableitem_DnKtRB",
+        "tableitem_LwzwAp",
+        "tableitem_TUBVYV",
+        "tableitem_9JfJGq",
+        "tableitem_y3Pja9"
+      ],
+      "name": "PP - Comparison Table",
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#000000",
+        "gradient": "",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_guarantee_qmGNEC": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_FBTQTA": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "shield",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#000000"
+          }
+        },
+        "heading_gc4gfH": {
+          "type": "heading",
+          "settings": {
+            "heading": "Travel with peace of mind",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_LLQAeq": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If your Astronaut Pet Carrier Backpack doesn't hold up to daily adventures, send it back within 30 days for a full refund. No questions asked.<br/></p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_Ja3nGK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#000000",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "30-Day Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_FBTQTA",
+        "heading_gc4gfH",
+        "text_LLQAeq",
+        "button_Ja3nGK"
+      ],
+      "name": "PP - Guarantee",
+      "settings": {
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "featured_collection_4JUPnn": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "heading": "Featured Collection",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_rounded_corners": "medium",
+        "color_scheme": "",
+        "button_rounded_corners": "medium",
+        "button_width": "fit",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "related-products",
+    "pp_image_with_benefits_7jKKKP",
+    "pp_image_with_text_aVCYVi",
+    "pp_image_with_percentage_bWi6Ak",
+    "pp_reviews_Mb9Ney",
+    "pp_comparison_table_zkkEGP",
+    "pp_guarantee_qmGNEC",
+    "featured_collection_4JUPnn"
+  ]
+}
