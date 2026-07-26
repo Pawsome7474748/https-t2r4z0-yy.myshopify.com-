@@ -21,8 +21,7 @@
           "settings": {
             "variant_title": "1 Bottle — 1 Month Supply",
             "label": "1 Bottle",
-            "sublabel": "1 Month Supply",
-            "badge": ""
+            "sublabel": "1 Month Supply"
           }
         },
         "tier_2": {
@@ -78,7 +77,6 @@
         "eyebrow_text": "Comfort support for perimenopausal dry eye",
         "show_rating": false,
         "rating_value": 4.8,
-        "rating_count_text": "",
         "heading": "Omega-3 Fish Oil — EPA & DHA",
         "subheading": "<p>Nutritional support for tear film quality, heart, and brain health — from a brand built around perimenopausal eye comfort.</p>",
         "buy_button_text": "Add to Cart",

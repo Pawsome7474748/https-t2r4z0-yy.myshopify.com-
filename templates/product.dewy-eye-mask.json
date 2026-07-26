@@ -20,9 +20,7 @@
           "type": "tier",
           "settings": {
             "variant_title": "1pc-eye mask-grey / China Mainland",
-            "label": "1 Mask",
-            "sublabel": "",
-            "badge": ""
+            "label": "1 Mask"
           }
         },
         "tier_2": {
@@ -78,7 +76,6 @@
         "eyebrow_text": "Soothing relief for tired, dry eyes",
         "show_rating": false,
         "rating_value": 4.8,
-        "rating_count_text": "",
         "heading": "Cooling Gel Eye Mask",
         "subheading": "<p>A reusable cooling compress for the gritty, tired-eye feeling perimenopause can bring — freeze it, wear it, feel it.</p>",
         "buy_button_text": "Add to Cart",
