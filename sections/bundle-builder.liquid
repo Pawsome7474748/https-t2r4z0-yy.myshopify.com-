@@ -1,0 +1,378 @@
+{{ 'bundle-builder.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'bundle-builder.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign section_padding = 'padding-top: ' | append: section.settings.padding_top | append: 'px; padding-bottom: ' | append: section.settings.padding_bottom | append: 'px; margin-top: ' | append: section.settings.margin_top | append: 'px; margin-bottom: ' | append: section.settings.margin_bottom | append: 'px;'
+
+  assign background_style = ''
+  if section.settings.background != blank
+    assign background_style = 'background: ' | append: section.settings.background | append: ';'
+  endif
+
+  assign tier_blocks = section.blocks | where: 'type', 'tier'
+  assign product_blocks = section.blocks | where: 'type', 'product'
+%}
+
+<div id="{{ section.id }}" class="bb-section" style="{{ section_padding }}{{ background_style }}">
+  <div class="bb-wrap">
+
+    {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+      <div class="bb-head">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="bb-head__heading {{ section.settings.heading_size }}" style="color: {{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <div class="bb-head__subheading rte" style="color: {{ section.settings.text_color }};">{{ section.settings.subheading }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <bundle-builder
+      data-currency="{{ cart.currency.iso_code }}"
+      data-generic-error="{{ 'sections.cart.cart_error' | t | escape }}"
+    >
+      {%- if tier_blocks.size > 0 -%}
+        <div class="bb-tiers">
+          <div class="bb-tiers__track">
+            <div class="bb-tiers__fill" data-bundle-fill style="background: {{ section.settings.accent_color }};"></div>
+          </div>
+          <div class="bb-tiers__marks">
+            {%- for block in tier_blocks -%}
+              <div class="bb-tier" data-bundle-tier="{{ block.settings.quantity }}" {{ block.shopify_attributes }}>
+                <span class="bb-tier__dot" style="border-color: {{ section.settings.accent_color }};"></span>
+                <span class="bb-tier__label">{{ block.settings.quantity }}+ &middot; {{ block.settings.discount }}% off</span>
+              </div>
+            {%- endfor -%}
+          </div>
+          <p
+            class="bb-message"
+            data-bundle-message
+            data-progress-template="{{ section.settings.progress_text | escape }}"
+            data-unlocked-template="{{ section.settings.unlocked_text | escape }}"
+            data-default-text="{{ section.settings.default_text | escape }}"
+            style="color: {{ section.settings.accent_color }};"
+          >
+            {{ section.settings.default_text }}
+          </p>
+        </div>
+
+        <script type="application/json" data-bundle-tiers>
+          [
+            {%- for block in tier_blocks -%}
+              {
+                "quantity": {{ block.settings.quantity }},
+                "discount": {{ block.settings.discount }},
+                "label": {{ block.settings.label | json }}
+              }{% unless forloop.last %},{% endunless %}
+            {%- endfor -%}
+          ]
+        </script>
+      {%- endif -%}
+
+      <div class="bb-grid" data-bundle-grid>
+        {%- for block in product_blocks -%}
+          {%- assign product = block.settings.product -%}
+          {%- if product != blank -%}
+            {%- assign variant = product.selected_or_first_available_variant -%}
+            {%- assign max_quantity = 10 -%}
+            {%- if variant.inventory_management == 'shopify' and variant.inventory_policy == 'deny' -%}
+              {%- assign max_quantity = variant.inventory_quantity | at_least: 0 -%}
+            {%- endif -%}
+
+            <div
+              class="bb-card"
+              data-bundle-item
+              data-variant-id="{{ variant.id }}"
+              data-price="{{ variant.price }}"
+              {{ block.shopify_attributes }}
+            >
+              <div class="bb-card__image-wrap">
+                {%- if product.featured_image != blank -%}
+                  <img
+                    class="bb-card__image"
+                    src="{{ product.featured_image | image_url: width: 400 }}"
+                    alt="{{ product.featured_image.alt | escape }}"
+                    loading="lazy"
+                    width="400"
+                    height="{{ 400 | divided_by: product.featured_image.aspect_ratio }}"
+                  >
+                {%- endif -%}
+              </div>
+
+              <p class="bb-card__title">{{ product.title }}</p>
+
+              <div class="bb-card__price">
+                <span>{{ variant.price | money }}</span>
+                {%- if variant.compare_at_price > variant.price -%}
+                  <span class="bb-card__price-compare">{{ variant.compare_at_price | money }}</span>
+                {%- endif -%}
+              </div>
+
+              {%- if variant.available -%}
+                <div class="bb-stepper">
+                  <button type="button" class="bb-stepper__button" data-step="minus" aria-label="{{ 'products.product.quantity.decrease' | t: product: product.title | escape }}">
+                    {%- render 'icon-minus' -%}
+                  </button>
+                  <input
+                    type="number"
+                    class="bb-stepper__value"
+                    data-bundle-qty
+                    data-max="{{ max_quantity }}"
+                    value="0"
+                    readonly
+                    aria-label="{{ 'products.product.quantity.input_label' | t: product: product.title | escape }}"
+                  >
+                  <button type="button" class="bb-stepper__button" data-step="plus" aria-label="{{ 'products.product.quantity.increase' | t: product: product.title | escape }}">
+                    {%- render 'icon-plus' -%}
+                  </button>
+                </div>
+              {%- else -%}
+                <div class="bb-stepper" aria-disabled="true">
+                  <span class="bb-stepper__value">{{ 'products.product.sold_out' | t }}</span>
+                </div>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+
+      <p class="bb-error" data-bundle-error hidden></p>
+
+      <div class="bb-summary" style="background: {{ section.settings.summary_background }}; color: {{ section.settings.summary_text_color }};">
+        <div class="bb-summary__info">
+          <span class="bb-summary__count"><span data-bundle-count>0</span> {{ section.settings.items_label }}</span>
+          <span class="bb-summary__price">
+            <span data-bundle-subtotal>{{ 0 | money }}</span>
+            <span class="bb-summary__compare" data-bundle-compare hidden></span>
+          </span>
+        </div>
+        <button
+          type="button"
+          class="bb-summary__button"
+          data-bundle-submit
+          disabled
+          style="background: {{ section.settings.accent_color }}; color: {{ section.settings.button_text_color }};"
+        >
+          {{ section.settings.button_label }}
+        </button>
+      </div>
+    </bundle-builder>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bundle builder",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Heading"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Build your bundle"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "Heading size",
+      "options": [
+        { "value": "h3", "label": "Small" },
+        { "value": "h2", "label": "Medium" },
+        { "value": "h1", "label": "Large" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Mix and match your favorites — the more you add, the more you save.</p>"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Subheading color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Savings messaging"
+    },
+    {
+      "type": "text",
+      "id": "default_text",
+      "label": "Default message",
+      "default": "Add items below to see your bundle savings"
+    },
+    {
+      "type": "text",
+      "id": "progress_text",
+      "label": "Progress message",
+      "info": "Use [remaining], [discount] and [label] as placeholders.",
+      "default": "Add [remaining] more to unlock [discount]% off — [label]"
+    },
+    {
+      "type": "text",
+      "id": "unlocked_text",
+      "label": "Unlocked message",
+      "info": "Use [discount] and [label] as placeholders.",
+      "default": "You've unlocked [discount]% off — [label]!"
+    },
+    {
+      "type": "text",
+      "id": "items_label",
+      "label": "Item count label",
+      "default": "items selected"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Add bundle to cart"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Section background"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color (progress, price, button)",
+      "default": "#2a7a72"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "summary_background",
+      "label": "Summary bar background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "summary_text_color",
+      "label": "Summary bar text color",
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Section padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top padding",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom padding",
+      "default": 48
+    },
+    {
+      "type": "header",
+      "content": "Section margin"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Top margin",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product"
+        }
+      ]
+    },
+    {
+      "type": "tier",
+      "name": "Discount tier",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "number",
+          "id": "quantity",
+          "label": "Minimum quantity",
+          "default": 2
+        },
+        {
+          "type": "range",
+          "id": "discount",
+          "min": 0,
+          "max": 50,
+          "step": 5,
+          "unit": "%",
+          "label": "Discount percentage",
+          "default": 10,
+          "info": "For this to apply at checkout, create a matching automatic discount in Shopify admin (Discounts → minimum quantity of items) with the same threshold and percentage."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tier label",
+          "default": "Buy more, save more"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bundle builder",
+      "blocks": [
+        { "type": "tier", "settings": { "quantity": 2, "discount": 10, "label": "Buy 2, save 10%" } },
+        { "type": "tier", "settings": { "quantity": 3, "discount": 15, "label": "Buy 3, save 15%" } },
+        { "type": "tier", "settings": { "quantity": 4, "discount": 20, "label": "Buy 4, save 20%" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
