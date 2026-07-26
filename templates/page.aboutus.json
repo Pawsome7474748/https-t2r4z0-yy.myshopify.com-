@@ -22,7 +22,7 @@
         "heading_GVL4Hb": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Join the PawPatrol family<\/strong>",
+            "heading": "<strong>Welcome to Dewy<\/strong>",
             "heading_size": "h1",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
@@ -32,7 +32,7 @@
         "text_juioQH": {
           "type": "text",
           "settings": {
-            "text": "<p>PawPatrol is a friendly pet shop made for real pet owners. We build safe, comfy, and fun products so pets feel loved. Join our community for tips, new drops, and special deals. We treat every pet like family and every owner like a friend.<\/p>",
+            "text": "<p>Dewy makes simple, everyday products for the eye comfort perimenopause can take away. We build thoughtful, effective products so you can get back to your day. Join our community for tips, new arrivals, and special offers.<\/p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -46,7 +46,7 @@
             "button_link": "\/collections\/all",
             "button_link_newtab": false,
             "button_text_color": "#FFFFFF",
-            "button_background_color": "#f8663b",
+            "button_background_color": "#2a7a72",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "full",
@@ -87,7 +87,7 @@
         "heading_pnf3ak": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Our little secret<\/strong>",
+            "heading": "<strong>Why we started Dewy<\/strong>",
             "heading_size": "h1",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
@@ -97,7 +97,7 @@
         "text_tfexQH": {
           "type": "text",
           "settings": {
-            "text": "<p>We test every item with real pets before we sell it. That means durable, safe, and pet-approved gear for your home. Be part of the club — get early access, special discounts, and pet care tips. Start today and give your pet the best with PawPatrol.<\/p>",
+            "text": "<p>Perimenopausal dry eye is common and rarely talked about. We started Dewy to bring together the everyday products that actually help — nutritional support and soothing relief — in one simple place, backed by real research and honest guidance.<\/p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -115,7 +115,7 @@
         "image_border_radius": 50,
         "layout": "text_first",
         "mobile_layout": "image_first",
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.68), #ffd4c7 100%)",
+        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.68), #d7ece9 100%)",
         "padding_top": 64,
         "padding_bottom": 64,
         "margin_top": 52,
@@ -138,7 +138,7 @@
         "text_qzgWdQ": {
           "type": "text",
           "settings": {
-            "text": "<p>We make pet life easier with smart, loving designs. PawPatrol helps pets stay comfy, healthy, and happy through quality products and caring service.<\/p>",
+            "text": "<p>Dewy helps you feel more comfortable in your own day, through quality products and caring service.<\/p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",

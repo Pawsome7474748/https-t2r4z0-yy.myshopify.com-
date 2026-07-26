@@ -15,14 +15,14 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Everything your pet needs — reliable, stylish, and made for happy tails and wagging hearts.",
+            "heading": "Comfort for the days perimenopause makes your eyes feel impossible",
             "heading_size": "h0"
           }
         },
         "buttons_pVK3W7": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "View Collection 👉🏻",
+            "button_label_1": "Shop Dewy",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -30,7 +30,7 @@
             "button_style_secondary_2": false,
             "button_rounded_corners": "medium",
             "button_text_color": "#ffffff",
-            "button_background_color": "#f8663b",
+            "button_background_color": "#2a7a72",
             "button_padding_vertical": 20
           }
         }
@@ -59,7 +59,7 @@
         "heading_XBqRa6": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to Pawsome Pet Essentials That Make Life Easier And Pets Happier.",
+            "heading": "Welcome to Dewy — comfort support for perimenopausal dry eye",
             "heading_size": "h1",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
@@ -69,7 +69,7 @@
         "text_BnFjzQ": {
           "type": "text",
           "settings": {
-            "text": "<p> Welcome to Pawsome We create  toys, beds, collars, and grooming made for everyday pet joy.</p>",
+            "text": "<p>We make simple, everyday products for the eye comfort perimenopause can take away — from nutritional support to soothing relief you can feel right now.</p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -79,11 +79,11 @@
         "button_ewqPQY": {
           "type": "button",
           "settings": {
-            "button_label": "View Our Story 👉🏻",
-            "button_link": "/pages/about-us",
+            "button_label": "Learn About Dry Eye",
+            "button_link": "/pages/perimenopausal-dry-eye",
             "button_link_newtab": false,
             "button_text_color": "#ffffff",
-            "button_background_color": "#f8663b",
+            "button_background_color": "#2a7a72",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "full",
@@ -92,7 +92,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 25,
-            "button_subtext": "Find out what's our mission and goals",
+            "button_subtext": "What it is, and what actually helps",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
             "button_action": "link",
@@ -129,7 +129,7 @@
             "heading": "Fast shipping",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Faster than your dog at dinnertime. Gear's at your door before the next walk.</p>",
+            "text": "<p>Your order is on its way quickly, so you're not waiting around for relief.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
@@ -142,7 +142,7 @@
             "heading": "Quality first",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Strong, safe, vet-reviewed materials built to handle real life — mud, chewing, and all.</p>",
+            "text": "<p>We choose ingredients and materials we'd want to use ourselves.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
@@ -155,7 +155,7 @@
             "heading": "Friendly support",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Not sure about sizing? We've fitted thousands of various good dogs — happy to help with yours.</p>",
+            "text": "<p>Questions about what might help your symptoms? We're happy to talk it through.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
@@ -168,7 +168,7 @@
             "heading": "Easy returns",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Hassle-free 30-day returns if it’s not a perfect fit.</p>",
+            "text": "<p>Not the right fit? Reach out and our support team will help.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
@@ -184,17 +184,17 @@
         "image": "shopify://shop_images/Screenshot_2026-06-21_at_5.37.06_PM.png",
         "desktop_image_width": "large",
         "image_border_radius": 100,
-        "heading": "Why choose us",
+        "heading": "Why choose Dewy",
         "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
-        "text": "<p>PawPatrol makes pet care simple with quality gear, fast shipping, and friendly support for every pet family.</p>",
+        "text": "<p>Dewy makes eye comfort simple with thoughtful products, fast shipping, and friendly support.</p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
         "text_color": "#000000",
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 232, 225, 1) 100%)",
+        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(244, 250, 249, 1) 100%)",
         "padding_top": 52,
         "padding_bottom": 44,
         "margin_top": 0,
@@ -242,7 +242,7 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Mia R.",
+            "author_text": "Your customer's name",
             "author_style": "subtitle",
             "author_color": "#000000",
             "author_badge_text": "Verified Purchase",
@@ -254,7 +254,7 @@
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Love PawPatrol! The bed I bought arrived fast and my cat snores on it every night. Great quality and cute design. Customer service helped me pick the right size.",
+            "review_text": "Replace this with a real review from a real customer once you have one.",
             "review_text_style": "body",
             "review_text_color": "#000000",
             "review_background_color": "#ffffff",
@@ -265,7 +265,7 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Ethan S.",
+            "author_text": "Your customer's name",
             "author_style": "subtitle",
             "author_color": "#000000",
             "author_badge_text": "Verified Purchase",
@@ -277,7 +277,7 @@
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "soooo good 😍 my pup LOVES the chew toy. No joke, it lasted weeks and still looks new. lowkey obsessed, will buy again.",
+            "review_text": "Replace this with a real review from a real customer once you have one.",
             "review_text_style": "body",
             "review_text_color": "#000000",
             "review_background_color": "#ffffff",
@@ -288,7 +288,7 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Sophia L.",
+            "author_text": "Your customer's name",
             "author_style": "subtitle",
             "author_color": "#000000",
             "author_badge_text": "Verified Purchase",
@@ -300,283 +300,7 @@
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Amazing service and fast delivery. The leash is strong and the handle is comfy. Worth every penny.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc4": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Noah J.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "best store!!",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc5": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Ava M.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Bought a grooming kit — works well, small brushes are great for my rescue dog. Shipping was quick, packaging neat. Support answered my q's fast. Happy customer.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc6": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Lucas T.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "omg this collar is FIRE 🔥 my dog looks so cute. fits perfect, no rubbing. legit 10/10.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc7": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Isabella P.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "The play mat is perfect for my kitten. Soft, washable, and the colors are nice. It arrived earlier than expected. Very pleased.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc8": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Mason H.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Pretty happy with the bowl set. Non-slip and easy to clean. Would order more for gifts.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc9": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Emma K.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Nice quality, good price. No complaints.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc10": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Oliver B.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "I bought a travel carrier for my cat. It’s lightweight and solid. Zippers are strong and the padding is nice. The vet visit was calm thanks to PawPatrol’s carrier. Very impressed with the product build and how easy it is to clean. Support guided me on measurements before I ordered, which helped a lot. Will recommend to friends who travel with pets.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc11": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Charlotte W.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "luv it lol 😻",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc12": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "James F.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "PawPatrol’s toy bundle kept my lab busy for days. Durable, not cheap plastic, and the squeaker still works. My pup usually destroys toys fast but these hold up. Packaging was cute and smelled nice. Quick reply from support when I asked about replacements.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc13": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Amelia G.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Excellent experience. The puppy training pads absorb well and arrived earlier than expected. Great value, will reorder.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc14": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Benjamin C.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "ok good",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc15": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Harper N.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Absolutely thrilled. PawPatrol’s dog bed changed our nights — no more floor sleeping. The foam is comfy and cover washes easy. Customer support helped exchange size with no fuss. Fast shipping, great price, and a big happy pup.",
+            "review_text": "Replace this with a real review from a real customer once you have one.",
             "review_text_style": "body",
             "review_text_color": "#000000",
             "review_background_color": "#ffffff",
@@ -587,19 +311,7 @@
       "block_order": [
         "review_dtNXc1",
         "review_dtNXc2",
-        "review_dtNXc3",
-        "review_dtNXc4",
-        "review_dtNXc5",
-        "review_dtNXc6",
-        "review_dtNXc7",
-        "review_dtNXc8",
-        "review_dtNXc9",
-        "review_dtNXc10",
-        "review_dtNXc11",
-        "review_dtNXc12",
-        "review_dtNXc13",
-        "review_dtNXc14",
-        "review_dtNXc15"
+        "review_dtNXc3"
       ],
       "settings": {
         "heading_stars_size": "lg",
@@ -607,12 +319,12 @@
         "stars_alignment": "center",
         "stars_mobilealignment": "center",
         "heading_stars_number": 5,
-        "heading": "People love our products!",
+        "heading": "What customers are saying",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
-        "text": "<p>Rated 4.9/5 by 5,000+ Happy Customers</p>",
+        "text": "<p>Add your real customer reviews here</p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
@@ -622,7 +334,7 @@
         "button_link": "",
         "button_link_newtab": true,
         "button_text_color": "#ffffff",
-        "button_background_color": "#f8663b",
+        "button_background_color": "#2a7a72",
         "button_border_width": 0,
         "button_border_color": "#000000",
         "button_width": "fit",
@@ -653,13 +365,13 @@
             "icon_size": 65,
             "icon_alignment": "center",
             "icon_mobilealignment": "center",
-            "icon_color": "#f8663b"
+            "icon_color": "#2a7a72"
           }
         },
         "heading_CQ6HWW": {
           "type": "heading",
           "settings": {
-            "heading": "30-Day Money-Back Guarantee — Try Risk-Free",
+            "heading": "We're Here If You Need Us",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
@@ -669,7 +381,7 @@
         "text_4XnaxC": {
           "type": "text",
           "settings": {
-            "text": "<p>We believe you and your pet will love PawPatrol products. If you’re not satisfied within 30 days, return for a full refund. No fuss — just our promise to you and your pet.</p>",
+            "text": "<p>Questions about an order or what might help? Reach out any time — our support team is happy to help.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
@@ -679,11 +391,11 @@
         "button_nd9nGW": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now 👉🏻",
+            "button_label": "Shop Now",
             "button_link": "/collections/all",
             "button_link_newtab": false,
             "button_text_color": "#ffffff",
-            "button_background_color": "#f8663b",
+            "button_background_color": "#2a7a72",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "fit",
@@ -693,7 +405,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 15,
-            "button_subtext": "Enjoy 30-Day Money Back Guarantee",
+            "button_subtext": "",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
             "button_action": "link",
