@@ -39,7 +39,7 @@
           "type": "text",
           "settings": {
             "heading": "<strong>Contact Us<\/strong>",
-            "subtext": "<p><strong>📞 Phone:<\/strong> +1 777 777 7777<br\/><br\/><strong>💌 Email: <\/strong>youremail@gmail.com<\/p>"
+            "subtext": "<p><strong>💌 Email: <\/strong>hungpham890345@gmail.com<\/p>"
           }
         }
       },
@@ -50,7 +50,7 @@
         "text_QETYcC"
       ],
       "settings": {
-        "gradient": "linear-gradient(180deg, #ffe8e1, #ffe8e1 100%)",
+        "gradient": "linear-gradient(180deg, #d7ece9, #d7ece9 100%)",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,

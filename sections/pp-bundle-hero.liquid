@@ -1,0 +1,351 @@
+{{ 'pp-bundle-hero.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'pp-bundle-hero.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign benefit_blocks = section.blocks | where: 'type', 'benefit'
+  assign tier_blocks = section.blocks | where: 'type', 'tier'
+  assign trust_blocks = section.blocks | where: 'type', 'trust'
+  assign faq_blocks = section.blocks | where: 'type', 'faq'
+  assign has_checked = false
+%}
+
+<div
+  class="bh-section"
+  style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};"
+>
+  <div class="bh-wrap">
+    {%- assign hero_image = section.settings.image | default: product.featured_image -%}
+    {%- if hero_image != blank -%}
+      <div class="bh-image-wrap">
+        <img
+          class="bh-image"
+          src="{{ hero_image | image_url: width: 500 }}"
+          alt="{{ hero_image.alt | default: product.title | escape }}"
+          loading="eager"
+          width="500"
+          height="{{ 500 | divided_by: hero_image.aspect_ratio }}"
+        >
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.eyebrow_text != blank -%}
+      <p class="bh-eyebrow" style="color: {{ section.settings.accent_color }};">{{ section.settings.eyebrow_text }}</p>
+    {%- endif -%}
+
+    {%- if section.settings.show_rating -%}
+      <div class="bh-rating">
+        <span class="bh-rating__stars" aria-hidden="true">
+          {%- assign full_stars = section.settings.rating_value | floor -%}
+          {%- for i in (1..5) -%}
+            {%- if i <= full_stars -%}★{%- else -%}☆{%- endif -%}
+          {%- endfor -%}
+        </span>
+        <span>{{ section.settings.rating_value }}</span>
+        {%- if section.settings.rating_count_text != blank -%}
+          <span class="bh-rating__count">{{ section.settings.rating_count_text }}</span>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <h1 class="bh-heading">
+      {%- if section.settings.heading != blank -%}
+        {{ section.settings.heading }}
+      {%- else -%}
+        {{ product.title }}
+      {%- endif -%}
+    </h1>
+
+    {%- if section.settings.subheading != blank -%}
+      <div class="bh-subheading">{{ section.settings.subheading }}</div>
+    {%- endif -%}
+
+    {%- if benefit_blocks.size > 0 -%}
+      <ul class="bh-benefits">
+        {%- for block in benefit_blocks -%}
+          <li class="bh-benefit" {{ block.shopify_attributes }}>
+            <svg class="bh-benefit__icon" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" fill="none">
+              <path d="M28.5094 7.99689L25.6969 5.23595C25.3454 4.88566 24.8695 4.68896 24.3732 4.68896C23.877 4.68896 23.4011 4.88566 23.0496 5.23595L12.1875 15.9645L7.8879 11.7926C7.53572 11.4434 7.05956 11.248 6.56364 11.2491C6.06772 11.2502 5.59243 11.4477 5.2418 11.7985L2.4293 14.611C2.0783 14.9625 1.88115 15.439 1.88115 15.9358C1.88115 16.4325 2.0783 16.909 2.4293 17.2606L10.8223 25.6981C10.9964 25.8722 11.2031 26.0104 11.4306 26.1046C11.6581 26.1989 11.902 26.2474 12.1483 26.2474C12.3945 26.2474 12.6384 26.1989 12.8659 26.1046C13.0934 26.0104 13.3001 25.8722 13.4742 25.6981L28.5152 10.6535C28.6897 10.4789 28.828 10.2716 28.9222 10.0435C29.0163 9.81532 29.0645 9.57081 29.064 9.32399C29.0634 9.07717 29.0142 8.83288 28.919 8.60514C28.8238 8.37741 28.6846 8.1707 28.5094 7.99689ZM12.143 24.375L3.75001 15.9375L6.56251 13.125C6.56592 13.1278 6.56906 13.131 6.57188 13.1344L11.5348 17.9496C11.71 18.121 11.9453 18.217 12.1904 18.217C12.4355 18.217 12.6709 18.121 12.8461 17.9496L24.382 6.56251L27.1875 9.32814L12.143 24.375Z" fill="currentColor" />
+            </svg>
+            <span>{{ block.settings.text }}</span>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    <bundle-hero data-generic-error="{{ 'sections.cart.cart_error' | t | escape }}">
+      {%- if tier_blocks.size > 0 -%}
+        <div class="bh-tiers" role="radiogroup" aria-label="Choose your bundle">
+          {%- for block in tier_blocks -%}
+            {%- assign variant = product.variants | where: 'title', block.settings.variant_title | first -%}
+            {%- if variant != blank -%}
+              {%- assign is_checked = false -%}
+              {%- unless has_checked -%}
+                {%- assign is_checked = true -%}
+                {%- assign has_checked = true -%}
+              {%- endunless -%}
+              <label class="bh-tier" {{ block.shopify_attributes }}>
+                <input
+                  type="radio"
+                  name="id"
+                  class="bh-tier__input"
+                  data-bh-tier-input
+                  value="{{ variant.id }}"
+                  data-price="{{ variant.price | money }}"
+                  {% if is_checked %}checked{% endif %}
+                >
+                <span class="bh-tier__card" style="background: {{ section.settings.card_color }};">
+                  <span class="bh-tier__radio" aria-hidden="true"></span>
+                  <span class="bh-tier__label">
+                    <span class="bh-tier__name">
+                      {{ block.settings.label }}
+                      {%- if block.settings.badge != blank -%}
+                        <span class="bh-tier__badge" style="background: {{ section.settings.accent_color }};">{{ block.settings.badge }}</span>
+                      {%- endif -%}
+                    </span>
+                    {%- if block.settings.sublabel != blank -%}
+                      <span class="bh-tier__sub">{{ block.settings.sublabel }}</span>
+                    {%- endif -%}
+                  </span>
+                  <span class="bh-tier__price">
+                    <span class="bh-tier__price-now">{{ variant.price | money }}</span>
+                    {%- if variant.compare_at_price > variant.price -%}
+                      <span class="bh-tier__price-compare">{{ variant.compare_at_price | money }}</span>
+                    {%- endif -%}
+                  </span>
+                </span>
+              </label>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      <button type="button" class="bh-buy" data-bh-buy style="background: {{ section.settings.accent_color }};">
+        {{ section.settings.buy_button_text }} — <span data-bh-buy-price></span>
+      </button>
+
+      <p class="bh-error" data-bh-error hidden></p>
+    </bundle-hero>
+
+    {%- if trust_blocks.size > 0 -%}
+      <div class="bh-trust">
+        {%- for block in trust_blocks -%}
+          <span class="bh-trust__item" {{ block.shopify_attributes }}>
+            <svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none">
+              {%- case block.settings.icon -%}
+                {%- when 'truck' -%}
+                  <path d="M255.42,117l-14-35A15.93,15.93,0,0,0,226.58,72H192V64a8,8,0,0,0-8-8H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H49a32,32,0,0,0,62,0h50a32,32,0,0,0,62,0h17a16,16,0,0,0,16-16V120A7.94,7.94,0,0,0,255.42,117ZM192,88h34.58l9.6,24H192ZM32,72H176v64H32ZM80,208a16,16,0,1,1,16-16A16,16,0,0,1,80,208Zm81-24H111a32,32,0,0,0-62,0H32V152H176v12.31A32.11,32.11,0,0,0,161,184Zm31,24a16,16,0,1,1,16-16A16,16,0,0,1,192,208Zm48-24H223a32.06,32.06,0,0,0-31-24V128h48Z" fill="currentColor" transform="scale(0.1172)" />
+                {%- when 'shield' -%}
+                  <path d="M24.375 4.6875H5.625C5.12772 4.6875 4.65081 4.88504 4.29917 5.23667C3.94754 5.58831 3.75 6.06522 3.75 6.5625V13.125C3.75 19.3031 6.74063 23.0473 9.24961 25.1004C11.952 27.3105 14.6402 28.0605 14.7574 28.0922C14.9186 28.136 15.0885 28.136 15.2496 28.0922C15.3668 28.0605 18.0516 27.3105 20.7574 25.1004C23.2594 23.0473 26.25 19.3031 26.25 13.125V6.5625C26.25 6.06522 26.0525 5.58831 25.7008 5.23667C25.3492 4.88504 24.8723 4.6875 24.375 4.6875ZM24.375 13.125C24.375 17.4691 22.7742 20.9953 19.6172 23.6039C18.2429 24.7356 16.6799 25.6163 15 26.2055C13.342 25.6265 11.7984 24.7615 10.4391 23.6496C7.24453 21.0363 5.625 17.4961 5.625 13.125V6.5625H24.375V13.125ZM9.64922 16.6008C9.47331 16.4249 9.37448 16.1863 9.37448 15.9375C9.37448 15.6887 9.47331 15.4501 9.64922 15.2742C9.82513 15.0983 10.0637 14.9995 10.3125 14.9995C10.5613 14.9995 10.7999 15.0983 10.9758 15.2742L13.125 17.4246L19.0242 11.5242C19.1113 11.4371 19.2147 11.368 19.3285 11.3209C19.4423 11.2737 19.5643 11.2495 19.6875 11.2495C19.8107 11.2495 19.9327 11.2737 20.0465 11.3209C20.1603 11.368 20.2637 11.4371 20.3508 11.5242C20.4379 11.6113 20.507 11.7147 20.5541 11.8285C20.6013 11.9423 20.6255 12.0643 20.6255 12.1875C20.6255 12.3107 20.6013 12.4327 20.5541 12.5465C20.507 12.6603 20.4379 12.7637 20.3508 12.8508L13.7883 19.4133C13.7012 19.5004 13.5978 19.5696 13.484 19.6168C13.3702 19.664 13.2482 19.6882 13.125 19.6882C13.0018 19.6882 12.8798 19.664 12.766 19.6168C12.6522 19.5696 12.5488 19.5004 12.4617 19.4133L9.64922 16.6008Z" fill="currentColor" />
+                {%- when 'headset' -%}
+                  <path d="M23.659 6.40547C22.5375 5.27271 21.2036 4.37228 19.7337 3.75575C18.2637 3.13922 16.6866 2.81868 15.0926 2.8125H15C11.7677 2.8125 8.66774 4.09654 6.38214 6.38214C4.09654 8.66774 2.8125 11.7677 2.8125 15V21.5625C2.8125 22.3084 3.10882 23.0238 3.63626 23.5512C4.16371 24.0787 4.87908 24.375 5.625 24.375H7.5C8.24592 24.375 8.96129 24.0787 9.48874 23.5512C10.0162 23.0238 10.3125 22.3084 10.3125 21.5625V16.875C10.3125 16.1291 10.0162 15.4137 9.48874 14.8863C8.96129 14.3588 8.24592 14.0625 7.5 14.0625H4.72969C4.91049 12.1077 5.64473 10.245 6.84636 8.69262C8.04799 7.14024 9.66721 5.96254 11.5143 5.29754C13.3613 4.63254 15.3596 4.5078 17.275 4.93794C19.1904 5.36808 20.9436 6.33528 22.3289 7.72617C24.0221 9.42809 25.0636 11.6708 25.2715 14.0625H22.5C21.7541 14.0625 21.0387 14.3588 20.5113 14.8863C19.9838 15.4137 19.6875 16.1291 19.6875 16.875V21.5625C19.6875 22.3084 19.9838 23.0238 20.5113 23.5512C21.0387 24.0787 21.7541 24.375 22.5 24.375H25.3125C25.3125 25.1209 25.0162 25.8363 24.4887 26.3637C23.9613 26.8912 23.2459 27.1875 22.5 27.1875H15.9375C15.6889 27.1875 15.4504 27.2863 15.2746 27.4621C15.0988 27.6379 15 27.8764 15 28.125C15 28.3736 15.0988 28.6121 15.2746 28.7879C15.4504 28.9637 15.6889 29.0625 15.9375 29.0625H22.5C23.7432 29.0625 24.9355 28.5686 25.8146 27.6896C26.6936 26.8105 27.1875 25.6182 27.1875 24.375V15C27.1936 13.4058 26.8851 11.826 26.2796 10.3512C25.6741 8.87635 24.7836 7.53551 23.659 6.40547ZM7.5 15.9375C7.74864 15.9375 7.9871 16.0363 8.16291 16.2121C8.33873 16.3879 8.4375 16.6264 8.4375 16.875V21.5625C8.4375 21.8111 8.33873 22.0496 8.16291 22.2254C7.9871 22.4012 7.74864 22.5 7.5 22.5H5.625C5.37636 22.5 5.1379 22.4012 4.96209 22.2254C4.78627 22.0496 4.6875 21.8111 4.6875 21.5625V15.9375H7.5ZM22.5 22.5C22.2514 22.5 22.0129 22.4012 21.8371 22.2254C21.6613 22.0496 21.5625 21.8111 21.5625 21.5625V16.875C21.5625 16.6264 21.6613 16.3879 21.8371 16.2121C22.0129 16.0363 22.2514 15.9375 22.5 15.9375H25.3125V22.5H22.5Z" fill="currentColor" />
+                {%- else -%}
+                  <path d="M28.5094 7.99689L25.6969 5.23595C25.3454 4.88566 24.8695 4.68896 24.3732 4.68896C23.877 4.68896 23.4011 4.88566 23.0496 5.23595L12.1875 15.9645L7.8879 11.7926C7.53572 11.4434 7.05956 11.248 6.56364 11.2491C6.06772 11.2502 5.59243 11.4477 5.2418 11.7985L2.4293 14.611C2.0783 14.9625 1.88115 15.439 1.88115 15.9358C1.88115 16.4325 2.0783 16.909 2.4293 17.2606L10.8223 25.6981C10.9964 25.8722 11.2031 26.0104 11.4306 26.1046C11.6581 26.1989 11.902 26.2474 12.1483 26.2474C12.3945 26.2474 12.6384 26.1989 12.8659 26.1046C13.0934 26.0104 13.3001 25.8722 13.4742 25.6981L28.5152 10.6535C28.6897 10.4789 28.828 10.2716 28.9222 10.0435C29.0163 9.81532 29.0645 9.57081 29.064 9.32399C29.0634 9.07717 29.0142 8.83288 28.919 8.60514C28.8238 8.37741 28.6846 8.1707 28.5094 7.99689ZM12.143 24.375L3.75001 15.9375L6.56251 13.125C6.56592 13.1278 6.56906 13.131 6.57188 13.1344L11.5348 17.9496C11.71 18.121 11.9453 18.217 12.1904 18.217C12.4355 18.217 12.6709 18.121 12.8461 17.9496L24.382 6.56251L27.1875 9.32814L12.143 24.375Z" fill="currentColor" />
+              {%- endcase -%}
+            </svg>
+            {{ block.settings.text }}
+          </span>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if faq_blocks.size > 0 -%}
+      <div class="bh-faq">
+        {%- for block in faq_blocks -%}
+          <details class="bh-faq__item" {{ block.shopify_attributes }}>
+            <summary class="bh-faq__question">
+              {{ block.settings.question }}
+              <svg class="bh-faq__icon" width="16" height="16" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor" />
+              </svg>
+            </summary>
+            <div class="bh-faq__answer">{{ block.settings.answer }}</div>
+          </details>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bundle hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image",
+      "info": "Defaults to the product's featured image if left blank."
+    },
+    {
+      "type": "text",
+      "id": "eyebrow_text",
+      "label": "Eyebrow text",
+      "default": "Comfort support"
+    },
+    {
+      "type": "header",
+      "content": "Rating"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rating",
+      "label": "Show rating",
+      "default": false,
+      "info": "Only turn this on once you have real ratings — it currently shows the number you set below, not a live review count."
+    },
+    {
+      "type": "range",
+      "id": "rating_value",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "label": "Rating value",
+      "default": 4.8
+    },
+    {
+      "type": "text",
+      "id": "rating_count_text",
+      "label": "Rating count text",
+      "info": "e.g. \"128 reviews\". Leave blank until you have real reviews."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "info": "Leave blank to use the product title"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "buy_button_text",
+      "label": "Buy button text",
+      "default": "Add to Cart"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#0d211e"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#eaf6f3"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent",
+      "default": "#5eead4"
+    },
+    {
+      "type": "color",
+      "id": "card_color",
+      "label": "Card background",
+      "default": "#123a34"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Benefit text",
+          "default": "Benefit goes here"
+        }
+      ]
+    },
+    {
+      "type": "tier",
+      "name": "Bundle tier",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "variant_title",
+          "label": "Exact variant title",
+          "info": "Must match a variant's title exactly, e.g. \"2 Bottles — 2 Month Supply\". Find this on the product's Variants page in admin."
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Tier label",
+          "default": "1 Bottle"
+        },
+        {
+          "type": "text",
+          "id": "sublabel",
+          "label": "Tier sublabel"
+        },
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Badge text",
+          "info": "e.g. \"Most Popular\". Leave blank for none."
+        }
+      ]
+    },
+    {
+      "type": "trust",
+      "name": "Trust badge",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "truck", "label": "Truck" },
+            { "value": "shield", "label": "Shield" },
+            { "value": "headset", "label": "Headset" },
+            { "value": "checkmark", "label": "Checkmark" }
+          ],
+          "default": "checkmark"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Fast shipping"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Question goes here"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Answer goes here.</p>"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

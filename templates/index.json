@@ -60,7 +60,7 @@
           "type": "heading",
           "settings": {
             "heading": "Welcome to Dewy — comfort support for perimenopausal dry eye",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#000000"
@@ -127,10 +127,10 @@
             "emoji": "🚚",
             "emoji_size": "medium",
             "heading": "Fast shipping",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#000000",
             "text": "<p>Your order is on its way quickly, so you're not waiting around for relief.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#000000"
           }
         },
@@ -140,10 +140,10 @@
             "emoji": "🛡️",
             "emoji_size": "medium",
             "heading": "Quality first",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#000000",
             "text": "<p>We choose ingredients and materials we'd want to use ourselves.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#000000"
           }
         },
@@ -153,10 +153,10 @@
             "emoji": "💬",
             "emoji_size": "medium",
             "heading": "Friendly support",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#000000",
             "text": "<p>Questions about what might help your symptoms? We're happy to talk it through.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#000000"
           }
         },
@@ -166,10 +166,10 @@
             "emoji": "🔁",
             "emoji_size": "medium",
             "heading": "Easy returns",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#000000",
             "text": "<p>Not the right fit? Reach out and our support team will help.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#000000"
           }
         }
@@ -205,7 +205,7 @@
       "type": "featured-collection",
       "settings": {
         "heading": "Discover Our Collection",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
@@ -320,7 +320,7 @@
         "stars_mobilealignment": "center",
         "heading_stars_number": 5,
         "heading": "What customers are saying",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
@@ -372,7 +372,7 @@
           "type": "heading",
           "settings": {
             "heading": "We're Here If You Need Us",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
             "heading_color": "#000000"

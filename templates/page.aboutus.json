@@ -23,7 +23,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Welcome to Dewy<\/strong>",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#000000"
@@ -88,7 +88,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Why we started Dewy<\/strong>",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#000000"
@@ -129,7 +129,7 @@
           "type": "heading",
           "settings": {
             "heading": "<strong>Our mission<\/strong>",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#000000"

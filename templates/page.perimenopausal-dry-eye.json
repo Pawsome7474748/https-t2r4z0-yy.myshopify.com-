@@ -24,7 +24,7 @@
           "type": "heading",
           "settings": {
             "heading": "Perimenopausal Dry Eye Is Real — And You're Not Imagining It",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
             "heading_color": "#14312d"
@@ -80,7 +80,7 @@
           "type": "heading",
           "settings": {
             "heading": "What's Actually Happening To Your Eyes",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#14312d"
@@ -118,7 +118,7 @@
           "type": "heading",
           "settings": {
             "heading": "You Are Far From Alone",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#14312d"
@@ -133,7 +133,7 @@
             "percent_text_color": "#14312d",
             "percent_background_color": "#ffffff",
             "text": "<p>of women report dry eye symptoms during perimenopause</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
             "text_color": "#3f5854",
@@ -150,7 +150,7 @@
             "percent_text_color": "#14312d",
             "percent_background_color": "#ffffff",
             "text": "<p>of postmenopausal women report the same experience</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
             "text_color": "#3f5854",
@@ -167,7 +167,7 @@
             "percent_text_color": "#14312d",
             "percent_background_color": "#ffffff",
             "text": "<p>of adults over 40 show signs of meibomian gland dysfunction, a leading cause of dry eye</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
             "text_color": "#3f5854",
@@ -222,10 +222,10 @@
             "emoji": "😖",
             "emoji_size": "medium",
             "heading": "That gritty, burning feeling",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Like sand in your eyes that won't go away — often worse by mid-afternoon.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         },
@@ -235,10 +235,10 @@
             "emoji": "📱",
             "emoji_size": "medium",
             "heading": "Screens make it so much worse",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Every scroll and every email dries your eyes out faster and blurs your focus.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         },
@@ -248,10 +248,10 @@
             "emoji": "😴",
             "emoji_size": "medium",
             "heading": "Waking up already dry",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Tear production naturally dips overnight — for many women in perimenopause, that dip runs deeper.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         },
@@ -261,10 +261,10 @@
             "emoji": "🪞",
             "emoji_size": "medium",
             "heading": "Looking more tired than you feel",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Red, glassy, puffy-looking eyes can make you look — and feel — exhausted, even on a good day.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         }
@@ -288,7 +288,7 @@
           "type": "heading",
           "settings": {
             "heading": "It's Not Just Your Eyes — It's Your Whole Day",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#14312d"
@@ -326,7 +326,7 @@
           "type": "heading",
           "settings": {
             "heading": "Two Simple Ways To Support Your Eyes",
-            "heading_size": "h1",
+            "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#14312d"
@@ -427,10 +427,10 @@
           "type": "question",
           "settings": {
             "heading": "Is perimenopausal dry eye permanent?",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>For many women, symptoms ease once hormone levels stabilize after menopause — but for others, dry eye becomes an ongoing part of eye care. Either way, the goal is comfort and support, not just waiting it out.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         },
@@ -438,10 +438,10 @@
           "type": "question",
           "settings": {
             "heading": "Can supplements and self-care actually help?",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Omega-3 fatty acids are one of the most studied nutritional supports for tear film quality, and simple habits like cooling compresses and blinking breaks can meaningfully ease day-to-day discomfort. They work best alongside — not instead of — guidance from an eye care professional.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         },
@@ -449,10 +449,10 @@
           "type": "question",
           "settings": {
             "heading": "How long before I notice a difference?",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Comfort routines are cumulative. Many people notice small improvements within a few weeks of consistent use, though everyone's eyes — and hormones — respond differently.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         },
@@ -460,10 +460,10 @@
           "type": "question",
           "settings": {
             "heading": "Should I still see a doctor?",
-            "heading_size": "h3",
+            "heading_size": "h2",
             "heading_color": "#14312d",
             "text": "<p>Yes. If your symptoms are severe, sudden, or affecting your vision, please see an optometrist or ophthalmologist. Dewy is here to support day-to-day comfort, not to diagnose or treat any medical condition.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_color": "#3f5854"
           }
         }
@@ -471,7 +471,7 @@
       "block_order": ["question_1", "question_2", "question_3", "question_4"],
       "settings": {
         "heading": "Common Questions",
-        "heading_size": "h1",
+        "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#14312d",
@@ -519,7 +519,7 @@
           "type": "text",
           "settings": {
             "text": "<p>Questions about your order or what might help? Our support team is a message away — reach out any time.</p>",
-            "text_style": "body",
+            "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
             "text_color": "#3f5854"

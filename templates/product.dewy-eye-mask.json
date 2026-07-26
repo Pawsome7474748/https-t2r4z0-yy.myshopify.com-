@@ -12,34 +12,34 @@
     "bundle_hero_1": {
       "type": "pp-bundle-hero",
       "blocks": {
-        "benefit_1": { "type": "benefit", "settings": { "text": "Omega-3 EPA & DHA in every capsule" } },
-        "benefit_2": { "type": "benefit", "settings": { "text": "Supports heart, brain & eye comfort" } },
-        "benefit_3": { "type": "benefit", "settings": { "text": "Simple 2-capsules-a-day routine" } },
-        "benefit_4": { "type": "benefit", "settings": { "text": "One of the most studied nutrients for tear film" } },
+        "benefit_1": { "type": "benefit", "settings": { "text": "Instant cooling relief for tired, dry-feeling eyes" } },
+        "benefit_2": { "type": "benefit", "settings": { "text": "Reusable — freeze it and use it again and again" } },
+        "benefit_3": { "type": "benefit", "settings": { "text": "Soft, breathable strap fits most face shapes" } },
+        "benefit_4": { "type": "benefit", "settings": { "text": "Great for a midday break or before bed" } },
         "tier_1": {
           "type": "tier",
           "settings": {
-            "variant_title": "1 Bottle — 1 Month Supply",
-            "label": "1 Bottle",
-            "sublabel": "1 Month Supply",
+            "variant_title": "1pc-eye mask-grey / China Mainland",
+            "label": "1 Mask",
+            "sublabel": "",
             "badge": ""
           }
         },
         "tier_2": {
           "type": "tier",
           "settings": {
-            "variant_title": "2 Bottles — 2 Month Supply",
-            "label": "2 Bottles",
-            "sublabel": "2 Month Supply · Save 10%",
+            "variant_title": "Grey — 2 Pack / China Mainland",
+            "label": "2 Masks",
+            "sublabel": "Save 10%",
             "badge": "Most Popular"
           }
         },
         "tier_3": {
           "type": "tier",
           "settings": {
-            "variant_title": "3 Bottles — 3 Month Supply",
-            "label": "3 Bottles",
-            "sublabel": "3 Month Supply · 3rd bottle 20% off",
+            "variant_title": "Grey — 3 Pack / China Mainland",
+            "label": "3 Masks",
+            "sublabel": "3rd mask 20% off",
             "badge": "Best Value"
           }
         },
@@ -49,15 +49,15 @@
         "faq_1": {
           "type": "faq",
           "settings": {
-            "question": "How does Omega-3 support eye comfort?",
-            "answer": "<p>Perimenopause can disrupt the oily layer of your tear film. Omega-3 fatty acids (EPA & DHA) are among the most studied nutrients for supporting that layer and overall tear quality, alongside heart and brain health.</p>"
+            "question": "How do I use it?",
+            "answer": "<p>Freeze for at least 2 hours for a cooling compress, or briefly warm it for a soothing heat compress. Place gently over closed eyes for 10–15 minutes.</p>"
           }
         },
         "faq_2": {
           "type": "faq",
           "settings": {
-            "question": "How do I take it?",
-            "answer": "<p>2 capsules daily, ideally with a meal and plenty of water.</p>"
+            "question": "Is it reusable?",
+            "answer": "<p>Yes — rinse, refreeze (or reheat), and use again. The gel beads are designed for repeated use.</p>"
           }
         },
         "faq_3": {
@@ -75,12 +75,12 @@
         "faq_1", "faq_2", "faq_3"
       ],
       "settings": {
-        "eyebrow_text": "Comfort support for perimenopausal dry eye",
+        "eyebrow_text": "Soothing relief for tired, dry eyes",
         "show_rating": false,
         "rating_value": 4.8,
         "rating_count_text": "",
-        "heading": "Omega-3 Fish Oil — EPA & DHA",
-        "subheading": "<p>Nutritional support for tear film quality, heart, and brain health — from a brand built around perimenopausal eye comfort.</p>",
+        "heading": "Cooling Gel Eye Mask",
+        "subheading": "<p>A reusable cooling compress for the gritty, tired-eye feeling perimenopause can bring — freeze it, wear it, feel it.</p>",
         "buy_button_text": "Add to Cart",
         "background_color": "#0d211e",
         "text_color": "#eaf6f3",

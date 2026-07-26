@@ -126,7 +126,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
-    "cartdrawer_button_color": "#f8663b",
+    "cartdrawer_button_color": "#2a7a72",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -149,10 +149,10 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "",
-          "text": "#000000",
-          "button": "#f8663b",
+          "text": "#14312d",
+          "button": "#2a7a72",
           "button_label": "#ffffff",
-          "secondary_button_label": "#f8663b",
+          "secondary_button_label": "#2a7a72",
           "shadow": "#000000"
         }
       },
