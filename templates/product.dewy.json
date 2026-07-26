@@ -1,0 +1,158 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_title_1": {
+          "type": "product-title",
+          "settings": {
+            "product_title_heading_size": "h1",
+            "product_title_heading_alignment": "left",
+            "product_title_heading_mobilealignment": "left",
+            "product_title_heading_color": "#14312d",
+            "product_title_padding_top": 0,
+            "product_title_padding_bottom": 8
+          }
+        },
+        "price_1": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#14312d",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": true
+          }
+        },
+        "pp_text_1": {
+          "type": "pp-text",
+          "settings": {
+            "pp_text": "Omega-3 EPA & DHA — one of the most studied nutritional supports for tear film quality.",
+            "pp_text_size": "subtitle",
+            "pp_text_color": "#3f5854",
+            "pp_text_alignment": "left",
+            "pp_text_mobilealignment": "left",
+            "pp_text_border_top": 0,
+            "pp_text_border_bottom": 1,
+            "pp_text_border_color": "#d7ece9",
+            "pp_text_padding_top": 0,
+            "pp_text_padding_bottom": 16
+          }
+        },
+        "pp_benefits_1": {
+          "type": "pp-benefits",
+          "settings": {
+            "pp_benefits_text1": "✔️ Omega-3 EPA & DHA in every capsule",
+            "pp_benefits_text2": "✔️ Supports heart, brain, and eye comfort",
+            "pp_benefits_text3": "✔️ Simple 2-capsules-a-day routine",
+            "pp_benefits_text4": "✔️ Subscribe, adjust, or cancel any time",
+            "pp_benefits_text_size": "body",
+            "pp_benefits_text_color": "#3f5854",
+            "pp_benefits_text_alignment": "left",
+            "pp_benefits_text_mobilealignment": "left",
+            "pp_benefits_border_top": 0,
+            "pp_benefits_border_bottom": 1,
+            "pp_benefits_border_color": "#d7ece9",
+            "pp_benefits_padding_top": 12,
+            "pp_benefits_padding_bottom": 16
+          }
+        },
+        "variant_picker_1": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "none"
+          }
+        },
+        "buy_buttons_1": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "button_text": "Add Bundle to Cart",
+            "sold_out_text": "Sold Out",
+            "unavailable_text": "Unavailable",
+            "button_color": "#2a7a72",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "high",
+            "button_padding_vertical": 16,
+            "button_padding_horizontal": 25
+          }
+        },
+        "pp_guarantees_1": {
+          "type": "pp-guarantees",
+          "settings": {
+            "pp_guarantees_icon1": "truck",
+            "pp_guarantees_text1": "Fast shipping",
+            "pp_guarantees_icon2": "shield",
+            "pp_guarantees_text2": "Secure checkout",
+            "pp_guarantees_icon3": "headset",
+            "pp_guarantees_text3": "Friendly support",
+            "pp_guarantees_text_size": "small",
+            "pp_guarantees_text_color": "#3f5854",
+            "pp_guarantees_border_top": 1,
+            "pp_guarantees_border_bottom": 0,
+            "pp_guarantees_border_color": "#d7ece9",
+            "pp_guarantees_padding_top": 16,
+            "pp_guarantees_padding_bottom": 16
+          }
+        },
+        "pp_expandable_1": {
+          "type": "pp-expandable",
+          "settings": {
+            "pp_expandable_title1": "How does Omega-3 support eye comfort?",
+            "pp_expandable_content1": "<p>Perimenopause can disrupt the oily layer of your tear film. Omega-3 fatty acids (EPA & DHA) are among the most studied nutrients for supporting that layer and overall tear quality, alongside heart and brain health.</p>",
+            "pp_expandable_title2": "How do I take it?",
+            "pp_expandable_content2": "<p>2 capsules daily, ideally with a meal and plenty of water.</p>",
+            "pp_expandable_title3": "Is this a substitute for medical advice?",
+            "pp_expandable_content3": "<p>No. This supports day-to-day comfort but doesn't diagnose or treat any condition. If your symptoms are severe or sudden, please see a doctor or eye care professional.</p>",
+            "pp_expandable_text_size": "medium",
+            "pp_expandable_answer_size": "small",
+            "pp_expandable_text_color": "#14312d",
+            "pp_expandable_arrow_color": "#2a7a72",
+            "pp_expandable_text_border_color": "#d7ece9",
+            "pp_expandable_border_top": 1,
+            "pp_expandable_border_bottom": 0,
+            "pp_expandable_border_color": "#d7ece9",
+            "pp_expandable_padding_top": 16,
+            "pp_expandable_padding_bottom": 16
+          }
+        },
+        "description_1": {
+          "type": "description"
+        },
+        "collapsible_tab_1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping & returns",
+            "icon": "eye",
+            "content": "<p>Questions about your order or what might help? Reach out any time — our support team is happy to help you find the right fit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product_title_1",
+        "price_1",
+        "pp_text_1",
+        "pp_benefits_1",
+        "variant_picker_1",
+        "buy_buttons_1",
+        "pp_guarantees_1",
+        "pp_expandable_1",
+        "description_1",
+        "collapsible_tab_1"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
