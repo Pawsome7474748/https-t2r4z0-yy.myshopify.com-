@@ -83,19 +83,10 @@
         "background_color": "#0d211e",
         "text_color": "#eaf6f3",
         "accent_color": "#5eead4",
-        "card_color": "#123a34"
+        "card_color": "#123a34",
+        "show_description": true
       }
-    },
-    "main": {
-      "type": "main-product",
-      "blocks": {
-        "description_1": {
-          "type": "description"
-        }
-      },
-      "block_order": ["description_1"],
-      "settings": {}
     }
   },
-  "order": ["bundle_hero_1", "main"]
+  "order": ["bundle_hero_1"]
 }

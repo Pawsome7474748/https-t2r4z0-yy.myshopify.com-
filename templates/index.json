@@ -63,7 +63,7 @@
             "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#ffffff"
           }
         },
         "text_BnFjzQ": {
@@ -73,7 +73,7 @@
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
-            "text_color": "#000000"
+            "text_color": "#eaf6f3"
           }
         },
         "button_ewqPQY": {
@@ -94,7 +94,7 @@
             "button_padding_horizontal": 25,
             "button_subtext": "What it is, and what actually helps",
             "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
+            "button_subtext_color": "#eaf6f3",
             "button_action": "link",
             "button_action_scroll_element": ""
           }
@@ -108,12 +108,12 @@
       "settings": {
         "image": "shopify://shop_images/theme_image_149_5_14.webp",
         "desktop_image_width": "large",
-        "image_border_radius": 50,
+        "image_border_radius": 25,
         "layout": "image_first",
         "mobile_layout": "image_first",
-        "gradient": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "gradient": "#0d211e",
+        "padding_top": 64,
+        "padding_bottom": 64,
         "margin_top": 40,
         "margin_bottom": 0
       }
@@ -194,7 +194,7 @@
         "text_alignment": "center",
         "text_mobilealignment": "center",
         "text_color": "#000000",
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(244, 250, 249, 1) 100%)",
+        "gradient": "#d7ece9",
         "padding_top": 52,
         "padding_bottom": 44,
         "margin_top": 0,
@@ -365,7 +365,7 @@
             "icon_size": 65,
             "icon_alignment": "center",
             "icon_mobilealignment": "center",
-            "icon_color": "#2a7a72"
+            "icon_color": "#5eead4"
           }
         },
         "heading_CQ6HWW": {
@@ -375,7 +375,7 @@
             "heading_size": "h0",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#ffffff"
           }
         },
         "text_4XnaxC": {
@@ -385,7 +385,7 @@
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
-            "text_color": "#000000"
+            "text_color": "#eaf6f3"
           }
         },
         "button_nd9nGW": {
@@ -420,7 +420,7 @@
         "button_nd9nGW"
       ],
       "settings": {
-        "gradient": "",
+        "gradient": "#0d211e",
         "padding_top": 64,
         "padding_bottom": 64,
         "margin_top": 0,

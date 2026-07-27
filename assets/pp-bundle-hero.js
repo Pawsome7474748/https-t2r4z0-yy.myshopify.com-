@@ -16,6 +16,40 @@ if (!customElements.get('bundle-hero')) {
 
         const checked = this.inputs.find((input) => input.checked);
         if (checked) this.updatePrice(checked);
+
+        this.initGallery();
+      }
+
+      initGallery() {
+        this.galleryMain = this.querySelector('[data-bh-gallery-main]');
+        this.galleryThumbs = Array.from(this.querySelectorAll('[data-bh-gallery-thumb]'));
+        this.gallerySlides = this.galleryMain ? Array.from(this.galleryMain.children) : [];
+
+        if (!this.galleryMain || !this.gallerySlides.length) return;
+
+        this.galleryThumbs.forEach((thumb) => {
+          thumb.addEventListener('click', () => {
+            const index = parseInt(thumb.dataset.bhGalleryThumb, 10);
+            const slide = this.gallerySlides[index];
+            if (slide) slide.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+          });
+        });
+
+        if (this.galleryThumbs.length > 1 && 'IntersectionObserver' in window) {
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+                const index = this.gallerySlides.indexOf(entry.target);
+                this.galleryThumbs.forEach((thumb, i) => {
+                  thumb.classList.toggle('is-active', i === index);
+                });
+              });
+            },
+            { root: this.galleryMain, threshold: 0.6 }
+          );
+          this.gallerySlides.forEach((slide) => observer.observe(slide));
+        }
       }
 
       get selectedInput() {
