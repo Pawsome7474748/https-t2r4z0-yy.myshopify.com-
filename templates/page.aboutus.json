@@ -26,7 +26,7 @@
             "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#14312d"
           }
         },
         "text_juioQH": {
@@ -36,7 +36,7 @@
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
-            "text_color": "#000000"
+            "text_color": "#3f5854"
           }
         },
         "button_zWUYxa": {
@@ -69,12 +69,12 @@
         "button_zWUYxa"
       ],
       "settings": {
-        "image": "shopify://shop_images/theme_image_139_5_4.webp",
+        "image": "shopify://shop_images/dewy-welcome.png",
         "desktop_image_width": "medium",
         "image_border_radius": 50,
         "layout": "image_first",
         "mobile_layout": "image_first",
-        "gradient": "",
+        "gradient": "#eaf6f3",
         "padding_top": 0,
         "padding_bottom": 0,
         "margin_top": 0,
@@ -91,7 +91,7 @@
             "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#14312d"
           }
         },
         "text_tfexQH": {
@@ -101,7 +101,7 @@
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
-            "text_color": "#000000"
+            "text_color": "#3f5854"
           }
         }
       },
@@ -110,7 +110,7 @@
         "text_tfexQH"
       ],
       "settings": {
-        "image": "shopify://shop_images/theme_image_666_5_25.webp",
+        "image": "shopify://shop_images/dewy-founder-story.png",
         "desktop_image_width": "medium",
         "image_border_radius": 50,
         "layout": "text_first",
@@ -132,7 +132,7 @@
             "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#14312d"
           }
         },
         "text_qzgWdQ": {
@@ -142,7 +142,7 @@
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
-            "text_color": "#000000"
+            "text_color": "#3f5854"
           }
         }
       },
@@ -151,12 +151,12 @@
         "text_qzgWdQ"
       ],
       "settings": {
-        "image": "shopify://shop_images/theme_image_660_5_19.webp",
+        "image": "shopify://shop_images/dewy-mission-products.png",
         "desktop_image_width": "medium",
         "image_border_radius": 50,
         "layout": "image_first",
         "mobile_layout": "image_first",
-        "gradient": "",
+        "gradient": "#eaf6f3",
         "padding_top": 20,
         "padding_bottom": 40,
         "margin_top": 0,
