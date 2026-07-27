@@ -64,13 +64,41 @@
             "question": "Is this a substitute for medical advice?",
             "answer": "<p>No. This supports day-to-day comfort but doesn't diagnose or treat any condition. If your symptoms are severe or sudden, please see a doctor or eye care professional.</p>"
           }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "How should I store it between uses?",
+            "answer": "<p>Keep it in the freezer (in a clean bag or the pouch it came with) so it's ready whenever you need a cooling break.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use it if I wear contact lenses?",
+            "answer": "<p>Remove contact lenses before use, the same as you would for any eye compress.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "What if I have sensitive skin?",
+            "answer": "<p>The mask has a soft fabric cover, but if you know you're sensitive to gel-bead compresses, do a short test first and stop if you notice any irritation.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "How long should I use it for?",
+            "answer": "<p>10–15 minutes per session is typical. Avoid falling asleep with it on for extended periods.</p>"
+          }
         }
       },
       "block_order": [
         "benefit_1", "benefit_2", "benefit_3", "benefit_4",
         "tier_1", "tier_2", "tier_3",
         "trust_1", "trust_2", "trust_3",
-        "faq_1", "faq_2", "faq_3"
+        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7"
       ],
       "settings": {
         "eyebrow_text": "Soothing relief for tired, dry eyes",
@@ -82,8 +110,7 @@
         "background_color": "#0d211e",
         "text_color": "#eaf6f3",
         "accent_color": "#5eead4",
-        "card_color": "#123a34",
-        "show_description": true
+        "card_color": "#123a34"
       }
     }
   },

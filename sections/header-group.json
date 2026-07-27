@@ -17,8 +17,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "🎉 UP TO 50% OFF — LIMITED TIME SALE 🎉",
-            "text_color": "#000000",
+            "text": "Comfort support for perimenopausal dry eye",
+            "text_color": "#eaf6f3",
             "link": ""
           }
         }
@@ -27,7 +27,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "gradient": "linear-gradient(57deg, #ffd4c7, #ffd4c7 98%)",
+        "gradient": "linear-gradient(57deg, #0d211e, #0d211e 98%)",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
@@ -44,8 +44,8 @@
         "menu_type_desktop": "dropdown",
         "sticky_header_type": "on-scroll-up",
         "show_line_separator": true,
-        "color_scheme": "scheme-1",
-        "menu_color_scheme": "scheme-1",
+        "color_scheme": "scheme-6",
+        "menu_color_scheme": "scheme-6",
         "enable_country_selector": false,
         "enable_language_selector": false,
         "enable_customer_avatar": false,

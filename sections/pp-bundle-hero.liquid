@@ -145,9 +145,12 @@
 
         {%- if shop.enabled_payment_types.size > 0 -%}
           <div class="bh-payment">
-            {%- for type in shop.enabled_payment_types -%}
-              {{ type | payment_type_svg_tag: class: 'bh-payment__icon' }}
-            {%- endfor -%}
+            <span class="bh-payment__label">We accept</span>
+            <div class="bh-payment__icons">
+              {%- for type in shop.enabled_payment_types -%}
+                {{ type | payment_type_svg_tag: class: 'bh-payment__icon' }}
+              {%- endfor -%}
+            </div>
           </div>
         {%- endif -%}
 
@@ -174,10 +177,6 @@
         {%- endif -%}
       </div>
     </div>
-
-    {%- if section.settings.show_description and product.description != blank -%}
-      <div class="bh-description rte">{{ product.description }}</div>
-    {%- endif -%}
 
     {%- if faq_blocks.size > 0 -%}
       <div class="bh-faq">
@@ -247,12 +246,6 @@
       "type": "richtext",
       "id": "subheading",
       "label": "Subheading"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_description",
-      "label": "Show product description",
-      "default": true
     },
     {
       "type": "text",
@@ -361,7 +354,7 @@
     {
       "type": "faq",
       "name": "FAQ item",
-      "limit": 6,
+      "limit": 12,
       "settings": [
         {
           "type": "text",

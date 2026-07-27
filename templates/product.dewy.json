@@ -65,13 +65,41 @@
             "question": "Is this a substitute for medical advice?",
             "answer": "<p>No. This supports day-to-day comfort but doesn't diagnose or treat any condition. If your symptoms are severe or sudden, please see a doctor or eye care professional.</p>"
           }
+        },
+        "faq_4": {
+          "type": "faq",
+          "settings": {
+            "question": "How should I store it?",
+            "answer": "<p>Keep in a cool, dry place away from direct sunlight and heat. Reseal the bottle tightly after each use.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Is it safe to take with medication or if I'm pregnant or nursing?",
+            "answer": "<p>If you're pregnant, nursing, taking medication (especially blood thinners), or have a medical condition, please check with your doctor before starting any new supplement.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq",
+          "settings": {
+            "question": "How long before I notice a difference?",
+            "answer": "<p>Everyone is different. Nutritional support like Omega-3 works best as part of a consistent daily routine over time, rather than as an instant fix — many people reassess after finishing a full bottle.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I take more than 2 capsules a day?",
+            "answer": "<p>Please stick to the serving size on the label unless a doctor advises otherwise.</p>"
+          }
         }
       },
       "block_order": [
         "benefit_1", "benefit_2", "benefit_3", "benefit_4",
         "tier_1", "tier_2", "tier_3",
         "trust_1", "trust_2", "trust_3",
-        "faq_1", "faq_2", "faq_3"
+        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7"
       ],
       "settings": {
         "eyebrow_text": "Comfort support for perimenopausal dry eye",
@@ -83,8 +111,7 @@
         "background_color": "#0d211e",
         "text_color": "#eaf6f3",
         "accent_color": "#5eead4",
-        "card_color": "#123a34",
-        "show_description": true
+        "card_color": "#123a34"
       }
     }
   },

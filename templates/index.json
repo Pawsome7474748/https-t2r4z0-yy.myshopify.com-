@@ -29,8 +29,8 @@
             "button_link_2": "",
             "button_style_secondary_2": false,
             "button_rounded_corners": "medium",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#2a7a72",
+            "button_text_color": "#0d211e",
+            "button_background_color": "#5eead4",
             "button_padding_vertical": 20
           }
         }
@@ -41,16 +41,124 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Screenshot_2026-06-21_at_2.13.40_PM.png",
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 50,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-6",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
         "show_text_below": false
+      }
+    },
+    "stats": {
+      "type": "pp-image-with-percentage",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "heading": "You Are Far From Alone",
+            "heading_size": "h0",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#ffffff"
+          }
+        },
+        "percent_1": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 76,
+            "percent_filled_color": "#5eead4",
+            "percent_unfilled_color": "#123a34",
+            "percent_text_color": "#0d211e",
+            "percent_background_color": "#eaf6f3",
+            "text": "<p>of women report dry eye symptoms during perimenopause</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#eaf6f3",
+            "border_size": 1,
+            "border_color": "#123a34"
+          }
+        },
+        "percent_2": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 80,
+            "percent_filled_color": "#5eead4",
+            "percent_unfilled_color": "#123a34",
+            "percent_text_color": "#0d211e",
+            "percent_background_color": "#eaf6f3",
+            "text": "<p>of postmenopausal women report the same experience</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#eaf6f3",
+            "border_size": 1,
+            "border_color": "#123a34"
+          }
+        },
+        "percent_3": {
+          "type": "percent",
+          "settings": {
+            "percent_value": 69,
+            "percent_filled_color": "#5eead4",
+            "percent_unfilled_color": "#123a34",
+            "percent_text_color": "#0d211e",
+            "percent_background_color": "#eaf6f3",
+            "text": "<p>of adults over 40 show signs of meibomian gland dysfunction, a leading cause of dry eye</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#eaf6f3",
+            "border_size": 0,
+            "border_color": "#123a34"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Read More About Dry Eye",
+            "button_link": "/pages/perimenopausal-dry-eye",
+            "button_link_newtab": false,
+            "button_text_color": "#0d211e",
+            "button_background_color": "#5eead4",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_alignment": "left",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#eaf6f3",
+            "button_action": "link",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "percent_1",
+        "percent_2",
+        "percent_3",
+        "button_1"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/theme_image_149_5_14.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 25,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "#0d211e",
+        "padding_top": 64,
+        "padding_bottom": 24,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "pp_image_with_text_HNW9yr": {
@@ -59,7 +167,7 @@
         "heading_XBqRa6": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to Dewy — comfort support for perimenopausal dry eye",
+            "heading": "What is perimenopausal dry eye?",
             "heading_size": "h0",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
@@ -69,7 +177,7 @@
         "text_BnFjzQ": {
           "type": "text",
           "settings": {
-            "text": "<p>We make simple, everyday products for the eye comfort perimenopause can take away — from nutritional support to soothing relief you can feel right now.</p>",
+            "text": "<p>As estrogen and androgen levels shift during perimenopause, they affect the glands that keep your tear film stable — particularly the meibomian glands, which produce the oily layer that stops tears from evaporating too fast. When that layer breaks down, eyes can feel gritty, tired, and dry, even if they look perfectly normal.</p><p>It's a real, hormone-driven change — not something you're imagining, and not something you just have to live with.</p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -82,8 +190,8 @@
             "button_label": "Learn About Dry Eye",
             "button_link": "/pages/perimenopausal-dry-eye",
             "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#2a7a72",
+            "button_text_color": "#0d211e",
+            "button_background_color": "#5eead4",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "full",
@@ -106,15 +214,15 @@
         "button_ewqPQY"
       ],
       "settings": {
-        "image": "shopify://shop_images/theme_image_149_5_14.webp",
+        "image": "shopify://shop_images/Screenshot_2026-06-21_at_2.13.40_PM.png",
         "desktop_image_width": "large",
         "image_border_radius": 25,
-        "layout": "image_first",
+        "layout": "text_first",
         "mobile_layout": "image_first",
         "gradient": "#0d211e",
-        "padding_top": 64,
+        "padding_top": 24,
         "padding_bottom": 64,
-        "margin_top": 40,
+        "margin_top": 0,
         "margin_bottom": 0
       }
     },
@@ -124,53 +232,53 @@
         "benefit_D6UzNR": {
           "type": "benefit",
           "settings": {
-            "emoji": "🚚",
+            "emoji": "👁️",
             "emoji_size": "medium",
-            "heading": "Fast shipping",
+            "heading": "That gritty, dry feeling",
             "heading_size": "h2",
-            "heading_color": "#000000",
-            "text": "<p>Your order is on its way quickly, so you're not waiting around for relief.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>A scratchy, sandy sensation that can show up out of nowhere, even without any warning signs.</p>",
             "text_style": "subtitle",
-            "text_color": "#000000"
+            "text_color": "#eaf6f3"
           }
         },
         "benefit_QgKXFK": {
           "type": "benefit",
           "settings": {
-            "emoji": "🛡️",
+            "emoji": "😩",
             "emoji_size": "medium",
-            "heading": "Quality first",
+            "heading": "Worse by the end of the day",
             "heading_size": "h2",
-            "heading_color": "#000000",
-            "text": "<p>We choose ingredients and materials we'd want to use ourselves.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>Comfort often fades the longer you're awake, especially after screen time.</p>",
             "text_style": "subtitle",
-            "text_color": "#000000"
+            "text_color": "#eaf6f3"
           }
         },
         "benefit_47AwEj": {
           "type": "benefit",
           "settings": {
-            "emoji": "💬",
+            "emoji": "🌤️",
             "emoji_size": "medium",
-            "heading": "Friendly support",
+            "heading": "Light sensitivity",
             "heading_size": "h2",
-            "heading_color": "#000000",
-            "text": "<p>Questions about what might help your symptoms? We're happy to talk it through.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>Bright rooms or sunlight can suddenly feel like too much for your eyes to handle.</p>",
             "text_style": "subtitle",
-            "text_color": "#000000"
+            "text_color": "#eaf6f3"
           }
         },
         "benefit_EKiWTc": {
           "type": "benefit",
           "settings": {
-            "emoji": "🔁",
+            "emoji": "🌙",
             "emoji_size": "medium",
-            "heading": "Easy returns",
+            "heading": "Restless, uncomfortable eyes at night",
             "heading_size": "h2",
-            "heading_color": "#000000",
-            "text": "<p>Not the right fit? Reach out and our support team will help.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>The same hormonal shifts behind hot flashes and disrupted sleep can affect your tear film too.</p>",
             "text_style": "subtitle",
-            "text_color": "#000000"
+            "text_color": "#eaf6f3"
           }
         }
       },
@@ -184,17 +292,17 @@
         "image": "shopify://shop_images/Screenshot_2026-06-21_at_5.37.06_PM.png",
         "desktop_image_width": "large",
         "image_border_radius": 100,
-        "heading": "Why choose Dewy",
+        "heading": "Do these sound familiar?",
         "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "text": "<p>Dewy makes eye comfort simple with thoughtful products, fast shipping, and friendly support.</p>",
+        "heading_color": "#ffffff",
+        "text": "<p>These are some of the most commonly reported perimenopausal dry eye symptoms — Dewy is built around helping with exactly this.</p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
-        "text_color": "#000000",
-        "gradient": "#d7ece9",
+        "text_color": "#eaf6f3",
+        "gradient": "#0d211e",
         "padding_top": 52,
         "padding_bottom": 44,
         "margin_top": 0,
@@ -204,11 +312,11 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Discover Our Collection",
+        "heading": "Shop Dewy",
         "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
+        "heading_color": "#ffffff",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -220,7 +328,7 @@
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "image_rounded_corners": "high",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-6",
         "button_rounded_corners": "medium",
         "button_width": "fit",
         "image_ratio": "adapt",
@@ -323,18 +431,18 @@
         "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
+        "heading_color": "#ffffff",
         "text": "<p>Add your real customer reviews here</p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
-        "text_color": "#000000",
-        "gradient": "",
+        "text_color": "#eaf6f3",
+        "gradient": "#0d211e",
         "button_label": "",
         "button_link": "",
         "button_link_newtab": true,
-        "button_text_color": "#ffffff",
-        "button_background_color": "#2a7a72",
+        "button_text_color": "#0d211e",
+        "button_background_color": "#5eead4",
         "button_border_width": 0,
         "button_border_color": "#000000",
         "button_width": "fit",
@@ -346,11 +454,11 @@
         "button_padding_horizontal": 15,
         "button_subtext": "",
         "button_subtext_style": "body",
-        "button_subtext_color": "#000000",
+        "button_subtext_color": "#eaf6f3",
         "button_action": "scroll",
         "button_action_scroll_element": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 60,
+        "padding_bottom": 60,
         "margin_top": 0,
         "margin_bottom": 0
       }
@@ -394,8 +502,8 @@
             "button_label": "Shop Now",
             "button_link": "/collections/all",
             "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#2a7a72",
+            "button_text_color": "#0d211e",
+            "button_background_color": "#5eead4",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "fit",
@@ -407,7 +515,7 @@
             "button_padding_horizontal": 15,
             "button_subtext": "",
             "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
+            "button_subtext_color": "#eaf6f3",
             "button_action": "link",
             "button_action_scroll_element": ""
           }
@@ -430,6 +538,7 @@
   },
   "order": [
     "image_banner",
+    "stats",
     "pp_image_with_text_HNW9yr",
     "pp_image_with_benefits_YnG9hi",
     "featured_collection",
