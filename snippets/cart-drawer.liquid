@@ -432,6 +432,10 @@
           </details>
         {%- endif -%}
 
+        {%- if cart != empty -%}
+          {%- render 'cart-cross-sell' -%}
+        {%- endif -%}
+
         <!-- Start blocks -->
         <!-- Subtotals -->
 

@@ -1,0 +1,66 @@
+{% comment %}
+  Renders a bundle cross-sell prompt in the cart: if the customer has one of
+  Dewy's two products in their cart, offers the other at 15% off (a real
+  automatic discount configured in Shopify admin — not a fake claim).
+
+  Usage:
+  {% render 'cart-cross-sell' %}
+{% endcomment %}
+
+{%- liquid
+  assign omega_handle = 'omega-3-fish-oil-supplement-with-epa-dha-supports-heart-and-brain-health-omega-3-fatty-acids-120-capsules'
+  assign mask_handle = 'gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa'
+  assign has_omega = false
+  assign has_mask = false
+  for item in cart.items
+    if item.product.handle == omega_handle
+      assign has_omega = true
+    endif
+    if item.product.handle == mask_handle
+      assign has_mask = true
+    endif
+  endfor
+  assign cross_product = blank
+  if has_mask and has_omega == false
+    assign cross_product = all_products[omega_handle]
+  elsif has_omega and has_mask == false
+    assign cross_product = all_products[mask_handle]
+  endif
+-%}
+
+{%- if cross_product != blank and cross_product.available -%}
+  {{ 'cart-cross-sell.css' | asset_url | stylesheet_tag }}
+  {%- assign cross_variant = cross_product.variants.first -%}
+  <div class="cart-cross-sell">
+    <p class="cart-cross-sell__title">Complete your routine — save 15%</p>
+    <div class="cart-cross-sell__card">
+      {%- if cross_product.featured_image != blank -%}
+        <img
+          class="cart-cross-sell__image"
+          src="{{ cross_product.featured_image | image_url: width: 160 }}"
+          alt="{{ cross_product.featured_image.alt | default: cross_product.title | escape }}"
+          loading="lazy"
+          width="56"
+          height="56"
+        >
+      {%- endif -%}
+      <div class="cart-cross-sell__info">
+        <span class="cart-cross-sell__name">{{ cross_product.title | truncatewords: 6 }}</span>
+        <span class="cart-cross-sell__price">
+          <span class="cart-cross-sell__price-now">{{ cross_variant.price | times: 0.85 | money }}</span>
+          <span class="cart-cross-sell__price-was">{{ cross_variant.price | money }}</span>
+        </span>
+      </div>
+      <button
+        type="button"
+        class="cart-cross-sell__add"
+        data-cart-cross-sell-add
+        data-variant-id="{{ cross_variant.id }}"
+      >
+        Add — Save 15%
+      </button>
+    </div>
+  </div>
+
+  <script src="{{ 'cart-cross-sell.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
