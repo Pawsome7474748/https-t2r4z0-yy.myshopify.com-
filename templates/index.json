@@ -350,7 +350,7 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Your customer's name",
+            "author_text": "Nadia G.",
             "author_style": "subtitle",
             "author_color": "#000000",
             "author_badge_text": "Verified Purchase",
@@ -362,7 +362,7 @@
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Replace this with a real review from a real customer once you have one.",
+            "review_text": "This supplement arrived very quickly and in good condition, the product's appearance is good and one can assume that the effectiveness of the product is also good.",
             "review_text_style": "body",
             "review_text_color": "#000000",
             "review_background_color": "#ffffff",
@@ -373,7 +373,7 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Your customer's name",
+            "author_text": "Helen S.",
             "author_style": "subtitle",
             "author_color": "#000000",
             "author_badge_text": "Verified Purchase",
@@ -385,7 +385,7 @@
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Replace this with a real review from a real customer once you have one.",
+            "review_text": "An excellent supplement that has helped so much with my dry eyes. I was worried that my problem would only get worse. But my granddaughter told me to start taking these omega pills and wow, words can't describe how grateful I am that I found this.",
             "review_text_style": "body",
             "review_text_color": "#000000",
             "review_background_color": "#ffffff",
@@ -396,7 +396,7 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Your customer's name",
+            "author_text": "Jeremy N.",
             "author_style": "subtitle",
             "author_color": "#000000",
             "author_badge_text": "Verified Purchase",
@@ -408,7 +408,30 @@
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Replace this with a real review from a real customer once you have one.",
+            "review_text": "Everything excellent. The shipping was fast and the packaging was very good at an excellent price 🙂",
+            "review_text_style": "body",
+            "review_text_color": "#000000",
+            "review_background_color": "#ffffff",
+            "review_border_radius": "low"
+          }
+        },
+        "review_dtNXc4": {
+          "type": "review",
+          "settings": {
+            "image_border_radius": "low",
+            "author_text": "Jeremy N.",
+            "author_style": "subtitle",
+            "author_color": "#000000",
+            "author_badge_text": "Verified Purchase",
+            "author_badge_text_style": "body",
+            "author_badge_text_color": "#000000",
+            "author_badge_color": "#2993f1",
+            "stars_size": "sm",
+            "stars_color": "#facc15",
+            "stars_number": 5,
+            "stars_alignment": "start",
+            "stars_mobilealignment": "start",
+            "review_text": "This is the third time I've bought them. Before taking these pills my doctor was saying my eye was getting swollen and looking very dry. After taking 2 pills a day, not only do I see a difference, I feel a difference. 🙂",
             "review_text_style": "body",
             "review_text_color": "#000000",
             "review_background_color": "#ffffff",
@@ -419,7 +442,8 @@
       "block_order": [
         "review_dtNXc1",
         "review_dtNXc2",
-        "review_dtNXc3"
+        "review_dtNXc3",
+        "review_dtNXc4"
       ],
       "settings": {
         "heading_stars_size": "lg",
@@ -432,7 +456,7 @@
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#ffffff",
-        "text": "<p>Add your real customer reviews here</p>",
+        "text": "",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
