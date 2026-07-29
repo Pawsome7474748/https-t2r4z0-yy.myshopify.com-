@@ -93,13 +93,59 @@
             "question": "Can I take more than 2 capsules a day?",
             "answer": "<p>Please stick to the serving size on the label unless a doctor advises otherwise.</p>"
           }
-        }
+        },
+        "checkmark_1": { "type": "checkmark", "settings": { "text": "Helps Dry Eyes" } },
+        "checkmark_2": { "type": "checkmark", "settings": { "text": "Supports Heart Health" } },
+        "checkmark_3": { "type": "checkmark", "settings": { "text": "Supports Brain Health" } },
+        "checkmark_4": { "type": "checkmark", "settings": { "text": "Non-GMO & Wild Caught" } },
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "author": "Nadia G.",
+            "rating": 5,
+            "text": "This supplement arrived very quickly and in good condition, the product's appearance is good and one can assume that the effectiveness of the product is also good."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "author": "Helen S.",
+            "rating": 5,
+            "text": "An excellent supplement that has helped so much with my dry eyes. I was worried that my problem would only get worse. But my granddaughter told me to start taking these omega pills and wow, words can't describe how grateful I am that I found this."
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "author": "Jeremy N.",
+            "rating": 5,
+            "text": "Everything excellent. The shipping was fast and the packaging was very good at an excellent price 🙂"
+          }
+        },
+        "review_4": {
+          "type": "review",
+          "settings": {
+            "author": "Jeremy N.",
+            "rating": 5,
+            "text": "This is the third time I've bought them. Before taking these pills my doctor was saying my eye was getting swollen and looking very dry. After taking 2 pills a day, not only do I see a difference, I feel a difference. 🙂"
+          }
+        },
+        "comparison_1": { "type": "comparison", "settings": { "feature": "EPA & DHA Fish Oil", "us": true, "others1": true, "others2": true } },
+        "comparison_2": { "type": "comparison", "settings": { "feature": "Non-GMO Ingredients", "us": true, "others1": true, "others2": false } },
+        "comparison_3": { "type": "comparison", "settings": { "feature": "Molecularly Distilled", "us": true, "others1": false, "others2": false } },
+        "comparison_4": { "type": "comparison", "settings": { "feature": "Heavy Metal Tested", "us": true, "others1": true, "others2": false } },
+        "comparison_5": { "type": "comparison", "settings": { "feature": "Wild Caught Fish", "us": true, "others1": false, "others2": false } },
+        "comparison_6": { "type": "comparison", "settings": { "feature": "No Fishy Aftertaste", "us": true, "others1": false, "others2": false } },
+        "comparison_7": { "type": "comparison", "settings": { "feature": "Formulated in the USA", "us": true, "others1": false, "others2": false } }
       },
       "block_order": [
         "benefit_1", "benefit_2", "benefit_3", "benefit_4",
         "tier_1", "tier_2", "tier_3",
         "trust_1", "trust_2", "trust_3",
-        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7"
+        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7",
+        "checkmark_1", "checkmark_2", "checkmark_3", "checkmark_4",
+        "review_1", "review_2", "review_3", "review_4",
+        "comparison_1", "comparison_2", "comparison_3", "comparison_4", "comparison_5", "comparison_6", "comparison_7"
       ],
       "settings": {
         "eyebrow_text": "Comfort support for perimenopausal dry eye",

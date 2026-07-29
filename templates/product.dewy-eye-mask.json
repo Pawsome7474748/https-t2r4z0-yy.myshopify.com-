@@ -92,13 +92,23 @@
             "question": "How long should I use it for?",
             "answer": "<p>10–15 minutes per session is typical. Avoid falling asleep with it on for extended periods.</p>"
           }
-        }
+        },
+        "checkmark_1": { "type": "checkmark", "settings": { "text": "Cooling & Soothing Relief" } },
+        "checkmark_2": { "type": "checkmark", "settings": { "text": "Reusable — Freeze & Reuse" } },
+        "checkmark_3": { "type": "checkmark", "settings": { "text": "Soft, Breathable Strap" } },
+        "checkmark_4": { "type": "checkmark", "settings": { "text": "Great for Day or Night" } },
+        "comparison_1": { "type": "comparison", "settings": { "feature": "Reusable Design", "us": true, "others1": true, "others2": false } },
+        "comparison_2": { "type": "comparison", "settings": { "feature": "Hot & Cold Use", "us": true, "others1": false, "others2": false } },
+        "comparison_3": { "type": "comparison", "settings": { "feature": "Soft Fabric Cover", "us": true, "others1": false, "others2": false } },
+        "comparison_4": { "type": "comparison", "settings": { "feature": "Adjustable Comfort Strap", "us": true, "others1": true, "others2": true } }
       },
       "block_order": [
         "benefit_1", "benefit_2", "benefit_3", "benefit_4",
         "tier_1", "tier_2", "tier_3",
         "trust_1", "trust_2", "trust_3",
-        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7"
+        "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7",
+        "checkmark_1", "checkmark_2", "checkmark_3", "checkmark_4",
+        "comparison_1", "comparison_2", "comparison_3", "comparison_4"
       ],
       "settings": {
         "eyebrow_text": "Soothing relief for tired, dry eyes",

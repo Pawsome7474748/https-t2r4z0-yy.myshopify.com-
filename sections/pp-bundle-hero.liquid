@@ -6,6 +6,9 @@
   assign tier_blocks = section.blocks | where: 'type', 'tier'
   assign trust_blocks = section.blocks | where: 'type', 'trust'
   assign faq_blocks = section.blocks | where: 'type', 'faq'
+  assign checkmark_blocks = section.blocks | where: 'type', 'checkmark'
+  assign review_blocks = section.blocks | where: 'type', 'review'
+  assign comparison_blocks = section.blocks | where: 'type', 'comparison'
   assign has_checked = false
 %}
 
@@ -178,6 +181,43 @@
       </div>
     </div>
 
+    {%- if section.settings.show_rating_badge and review_blocks.size > 0 -%}
+      {%- liquid
+        assign review_total = 0
+        for block in review_blocks
+          assign review_total = review_total | plus: block.settings.rating
+        endfor
+        assign review_avg = review_total | times: 1.0 | divided_by: review_blocks.size | round: 1
+        assign review_avg_floor = review_avg | floor
+      -%}
+      <div class="bh-ratingbadge">
+        <span class="bh-ratingbadge__stars" aria-hidden="true">
+          {%- for i in (1..5) -%}
+            {%- if i <= review_avg_floor -%}★{%- else -%}☆{%- endif -%}
+          {%- endfor -%}
+        </span>
+        <span class="bh-ratingbadge__text">
+          Rated {{ review_avg }} '{{ section.settings.rating_badge_text }}'
+          <span class="bh-ratingbadge__divider">|</span>
+          <a href="#bh-reviews-{{ section.id }}" class="bh-ratingbadge__count">{{ review_blocks.size }} Review{% if review_blocks.size != 1 %}s{% endif %}</a>
+        </span>
+      </div>
+    {%- endif -%}
+
+    {%- if checkmark_blocks.size > 0 -%}
+      <div class="bh-checkmarks">
+        {%- for block in checkmark_blocks -%}
+          <span class="bh-checkmarks__item" {{ block.shopify_attributes }}>
+            <svg class="bh-checkmarks__icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="10" cy="10" r="10" fill="currentColor" />
+              <path d="M6 10.3L8.6 12.9L14.2 7" stroke="#0d211e" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            {{ block.settings.text }}
+          </span>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
     {%- if faq_blocks.size > 0 -%}
       <div class="bh-faq">
         {%- for block in faq_blocks -%}
@@ -191,6 +231,78 @@
             <div class="bh-faq__answer">{{ block.settings.answer }}</div>
           </details>
         {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if review_blocks.size > 0 -%}
+      <div class="bh-reviews" id="bh-reviews-{{ section.id }}">
+        <h2 class="bh-reviews__heading">What customers are saying</h2>
+        <div class="bh-reviews__track" data-bh-reviews-track>
+          {%- for block in review_blocks -%}
+            <div class="bh-reviews__card" {{ block.shopify_attributes }}>
+              <div class="bh-reviews__stars" aria-hidden="true">
+                {%- assign r_floor = block.settings.rating | floor -%}
+                {%- for i in (1..5) -%}
+                  {%- if i <= r_floor -%}★{%- else -%}☆{%- endif -%}
+                {%- endfor -%}
+              </div>
+              <p class="bh-reviews__text">{{ block.settings.text }}</p>
+              <p class="bh-reviews__author">
+                {{ block.settings.author }}
+                <span class="bh-reviews__badge">Verified Purchase</span>
+              </p>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if comparison_blocks.size > 0 -%}
+      <div class="bh-compare">
+        <h2 class="bh-compare__heading">{{ section.settings.comparison_heading }}</h2>
+        {%- if section.settings.comparison_subheading != blank -%}
+          <p class="bh-compare__subheading">{{ section.settings.comparison_subheading }}</p>
+        {%- endif -%}
+        <div class="bh-compare__table-wrap">
+          <table class="bh-compare__table">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="bh-compare__us-col">{{ section.settings.comparison_us_label }}</th>
+                <th>{{ section.settings.comparison_others_label_1 }}</th>
+                <th>{{ section.settings.comparison_others_label_2 }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {%- for block in comparison_blocks -%}
+                <tr {{ block.shopify_attributes }}>
+                  <td class="bh-compare__feature">{{ block.settings.feature }}</td>
+                  <td class="bh-compare__us-col">
+                    {%- if block.settings.us -%}
+                      <span class="bh-compare__check">✓</span>
+                    {%- else -%}
+                      <span class="bh-compare__x">✕</span>
+                    {%- endif -%}
+                  </td>
+                  <td>
+                    {%- if block.settings.others1 -%}
+                      <span class="bh-compare__check">✓</span>
+                    {%- else -%}
+                      <span class="bh-compare__x">✕</span>
+                    {%- endif -%}
+                  </td>
+                  <td>
+                    {%- if block.settings.others2 -%}
+                      <span class="bh-compare__check">✓</span>
+                    {%- else -%}
+                      <span class="bh-compare__x">✕</span>
+                    {%- endif -%}
+                  </td>
+                </tr>
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
       </div>
     {%- endif -%}
   </div>
@@ -233,6 +345,19 @@
       "info": "e.g. \"128 reviews\". Leave blank until you have real reviews."
     },
     {
+      "type": "checkbox",
+      "id": "show_rating_badge",
+      "label": "Show review rating badge",
+      "default": true,
+      "info": "Automatically calculated from the Review blocks below — always reflects your real count and average, never a made-up number."
+    },
+    {
+      "type": "text",
+      "id": "rating_badge_text",
+      "label": "Rating badge label",
+      "default": "Excellent"
+    },
+    {
       "type": "header",
       "content": "Content"
     },
@@ -252,6 +377,40 @@
       "id": "buy_button_text",
       "label": "Buy button text",
       "default": "Add to Cart"
+    },
+    {
+      "type": "header",
+      "content": "Why choose us"
+    },
+    {
+      "type": "text",
+      "id": "comparison_heading",
+      "label": "Comparison heading",
+      "default": "Why Choose Dewy?"
+    },
+    {
+      "type": "text",
+      "id": "comparison_subheading",
+      "label": "Comparison subheading",
+      "default": "See how we compare"
+    },
+    {
+      "type": "text",
+      "id": "comparison_us_label",
+      "label": "Our column label",
+      "default": "Dewy"
+    },
+    {
+      "type": "text",
+      "id": "comparison_others_label_1",
+      "label": "Comparison column 1 label",
+      "default": "Others"
+    },
+    {
+      "type": "text",
+      "id": "comparison_others_label_2",
+      "label": "Comparison column 2 label",
+      "default": "Others"
     },
     {
       "type": "header",
@@ -367,6 +526,78 @@
           "id": "answer",
           "label": "Answer",
           "default": "<p>Answer goes here.</p>"
+        }
+      ]
+    },
+    {
+      "type": "checkmark",
+      "name": "Checkmark benefit",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Benefit text",
+          "default": "Real benefit here"
+        }
+      ]
+    },
+    {
+      "type": "review",
+      "name": "Customer review",
+      "limit": 30,
+      "settings": [
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Customer name",
+          "default": "Customer name"
+        },
+        {
+          "type": "range",
+          "id": "rating",
+          "label": "Star rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review text",
+          "default": "Review text goes here."
+        }
+      ]
+    },
+    {
+      "type": "comparison",
+      "name": "Comparison row",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature",
+          "label": "Feature",
+          "default": "Feature name"
+        },
+        {
+          "type": "checkbox",
+          "id": "us",
+          "label": "We have it",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "others1",
+          "label": "Others (column 1) have it",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "others2",
+          "label": "Others (column 2) have it",
+          "default": false
         }
       ]
     }
