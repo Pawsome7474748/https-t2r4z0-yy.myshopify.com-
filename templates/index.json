@@ -53,6 +53,41 @@
         "show_text_below": false
       }
     },
+    "urgency_banner": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ub1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why It's Worth Starting Now",
+            "heading_size": "h1"
+          }
+        },
+        "text_ub1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Perimenopausal dry eye symptoms rarely show up all at once — they tend to build gradually as hormone levels keep shifting, and they don't usually resolve on their own without some kind of support. The earlier you start, the more comfortable each day can be while your body moves through this transition.</p><p>New here? Use code <strong>WELCOME10</strong> at checkout for 10% off your first order.</p>"
+          }
+        },
+        "button_ub1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Dewy Now",
+            "button_link": "shopify://collections/all",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": ["heading_ub1", "text_ub1", "button_ub1"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "stats": {
       "type": "pp-image-with-percentage",
       "blocks": {
@@ -562,6 +597,7 @@
   },
   "order": [
     "image_banner",
+    "urgency_banner",
     "stats",
     "pp_image_with_text_HNW9yr",
     "pp_image_with_benefits_YnG9hi",
