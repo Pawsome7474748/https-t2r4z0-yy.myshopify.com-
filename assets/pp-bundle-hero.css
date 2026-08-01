@@ -9,6 +9,10 @@
   padding: 3rem 1.5rem;
 }
 
+bundle-hero {
+  display: block;
+}
+
 .bh-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

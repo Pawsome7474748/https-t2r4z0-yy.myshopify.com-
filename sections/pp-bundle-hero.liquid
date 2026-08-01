@@ -14,6 +14,7 @@
 
 <div class="bh-section" style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
   <div class="bh-container">
+    <bundle-hero data-generic-error="{{ 'sections.cart.cart_error' | t | escape }}">
     <div class="bh-layout">
       <div class="bh-gallery">
         {%- if product.media.size > 0 -%}
@@ -92,7 +93,6 @@
           </ul>
         {%- endif -%}
 
-        <bundle-hero data-generic-error="{{ 'sections.cart.cart_error' | t | escape }}">
           {%- if tier_blocks.size > 0 -%}
             <div class="bh-tiers" role="radiogroup" aria-label="Choose your bundle">
               {%- for block in tier_blocks -%}
@@ -144,7 +144,6 @@
           </button>
 
           <p class="bh-error" data-bh-error hidden></p>
-        </bundle-hero>
 
         {%- if shop.enabled_payment_types.size > 0 -%}
           <div class="bh-payment">
@@ -180,6 +179,7 @@
         {%- endif -%}
       </div>
     </div>
+    </bundle-hero>
 
     {%- if section.settings.show_rating_badge and review_blocks.size > 0 -%}
       {%- liquid
