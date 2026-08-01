@@ -100,7 +100,31 @@
         "comparison_1": { "type": "comparison", "settings": { "feature": "Reusable Design", "us": true, "others1": true, "others2": false } },
         "comparison_2": { "type": "comparison", "settings": { "feature": "Hot & Cold Use", "us": true, "others1": false, "others2": false } },
         "comparison_3": { "type": "comparison", "settings": { "feature": "Soft Fabric Cover", "us": true, "others1": false, "others2": false } },
-        "comparison_4": { "type": "comparison", "settings": { "feature": "Adjustable Comfort Strap", "us": true, "others1": true, "others2": true } }
+        "comparison_4": { "type": "comparison", "settings": { "feature": "Adjustable Comfort Strap", "us": true, "others1": true, "others2": true } },
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "author": "Jenny W.",
+            "rating": 5,
+            "text": "It has a super soft texture and is pleasant to touch. The color is very suitable. I was surprised by the interior as there are gel beads that move, giving a massage to tired eyes, and the stitching is very well done. I found it a good product at a good price. It has an elastic band with velcro so it doesn't squeeze on the head or eyes, and it includes instructions for use, to use with both heat and cold. I bought some for myself and others as gifts, and I'm sure to buy more."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "author": "Liz K.",
+            "rating": 5,
+            "text": "This was a fantastic purchase. I struggle with dry eyes and on top of that working long night shifts. These have helped me so much, reducing my eye swelling and headaches."
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "author": "Anthony J.",
+            "rating": 5,
+            "text": "Very useful for eye fatigue, I recommend."
+          }
+        }
       },
       "block_order": [
         "benefit_1", "benefit_2", "benefit_3", "benefit_4",
@@ -108,6 +132,7 @@
         "trust_1", "trust_2", "trust_3",
         "faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6", "faq_7",
         "checkmark_1", "checkmark_2", "checkmark_3", "checkmark_4",
+        "review_1", "review_2", "review_3",
         "comparison_1", "comparison_2", "comparison_3", "comparison_4"
       ],
       "settings": {
