@@ -1,0 +1,334 @@
+<style>
+  .dewy {
+    --ink: #16302B;         /* deep eucalyptus ink */
+    --paper: #FBF8F3;       /* warm off-white */
+    --mist: #E9F0EE;        /* pale mint mist */
+    --dew: #6FB3A6;         /* dewy teal */
+    --dew-deep: #3E7E72;    /* deeper teal for text on mist */
+    --coral: #E8927C;       /* soft warm accent (used sparingly) */
+    --line: #D8E2DE;
+    --shadow: 0 18px 50px -24px rgba(22,48,43,.45);
+    font-family: {{ section.settings.body_font.family }}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .dewy * { box-sizing: border-box; }
+  .dewy__wrap { max-width: 720px; margin: 0 auto; padding: 0 22px; }
+
+  /* Eyebrow / masthead */
+  .dewy__masthead {
+    border-bottom: 1px solid var(--line);
+    padding: 18px 0; margin-bottom: 40px; text-align: center;
+  }
+  .dewy__logo {
+    font-family: {{ section.settings.heading_font.family }}, Georgia, serif;
+    font-weight: 600; font-size: 26px; letter-spacing: .06em;
+    color: var(--dew-deep); margin: 0;
+  }
+  .dewy__logo span { color: var(--coral); }
+  .dewy__kicker {
+    font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--dew-deep); margin-top: 4px;
+  }
+
+  .dewy h1 {
+    font-family: {{ section.settings.heading_font.family }}, Georgia, serif;
+    font-weight: 600; font-size: clamp(28px, 5vw, 42px);
+    line-height: 1.15; letter-spacing: -.01em; margin: 0 0 18px;
+  }
+  .dewy h2 {
+    font-family: {{ section.settings.heading_font.family }}, Georgia, serif;
+    font-weight: 600; font-size: clamp(22px, 3.6vw, 30px);
+    line-height: 1.2; margin: 48px 0 16px;
+  }
+  .dewy__byline {
+    font-size: 14px; color: var(--dew-deep);
+    border-bottom: 1px solid var(--line); padding-bottom: 22px; margin-bottom: 26px;
+  }
+  .dewy__byline strong { color: var(--ink); }
+
+  .dewy p { margin: 0 0 18px; font-size: 18px; }
+  .dewy__lead { font-size: 21px; }
+  .dewy strong.hl { font-weight: 700; }
+
+  .dewy__pull {
+    background: var(--mist); border-left: 4px solid var(--dew);
+    padding: 20px 24px; border-radius: 4px; margin: 26px 0;
+    font-size: 19px; color: var(--dew-deep);
+  }
+  .dewy__figure { margin: 30px 0; }
+  .dewy__figure img { width: 100%; border-radius: 12px; display: block; box-shadow: var(--shadow); }
+  .dewy__cap { font-size: 13px; color: #7a8b86; margin-top: 8px; text-align: center; }
+
+  /* Mechanism cards */
+  .dewy__mech { display: grid; gap: 14px; margin: 24px 0 8px; }
+  .dewy__mech-item {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 22px;
+  }
+  .dewy__mech-item h3 {
+    margin: 0 0 6px; font-size: 18px; font-weight: 700;
+    display: flex; align-items: baseline; gap: 10px;
+  }
+  .dewy__mech-num {
+    font-family: {{ section.settings.heading_font.family }}, Georgia, serif;
+    color: var(--dew); font-size: 15px; font-weight: 700;
+  }
+  .dewy__mech-item p { margin: 0; font-size: 16px; }
+
+  /* Evidence strip */
+  .dewy__evidence {
+    background: var(--ink); color: var(--paper); border-radius: 14px;
+    padding: 30px 26px; margin: 34px 0;
+  }
+  .dewy__evidence h2 { color: #fff; margin: 0 0 14px; font-size: 22px; }
+  .dewy__evidence p { font-size: 16px; color: #D7E4E0; margin: 0 0 12px; }
+  .dewy__evidence a { color: var(--dew); }
+  .dewy__evidence small { color: #9fb4ae; font-size: 12px; }
+
+  /* Offer / CTA */
+  .dewy__offer {
+    background: var(--mist); border-radius: 16px; padding: 34px 28px;
+    text-align: center; margin: 40px 0;
+  }
+  .dewy__price { font-size: 20px; margin-bottom: 6px; }
+  .dewy__price s { color: #97a6a1; margin-right: 8px; }
+  .dewy__price b { color: var(--dew-deep); font-size: 30px; }
+  .dewy__cta {
+    display: inline-block; background: var(--dew-deep); color: #fff;
+    font-size: 18px; font-weight: 600; text-decoration: none;
+    padding: 17px 40px; border-radius: 999px; margin: 16px 0 10px;
+    transition: transform .12s ease, background .2s ease;
+  }
+  .dewy__cta:hover { background: var(--dew); transform: translateY(-1px); }
+  .dewy__reassure { font-size: 14px; color: var(--dew-deep); margin: 6px 0 0; }
+
+  /* Testimonials */
+  .dewy__reviews { display: grid; gap: 16px; margin: 24px 0; }
+  .dewy__review {
+    background: #fff; border: 1px solid var(--line); border-radius: 12px;
+    padding: 20px 22px; font-size: 16px;
+  }
+  .dewy__review .who { margin-top: 10px; font-weight: 700; color: var(--dew-deep); font-size: 14px; }
+  .dewy__stars { color: var(--coral); letter-spacing: 2px; }
+
+  .dewy__faq { margin: 20px 0; }
+  .dewy__faq details {
+    border-bottom: 1px solid var(--line); padding: 16px 0;
+  }
+  .dewy__faq summary {
+    font-weight: 600; font-size: 17px; cursor: pointer; list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .dewy__faq summary::after { content: "+"; color: var(--dew); font-size: 22px; }
+  .dewy__faq details[open] summary::after { content: "\2013"; }
+  .dewy__faq p { margin: 12px 0 0; font-size: 16px; }
+
+  .dewy__disc {
+    background: #F0ECE4; color: #6b6257; font-size: 12.5px; line-height: 1.6;
+    padding: 22px; border-radius: 10px; margin: 40px 0 10px;
+  }
+  .dewy__foot { text-align: center; font-size: 12px; color: #8a978f; padding: 20px 0 60px; }
+
+  @media (max-width: 600px) {
+    .dewy p, .dewy__lead { font-size: 17px; }
+  }
+</style>
+
+<section class="dewy">
+  <div class="dewy__wrap">
+
+    <!-- MASTHEAD -->
+    <div class="dewy__masthead">
+      <p class="dewy__logo">{{ section.settings.brand_name }}<span>.</span></p>
+      <p class="dewy__kicker">{{ section.settings.kicker }}</p>
+    </div>
+
+    <!-- HERO / HEADLINE (problem) -->
+    <h1>{{ section.settings.headline }}</h1>
+    <div class="dewy__byline">
+      By <strong>{{ section.settings.author }}</strong> · {{ section.settings.byline_role }}
+    </div>
+
+    <p class="dewy__lead">{{ section.settings.lead }}</p>
+
+    {% if section.settings.hero_image != blank %}
+    <div class="dewy__figure">
+      <img src="{{ section.settings.hero_image | image_url: width: 1200 }}" alt="{{ section.settings.brand_name }}" loading="lazy">
+      {% if section.settings.hero_caption != blank %}<p class="dewy__cap">{{ section.settings.hero_caption }}</p>{% endif %}
+    </div>
+    {% endif %}
+
+    <!-- AGITATION -->
+    <h2>{{ section.settings.agitate_title }}</h2>
+    <div class="dewy__rte">{{ section.settings.agitate_body }}</div>
+
+    <div class="dewy__pull">{{ section.settings.pullquote }}</div>
+
+    <!-- MECHANISM -->
+    <h2>{{ section.settings.mech_title }}</h2>
+    <div class="dewy__rte">{{ section.settings.mech_intro }}</div>
+    <div class="dewy__mech">
+      <div class="dewy__mech-item">
+        <h3><span class="dewy__mech-num">01</span> {{ section.settings.mech1_title }}</h3>
+        <p>{{ section.settings.mech1_body }}</p>
+      </div>
+      <div class="dewy__mech-item">
+        <h3><span class="dewy__mech-num">02</span> {{ section.settings.mech2_title }}</h3>
+        <p>{{ section.settings.mech2_body }}</p>
+      </div>
+      <div class="dewy__mech-item">
+        <h3><span class="dewy__mech-num">03</span> {{ section.settings.mech3_title }}</h3>
+        <p>{{ section.settings.mech3_body }}</p>
+      </div>
+    </div>
+
+    <!-- EVIDENCE (honest, cited) -->
+    <div class="dewy__evidence">
+      <h2>{{ section.settings.evidence_title }}</h2>
+      <div>{{ section.settings.evidence_body }}</div>
+    </div>
+
+    <!-- OFFER -->
+    <div class="dewy__offer">
+      <p class="dewy__price">
+        {% if section.settings.compare_price != blank %}<s>{{ section.settings.compare_price }}</s>{% endif %}
+        <b>{{ section.settings.price }}</b>
+      </p>
+      <a class="dewy__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a>
+      <p class="dewy__reassure">{{ section.settings.reassure }}</p>
+    </div>
+
+    <!-- TESTIMONIALS (placeholder — replace with real reviews) -->
+    {% if section.settings.show_reviews %}
+    <h2>{{ section.settings.reviews_title }}</h2>
+    <div class="dewy__reviews">
+      {% for block in section.blocks %}
+        {% if block.type == 'review' %}
+        <div class="dewy__review" {{ block.shopify_attributes }}>
+          <div class="dewy__stars">★★★★★</div>
+          <div>{{ block.settings.text }}</div>
+          <div class="who">— {{ block.settings.name }}</div>
+        </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- FAQ -->
+    <h2>{{ section.settings.faq_title }}</h2>
+    <div class="dewy__faq">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq' %}
+        <details {{ block.shopify_attributes }}>
+          <summary>{{ block.settings.q }}</summary>
+          <p>{{ block.settings.a }}</p>
+        </details>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="dewy__offer">
+      <p class="dewy__price">
+        {% if section.settings.compare_price != blank %}<s>{{ section.settings.compare_price }}</s>{% endif %}
+        <b>{{ section.settings.price }}</b>
+      </p>
+      <a class="dewy__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a>
+      <p class="dewy__reassure">{{ section.settings.reassure }}</p>
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="dewy__disc">{{ section.settings.disclaimer }}</div>
+    <div class="dewy__foot">© {{ 'now' | date: '%Y' }} {{ section.settings.brand_name }}. {{ section.settings.footer_note }}</div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Dewy Presell",
+  "settings": [
+    { "type": "header", "content": "Fonts" },
+    { "type": "font_picker", "id": "heading_font", "label": "Heading font", "default": "assistant_n6" },
+    { "type": "font_picker", "id": "body_font", "label": "Body font", "default": "assistant_n4" },
+
+    { "type": "header", "content": "Masthead" },
+    { "type": "text", "id": "brand_name", "label": "Brand name", "default": "Dewy" },
+    { "type": "text", "id": "kicker", "label": "Kicker line", "default": "The midlife eye-comfort edit" },
+
+    { "type": "header", "content": "Headline & Lead" },
+    { "type": "text", "id": "headline", "label": "Headline", "default": "The dry-eye symptom no one warned you about at 40+" },
+    { "type": "text", "id": "author", "label": "Author name", "default": "The Dewy Team" },
+    { "type": "text", "id": "byline_role", "label": "Byline role", "default": "Perimenopausal eye-comfort essentials" },
+    { "type": "textarea", "id": "lead", "label": "Lead paragraph", "default": "If your eyes feel gritty by mid-afternoon, sting at the computer, and water for no reason — and every drop you've tried wears off within the hour — here's the mechanism behind it, and the simplest first step that actually helps." },
+    { "type": "image_picker", "id": "hero_image", "label": "Hero image" },
+    { "type": "text", "id": "hero_caption", "label": "Hero caption" },
+
+    { "type": "header", "content": "Agitation section" },
+    { "type": "text", "id": "agitate_title", "label": "Title", "default": "Why it gets worse in your 40s and 50s" },
+    { "type": "richtext", "id": "agitate_body", "label": "Body", "default": "<p>Here's the part most people never get told: the tiny glands along your eyelid rims — the ones that make the oily top layer of your tears — start to clog and slow down as we age, and the hormonal shifts of perimenopause speed that up. Less oil means your tears evaporate before they can do their job. That's why the drops feel great for an hour and then you're gritty again: they top up the water, but they can't fix the oil.</p><p>It's not in your head, and it's not just \"getting older.\" It's a specific, well-understood mechanism — and it responds to a specific, well-understood first step.</p>" },
+    { "type": "textarea", "id": "pullquote", "label": "Pull quote", "default": "Warm-compress therapy is named a first-line treatment for evaporative dry eye in the international TFOS DEWS II consensus — the reference eye specialists actually use." },
+
+    { "type": "header", "content": "Mechanism section" },
+    { "type": "text", "id": "mech_title", "label": "Title", "default": "How Dewy actually works" },
+    { "type": "richtext", "id": "mech_intro", "label": "Intro", "default": "<p>Dewy is a warm and cold compress mask designed around the one thing that matters for this: gentle, even temperature held long enough to do something.</p>" },
+    { "type": "text", "id": "mech1_title", "label": "Point 1 title", "default": "Warms the oil so it can flow again" },
+    { "type": "textarea", "id": "mech1_body", "label": "Point 1 body", "default": "Research indicates the eyelid needs to reach around 40°C to soften the thickened oils blocking the glands. Dewy is built to hold a comfortable, even warmth across the whole lid — not a towel that's scalding then cold in 90 seconds." },
+    { "type": "text", "id": "mech2_title", "label": "Point 2 title", "default": "Consistent, comfortable, repeatable" },
+    { "type": "textarea", "id": "mech2_body", "label": "Point 2 body", "default": "The reason warm compresses fail people isn't the science — it's that a hot flannel is annoying, so nobody keeps it up. Dewy is a 10-minute routine you'll actually do, which is the whole game with this." },
+    { "type": "text", "id": "mech3_title", "label": "Point 3 title", "default": "Reusable, and made to feel like a ritual" },
+    { "type": "textarea", "id": "mech3_body", "label": "Point 3 body", "default": "Soft, washable, and calming enough that it becomes the nice part of your evening rather than a chore. That's deliberate — comfort is what makes it a habit." },
+
+    { "type": "header", "content": "Evidence (keep wording as-is)" },
+    { "type": "text", "id": "evidence_title", "label": "Title", "default": "What the eye specialists say" },
+    { "type": "richtext", "id": "evidence_body", "label": "Body", "default": "<p>We won't tell you Dewy is a cure or a replacement for anything your optometrist has given you — it isn't, and anyone claiming that about a mask is being dishonest with you.</p><p>What's true: warm-compress and lid-warming therapy is recognised as a <strong>first-line</strong> approach for evaporative dry eye and meibomian gland dysfunction by the international TFOS DEWS II report and recommended by major eye-care bodies including the American Optometric Association and American Academy of Ophthalmology. Meibomian gland dysfunction is the leading cause of dry eye. A warm compress is one of the simplest, best-evidenced first steps you can take at home — often used <em>alongside</em> the care your eye professional gives you.</p><p>The honest framing: not a miracle, just the sensible, specialist-backed first thing to try — done in a way you'll actually stick to.</p>" },
+
+    { "type": "header", "content": "Offer" },
+    { "type": "text", "id": "price", "label": "Price", "default": "$24.89" },
+    { "type": "text", "id": "compare_price", "label": "Compare-at price (optional, must be genuine)", "default": "$33.99" },
+    { "type": "text", "id": "cta_label", "label": "Button label", "default": "Shop the Cooling Gel Eye Mask" },
+    { "type": "url", "id": "cta_url", "label": "Button link (your product page)" },
+    { "type": "text", "id": "reassure", "label": "Reassurance line", "default": "Shipping calculated at checkout · 30-day returns · One-time purchase, no subscription" },
+
+    { "type": "header", "content": "Reviews" },
+    { "type": "checkbox", "id": "show_reviews", "label": "Show reviews section", "default": true },
+    { "type": "text", "id": "reviews_title", "label": "Reviews title", "default": "What customers tell us" },
+
+    { "type": "header", "content": "FAQ" },
+    { "type": "text", "id": "faq_title", "label": "FAQ title", "default": "Honest answers" },
+
+    { "type": "header", "content": "Legal" },
+    { "type": "textarea", "id": "disclaimer", "label": "Disclaimer", "default": "Dewy is a comfort product. It is not a medicine and is not intended to diagnose, treat, cure, or prevent any disease. The information on this page is general and educational, is not medical advice, and does not replace guidance from a qualified eye-care professional. If you have persistent, painful, or worsening eye symptoms, or any sudden change in vision, see an optometrist or doctor. Statements about warm-compress therapy refer to the general approach as described in published eye-care guidance, not to results guaranteed from this product. Individual results vary." },
+    { "type": "text", "id": "footer_note", "label": "Footer note", "default": "All rights reserved." }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review (real only)",
+      "settings": [
+        { "type": "textarea", "id": "text", "label": "Review text", "default": "[Replace this with a real, consented customer review before publishing. Do not use invented reviews.]" },
+        { "type": "text", "id": "name", "label": "Name", "default": "Customer name" }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ item",
+      "settings": [
+        { "type": "text", "id": "q", "label": "Question", "default": "Is this a replacement for my eye drops?" },
+        { "type": "textarea", "id": "a", "label": "Answer", "default": "No — and we'd never tell you to stop anything your eye professional has recommended. Many people use a warm compress alongside their usual routine as a first-line habit. If in doubt, ask your optometrist." }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Dewy Presell",
+      "blocks": [
+        { "type": "review" }, { "type": "review" }, { "type": "review" },
+        { "type": "faq" }, { "type": "faq" }, { "type": "faq" }
+      ]
+    }
+  ]
+}
+{% endschema %}
