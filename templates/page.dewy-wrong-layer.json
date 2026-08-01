@@ -1,0 +1,100 @@
+{
+  "sections": {
+    "wrong_layer_1": {
+      "type": "dewy-wrong-layer",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "text": "It has a super soft texture and is pleasant to touch. The color is very suitable. I was surprised by the interior as there are gel beads that move, giving a massage to tired eyes, and the stitching is very well done. I found it a good product at a good price. It has an elastic band with velcro so it doesn't squeeze on the head or eyes, and it includes instructions for use, to use with both heat and cold. I bought some for myself and others as gifts, and I'm sure to buy more.",
+            "name": "Jenny W."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "text": "This was a fantastic purchase. I struggle with dry eyes and on top of that working long night shifts. These have helped me so much, reducing my eye swelling and headaches.",
+            "name": "Liz K."
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "text": "Very useful for eye fatigue, I recommend.",
+            "name": "Anthony J."
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "q": "Do I stop using my eye drops?",
+            "a": "No. Keep using whatever your eye professional recommends. Dewy works on the oil layer, which is a different job. Many people use both."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "q": "How do I use it?",
+            "a": "Freeze for at least 2 hours for a cooling compress, or briefly warm it for a soothing heat compress. Place gently over closed eyes for 10–15 minutes."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "q": "Is it reusable?",
+            "a": "Yes — rinse, refreeze (or reheat), and use again. The gel beads are designed for repeated use."
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3", "faq_1", "faq_2", "faq_3"],
+      "settings": {
+        "heading_font": "assistant_n6",
+        "body_font": "assistant_n4",
+        "brand_name": "Dewy",
+        "eyebrow": "Eye comfort, explained honestly",
+        "headline": "Your eye drops are treating the wrong layer",
+        "author": "The Dewy Team",
+        "byline_role": "Perimenopausal eye-comfort essentials",
+        "lead": "If your eyes feel gritty by mid-afternoon, sting at the screen, and somehow water for no reason — and every drop you've tried feels great for an hour and then fades — you're not doing anything wrong. You've just been handed the wrong tool for the actual problem. Here's what's really going on, because once you see it you can't un-see it.",
+        "intro_body": "<p>Most people never get told this part, and it changes how you think about relief.</p>",
+        "hero_image": "shopify://shop_images/Capture_b3073778-2b1c-4097-b208-5f98032ba06b.png",
+        "hero_caption": "",
+        "layers_title": "Your tears aren't one thing. They're three.",
+        "layers_intro": "<p>Most people picture tears as just water. They're not. A healthy tear film has three layers stacked on top of each other, and each one has a job:</p>",
+        "layer_oil_title": "The oil layer",
+        "layer_oil_desc": "Made by tiny glands in your eyelids. Its job is to stop the tears underneath from evaporating. This is the layer that fails most.",
+        "layer_water_title": "The water layer",
+        "layer_water_desc": "The big wet middle layer. This is the part most eye drops top up.",
+        "layer_mucin_title": "The mucin layer",
+        "layer_mucin_desc": "The sticky base that helps everything spread evenly across your eye.",
+        "layer_note": "Here's the catch: most drops refill the WATER layer. But the layer that's usually failing is the OIL layer on top. That's why the relief washes out in an hour — you're topping up water that has nothing holding it in.",
+        "pullquote": "When the oil layer thins, your tears evaporate before they can do their job. More water doesn't fix a missing lid on the jar.",
+        "agitate_title": "Why the oil layer gives out — especially in your 40s and 50s",
+        "agitate_body": "<p>Those oil glands along your lash line slow down and clog as we age, and the hormonal shifts of perimenopause speed it up. The oil thickens, the glands block, and less of it reaches your tears. It's gradual, so you adapt — you blink harder, you reach for drops, you assume it's just screens or getting older.</p><p>It isn't in your head, and it isn't only age. It's a specific, well-understood mechanism. And the good news about a specific mechanism is that it has a specific first step.</p>",
+        "mech_title": "What actually helps the oil layer",
+        "mech_intro": "<p>You can't fix a thickened-oil problem with more water. You warm the oil so it flows again — which is exactly what Dewy is built to do.</p>",
+        "mech1_title": "Warmth where it counts",
+        "mech1_body": "Research indicates the eyelid needs to reach around 40°C to soften the thickened oils in the glands. Dewy holds a gentle, even warmth across the whole lid — not a flannel that's scalding then cold in 90 seconds.",
+        "mech2_title": "A routine you'll actually keep",
+        "mech2_body": "Warm compresses fail people because a hot towel is a nuisance, so nobody keeps it up. Dewy is a 10-minute ritual you'll genuinely repeat — and consistency is the whole game here.",
+        "mech3_title": "Reusable, soft, calming",
+        "mech3_body": "Washable and comfortable enough that it becomes the nice part of your evening instead of a chore. That's deliberate — comfort is what turns it into a habit.",
+        "mech4_title": "Works with your drops, not instead of them",
+        "mech4_body": "Keep using whatever your optometrist recommends. Dewy addresses the oil layer those drops can't reach — the two do different jobs.",
+        "evidence_title": "What the eye specialists actually say",
+        "evidence_body": "<p>We won't tell you Dewy is a cure, or that it beats anything your optometrist has given you — it isn't and it doesn't, and anyone who says that about a warm mask is being dishonest with you.</p><p>What's true: warm-compress and lid-warming therapy is recognised as a <strong>first-line</strong> approach for evaporative dry eye and meibomian gland dysfunction in the international TFOS DEWS II consensus, and is recommended by major eye-care bodies including the American Optometric Association and American Academy of Ophthalmology. Meibomian gland dysfunction — an oil-layer problem — is the leading cause of dry eye. A warm compress is simply one of the best-evidenced first things you can do at home, often used alongside professional care.</p><p>Not a miracle. Just the sensible, specialist-backed first step — done in a way you'll actually stick to.</p>",
+        "price": "$24.89",
+        "compare_price": "$33.99",
+        "cta_label": "Shop the Cooling Gel Eye Mask",
+        "cta_url": "/products/gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa",
+        "reassure": "Shipping calculated at checkout · 30-day returns · One-time purchase, no subscription",
+        "show_reviews": true,
+        "reviews_title": "What customers tell us",
+        "faq_title": "Honest answers",
+        "disclaimer": "Dewy is a comfort product. It is not a medicine and is not intended to diagnose, treat, cure, or prevent any disease. This page is general educational information, not medical advice, and does not replace guidance from a qualified eye-care professional. If you have persistent, painful, or worsening symptoms, or any sudden change in vision, see an optometrist or doctor. Statements about warm-compress therapy describe the general approach as set out in published eye-care guidance, not results guaranteed from this product. Individual results vary.",
+        "footer_note": "All rights reserved."
+      }
+    }
+  },
+  "order": ["wrong_layer_1"]
+}
