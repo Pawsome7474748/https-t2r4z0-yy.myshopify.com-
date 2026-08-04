@@ -99,7 +99,7 @@
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Capture_f8a725d2-7d6e-4890-ac8a-b0b354da2334.png",
         "desktop_image_width": "medium",
         "image_border_radius": 25,
         "layout": "image_first",
@@ -201,7 +201,7 @@
       },
       "block_order": ["heading_1", "percent_1", "percent_2", "percent_3", "button_1"],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Capture_6dee1faa-7a0a-4127-80ac-1e5eb2f8a4aa.png",
         "desktop_image_width": "medium",
         "image_border_radius": 25,
         "layout": "text_first",
@@ -271,7 +271,7 @@
       },
       "block_order": ["benefit_1", "benefit_2", "benefit_3", "benefit_4"],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Capture_3ff9582c-730e-4939-82e2-1765bb842126.png",
         "desktop_image_width": "medium",
         "image_border_radius": 25,
         "gradient": "",
@@ -307,7 +307,7 @@
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Capture_2416671e-81f4-4b33-a35d-2cd86098d70b.png",
         "desktop_image_width": "medium",
         "image_border_radius": 25,
         "layout": "text_first",
@@ -345,7 +345,7 @@
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/Capture_6eb23e6f-82ef-4a55-bca0-558be6c362b1.png",
         "desktop_image_width": "medium",
         "image_border_radius": 25,
         "layout": "image_first",
