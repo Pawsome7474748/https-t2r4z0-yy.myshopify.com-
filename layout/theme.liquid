@@ -379,5 +379,9 @@
     {%- if settings.cart_type == "drawer" -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    {%- unless request.page_type == 'password' -%}
+      {%- render 'dewy-scratch-popup' -%}
+    {%- endunless -%}
   </body>
 </html>

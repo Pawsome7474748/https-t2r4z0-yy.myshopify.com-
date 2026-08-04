@@ -1,0 +1,253 @@
+<style>
+  #dewy-scratch-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(13, 33, 30, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  #dewy-scratch-overlay[hidden] { display: none; }
+
+  .dsp-panel {
+    position: relative;
+    background: #0d211e;
+    color: #eaf6f3;
+    border-radius: 20px;
+    padding: 2.5rem 2rem 2rem;
+    max-width: 380px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.6);
+  }
+
+  .dsp-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: none;
+    border: none;
+    color: #eaf6f3;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 4px;
+  }
+  .dsp-close:hover { opacity: 1; }
+
+  .dsp-logo {
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    font-size: 1.25rem;
+    margin: 0 0 1.25rem;
+    color: #5eead4;
+  }
+  .dsp-logo span { color: #eaf6f3; }
+
+  .dsp-panel h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.4rem;
+    color: #ffffff;
+  }
+
+  .dsp-sub {
+    font-size: 0.9375rem;
+    opacity: 0.8;
+    margin: 0 0 1.5rem;
+  }
+
+  .dsp-card {
+    position: relative;
+    width: 100%;
+    max-width: 260px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #123a34;
+  }
+
+  .dsp-card canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    touch-action: none;
+  }
+
+  .dsp-prize {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+  .dsp-prize[hidden] { display: none; }
+
+  .dsp-prize-label {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.85;
+  }
+
+  .dsp-prize-amount {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #5eead4;
+  }
+
+  .dsp-claim {
+    display: inline-block;
+    background: #5eead4;
+    color: #0d211e;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    padding: 0.6rem 1.75rem;
+    border-radius: 999px;
+    margin-top: 0.25rem;
+  }
+
+  .dsp-hint {
+    font-size: 0.8125rem;
+    opacity: 0.6;
+    margin: 1rem 0 0;
+  }
+</style>
+
+<div id="dewy-scratch-overlay" hidden>
+  <div class="dsp-panel" role="dialog" aria-modal="true" aria-label="Welcome discount">
+    <button type="button" class="dsp-close" id="dewy-scratch-close" aria-label="Close">&times;</button>
+    <p class="dsp-logo">Dewy<span>.</span></p>
+    <h2>Try Your Luck</h2>
+    <p class="dsp-sub">Scratch below to reveal your welcome discount</p>
+    <div class="dsp-card">
+      <canvas id="dewy-scratch-canvas" width="260" height="150"></canvas>
+      <div class="dsp-prize" id="dewy-scratch-prize" hidden>
+        <p class="dsp-prize-label">You've got</p>
+        <p class="dsp-prize-amount">10% off</p>
+        <a class="dsp-claim" href="/discount/WELCOME10?redirect=%2Fcollections%2Fall">Claim</a>
+      </div>
+    </div>
+    <p class="dsp-hint">New customers only · one-time use</p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var STORAGE_KEY = 'dewyScratchPopupSeen';
+    if (window.localStorage && localStorage.getItem(STORAGE_KEY)) return;
+    if (window.Shopify && Shopify.designMode) return;
+
+    function init() {
+      var overlay = document.getElementById('dewy-scratch-overlay');
+      var closeBtn = document.getElementById('dewy-scratch-close');
+      var canvas = document.getElementById('dewy-scratch-canvas');
+      var prize = document.getElementById('dewy-scratch-prize');
+      if (!overlay || !canvas) return;
+
+      var ctx = canvas.getContext('2d');
+      var w = canvas.width;
+      var h = canvas.height;
+
+      function paintFoil() {
+        var grad = ctx.createLinearGradient(0, 0, w, h);
+        grad.addColorStop(0, '#5eead4');
+        grad.addColorStop(1, '#2a7a72');
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, w, h);
+        ctx.fillStyle = 'rgba(13, 33, 30, 0.85)';
+        ctx.font = '700 16px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('SCRATCH HERE', w / 2, h / 2);
+      }
+      paintFoil();
+
+      var scratching = false;
+      var revealed = false;
+
+      function scratchAt(x, y) {
+        ctx.globalCompositeOperation = 'destination-out';
+        ctx.beginPath();
+        ctx.arc(x, y, 18, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      function getPos(evt) {
+        var rect = canvas.getBoundingClientRect();
+        var point = evt.touches ? evt.touches[0] : evt;
+        return {
+          x: (point.clientX - rect.left) * (w / rect.width),
+          y: (point.clientY - rect.top) * (h / rect.height),
+        };
+      }
+
+      function checkRevealed() {
+        if (revealed) return;
+        var imageData = ctx.getImageData(0, 0, w, h).data;
+        var cleared = 0;
+        for (var i = 3; i < imageData.length; i += 4 * 20) {
+          if (imageData[i] === 0) cleared++;
+        }
+        var total = imageData.length / (4 * 20);
+        if (cleared / total > 0.45) {
+          revealed = true;
+          canvas.style.display = 'none';
+          if (prize) prize.hidden = false;
+          if (window.localStorage) localStorage.setItem(STORAGE_KEY, 'revealed');
+        }
+      }
+
+      function onDown(evt) {
+        scratching = true;
+        var pos = getPos(evt);
+        scratchAt(pos.x, pos.y);
+      }
+      function onMove(evt) {
+        if (!scratching) return;
+        var pos = getPos(evt);
+        scratchAt(pos.x, pos.y);
+        checkRevealed();
+      }
+      function onUp() {
+        scratching = false;
+        checkRevealed();
+      }
+
+      canvas.addEventListener('mousedown', onDown);
+      canvas.addEventListener('mousemove', onMove);
+      window.addEventListener('mouseup', onUp);
+      canvas.addEventListener('touchstart', onDown, { passive: true });
+      canvas.addEventListener('touchmove', onMove, { passive: true });
+      canvas.addEventListener('touchend', onUp);
+
+      function dismiss() {
+        overlay.hidden = true;
+        if (window.localStorage) localStorage.setItem(STORAGE_KEY, 'dismissed');
+      }
+      if (closeBtn) closeBtn.addEventListener('click', dismiss);
+      overlay.addEventListener('click', function (evt) {
+        if (evt.target === overlay) dismiss();
+      });
+
+      setTimeout(function () {
+        overlay.hidden = false;
+      }, 3000);
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>

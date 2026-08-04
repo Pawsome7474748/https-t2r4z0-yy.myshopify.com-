@@ -151,6 +151,10 @@
         "eyebrow_text": "Comfort support for perimenopausal dry eye",
         "show_rating": false,
         "rating_value": 4.8,
+        "show_supplier_rating": true,
+        "supplier_rating_value": "4.5",
+        "supplier_rating_count": "359",
+        "supplier_rating_source": "AliExpress",
         "heading": "Omega-3 Fish Oil — EPA & DHA",
         "subheading": "<p>Nutritional support for tear film quality, heart, and brain health — from a brand built around perimenopausal eye comfort.</p>",
         "buy_button_text": "Add to Cart",
@@ -159,7 +163,34 @@
         "accent_color": "#5eead4",
         "card_color": "#123a34"
       }
+    },
+    "urgency_banner": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_ub1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Why It's Worth Starting Now",
+            "heading_size": "h1"
+          }
+        },
+        "text_ub1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Perimenopausal dry eye symptoms rarely show up all at once — they tend to build gradually as hormone levels keep shifting, and they don't usually resolve on their own without some kind of support. The earlier you start, the more comfortable each day can be while your body moves through this transition.</p><p>New here? Use code <strong>WELCOME10</strong> at checkout for 10% off your first order.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_ub1", "text_ub1"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
-  "order": ["bundle_hero_1"]
+  "order": ["bundle_hero_1", "urgency_banner"]
 }
