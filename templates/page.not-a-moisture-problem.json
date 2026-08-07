@@ -1,0 +1,95 @@
+{
+  "sections": {
+    "not_moisture_1": {
+      "type": "dewy-not-moisture",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "text": "It has a super soft texture and is pleasant to touch. The color is very suitable. I was surprised by the interior as there are gel beads that move, giving a massage to tired eyes, and the stitching is very well done. I found it a good product at a good price. It has an elastic band with velcro so it doesn't squeeze on the head or eyes, and it includes instructions for use, to use with both heat and cold. I bought some for myself and others as gifts, and I'm sure to buy more.",
+            "name": "Jenny W."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "text": "This was a fantastic purchase. I struggle with dry eyes and on top of that working long night shifts. These have helped me so much, reducing my eye swelling and headaches.",
+            "name": "Liz K."
+          }
+        },
+        "review_3": {
+          "type": "review",
+          "settings": {
+            "text": "Very useful for eye fatigue, I recommend.",
+            "name": "Anthony J."
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "q": "So drops are useless?",
+            "a": "Not at all — drops help the water layer and have their place. The point is that for many people the oil layer is the missing piece, which is what a warm compress addresses. Many people use both."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "q": "How do I use it?",
+            "a": "Freeze for at least 2 hours for a cooling compress, or briefly warm it for a soothing heat compress. Place gently over closed eyes for 10–15 minutes."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "q": "Is it reusable?",
+            "a": "Yes — rinse, refreeze (or reheat), and use again. The gel beads are designed for repeated use."
+          }
+        }
+      },
+      "block_order": ["review_1", "review_2", "review_3", "faq_1", "faq_2", "faq_3"],
+      "settings": {
+        "heading_font": "assistant_n6",
+        "body_font": "assistant_n4",
+        "brand_name": "Dewy",
+        "eyebrow": "Eye comfort, explained honestly",
+        "headline": "Dry eye isn't a moisture problem",
+        "author": "Thomas Cage",
+        "byline_role": "founder of Dewy",
+        "lead": "It sounds like it should be. The name says 'dry,' so you add moisture — drops, gels, more drops. And for an hour, it helps. Then you're gritty again. Here's the part almost nobody explains: for most people, dryness isn't the actual problem. Evaporation is.",
+        "intro_body": "<p>Once you understand the difference, every drop that ever let you down suddenly makes sense — and so does what to do instead.</p>",
+        "hero_image": "shopify://shop_images/Capture_b3073778-2b1c-4097-b208-5f98032ba06b.png",
+        "hero_caption": "",
+        "reveal_title": "The assumption that keeps you stuck",
+        "reveal_intro": "<p>The whole category is built on one idea — that dry eye means not enough moisture. For the most common type of dry eye, that idea is simply wrong:</p>",
+        "myth_text": "Dry eye means your eyes don't make enough tears — so the fix is to add more moisture with drops.",
+        "fact_text": "For most people the tears are there — they're just evaporating too fast, because the thin oil layer that's meant to seal them in has broken down. The problem isn't too little water. It's a missing lid on the jar.",
+        "pullquote": "Meibomian gland dysfunction — an oil-layer problem — is the leading cause of dry eye. Adding water to an evaporation problem is why the drops keep wearing off.",
+        "why_title": "Why the oil layer breaks down",
+        "why_body": "<p>Tiny glands along your eyelid rims produce the oily top layer of your tears. With age they slow and clog, and hormonal shifts around perimenopause speed it up. Less oil reaches the surface, tears evaporate faster than they're replaced, and your eyes feel dry — even though the watery layer the drops top up was never really the issue.</p>",
+        "mech_title": "So what actually helps",
+        "mech_intro": "<p>You don't fix an oil problem with water. You warm the oil so it flows again — which is exactly what Dewy is built to do.</p>",
+        "mech1_title": "Warmth where it counts",
+        "mech1_body": "Research indicates the eyelid needs to reach around 40°C to soften the thickened oils in the glands. Dewy holds gentle, even warmth across the whole lid — not a flannel that's scalding then cold in 90 seconds.",
+        "mech2_title": "A routine you'll keep",
+        "mech2_body": "Warm compresses fail people because a hot towel is a nuisance. Dewy is a 10-minute ritual you'll actually repeat — consistency is the whole game.",
+        "mech3_title": "Soft, reusable, calming",
+        "mech3_body": "Comfortable enough to become the nice part of your evening rather than a chore. Comfort is what makes it a habit.",
+        "mech4_title": "Use it with your drops",
+        "mech4_body": "Drops still have a place for the water layer. Dewy addresses the oil layer they can't reach — the two do different jobs, and many people use both.",
+        "evidence_title": "What the eye specialists say",
+        "evidence_body": "<p>We won't tell you Dewy is a cure or a replacement for anything your optometrist has given you — it isn't, and anyone who says that about a warm mask is being dishonest with you.</p><p>What's true: warm-compress and lid-warming therapy is recognised as a <strong>first-line</strong> approach for evaporative dry eye and meibomian gland dysfunction in the international TFOS DEWS II consensus, and recommended by major eye-care bodies including the American Optometric Association and American Academy of Ophthalmology. It's one of the simplest, best-evidenced first steps you can take at home — often used alongside professional care.</p>",
+        "price": "$24.89",
+        "compare_price": "$33.99",
+        "cta_label": "Shop the Cooling Gel Eye Mask",
+        "cta_url": "/products/gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa",
+        "reassure": "Shipping calculated at checkout · 30-day returns · One-time purchase, no subscription",
+        "show_reviews": true,
+        "reviews_title": "What customers tell us",
+        "faq_title": "Honest answers",
+        "disclaimer": "Dewy is a comfort product. It is not a medicine and is not intended to diagnose, treat, cure, or prevent any disease. This page is general educational information, not medical advice, and does not replace guidance from a qualified eye-care professional. If you have persistent, painful, or worsening symptoms, or any sudden change in vision, see an optometrist or doctor. Statements about warm-compress therapy describe the general approach as set out in published eye-care guidance, not results guaranteed from this product. Individual results vary.",
+        "footer_note": "All rights reserved."
+      }
+    }
+  },
+  "order": ["not_moisture_1"]
+}
