@@ -78,7 +78,11 @@
           }
         }
       },
-      "block_order": ["heading_ub1", "text_ub1", "button_ub1"],
+      "block_order": [
+        "heading_ub1",
+        "text_ub1",
+        "button_ub1"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -378,150 +382,6 @@
         "padding_bottom": 52
       }
     },
-    "pp_reviews_EXpLcn": {
-      "type": "pp-reviews",
-      "blocks": {
-        "review_dtNXc1": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Nadia G.",
-            "author_style": "subtitle",
-            "author_color": "#ffffff",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#5eead4",
-            "author_badge_color": "#16463f",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "This supplement arrived very quickly and in good condition, the product's appearance is good and one can assume that the effectiveness of the product is also good.",
-            "review_text_style": "body",
-            "review_text_color": "#eaf6f3",
-            "review_background_color": "#123a34",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc2": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Helen S.",
-            "author_style": "subtitle",
-            "author_color": "#ffffff",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#5eead4",
-            "author_badge_color": "#16463f",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "An excellent supplement that has helped so much with my dry eyes. I was worried that my problem would only get worse. But my granddaughter told me to start taking these omega pills and wow, words can't describe how grateful I am that I found this.",
-            "review_text_style": "body",
-            "review_text_color": "#eaf6f3",
-            "review_background_color": "#123a34",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc3": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Jeremy N.",
-            "author_style": "subtitle",
-            "author_color": "#ffffff",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#5eead4",
-            "author_badge_color": "#16463f",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Everything excellent. The shipping was fast and the packaging was very good at an excellent price 🙂",
-            "review_text_style": "body",
-            "review_text_color": "#eaf6f3",
-            "review_background_color": "#123a34",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc4": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Jeremy N.",
-            "author_style": "subtitle",
-            "author_color": "#ffffff",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#5eead4",
-            "author_badge_color": "#16463f",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "This is the third time I've bought them. Before taking these pills my doctor was saying my eye was getting swollen and looking very dry. After taking 2 pills a day, not only do I see a difference, I feel a difference. 🙂",
-            "review_text_style": "body",
-            "review_text_color": "#eaf6f3",
-            "review_background_color": "#123a34",
-            "review_border_radius": "low"
-          }
-        }
-      },
-      "block_order": [
-        "review_dtNXc1",
-        "review_dtNXc2",
-        "review_dtNXc3",
-        "review_dtNXc4"
-      ],
-      "settings": {
-        "heading_stars_size": "lg",
-        "heading_stars_color": "#facc15",
-        "stars_alignment": "center",
-        "stars_mobilealignment": "center",
-        "heading_stars_number": 5,
-        "heading": "What customers are saying",
-        "heading_size": "h0",
-        "heading_alignment": "center",
-        "heading_mobilealignment": "center",
-        "heading_color": "#ffffff",
-        "text": "",
-        "text_style": "subtitle",
-        "text_alignment": "center",
-        "text_mobilealignment": "center",
-        "text_color": "#eaf6f3",
-        "gradient": "#0d211e",
-        "button_label": "",
-        "button_link": "",
-        "button_link_newtab": true,
-        "button_text_color": "#0d211e",
-        "button_background_color": "#5eead4",
-        "button_border_width": 0,
-        "button_border_color": "#000000",
-        "button_width": "fit",
-        "button_width_mobile": "full",
-        "button_alignment": "center",
-        "button_mobilealignment": "left",
-        "button_rounded_corners": "medium",
-        "button_padding_vertical": 15,
-        "button_padding_horizontal": 15,
-        "button_subtext": "",
-        "button_subtext_style": "body",
-        "button_subtext_color": "#eaf6f3",
-        "button_action": "scroll",
-        "button_action_scroll_element": "",
-        "padding_top": 60,
-        "padding_bottom": 60,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
     "pp_guarantee_d8zzPK": {
       "type": "pp-guarantee",
       "blocks": {
@@ -602,7 +462,6 @@
     "pp_image_with_text_HNW9yr",
     "pp_image_with_benefits_YnG9hi",
     "featured_collection",
-    "pp_reviews_EXpLcn",
     "pp_guarantee_d8zzPK"
   ]
 }
