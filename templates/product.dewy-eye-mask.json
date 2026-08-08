@@ -261,12 +261,42 @@
             "rating": 5,
             "quote": "This was a fantastic purchase. I struggle with dry eyes and on top of that working long night shifts. These have helped me so much, reducing my eye swelling and headaches."
           }
+        },
+        "photo_4": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_171835_5adf15a4-0671-4757-bbc9-df58bc2c8550.png",
+            "name": "Andy A.",
+            "rating": 5,
+            "quote": "The first time I noticed how much dry air bothered my eyes was on a long flight. By the time I landed, my eyes felt awful. After that I started keeping drops in my bag, but I wanted something soothing for when I got to the hotel too. I bought a reusable cooling gel mask before my next trip and now it's one of the first things I pack. After a long day of flying, showering and putting that cold mask over my eyes feels like pressing a reset button."
+          }
+        },
+        "photo_5": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_171920_5890c20c-7ca2-468f-81d9-8e1d883a066d.png",
+            "name": "Tina G.",
+            "rating": 4.5,
+            "quote": "My evenings used to go something like this: finish work, close the laptop, rub my eyes, complain that they felt tired, then somehow open my phone for another hour. I bought the cooling eye mask on a whim because I wanted something that would actually make me step away from my screens. Now I put it in the fridge when I start dinner and use it while I'm winding down. The cold feeling over my eyes is honestly my favorite part. It's become my little signal that the workday is actually over."
+          }
+        },
+        "photo_6": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_173014_a123dd20-5fb0-47b9-b919-d011d0fc4f00.png",
+            "name": "Nina P.",
+            "rating": 5,
+            "quote": "I used to stay up way too late scrolling, and by the time I finally went to bed my eyes felt exhausted and dry. I tried eye drops, lowering my brightness and promising myself I'd use my phone less — with mixed success. Then I started keeping a cooling gel mask beside my bed. It sounds ridiculously simple, but putting it over my eyes for a few minutes has become part of my nighttime routine. Sometimes I don't even realize how tense my face feels until the mask goes on."
+          }
         }
       },
       "block_order": [
         "photo_1",
         "photo_2",
-        "photo_3"
+        "photo_3",
+        "photo_4",
+        "photo_5",
+        "photo_6"
       ],
       "settings": {
         "heading": "Real Stories From Real Customers",

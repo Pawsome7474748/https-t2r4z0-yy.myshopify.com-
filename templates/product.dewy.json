@@ -298,13 +298,53 @@
           "settings": {
             "photo": "shopify://shop_images/hf_20260808_164027_c7d8aea3-0294-4fdc-aad8-f8634d56982b.png"
           }
+        },
+        "photo_5": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_171824_9b160043-8f0f-499b-b394-303aa3f7bac3.png",
+            "name": "Henry P.",
+            "rating": 4.5,
+            "quote": "I honestly didn't realize how much I was rubbing my eyes until I started working from home. By 3pm I'd be staring at my laptop, blinking constantly and reaching for eye drops again. I tried changing my screen brightness, taking breaks, drinking more water… nothing really stuck. I eventually started taking omega supplements because I was already trying to be more intentional about my daily routine. It's not some overnight miracle, but after keeping up with them for a while, my eyes just don't feel like the first thing I notice at the end of the day anymore. That's a win for me."
+          }
+        },
+        "photo_6": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_171852_b6b6e893-a54c-4845-a5d6-fa43d2740f16.png",
+            "name": "Anthony N.",
+            "rating": 4.5,
+            "quote": "I've worn contacts for years, so I assumed the uncomfortable, dry feeling was just something I had to put up with. Some days I'd take them out as soon as I got home because my eyes were so irritated. I started paying more attention to my overall eye-care routine and added an omega supplement. I also became much better about taking breaks from my screen. I can't point to one thing and say that's what changed everything, but together my eyes have felt noticeably more comfortable. I wish I'd taken it seriously sooner."
+          }
+        },
+        "photo_7": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_171805_b5df2d16-c22b-496d-aeef-afbc75374ea5.png",
+            "name": "Emmah N.",
+            "rating": 5,
+            "quote": "For the longest time I blamed everything on getting older. My eyes would feel dry by the afternoon and I'd carry drops everywhere — in my purse, at my desk, even in the car. My sister suggested looking into omega supplements, so I added them to my morning routine. I almost stopped after the first couple weeks because I wasn't expecting anything dramatic. But eventually I realized I wasn't reaching for my drops quite as often. Now they're just part of my morning routine, along with my coffee."
+          }
+        },
+        "photo_8": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_171815_1a5e8988-20e8-4b14-b69e-5cd28ac2b03d.png",
+            "name": "Hannah K.",
+            "rating": 5,
+            "quote": "I was actually skeptical about omega supplements because I've bought so many things that promised to fix everything. I started taking these mostly because I wanted to improve my daily nutrition, not because I expected some huge transformation. The funny thing is that after a few months, I realized my dry-eye routine had gotten a lot less complicated. I wasn't constantly thinking about my eyes anymore. For me, the biggest difference was that it happened gradually enough that I almost didn't notice."
+          }
         }
       },
       "block_order": [
         "photo_1",
         "photo_2",
         "photo_3",
-        "photo_4"
+        "photo_4",
+        "photo_5",
+        "photo_6",
+        "photo_7",
+        "photo_8"
       ],
       "settings": {
         "heading": "Real Stories From Real Customers",
