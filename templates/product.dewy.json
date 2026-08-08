@@ -269,7 +269,7 @@
         "photo_1": {
           "type": "photo_review",
           "settings": {
-            "photo": "shopify://shop_images/hf_20260808_163903_12d0d1bd-f31f-4798-a4f8-e83d9d3a2253.png",
+            "photo": "shopify://shop_images/hf_20260808_163715_4d8a1557-5f15-47f2-a44d-c306e0bb5934.png",
             "name": "Nadia G.",
             "rating": 5,
             "quote": "This supplement arrived very quickly and in good condition, the product's appearance is good and one can assume that the effectiveness of the product is also good."
@@ -278,7 +278,7 @@
         "photo_2": {
           "type": "photo_review",
           "settings": {
-            "photo": "shopify://shop_images/hf_20260808_163917_7945d512-dc22-4f3d-8f0a-2f73367ec73a.png",
+            "photo": "shopify://shop_images/hf_20260808_163843_21d31f85-8f4f-438a-80cc-f34569d6014d.png",
             "name": "Helen S.",
             "rating": 5,
             "quote": "An excellent supplement that has helped so much with my dry eyes. I was worried that my problem would only get worse. But my granddaughter told me to start taking these omega pills and wow, words can't describe how grateful I am that I found this."
@@ -287,16 +287,10 @@
         "photo_3": {
           "type": "photo_review",
           "settings": {
-            "photo": "shopify://shop_images/hf_20260808_163929_2f0b4c93-837d-4dc1-ae77-bafba60692c2.png",
+            "photo": "shopify://shop_images/hf_20260808_163652_c045f3c9-0fa6-4821-ad4b-5e203dcee3c9.png",
             "name": "Jeremy N.",
             "rating": 5,
             "quote": "This is the third time I've bought them. Before taking these pills my doctor was saying my eye was getting swollen and looking very dry. After taking 2 pills a day, not only do I see a difference, I feel a difference. 🙂"
-          }
-        },
-        "photo_4": {
-          "type": "photo_review",
-          "settings": {
-            "photo": "shopify://shop_images/hf_20260808_164027_c7d8aea3-0294-4fdc-aad8-f8634d56982b.png"
           }
         },
         "photo_5": {
@@ -340,7 +334,6 @@
         "photo_1",
         "photo_2",
         "photo_3",
-        "photo_4",
         "photo_5",
         "photo_6",
         "photo_7",
