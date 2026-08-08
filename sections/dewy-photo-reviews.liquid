@@ -196,26 +196,26 @@
         <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M7.5 5L12.5 10L7.5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
+
+    <script>
+      (function () {
+        var section = document.currentScript.closest('.pr-section');
+        if (!section) return;
+        var track = section.querySelector('[data-pr-track]');
+        var prev = section.querySelector('[data-pr-prev]');
+        var next = section.querySelector('[data-pr-next]');
+        if (!track) return;
+        function scrollByCard(dir) {
+          var card = track.querySelector('.pr-card');
+          var amount = card ? card.getBoundingClientRect().width + 24 : 320;
+          track.scrollBy({ left: dir * amount, behavior: 'smooth' });
+        }
+        if (prev) prev.addEventListener('click', function () { scrollByCard(-1); });
+        if (next) next.addEventListener('click', function () { scrollByCard(1); });
+      })();
+    </script>
   </div>
 </section>
-
-<script>
-  (function () {
-    var section = document.currentScript.closest('.pr-section');
-    if (!section) return;
-    var track = section.querySelector('[data-pr-track]');
-    var prev = section.querySelector('[data-pr-prev]');
-    var next = section.querySelector('[data-pr-next]');
-    if (!track) return;
-    function scrollByCard(dir) {
-      var card = track.querySelector('.pr-card');
-      var amount = card ? card.getBoundingClientRect().width + 24 : 320;
-      track.scrollBy({ left: dir * amount, behavior: 'smooth' });
-    }
-    if (prev) prev.addEventListener('click', function () { scrollByCard(-1); });
-    if (next) next.addEventListener('click', function () { scrollByCard(1); });
-  })();
-</script>
 
 {% schema %}
 {
