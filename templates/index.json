@@ -348,6 +348,87 @@
         "margin_bottom": 0
       }
     },
+    "photo_reviews_home": {
+      "type": "dewy-photo-reviews",
+      "blocks": {
+        "photo_1": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_163715_4d8a1557-5f15-47f2-a44d-c306e0bb5934.png",
+            "name": "Nadia G.",
+            "rating": 5,
+            "quote": "This supplement arrived very quickly and in good condition, the product's appearance is good and one can assume that the effectiveness of the product is also good.",
+            "product": "omega-3-fish-oil-supplement-with-epa-dha-supports-heart-and-brain-health-omega-3-fatty-acids-120-capsules"
+          }
+        },
+        "photo_2": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_163843_21d31f85-8f4f-438a-80cc-f34569d6014d.png",
+            "name": "Helen S.",
+            "rating": 5,
+            "quote": "An excellent supplement that has helped so much with my dry eyes. I was worried that my problem would only get worse. But my granddaughter told me to start taking these omega pills and wow, words can't describe how grateful I am that I found this.",
+            "product": "omega-3-fish-oil-supplement-with-epa-dha-supports-heart-and-brain-health-omega-3-fatty-acids-120-capsules"
+          }
+        },
+        "photo_3": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_163652_c045f3c9-0fa6-4821-ad4b-5e203dcee3c9.png",
+            "name": "Jeremy N.",
+            "rating": 5,
+            "quote": "This is the third time I've bought them. Before taking these pills my doctor was saying my eye was getting swollen and looking very dry. After taking 2 pills a day, not only do I see a difference, I feel a difference. 🙂",
+            "product": "omega-3-fish-oil-supplement-with-epa-dha-supports-heart-and-brain-health-omega-3-fatty-acids-120-capsules"
+          }
+        },
+        "photo_4": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_163903_12d0d1bd-f31f-4798-a4f8-e83d9d3a2253.png",
+            "name": "Jenny W.",
+            "rating": 5,
+            "quote": "It has a super soft texture and is pleasant to touch. The color is very suitable. I was surprised by the interior as there are gel beads that move, giving a massage to tired eyes, and the stitching is very well done. I found it a good product at a good price. It has an elastic band with velcro so it doesn't squeeze on the head or eyes, and it includes instructions for use, to use with both heat and cold. I bought some for myself and others as gifts, and I'm sure to buy more.",
+            "product": "gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa"
+          }
+        },
+        "photo_5": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_163929_2f0b4c93-837d-4dc1-ae77-bafba60692c2.png",
+            "name": "Anthony J.",
+            "rating": 5,
+            "quote": "Very useful for eye fatigue, I recommend.",
+            "product": "gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa"
+          }
+        },
+        "photo_6": {
+          "type": "photo_review",
+          "settings": {
+            "photo": "shopify://shop_images/hf_20260808_163917_7945d512-dc22-4f3d-8f0a-2f73367ec73a.png",
+            "name": "Liz K.",
+            "rating": 5,
+            "quote": "This was a fantastic purchase. I struggle with dry eyes and on top of that working long night shifts. These have helped me so much, reducing my eye swelling and headaches.",
+            "product": "gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa"
+          }
+        }
+      },
+      "block_order": [
+        "photo_1",
+        "photo_2",
+        "photo_3",
+        "photo_4",
+        "photo_5",
+        "photo_6"
+      ],
+      "settings": {
+        "heading": "Real Stories From Real Customers",
+        "subheading": "We're confident you'll feel the difference too.",
+        "background_color": "#0d211e",
+        "text_color": "#eaf6f3",
+        "accent_color": "#5eead4",
+        "card_color": "#123a34"
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -461,6 +542,7 @@
     "stats",
     "pp_image_with_text_HNW9yr",
     "pp_image_with_benefits_YnG9hi",
+    "photo_reviews_home",
     "featured_collection",
     "pp_guarantee_d8zzPK"
   ]

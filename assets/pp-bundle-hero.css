@@ -158,6 +158,67 @@ bundle-hero {
   margin-top: 0.1em;
 }
 
+.bh-colors {
+  margin-bottom: 2rem;
+}
+
+.bh-colors__label {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 600;
+  opacity: 0.75;
+  margin-bottom: 0.96rem;
+}
+
+.bh-colors__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bh-colors__swatch {
+  position: relative;
+  cursor: pointer;
+}
+
+.bh-colors__swatch-input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.bh-colors__pill {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border: 2px solid rgba(94, 234, 212, 0.18);
+  border-radius: 999px;
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  background: #123a34;
+  font-size: 1.6rem;
+  font-weight: 600;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.bh-colors__swatch-input:checked + .bh-colors__pill {
+  border-color: #5eead4;
+  background: #16463f;
+}
+
+.bh-colors__swatch-input:focus-visible + .bh-colors__pill {
+  outline: 2px solid #5eead4;
+  outline-offset: 2px;
+}
+
+.bh-colors__dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid rgba(234, 246, 243, 0.35);
+}
+
 .bh-tiers {
   display: flex;
   flex-direction: column;

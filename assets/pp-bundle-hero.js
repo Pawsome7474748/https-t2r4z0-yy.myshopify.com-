@@ -10,8 +10,10 @@ if (!customElements.get('bundle-hero')) {
         this.priceElement = this.querySelector('[data-bh-buy-price]');
         this.errorElement = this.querySelector('[data-bh-error]');
         this.inputs = Array.from(this.querySelectorAll('[data-bh-tier-input]'));
+        this.colorInputs = Array.from(this.querySelectorAll('[data-bh-color-input]'));
 
         this.inputs.forEach((input) => input.addEventListener('change', this.onTierChange.bind(this)));
+        this.colorInputs.forEach((input) => input.addEventListener('change', this.onColorChange.bind(this)));
         if (this.buyButton) this.buyButton.addEventListener('click', this.onSubmit.bind(this));
 
         const checked = this.inputs.find((input) => input.checked);
@@ -58,6 +60,37 @@ if (!customElements.get('bundle-hero')) {
 
       onTierChange(event) {
         this.updatePrice(event.target);
+      }
+
+      onColorChange(event) {
+        const colorKey = event.target.value;
+
+        this.inputs.forEach((input) => {
+          const variant = input.dataset[`variant${colorKey}`];
+          const price = input.dataset[`price${colorKey}`];
+          const compare = input.dataset[`compare${colorKey}`];
+          if (!variant) return;
+
+          input.value = variant;
+          input.dataset.price = price || '';
+
+          const card = input.nextElementSibling;
+          if (!card) return;
+          const priceNow = card.querySelector('[data-bh-tier-price-now]');
+          const priceCompare = card.querySelector('[data-bh-tier-price-compare]');
+          if (priceNow) priceNow.textContent = price || '';
+          if (priceCompare) {
+            if (compare) {
+              priceCompare.textContent = compare;
+              priceCompare.hidden = false;
+            } else {
+              priceCompare.hidden = true;
+            }
+          }
+        });
+
+        const checked = this.selectedInput;
+        if (checked) this.updatePrice(checked);
       }
 
       updatePrice(input) {

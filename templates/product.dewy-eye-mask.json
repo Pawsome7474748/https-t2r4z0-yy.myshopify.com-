@@ -39,14 +39,16 @@
         "tier_1": {
           "type": "tier",
           "settings": {
-            "variant_title": "1pc-eye mask-grey / China Mainland",
+            "variant_title": "1pc-eye mask-blue",
+            "variant_title_color2": "1pc-eye mask-pink",
             "label": "1 Mask"
           }
         },
         "tier_2": {
           "type": "tier",
           "settings": {
-            "variant_title": "Grey — 2 Pack / China Mainland",
+            "variant_title": "2pc eye mask blue",
+            "variant_title_color2": "2pc eye mask pink",
             "label": "2 Masks",
             "sublabel": "Save 15%",
             "badge": "Most Popular"
@@ -55,7 +57,8 @@
         "tier_3": {
           "type": "tier",
           "settings": {
-            "variant_title": "Grey — 3 Pack / China Mainland",
+            "variant_title": "3pc eye mask blue",
+            "variant_title_color2": "3pc eye mask pink",
             "label": "3 Masks",
             "sublabel": "3rd mask 30% off",
             "badge": "Best Value"
@@ -226,6 +229,11 @@
         "heading": "Cooling Gel Eye Mask",
         "subheading": "<p>A reusable cooling compress for the gritty, tired-eye feeling perimenopause can bring — freeze it, wear it, feel it.</p>",
         "buy_button_text": "Add to Cart",
+        "enable_color_option": true,
+        "color_1_label": "Blue",
+        "color_1_swatch": "#4a90d9",
+        "color_2_label": "Pink",
+        "color_2_swatch": "#f2b8cf",
         "background_color": "#0d211e",
         "text_color": "#eaf6f3",
         "accent_color": "#5eead4",

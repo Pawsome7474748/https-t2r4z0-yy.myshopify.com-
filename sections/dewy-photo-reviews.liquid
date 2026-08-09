@@ -87,6 +87,8 @@
     background: {{ section.settings.card_color }};
     border-radius: 12px;
     padding: 0.9rem 1.2rem;
+    text-decoration: none;
+    color: inherit;
   }
   .pr-card__product img {
     width: 36px; height: 36px; border-radius: 7px; object-fit: cover; flex-shrink: 0;
@@ -175,15 +177,18 @@
             </div>
           {%- endif -%}
           {%- if block.settings.quote != blank -%}<p class="pr-card__quote">"{{ block.settings.quote }}"</p>{%- endif -%}
-          <div class="pr-card__product">
-            {%- if product.featured_image != blank -%}
-              <img src="{{ product.featured_image | image_url: width: 80 }}" alt="{{ product.title | escape }}">
-            {%- endif -%}
-            <div>
-              <p class="pr-card__product-name">{{ product.title | truncate: 28 }}</p>
-              <p class="pr-card__product-price">{{ product.price | money }}</p>
-            </div>
-          </div>
+          {%- assign card_product = block.settings.product | default: product -%}
+          {%- if card_product != blank -%}
+            <a href="{{ card_product.url }}" class="pr-card__product">
+              {%- if card_product.featured_image != blank -%}
+                <img src="{{ card_product.featured_image | image_url: width: 80 }}" alt="{{ card_product.title | escape }}">
+              {%- endif -%}
+              <div>
+                <p class="pr-card__product-name">{{ card_product.title | truncate: 28 }}</p>
+                <p class="pr-card__product-price">{{ card_product.price | money }}</p>
+              </div>
+            </a>
+          {%- endif -%}
         </div>
       {%- endfor -%}
     </div>
@@ -236,7 +241,8 @@
         { "type": "image_picker", "id": "photo", "label": "Customer photo" },
         { "type": "text", "id": "name", "label": "Customer name" },
         { "type": "range", "id": "rating", "label": "Star rating", "min": 1, "max": 5, "step": 0.5, "default": 5 },
-        { "type": "textarea", "id": "quote", "label": "Review quote" }
+        { "type": "textarea", "id": "quote", "label": "Review quote" },
+        { "type": "product", "id": "product", "label": "Product", "info": "Leave blank on product pages to use the current product automatically. Required on non-product pages like the homepage." }
       ]
     }
   ],

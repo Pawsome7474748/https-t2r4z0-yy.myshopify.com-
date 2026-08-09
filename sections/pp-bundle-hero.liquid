@@ -93,6 +93,28 @@
           </ul>
         {%- endif -%}
 
+          {%- if section.settings.enable_color_option -%}
+            <div class="bh-colors" role="radiogroup" aria-label="Choose color">
+              <span class="bh-colors__label">Color</span>
+              <div class="bh-colors__options">
+                <label class="bh-colors__swatch">
+                  <input type="radio" name="bh-color-{{ section.id }}" class="bh-colors__swatch-input" data-bh-color-input value="Color1" checked>
+                  <span class="bh-colors__pill">
+                    <span class="bh-colors__dot" style="background: {{ section.settings.color_1_swatch }};" aria-hidden="true"></span>
+                    {{ section.settings.color_1_label }}
+                  </span>
+                </label>
+                <label class="bh-colors__swatch">
+                  <input type="radio" name="bh-color-{{ section.id }}" class="bh-colors__swatch-input" data-bh-color-input value="Color2">
+                  <span class="bh-colors__pill">
+                    <span class="bh-colors__dot" style="background: {{ section.settings.color_2_swatch }};" aria-hidden="true"></span>
+                    {{ section.settings.color_2_label }}
+                  </span>
+                </label>
+              </div>
+            </div>
+          {%- endif -%}
+
           {%- if tier_blocks.size > 0 -%}
             <div class="bh-tiers" role="radiogroup" aria-label="Choose your bundle">
               {%- for block in tier_blocks -%}
@@ -103,6 +125,10 @@
                     {%- assign is_checked = true -%}
                     {%- assign has_checked = true -%}
                   {%- endunless -%}
+                  {%- assign variant_color2 = blank -%}
+                  {%- if section.settings.enable_color_option and block.settings.variant_title_color2 != blank -%}
+                    {%- assign variant_color2 = product.variants | where: 'title', block.settings.variant_title_color2 | first -%}
+                  {%- endif -%}
                   <label class="bh-tier" {{ block.shopify_attributes }}>
                     <input
                       type="radio"
@@ -111,6 +137,14 @@
                       data-bh-tier-input
                       value="{{ variant.id }}"
                       data-price="{{ variant.price | money }}"
+                      data-variant-color1="{{ variant.id }}"
+                      data-price-color1="{{ variant.price | money }}"
+                      data-compare-color1="{% if variant.compare_at_price > variant.price %}{{ variant.compare_at_price | money }}{% endif %}"
+                      {%- if variant_color2 != blank %}
+                      data-variant-color2="{{ variant_color2.id }}"
+                      data-price-color2="{{ variant_color2.price | money }}"
+                      data-compare-color2="{% if variant_color2.compare_at_price > variant_color2.price %}{{ variant_color2.compare_at_price | money }}{% endif %}"
+                      {%- endif %}
                       {% if is_checked %}checked{% endif %}
                     >
                     <span class="bh-tier__card" style="background: {{ section.settings.card_color }};">
@@ -127,10 +161,8 @@
                         {%- endif -%}
                       </span>
                       <span class="bh-tier__price">
-                        <span class="bh-tier__price-now">{{ variant.price | money }}</span>
-                        {%- if variant.compare_at_price > variant.price -%}
-                          <span class="bh-tier__price-compare">{{ variant.compare_at_price | money }}</span>
-                        {%- endif -%}
+                        <span class="bh-tier__price-now" data-bh-tier-price-now>{{ variant.price | money }}</span>
+                        <span class="bh-tier__price-compare" data-bh-tier-price-compare {% unless variant.compare_at_price > variant.price %}hidden{% endunless %}>{{ variant.compare_at_price | money }}</span>
                       </span>
                     </span>
                   </label>
@@ -380,6 +412,41 @@
     },
     {
       "type": "header",
+      "content": "Color option"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_color_option",
+      "label": "Enable color selector",
+      "default": false,
+      "info": "Shows a color swatch picker above the bundle tiers. Set each tier's variant title for both colors below."
+    },
+    {
+      "type": "text",
+      "id": "color_1_label",
+      "label": "Color 1 name",
+      "default": "Blue"
+    },
+    {
+      "type": "color",
+      "id": "color_1_swatch",
+      "label": "Color 1 swatch",
+      "default": "#4a90d9"
+    },
+    {
+      "type": "text",
+      "id": "color_2_label",
+      "label": "Color 2 name",
+      "default": "Pink"
+    },
+    {
+      "type": "color",
+      "id": "color_2_swatch",
+      "label": "Color 2 swatch",
+      "default": "#f4b8c8"
+    },
+    {
+      "type": "header",
       "content": "Why choose us"
     },
     {
@@ -463,8 +530,14 @@
         {
           "type": "text",
           "id": "variant_title",
-          "label": "Exact variant title",
+          "label": "Exact variant title (color 1)",
           "info": "Must match a variant's title exactly, e.g. \"2 Bottles — 2 Month Supply\". Find this on the product's Variants page in admin."
+        },
+        {
+          "type": "text",
+          "id": "variant_title_color2",
+          "label": "Exact variant title (color 2)",
+          "info": "Only used when the color selector above is enabled. Leave blank if this product has no color option."
         },
         {
           "type": "text",
