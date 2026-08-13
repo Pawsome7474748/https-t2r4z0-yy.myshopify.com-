@@ -13,8 +13,8 @@
 
   .dsp-panel {
     position: relative;
-    background: #0d211e;
-    color: #eaf6f3;
+    background: #0d0d0d;
+    color: #f3ead9;
     border-radius: 20px;
     padding: 4rem 3.2rem 3.2rem;
     max-width: 380px;
@@ -29,7 +29,7 @@
     right: 14px;
     background: none;
     border: none;
-    color: #eaf6f3;
+    color: #f3ead9;
     font-size: 2.4rem;
     line-height: 1;
     cursor: pointer;
@@ -43,9 +43,9 @@
     letter-spacing: 0.06em;
     font-size: 2rem;
     margin: 0 0 2rem;
-    color: #5eead4;
+    color: #c9a227;
   }
-  .dsp-logo span { color: #eaf6f3; }
+  .dsp-logo span { color: #f3ead9; }
 
   .dsp-panel h2 {
     font-size: 2.4rem;
@@ -68,7 +68,7 @@
     margin: 0 auto;
     border-radius: 14px;
     overflow: hidden;
-    background: #123a34;
+    background: #1c1613;
   }
 
   .dsp-card canvas {
@@ -101,13 +101,13 @@
     margin: 0;
     font-size: 3.2rem;
     font-weight: 700;
-    color: #5eead4;
+    color: #c9a227;
   }
 
   .dsp-claim {
     display: inline-block;
-    background: #5eead4;
-    color: #0d211e;
+    background: #c9a227;
+    color: #0d0d0d;
     font-weight: 700;
     font-size: 1.5rem;
     text-decoration: none;
@@ -126,7 +126,7 @@
 <div id="dewy-scratch-overlay" hidden>
   <div class="dsp-panel" role="dialog" aria-modal="true" aria-label="Welcome discount">
     <button type="button" class="dsp-close" id="dewy-scratch-close" aria-label="Close">&times;</button>
-    <p class="dsp-logo">Dewy<span>.</span></p>
+    <p class="dsp-logo">Corvina<span>.</span></p>
     <h2>Try Your Luck</h2>
     <p class="dsp-sub">Scratch below to reveal your welcome discount</p>
     <div class="dsp-card">
@@ -160,8 +160,8 @@
 
       function paintFoil() {
         var grad = ctx.createLinearGradient(0, 0, w, h);
-        grad.addColorStop(0, '#5eead4');
-        grad.addColorStop(1, '#2a7a72');
+        grad.addColorStop(0, '#c9a227');
+        grad.addColorStop(1, '#7a1f2b');
         ctx.fillStyle = grad;
         ctx.fillRect(0, 0, w, h);
         ctx.fillStyle = 'rgba(13, 33, 30, 0.85)';

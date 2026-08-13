@@ -126,7 +126,7 @@
     "show_cart_note": false,
     "cart_drawer_collection": "",
     "cart_color_scheme": "scheme-1",
-    "cartdrawer_button_color": "#2a7a72",
+    "cartdrawer_button_color": "#c9a227",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
@@ -202,23 +202,23 @@
       },
       "scheme-6": {
         "settings": {
-          "background": "#0d211e",
+          "background": "#0d0d0d",
           "background_gradient": "",
-          "text": "#eaf6f3",
-          "button": "#5eead4",
-          "button_label": "#0d211e",
-          "secondary_button_label": "#5eead4",
+          "text": "#f3ead9",
+          "button": "#c9a227",
+          "button_label": "#0d0d0d",
+          "secondary_button_label": "#c9a227",
           "shadow": "#000000"
         }
       },
       "scheme-7": {
         "settings": {
-          "background": "#123a34",
+          "background": "#1c1613",
           "background_gradient": "",
-          "text": "#eaf6f3",
-          "button": "#5eead4",
-          "button_label": "#0d211e",
-          "secondary_button_label": "#5eead4",
+          "text": "#f3ead9",
+          "button": "#c9a227",
+          "button_label": "#0d0d0d",
+          "secondary_button_label": "#c9a227",
           "shadow": "#000000"
         }
       },

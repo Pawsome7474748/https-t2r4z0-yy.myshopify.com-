@@ -17,8 +17,8 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "Comfort support for perimenopausal dry eye",
-            "text_color": "#eaf6f3",
+            "text": "Cover grey hair in the shower — no mixing, no mess",
+            "text_color": "#f3ead9",
             "link": ""
           }
         }
@@ -27,7 +27,7 @@
         "announcement-bar-0"
       ],
       "settings": {
-        "gradient": "linear-gradient(57deg, #0d211e, #0d211e 98%)",
+        "gradient": "linear-gradient(57deg, #0d0d0d, #0d0d0d 98%)",
         "show_line_separator": true,
         "show_social": false,
         "auto_rotate": false,
