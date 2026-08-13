@@ -8,416 +8,128 @@
       }
     },
     "hero_intro": {
-      "type": "pp-guarantee",
+      "type": "rich-text",
       "blocks": {
-        "icon_1": {
-          "type": "icon",
-          "settings": {
-            "icon_type": "heart",
-            "icon_size": 48,
-            "icon_alignment": "center",
-            "icon_mobilealignment": "center",
-            "icon_color": "#2a7a72"
-          }
-        },
         "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "You're Not Imagining This — And You're Not Alone",
-            "heading_size": "h0",
-            "heading_alignment": "center",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading": "Grey Hair Doesn't Have to Mean Salon Visits or Mixing Dye",
+            "heading_size": "h0"
           }
         },
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Maybe it started small — a raspy feeling by the afternoon, a blink that didn't quite do its job, eyes that felt raw by the time you got into bed. Somewhere around your 40s, something changed, and it's easy to start wondering if it's really happening or if you're just tired, stressed, staring at screens too much.</p><p>You're not imagining it, and you're not overreacting. Perimenopausal dry eye is real, it's hormone-driven, and it's far more common than most people realize — most of them just aren't talking about it. We are. Here's what's actually happening, backed by real numbers, and what genuinely helps.</p>",
-            "text_style": "subtitle",
-            "text_alignment": "center",
-            "text_mobilealignment": "center",
-            "text_color": "#3f5854"
+            "text": "<p>Maybe it started with a few strands around your temples, then a few more. Somewhere along the way, checking the mirror before you left the house became a habit. Grey hair is completely normal — but that doesn't mean you have to spend hours and money covering it the old way.</p><p>Here's what's actually happening when hair turns grey, and a simpler way to cover it.</p>"
           }
         },
         "button_1": {
           "type": "button",
           "settings": {
-            "button_label": "See What Can Help",
-            "button_link": "",
-            "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#2a7a72",
-            "button_border_width": 0,
-            "button_border_color": "#000000",
-            "button_width": "fit",
-            "button_alignment": "center",
-            "button_mobilealignment": "center",
-            "button_rounded_corners": "high",
-            "button_padding_vertical": 16,
-            "button_padding_horizontal": 25,
-            "button_subtext": "",
-            "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
-            "button_action": "scroll",
-            "button_action_scroll_element": "#dewy_bundle"
+            "button_label": "Shop Corvina",
+            "button_link": "/products/eelhoe-black-hair-dye-shampoo-3-in-1-growth-clean-hair-darkening-deep-nourishing-black-hair-dye-shampoo-natural-organic-herbal",
+            "button_style_secondary": false
           }
         }
       },
-      "block_order": ["icon_1", "heading_1", "text_1", "button_1"],
+      "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
-        "gradient": "linear-gradient(180deg, #f4faf9 0%, #ffffff 100%)",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6",
+        "full_width": true,
         "padding_top": 64,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0
+        "padding_bottom": 48
       }
     },
     "what_is_it": {
-      "type": "pp-image-with-text",
+      "type": "rich-text",
       "blocks": {
         "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "Here's What's Actually Happening Inside Your Eyes",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading": "Why Does Hair Go Grey?",
+            "heading_size": "h1"
           }
         },
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>During perimenopause, your estrogen and androgen levels (hormones like DHEA) don't just dip once — they swing, unevenly, sometimes for years. Those hormones aren't just involved in hot flashes and mood. They also help keep your meibomian glands (which make the oily layer of your tears) and your lacrimal glands (which make the watery layer) working the way they're supposed to.</p><p>When that hormonal support falls away, your tear film gets thinner and evaporates faster than it should. The result is what's called evaporative dry eye — eyes that feel gritty, burning, or exhausted, even though they can look completely normal in the mirror, or even watery. That gap, between how your eyes look and how they actually feel, is part of why it's so often dismissed — even by the people closest to you.</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854"
+            "text": "<p>Hair colour comes from melanin, produced by cells in each hair follicle. As we age — or due to genetics, stress, and other factors — those cells gradually slow down or stop producing pigment, and new hair grows in grey or white.</p><p>It's a normal, natural process. It's also one you're allowed to have an opinion about — including choosing to cover it, on your own terms, without turning it into a whole event.</p>"
           }
         }
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
-        "image": "shopify://shop_images/Capture_f8a725d2-7d6e-4890-ac8a-b0b354da2334.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 25,
-        "layout": "image_first",
-        "mobile_layout": "image_first",
-        "gradient": "",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7",
+        "full_width": true,
         "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0
+        "padding_bottom": 48
       }
     },
-    "stats": {
-      "type": "pp-image-with-percentage",
+    "frustrations": {
+      "type": "rich-text",
       "blocks": {
         "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "The Numbers Say What You've Been Feeling",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading": "The Part Nobody Talks About",
+            "heading_size": "h1"
           }
         },
-        "percent_1": {
-          "type": "percent",
+        "text_1": {
+          "type": "text",
           "settings": {
-            "percent_value": 76,
-            "percent_filled_color": "#2a7a72",
-            "percent_unfilled_color": "#d7ece9",
-            "percent_text_color": "#14312d",
-            "percent_background_color": "#ffffff",
-            "text": "<p>of women report dry eye symptoms during perimenopause</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854",
-            "border_size": 1,
-            "border_color": "#d7ece9"
+            "text": "<p>A few of the most common frustrations people share about covering grey hair:</p><ul><li>Spotting the first few strands, then checking the mirror a little more often after that</li><li>Booking, paying for, and scheduling around salon appointments every few weeks</li><li>Mixing, timing, and cleaning up traditional dye — turning colour into a whole event</li><li>Positioning yourself so the grey around your hairline isn't the first thing people notice in photos</li></ul>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "how_it_helps": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "heading": "A Simpler Way to Cover Grey",
+            "heading_size": "h1"
           }
         },
-        "percent_2": {
-          "type": "percent",
+        "text_1": {
+          "type": "text",
           "settings": {
-            "percent_value": 80,
-            "percent_filled_color": "#2a7a72",
-            "percent_unfilled_color": "#d7ece9",
-            "percent_text_color": "#14312d",
-            "percent_background_color": "#ffffff",
-            "text": "<p>of postmenopausal women report the same experience</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854",
-            "border_size": 1,
-            "border_color": "#d7ece9"
-          }
-        },
-        "percent_3": {
-          "type": "percent",
-          "settings": {
-            "percent_value": 69,
-            "percent_filled_color": "#2a7a72",
-            "percent_unfilled_color": "#d7ece9",
-            "percent_text_color": "#14312d",
-            "percent_background_color": "#ffffff",
-            "text": "<p>of adults over 40 show signs of meibomian gland dysfunction, a leading cause of dry eye</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854",
-            "border_size": 0,
-            "border_color": "#d7ece9"
+            "text": "<p>Corvina's black hair dye shampoo is a wash-in herbal formula with Polygonum multiflorum (he shou wu) that gradually builds colour with repeated use — no ammonia, no mixing, no timer. Apply it like a normal shampoo, and let it do the work in the shower.</p><p>It won't replace a full salon transformation overnight, and we won't pretend otherwise — but it's a real, honest way to keep grey covered as part of your normal routine, in Black or Brown.</p>",
+            "text_style": "subtitle"
           }
         },
         "button_1": {
           "type": "button",
           "settings": {
-            "button_label": "Build Your Comfort Bundle",
-            "button_link": "",
-            "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#2a7a72",
-            "button_border_width": 0,
-            "button_border_color": "#000000",
-            "button_width": "fit",
-            "button_alignment": "left",
-            "button_mobilealignment": "center",
-            "button_rounded_corners": "high",
-            "button_padding_vertical": 15,
-            "button_padding_horizontal": 25,
-            "button_subtext": "",
-            "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
-            "button_action": "scroll",
-            "button_action_scroll_element": "#dewy_bundle"
+            "button_label": "Shop Corvina",
+            "button_link": "/products/eelhoe-black-hair-dye-shampoo-3-in-1-growth-clean-hair-darkening-deep-nourishing-black-hair-dye-shampoo-natural-organic-herbal",
+            "button_style_secondary": false
           }
         }
       },
-      "block_order": ["heading_1", "percent_1", "percent_2", "percent_3", "button_1"],
+      "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
-        "image": "shopify://shop_images/Capture_6dee1faa-7a0a-4127-80ac-1e5eb2f8a4aa.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 25,
-        "layout": "text_first",
-        "mobile_layout": "image_first",
-        "gradient": "#f4faf9",
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7",
+        "full_width": true,
         "padding_top": 48,
-        "padding_bottom": 48,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "symptoms": {
-      "type": "pp-image-with-benefits",
-      "blocks": {
-        "benefit_1": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "😖",
-            "emoji_size": "medium",
-            "heading": "That gritty, burning feeling",
-            "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Like sand in your eyes that won't go away — often worse by mid-afternoon, sometimes bad enough to make you want to close your eyes and just not open them for a while.</p>",
-            "text_style": "subtitle",
-            "text_color": "#3f5854"
-          }
-        },
-        "benefit_2": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "📱",
-            "emoji_size": "medium",
-            "heading": "Screens make it so much worse",
-            "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Every scroll and every email dries your eyes out faster and blurs your focus.</p>",
-            "text_style": "subtitle",
-            "text_color": "#3f5854"
-          }
-        },
-        "benefit_3": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "😴",
-            "emoji_size": "medium",
-            "heading": "Waking up already dry",
-            "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Tear production naturally dips overnight — for many women in perimenopause, that dip runs deeper.</p>",
-            "text_style": "subtitle",
-            "text_color": "#3f5854"
-          }
-        },
-        "benefit_4": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "🪞",
-            "emoji_size": "medium",
-            "heading": "Looking more tired than you feel",
-            "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Red, glassy, puffy-looking eyes can make you look — and feel — exhausted, even on a good day.</p>",
-            "text_style": "subtitle",
-            "text_color": "#3f5854"
-          }
-        }
-      },
-      "block_order": ["benefit_1", "benefit_2", "benefit_3", "benefit_4"],
-      "settings": {
-        "image": "shopify://shop_images/Capture_3ff9582c-730e-4939-82e2-1765bb842126.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 25,
-        "gradient": "",
-        "padding_top": 48,
-        "padding_bottom": 24,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "emotional_impact": {
-      "type": "pp-image-with-text",
-      "blocks": {
-        "heading_1": {
-          "type": "heading",
-          "settings": {
-            "heading": "It's Not Just Your Eyes — It's Your Whole Day",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
-          }
-        },
-        "text_1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>It's blinking hard through a work call so no one notices your eyes stinging. It's putting a book down because the words have gone blurry, not because the story lost you. It's driving at night and quietly bracing for oncoming headlights. It's someone saying \"have you tried just resting your eyes?\" when you've already tried that, four times today.</p><p>Dry eye doesn't stay contained to your eyes. It touches your focus, your mood, your sleep — even how confident you feel walking into a room with eyes that look red or glassy no matter how much rest you got. And because so much of it is invisible from the outside, it can feel like you're carrying it alone.</p><p>You're not, and you don't have to just wait it out. Perimenopausal dry eye is well understood medically, and there's a lot you can genuinely do to support your comfort day to day.</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854"
-          }
-        }
-      },
-      "block_order": ["heading_1", "text_1"],
-      "settings": {
-        "image": "shopify://shop_images/Capture_2416671e-81f4-4b33-a35d-2cd86098d70b.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 25,
-        "layout": "text_first",
-        "mobile_layout": "image_first",
-        "gradient": "",
-        "padding_top": 24,
-        "padding_bottom": 24,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "solution_intro": {
-      "type": "pp-image-with-text",
-      "blocks": {
-        "heading_1": {
-          "type": "heading",
-          "settings": {
-            "heading": "Two Simple, Real Things That Can Help",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
-          }
-        },
-        "text_1": {
-          "type": "text",
-          "settings": {
-            "text": "<p><strong>Omega-3 fatty acids</strong> are one of the most studied nutritional supports for the oil layer of your tear film — the exact layer perimenopause disrupts.</p><p>And when your eyes need relief right now, not in a few weeks, a <strong>cooling gel compress</strong> calms puffiness, soothes irritation, and just plain feels good in the moment.</p><p>Neither one is a miracle cure, and we won't pretend otherwise. But together, they're a real, honest way to support your eyes while your body moves through this transition. Build your own comfort bundle below and save more the more you add.</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854"
-          }
-        }
-      },
-      "block_order": ["heading_1", "text_1"],
-      "settings": {
-        "image": "shopify://shop_images/Capture_6eb23e6f-82ef-4a55-bca0-558be6c362b1.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 25,
-        "layout": "image_first",
-        "mobile_layout": "image_first",
-        "gradient": "#f4faf9",
-        "padding_top": 48,
-        "padding_bottom": 24,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "dewy_bundle": {
-      "type": "bundle-builder",
-      "blocks": {
-        "tier_1": {
-          "type": "tier",
-          "settings": {
-            "quantity": 2,
-            "discount": 10,
-            "label": "Buy 2, Save 10%"
-          }
-        },
-        "tier_2": {
-          "type": "tier",
-          "settings": {
-            "quantity": 3,
-            "discount": 15,
-            "label": "Buy 3, Save 15%"
-          }
-        },
-        "tier_3": {
-          "type": "tier",
-          "settings": {
-            "quantity": 4,
-            "discount": 20,
-            "label": "Buy 4, Save 20%"
-          }
-        },
-        "product_1": {
-          "type": "product",
-          "settings": {
-            "product": "omega-3-fish-oil-supplement-with-epa-dha-supports-heart-and-brain-health-omega-3-fatty-acids-120-capsules"
-          }
-        },
-        "product_2": {
-          "type": "product",
-          "settings": {
-            "product": "gel-cooling-ice-face-eye-mask-facial-mask-hot-cold-compress-pack-gel-bead-cold-face-eye-mask-ice-pack-compress-sleeping-face-spa"
-          }
-        }
-      },
-      "block_order": ["tier_1", "tier_2", "tier_3", "product_1", "product_2"],
-      "settings": {
-        "heading": "Build Your Dewy Comfort Bundle",
-        "heading_size": "h2",
-        "heading_color": "#14312d",
-        "subheading": "<p>Mix and match — the more you add, the more you save.</p>",
-        "text_color": "#3f5854",
-        "default_text": "Add items below to see your bundle savings",
-        "progress_text": "Add [remaining] more to unlock [discount]% off — [label]",
-        "unlocked_text": "You've unlocked [discount]% off — [label]!",
-        "items_label": "items selected",
-        "button_label": "Add Bundle to Cart",
-        "background": "#f4faf9",
-        "accent_color": "#2a7a72",
-        "button_text_color": "#ffffff",
-        "summary_background": "#ffffff",
-        "summary_text_color": "#14312d",
-        "padding_top": 56,
-        "padding_bottom": 56,
-        "margin_top": 0,
-        "margin_bottom": 0
+        "padding_bottom": 48
       }
     },
     "faq": {
@@ -426,45 +138,45 @@
         "question_1": {
           "type": "question",
           "settings": {
-            "heading": "Is perimenopausal dry eye permanent?",
+            "heading": "How does it work?",
             "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>For many women, symptoms ease once hormone levels stabilize after menopause — but for others, dry eye becomes an ongoing part of eye care. Either way, the goal is comfort and support, not just waiting it out.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>Rich botanical pigments, including Polygonum multiflorum (he shou wu), coat each strand as you wash, gradually building colour with repeated use — no ammonia, no mixing, no timer.</p>",
             "text_style": "subtitle",
-            "text_color": "#3f5854"
+            "text_color": "#f3ead9"
           }
         },
         "question_2": {
           "type": "question",
           "settings": {
-            "heading": "Can supplements and self-care actually help?",
+            "heading": "Is this a substitute for medical advice?",
             "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Omega-3 fatty acids are one of the most studied nutritional supports for tear film quality, and simple habits like cooling compresses and blinking breaks can meaningfully ease day-to-day discomfort. They work best alongside — not instead of — guidance from an eye care professional.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>No. This is a cosmetic hair colour product and doesn't diagnose or treat any condition. If you have scalp irritation or a known allergy, please check with a doctor before use.</p>",
             "text_style": "subtitle",
-            "text_color": "#3f5854"
+            "text_color": "#f3ead9"
           }
         },
         "question_3": {
           "type": "question",
           "settings": {
-            "heading": "How long before I notice a difference?",
+            "heading": "How long before I see a difference?",
             "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Comfort routines are cumulative. Many people notice small improvements within a few weeks of consistent use, though everyone's eyes — and hormones — respond differently.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>Most people notice a difference after a few uses, with colour building gradually the more consistently it's used.</p>",
             "text_style": "subtitle",
-            "text_color": "#3f5854"
+            "text_color": "#f3ead9"
           }
         },
         "question_4": {
           "type": "question",
           "settings": {
-            "heading": "Should I still see a doctor?",
+            "heading": "Can I use it if I have sensitive skin?",
             "heading_size": "h2",
-            "heading_color": "#14312d",
-            "text": "<p>Yes. If your symptoms are severe, sudden, or affecting your vision, please see an optometrist or ophthalmologist. Dewy is here to support day-to-day comfort, not to diagnose or treat any medical condition.</p>",
+            "heading_color": "#ffffff",
+            "text": "<p>Please do a small patch test before your first full use if you have sensitive skin or any known allergies.</p>",
             "text_style": "subtitle",
-            "text_color": "#3f5854"
+            "text_color": "#f3ead9"
           }
         }
       },
@@ -474,18 +186,18 @@
         "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#14312d",
+        "heading_color": "#ffffff",
         "text": "",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
-        "text_color": "#3f5854",
+        "text_color": "#f3ead9",
         "border_size": "small",
         "rounded_corners": "medium",
-        "border_color": "#d7ece9",
-        "question_background_color": "#f4faf9",
-        "arrow_color": "#2a7a72",
-        "gradient": "",
+        "border_color": "#2a221c",
+        "question_background_color": "#1c1613",
+        "arrow_color": "#c9a227",
+        "gradient": "#0d0d0d",
         "padding_top": 48,
         "padding_bottom": 48,
         "margin_top": 0,
@@ -502,7 +214,7 @@
             "icon_size": 40,
             "icon_alignment": "center",
             "icon_mobilealignment": "center",
-            "icon_color": "#2a7a72"
+            "icon_color": "#c9a227"
           }
         },
         "heading_1": {
@@ -512,7 +224,7 @@
             "heading_size": "h2",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading_color": "#ffffff"
           }
         },
         "text_1": {
@@ -522,7 +234,7 @@
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
-            "text_color": "#3f5854"
+            "text_color": "#f3ead9"
           }
         },
         "button_1": {
@@ -531,8 +243,8 @@
             "button_label": "Contact Us",
             "button_link": "/pages/contact",
             "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#2a7a72",
+            "button_text_color": "#0d0d0d",
+            "button_background_color": "#c9a227",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "fit",
@@ -551,7 +263,7 @@
       },
       "block_order": ["icon_1", "heading_1", "text_1", "button_1"],
       "settings": {
-        "gradient": "",
+        "gradient": "#0d0d0d",
         "padding_top": 32,
         "padding_bottom": 48,
         "margin_top": 0,
@@ -563,11 +275,8 @@
     "main",
     "hero_intro",
     "what_is_it",
-    "stats",
-    "symptoms",
-    "emotional_impact",
-    "solution_intro",
-    "dewy_bundle",
+    "frustrations",
+    "how_it_helps",
     "faq",
     "support"
   ]

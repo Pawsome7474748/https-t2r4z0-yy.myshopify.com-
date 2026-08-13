@@ -16,158 +16,100 @@
         "padding_bottom": 28
       }
     },
-    "pp_image_with_text_Mwp9Hi": {
-      "type": "pp-image-with-text",
+    "welcome": {
+      "type": "rich-text",
       "blocks": {
-        "heading_GVL4Hb": {
+        "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Welcome to Dewy<\/strong>",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading": "Welcome to Corvina",
+            "heading_size": "h0"
           }
         },
-        "text_juioQH": {
+        "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Dewy makes simple, everyday products for the eye comfort perimenopause can take away. We build thoughtful, effective products so you can get back to your day. Join our community for tips, new arrivals, and special offers.<\/p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854"
+            "text": "<p>Corvina makes simple, wash-in hair colour for covering grey without the mess of traditional dye. We build thoughtful, effective products so covering your roots can be part of your normal routine, not a whole event.</p>"
           }
         },
-        "button_zWUYxa": {
+        "button_1": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now 👉🏻",
-            "button_link": "\/collections\/all",
-            "button_link_newtab": false,
-            "button_text_color": "#FFFFFF",
-            "button_background_color": "#2a7a72",
-            "button_border_width": 0,
-            "button_border_color": "#000000",
-            "button_width": "full",
-            "button_alignment": "left",
-            "button_mobilealignment": "center",
-            "button_rounded_corners": "medium",
-            "button_padding_vertical": 15,
-            "button_padding_horizontal": 15,
-            "button_subtext": "",
-            "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
-            "button_action": "link",
-            "button_action_scroll_element": ""
+            "button_label": "Shop Now",
+            "button_link": "/collections/all",
+            "button_style_secondary": false
           }
         }
       },
-      "block_order": [
-        "heading_GVL4Hb",
-        "text_juioQH",
-        "button_zWUYxa"
-      ],
+      "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
-        "image": "shopify://shop_images/dewy-welcome.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 50,
-        "layout": "image_first",
-        "mobile_layout": "image_first",
-        "gradient": "#eaf6f3",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
-    "pp_image_with_text_ttLHQy": {
-      "type": "pp-image-with-text",
+    "why_we_started": {
+      "type": "rich-text",
       "blocks": {
-        "heading_pnf3ak": {
+        "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Why we started Dewy<\/strong>",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading": "Why we started Corvina",
+            "heading_size": "h1"
           }
         },
-        "text_tfexQH": {
+        "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Perimenopausal dry eye is common and rarely talked about. We started Dewy to bring together the everyday products that actually help — nutritional support and soothing relief — in one simple place, backed by real research and honest guidance.<\/p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854"
+            "text": "<p>Covering grey hair usually means one of two things: a recurring salon appointment, or messy, time-consuming dye at home. We started Corvina to bring a simpler option to the everyday routine — a wash-in colour shampoo, backed by honest ingredients and no exaggerated promises.</p>"
           }
         }
       },
-      "block_order": [
-        "heading_pnf3ak",
-        "text_tfexQH"
-      ],
+      "block_order": ["heading_1", "text_1"],
       "settings": {
-        "image": "shopify://shop_images/dewy-founder-story.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 50,
-        "layout": "text_first",
-        "mobile_layout": "image_first",
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.68), #d7ece9 100%)",
-        "padding_top": 64,
-        "padding_bottom": 64,
-        "margin_top": 52,
-        "margin_bottom": 52
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
-    "pp_image_with_text_xd44KG": {
-      "type": "pp-image-with-text",
+    "mission": {
+      "type": "rich-text",
       "blocks": {
-        "heading_hH8Xcf": {
+        "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "<strong>Our mission<\/strong>",
-            "heading_size": "h0",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#14312d"
+            "heading": "Our mission",
+            "heading_size": "h1"
           }
         },
-        "text_qzgWdQ": {
+        "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Dewy helps you feel more comfortable in your own day, through quality products and caring service.<\/p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#3f5854"
+            "text": "<p>Corvina helps you feel more confident in your everyday routine, through honest products and caring service.</p>"
           }
         }
       },
-      "block_order": [
-        "heading_hH8Xcf",
-        "text_qzgWdQ"
-      ],
+      "block_order": ["heading_1", "text_1"],
       "settings": {
-        "image": "shopify://shop_images/dewy-mission-products.png",
-        "desktop_image_width": "medium",
-        "image_border_radius": 50,
-        "layout": "image_first",
-        "mobile_layout": "image_first",
-        "gradient": "#eaf6f3",
-        "padding_top": 20,
-        "padding_bottom": 40,
-        "margin_top": 0,
-        "margin_bottom": 0
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-6",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 48
       }
     }
   },
   "order": [
     "main",
-    "pp_image_with_text_Mwp9Hi",
-    "pp_image_with_text_ttLHQy",
-    "pp_image_with_text_xd44KG"
+    "welcome",
+    "why_we_started",
+    "mission"
   ]
 }
