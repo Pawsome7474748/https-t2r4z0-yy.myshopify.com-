@@ -39,18 +39,25 @@
         "tier_1": {
           "type": "tier",
           "settings": {
-            "variant_title": "Black 100ml Boxed",
-            "variant_title_color2": "Brown 100ml Boxed",
-            "label": "100ml"
+            "variant_title": "1 Bottle",
+            "label": "1 Bottle"
           }
         },
         "tier_2": {
           "type": "tier",
           "settings": {
-            "variant_title": "Black 500ml Boxed",
-            "variant_title_color2": "Brown 500ml Boxed",
-            "label": "500ml",
-            "sublabel": "Better value per ml",
+            "variant_title": "2 Bottles",
+            "label": "2 Bottles",
+            "sublabel": "Save 14%",
+            "badge": "Most Popular"
+          }
+        },
+        "tier_3": {
+          "type": "tier",
+          "settings": {
+            "variant_title": "3 Bottles",
+            "label": "3 Bottles",
+            "sublabel": "Save 22%",
             "badge": "Best Value"
           }
         },
@@ -201,6 +208,7 @@
         "benefit_4",
         "tier_1",
         "tier_2",
+        "tier_3",
         "trust_1",
         "trust_2",
         "trust_3",
@@ -228,11 +236,6 @@
         "heading": "Black Hair Dye Shampoo",
         "subheading": "<p>A wash-in herbal shampoo that gradually covers grey — no mixing, no mess, no salon appointment.</p>",
         "buy_button_text": "Add to Cart",
-        "enable_color_option": true,
-        "color_1_label": "Black",
-        "color_1_swatch": "#1a1a1a",
-        "color_2_label": "Brown",
-        "color_2_swatch": "#6b4226",
         "background_color": "#0d0d0d",
         "text_color": "#f3ead9",
         "accent_color": "#c9a227",

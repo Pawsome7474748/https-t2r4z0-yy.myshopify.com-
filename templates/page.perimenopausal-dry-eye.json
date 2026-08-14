@@ -13,14 +13,15 @@
         "heading_1": {
           "type": "heading",
           "settings": {
-            "heading": "Grey Hair Doesn't Have to Mean Salon Visits or Mixing Dye",
+            "heading": "The Hair Guide",
             "heading_size": "h0"
           }
         },
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Maybe it started with a few strands around your temples, then a few more. Somewhere along the way, checking the mirror before you left the house became a habit. Grey hair is completely normal — but that doesn't mean you have to spend hours and money covering it the old way.</p><p>Here's what's actually happening when hair turns grey, and a simpler way to cover it.</p>"
+            "text": "<p>Everything worth knowing about grey hair and covering it — why it happens, what actually works, and how Corvina fits into a normal routine. No salon appointment, no mixing, no guesswork.</p>",
+            "text_style": "subtitle"
           }
         },
         "button_1": {
@@ -55,7 +56,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Hair colour comes from melanin, produced by cells in each hair follicle. As we age — or due to genetics, stress, and other factors — those cells gradually slow down or stop producing pigment, and new hair grows in grey or white.</p><p>It's a normal, natural process. It's also one you're allowed to have an opinion about — including choosing to cover it, on your own terms, without turning it into a whole event.</p>"
+            "text": "<p>Hair colour comes from melanin, produced by cells in each hair follicle. As we age — or due to genetics, stress, and other factors — those cells gradually slow down or stop producing pigment, and new hair grows in grey or white. It's a normal, natural process, and it happens at a different pace for everyone.</p><ul><li><strong>Genetics</strong> — the biggest factor in when and how fast grey appears</li><li><strong>Age</strong> — pigment-producing cells naturally slow down over time</li><li><strong>Stress &amp; lifestyle</strong> — can accelerate the process in some people</li></ul><p>It's also something you're allowed to have an opinion about — including choosing to cover it, on your own terms, without turning it into a whole event.</p>"
           }
         }
       },
@@ -109,8 +110,35 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Corvina's black hair dye shampoo is a wash-in herbal formula with Polygonum multiflorum (he shou wu) that gradually builds colour with repeated use — no ammonia, no mixing, no timer. Apply it like a normal shampoo, and let it do the work in the shower.</p><p>It won't replace a full salon transformation overnight, and we won't pretend otherwise — but it's a real, honest way to keep grey covered as part of your normal routine, in Black or Brown.</p>",
+            "text": "<p>Corvina is a wash-in herbal formula built around Polygonum multiflorum (he shou wu), a botanical long used in traditional hair care. Rich pigments coat each strand as you wash, gradually building colour with repeated use — no ammonia, no mixing, no timer.</p><p>It won't replace a full salon transformation overnight, and we won't pretend otherwise — but it's a real, honest way to keep grey covered as part of your normal routine.</p>",
             "text_style": "subtitle"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-7",
+        "full_width": true,
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "how_to_use": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "heading": "How to Use It",
+            "heading_size": "h1"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Apply</strong> — work into wet hair like a normal shampoo, focusing on roots and grey areas.</p><p><strong>2. Lather &amp; wait</strong> — massage through, leave for a few minutes so the pigment can coat each strand.</p><p><strong>3. Rinse &amp; repeat</strong> — rinse thoroughly. Colour builds gradually, so repeat with each wash until you reach your shade, then use as needed to maintain it.</p>"
           }
         },
         "button_1": {
@@ -126,7 +154,7 @@
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "scheme-7",
+        "color_scheme": "scheme-6",
         "full_width": true,
         "padding_top": 48,
         "padding_bottom": 48
@@ -277,6 +305,7 @@
     "what_is_it",
     "frustrations",
     "how_it_helps",
+    "how_to_use",
     "faq",
     "support"
   ]
