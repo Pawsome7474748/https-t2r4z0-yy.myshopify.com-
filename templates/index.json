@@ -99,7 +99,7 @@
           "type": "heading",
           "settings": {
             "heading": "Why does hair go grey?",
-            "heading_size": "h0",
+            "heading_size": "hxl",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
             "heading_color": "#ffffff"
@@ -145,8 +145,8 @@
         "button_ewqPQY"
       ],
       "settings": {
-        "image": "shopify://shop_images/A079b63ba64294e92a667659de63bf0f7Z.webp",
-        "desktop_image_width": "large",
+        "image": "shopify://shop_images/07111b33-fab5-475c-abb8-0e002d9f6d42.png",
+        "desktop_image_width": "xlarge",
         "image_border_radius": 25,
         "layout": "text_first",
         "mobile_layout": "image_first",
@@ -164,9 +164,9 @@
           "type": "benefit",
           "settings": {
             "emoji": "🪞",
-            "emoji_size": "medium",
+            "emoji_size": "large",
             "heading": "That first grey hair moment",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "heading_color": "#ffffff",
             "text": "<p>Spotting the first few strands, then checking the mirror a little more often after that.</p>",
             "text_style": "subtitle",
@@ -177,9 +177,9 @@
           "type": "benefit",
           "settings": {
             "emoji": "💸",
-            "emoji_size": "medium",
+            "emoji_size": "large",
             "heading": "Constant salon appointments",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "heading_color": "#ffffff",
             "text": "<p>Booking, paying, then starting to think about your roots again just a few weeks later.</p>",
             "text_style": "subtitle",
@@ -190,9 +190,9 @@
           "type": "benefit",
           "settings": {
             "emoji": "🧴",
-            "emoji_size": "medium",
+            "emoji_size": "large",
             "heading": "Messy, time-consuming dye",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "heading_color": "#ffffff",
             "text": "<p>Mixing, timing, and cleaning up — turning colour into a whole event instead of a quick step.</p>",
             "text_style": "subtitle",
@@ -203,9 +203,9 @@
           "type": "benefit",
           "settings": {
             "emoji": "📸",
-            "emoji_size": "medium",
+            "emoji_size": "large",
             "heading": "Second-guessing photos",
-            "heading_size": "h2",
+            "heading_size": "h1",
             "heading_color": "#ffffff",
             "text": "<p>Positioning yourself so the grey around your hairline or temples isn't the first thing people notice.</p>",
             "text_style": "subtitle",
@@ -220,11 +220,11 @@
         "benefit_EKiWTc"
       ],
       "settings": {
-        "image": "shopify://shop_images/A993e540762064fe29c16a859af78f300k.webp",
-        "desktop_image_width": "large",
+        "image": "shopify://shop_images/9b696ae1-eaf8-4d93-8b45-788b23447e27.png",
+        "desktop_image_width": "xlarge",
         "image_border_radius": 100,
         "heading": "Does this sound familiar?",
-        "heading_size": "h0",
+        "heading_size": "hxl",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#ffffff",

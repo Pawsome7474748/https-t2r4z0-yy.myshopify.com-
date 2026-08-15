@@ -20,6 +20,8 @@
             {% assign image_width_class = 'pp-max-w-2xl' %}
           {% when 'large' %}
             {% assign image_width_class = 'pp-max-w-4xl' %}
+          {% when 'xlarge' %}
+            {% assign image_width_class = 'pp-max-w-full' %}
         {% endcase %}
 
         {% assign border_radius = section.settings.image_border_radius | times: 1 %}
@@ -159,6 +161,10 @@
         {
           "value": "large",
           "label": "Large"
+        },
+        {
+          "value": "xlarge",
+          "label": "Extra large"
         }
       ],
       "default": "large",
@@ -189,7 +195,7 @@
         }
       ],
       "default": "image_first",
-      "label": "Desktop image placement",
+      "label": "Desktop image placement"
     },
     {
       "type": "select",
@@ -205,7 +211,7 @@
         }
       ],
       "default": "image_first",
-      "label": "Mobile image placement",
+      "label": "Mobile image placement"
     },
     {
       "type": "header",
@@ -214,7 +220,7 @@
     {
       "type": "color_background",
       "id": "gradient",
-      "label": "Background color",
+      "label": "Background color"
     },
     {
       "type": "header",
@@ -513,7 +519,7 @@
             }
           ],
           "default": "left",
-          "label": "Alignment",
+          "label": "Alignment"
         },
         {
           "type": "select",
@@ -533,7 +539,7 @@
             }
           ],
           "default": "center",
-          "label": "Mobile alignment",
+          "label": "Mobile alignment"
         },
        {
           "type": "select",
@@ -638,7 +644,7 @@
           "id": "button_action_scroll_element",
           "label": "Button scroll element",
           "info": "Set the scroll to element, example #test or .test"
-        },
+        }
       ]
     }
   ],

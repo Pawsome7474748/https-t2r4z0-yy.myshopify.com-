@@ -59,6 +59,8 @@
               {% assign image_width_class = 'pp-max-w-2xl' %}
             {% when 'large' %}
               {% assign image_width_class = 'pp-max-w-4xl' %}
+            {% when 'xlarge' %}
+              {% assign image_width_class = 'pp-max-w-full' %}
           {% endcase %}
 
         {% assign image_class = 'pp-w-full ' | append: image_width_class | append: ' ' | append: rounded_class %}
@@ -135,6 +137,10 @@
         {
           "value": "large",
           "label": "Large"
+        },
+        {
+          "value": "xlarge",
+          "label": "Extra large"
         }
       ],
       "default": "large",
@@ -314,7 +320,7 @@
     {
       "type": "color_background",
       "id": "gradient",
-      "label": "Background color",
+      "label": "Background color"
     },
     {
       "type": "header",
