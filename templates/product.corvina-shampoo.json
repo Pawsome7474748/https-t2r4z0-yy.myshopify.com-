@@ -131,6 +131,30 @@
             "answer": "<p>Please do a small patch test before your first full use if you have sensitive skin or any known allergies.</p>"
           }
         },
+        "ingredient_1": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/hf_20260813_132117_2d956091-c5a0-4ac7-8143-145bb22ae45d.png",
+            "name": "Coffee Bean Oil",
+            "text": "Rich in antioxidants and lightweight on strands — helps add natural shine and softness with every wash."
+          }
+        },
+        "ingredient_2": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/hf_20260813_132131_85675cca-2270-4dcf-a855-72416c73ab7d.png",
+            "name": "Polygonum Multiflorum Extract",
+            "text": "A botanical long used in traditional hair care, prized for nourishing the scalp and strengthening strands from root to tip."
+          }
+        },
+        "ingredient_3": {
+          "type": "ingredient",
+          "settings": {
+            "image": "shopify://shop_images/hf_20260813_132147_6d7c1f1f-ef11-42aa-9ee3-eba83bba2a27.png",
+            "name": "Henna Leaf",
+            "text": "A traditional plant-based colorant that coats each strand, helping deposit rich, natural-looking color while conditioning hair."
+          }
+        },
         "checkmark_1": {
           "type": "checkmark",
           "settings": {
@@ -219,6 +243,9 @@
         "faq_5",
         "faq_6",
         "faq_7",
+        "ingredient_1",
+        "ingredient_2",
+        "ingredient_3",
         "checkmark_1",
         "checkmark_2",
         "checkmark_3",
@@ -236,6 +263,10 @@
         "heading": "Black Hair Dye Shampoo",
         "subheading": "<p>A wash-in herbal shampoo that gradually covers grey — no mixing, no mess, no salon appointment.</p>",
         "buy_button_text": "Add to Cart",
+        "show_stock_urgency": true,
+        "stock_urgency_text": "Almost out of stock",
+        "ingredients_heading": "What's Inside",
+        "ingredients_subheading": "Real botanicals, working together with every wash.",
         "background_color": "#0d0d0d",
         "text_color": "#f3ead9",
         "accent_color": "#c9a227",

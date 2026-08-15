@@ -9,6 +9,7 @@
   assign checkmark_blocks = section.blocks | where: 'type', 'checkmark'
   assign review_blocks = section.blocks | where: 'type', 'review'
   assign comparison_blocks = section.blocks | where: 'type', 'comparison'
+  assign ingredient_blocks = section.blocks | where: 'type', 'ingredient'
   assign has_checked = false
 %}
 
@@ -171,6 +172,13 @@
             </div>
           {%- endif -%}
 
+          {%- if section.settings.show_stock_urgency and section.settings.stock_urgency_text != blank -%}
+            <p class="bh-stock-urgency">
+              <span class="bh-stock-urgency__dot" aria-hidden="true"></span>
+              {{ section.settings.stock_urgency_text }}
+            </p>
+          {%- endif -%}
+
           <button type="button" class="bh-buy" data-bh-buy style="background: {{ section.settings.accent_color }};">
             {{ section.settings.buy_button_text }} — <span data-bh-buy-price></span>
           </button>
@@ -264,6 +272,88 @@
           </details>
         {%- endfor -%}
       </div>
+    {%- endif -%}
+
+    {%- if ingredient_blocks.size > 0 -%}
+      <div class="bh-ingredients">
+        <h2 class="bh-ingredients__heading">{{ section.settings.ingredients_heading }}</h2>
+        {%- if section.settings.ingredients_subheading != blank -%}
+          <p class="bh-ingredients__subheading">{{ section.settings.ingredients_subheading }}</p>
+        {%- endif -%}
+        <div class="bh-ingredients__layout">
+          <div class="bh-ingredients__list">
+            {%- for block in ingredient_blocks -%}
+              <div class="bh-ingredient" {{ block.shopify_attributes }}>
+                {%- if block.settings.image != blank -%}
+                  <span class="bh-ingredient__thumb">
+                    <img src="{{ block.settings.image | image_url: width: 112 }}" alt="{{ block.settings.name | escape }}" loading="lazy" width="56" height="56">
+                  </span>
+                {%- endif -%}
+                <div>
+                  <p class="bh-ingredient__name">{{ block.settings.name }}</p>
+                  {%- if block.settings.text != blank -%}
+                    <p class="bh-ingredient__text">{{ block.settings.text }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+          <div class="bh-ingredients__gallery">
+            <div class="bh-ingredients__track" data-bh-ingredients-track>
+              {%- for block in ingredient_blocks -%}
+                {%- if block.settings.image != blank -%}
+                  <div class="bh-ingredients__slide" data-bh-ingredients-slide>
+                    <img src="{{ block.settings.image | image_url: width: 900 }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+            {%- if ingredient_blocks.size > 1 -%}
+              <div class="bh-ingredients__dots" data-bh-ingredients-dots>
+                {%- for block in ingredient_blocks -%}
+                  <button type="button" class="bh-ingredients__dot" data-bh-ingredients-dot="{{ forloop.index0 }}" aria-label="View {{ block.settings.name | escape }}"></button>
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+      <script>
+        (function () {
+          var wrap = document.currentScript.previousElementSibling;
+          if (!wrap || !wrap.classList.contains('bh-ingredients')) return;
+          var track = wrap.querySelector('[data-bh-ingredients-track]');
+          var dots = Array.prototype.slice.call(wrap.querySelectorAll('[data-bh-ingredients-dot]'));
+          var slides = track ? Array.prototype.slice.call(track.querySelectorAll('[data-bh-ingredients-slide]')) : [];
+          if (!track || !slides.length) return;
+
+          dots.forEach(function (dot) {
+            dot.addEventListener('click', function () {
+              var index = parseInt(dot.dataset.bhIngredientsDot, 10);
+              var slide = slides[index];
+              if (slide) slide.scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+            });
+          });
+
+          if (dots.length && 'IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (!entry.isIntersecting) return;
+                  var index = slides.indexOf(entry.target);
+                  dots.forEach(function (dot, i) {
+                    dot.classList.toggle('is-active', i === index);
+                  });
+                });
+              },
+              { root: track, threshold: 0.6 }
+            );
+            slides.forEach(function (slide) { observer.observe(slide); });
+          }
+
+          if (dots[0]) dots[0].classList.add('is-active');
+        })();
+      </script>
     {%- endif -%}
 
     {%- if review_blocks.size > 0 -%}
@@ -447,6 +537,38 @@
     },
     {
       "type": "header",
+      "content": "Stock urgency"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_stock_urgency",
+      "label": "Show low stock indicator",
+      "default": false,
+      "info": "Shows a flashing red dot with your urgency message below the bundle tiers."
+    },
+    {
+      "type": "text",
+      "id": "stock_urgency_text",
+      "label": "Stock urgency text",
+      "default": "Almost out of stock"
+    },
+    {
+      "type": "header",
+      "content": "Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "ingredients_heading",
+      "label": "Ingredients heading",
+      "default": "What's Inside"
+    },
+    {
+      "type": "text",
+      "id": "ingredients_subheading",
+      "label": "Ingredients subheading"
+    },
+    {
+      "type": "header",
       "content": "Why choose us"
     },
     {
@@ -580,6 +702,29 @@
           "id": "text",
           "label": "Text",
           "default": "Fast shipping"
+        }
+      ]
+    },
+    {
+      "type": "ingredient",
+      "name": "Ingredient",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Ingredient photo"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Ingredient name",
+          "default": "Ingredient name"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Benefit description"
         }
       ]
     },
