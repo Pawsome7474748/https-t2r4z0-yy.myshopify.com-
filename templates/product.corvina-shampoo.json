@@ -47,7 +47,7 @@
           "type": "tier",
           "settings": {
             "variant_title": "2 Bottles",
-            "label": "2 Bottles (200ml)",
+            "label": "2 Bottles",
             "sublabel": "Save 14%",
             "badge": "Most Popular"
           }
@@ -56,7 +56,7 @@
           "type": "tier",
           "settings": {
             "variant_title": "3 Bottles",
-            "label": "3 Bottles (300ml)",
+            "label": "3 Bottles",
             "sublabel": "Save 22%",
             "badge": "Best Value"
           }
