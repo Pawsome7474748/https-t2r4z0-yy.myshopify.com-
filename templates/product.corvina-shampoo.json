@@ -9,6 +9,50 @@
  */
 {
   "sections": {
+    "marquee_banner": {
+      "type": "corvina-marquee-banner",
+      "blocks": {
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "icon": "🚚",
+            "text": "Free Shipping On Every Order"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "icon": "🌿",
+            "text": "Herbal Formula — No Ammonia"
+          }
+        },
+        "item_3": {
+          "type": "item",
+          "settings": {
+            "icon": "🔒",
+            "text": "Secure Checkout"
+          }
+        },
+        "item_4": {
+          "type": "item",
+          "settings": {
+            "icon": "💛",
+            "text": "30-Day Money Back Guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "item_1",
+        "item_2",
+        "item_3",
+        "item_4"
+      ],
+      "settings": {
+        "background_color": "#c9a227",
+        "text_color": "#0d0d0d",
+        "speed": 26
+      }
+    },
     "bundle_hero_1": {
       "type": "pp-bundle-hero",
       "blocks": {
@@ -369,6 +413,7 @@
     }
   },
   "order": [
+    "marquee_banner",
     "bundle_hero_1",
     "photo_reviews_1",
     "urgency_banner"

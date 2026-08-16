@@ -1,0 +1,84 @@
+{{ 'corvina-marquee-banner.css' | asset_url | stylesheet_tag }}
+
+{% liquid
+  assign item_blocks = section.blocks | where: 'type', 'item'
+%}
+
+{%- if item_blocks.size > 0 -%}
+  <div class="cmb" style="background: {{ section.settings.background_color }}; color: {{ section.settings.text_color }};">
+    <div class="cmb__track" style="animation-duration: {{ section.settings.speed }}s;">
+      {%- for i in (1..2) -%}
+        <div class="cmb__set" aria-hidden="{% if i == 2 %}true{% else %}false{% endif %}">
+          {%- for block in item_blocks -%}
+            <span class="cmb__item" {% if i == 1 %}{{ block.shopify_attributes }}{% endif %}>
+              {%- if block.settings.icon != blank -%}<span class="cmb__icon">{{ block.settings.icon }}</span>{%- endif -%}
+              {{ block.settings.text }}
+            </span>
+            <span class="cmb__dot">&#8226;</span>
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Corvina Marquee Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#c9a227"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#0d0d0d"
+    },
+    {
+      "type": "range",
+      "id": "speed",
+      "label": "Scroll speed (seconds)",
+      "min": 10,
+      "max": 60,
+      "step": 2,
+      "default": 26,
+      "info": "Lower is faster."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "Message",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji icon (optional)",
+          "default": "✨"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Free shipping on every order"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Corvina Marquee Banner",
+      "blocks": [
+        { "type": "item", "settings": { "icon": "🚚", "text": "Free Shipping On Every Order" } },
+        { "type": "item", "settings": { "icon": "🌿", "text": "Herbal Formula — No Ammonia" } },
+        { "type": "item", "settings": { "icon": "🔒", "text": "Secure Checkout" } },
+        { "type": "item", "settings": { "icon": "💛", "text": "30-Day Money Back Guarantee" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

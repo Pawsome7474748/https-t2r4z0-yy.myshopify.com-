@@ -1,0 +1,54 @@
+.cmb {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.cmb__track {
+  display: flex;
+  width: max-content;
+  animation-name: cmb-scroll;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.cmb__set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cmb__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  padding: 0 1.6rem;
+}
+
+.cmb__icon {
+  font-size: 1.6rem;
+}
+
+.cmb__dot {
+  opacity: 0.5;
+  font-size: 1.2rem;
+}
+
+@keyframes cmb-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cmb__track {
+    animation: none;
+  }
+}
