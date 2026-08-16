@@ -51,8 +51,9 @@
       ],
       "settings": {
         "gradient": "linear-gradient(180deg, #d7ece9, #d7ece9 100%)",
-        "newsletter_enable": false,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_enable": true,
+        "newsletter_heading": "Stay in the Loop",
+        "newsletter_subheading": "Hair care tips, exclusive offers, and product updates — straight to your inbox.",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,

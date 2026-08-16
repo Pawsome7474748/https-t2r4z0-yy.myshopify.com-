@@ -1,65 +1,336 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "main": {
-      "type": "main-page",
-      "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "rich_text_cNpxQn": {
-      "type": "rich-text",
+    "contact_hub": {
+      "type": "corvina-contact-hub",
       "blocks": {
-        "heading_VR9ngC": {
-          "type": "heading",
+        "contact_card_email": {
+          "type": "contact_card",
           "settings": {
-            "heading": "<strong>Got a question? A rave review? Maybe a suggestion?<\/strong>",
-            "heading_size": "h2"
+            "icon": "chat",
+            "heading": "Email Support",
+            "text": "Message our support inbox directly and we'll get back to you fast.",
+            "button_label": "Email Us",
+            "button_link": "mailto:hp10ne@gmail.com",
+            "extra_line": ""
           }
         },
-        "text_Nwnkrp": {
-          "type": "text",
+        "contact_card_hours": {
+          "type": "contact_card",
           "settings": {
-            "text": "<p>We’re here to listen. Feel free to reach out by using the contact form below.<\/p>"
+            "icon": "clock",
+            "heading": "Support Hours",
+            "text": "We're available 7 days a week, 9AM–6PM.",
+            "button_label": "",
+            "button_link": "",
+            "extra_line": "<p><a href=\"mailto:hp10ne@gmail.com\">hp10ne@gmail.com<\/a><\/p>"
+          }
+        },
+        "category_account": {
+          "type": "category",
+          "settings": {
+            "heading": "Account & Orders",
+            "nav_label": "Account",
+            "bg_style": "cream",
+            "image": "",
+            "image_position": "left"
+          }
+        },
+        "faq_account_1": {
+          "type": "faq",
+          "settings": {
+            "question": "Do I need an account to order?",
+            "answer": "<p>No — you can check out as a guest. Creating an account just makes it faster to track future orders and reorder your favourites.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_account_2": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I check my order status?",
+            "answer": "<p>Log into your account, or use the Track Your Order box above with the order number or tracking code from your confirmation email.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_account_3": {
+          "type": "faq",
+          "settings": {
+            "question": "I didn't get an order confirmation email — what do I do?",
+            "answer": "<p>Check your spam or promotions folder first. If you still can't find it, email us and we'll resend it right away.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_account_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I change my email or shipping address after ordering?",
+            "answer": "<p>Email us as soon as possible after placing your order — we can usually update it if the order hasn't shipped yet.<\/p>",
+            "new_badge": true
+          }
+        },
+        "faq_account_5": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I create an account?",
+            "answer": "<p>Click \"Log in\" at the top of any page and select \"Create account\". You can also create one at checkout.<\/p>",
+            "new_badge": false
+          }
+        },
+        "category_shipping": {
+          "type": "category",
+          "settings": {
+            "heading": "Order & Shipping",
+            "nav_label": "Shipping",
+            "bg_style": "white",
+            "image": "",
+            "image_position": "left"
+          }
+        },
+        "faq_shipping_1": {
+          "type": "faq",
+          "settings": {
+            "question": "When will my order be shipped?",
+            "answer": "<p>Orders are typically processed and shipped within 1–2 business days of being placed.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_shipping_2": {
+          "type": "faq",
+          "settings": {
+            "question": "How long does shipping take?",
+            "answer": "<p>Delivery times vary by location, but most orders arrive within 5–9 business days after shipping.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_shipping_3": {
+          "type": "faq",
+          "settings": {
+            "question": "How can I track my order?",
+            "answer": "<p>Use the Track Your Order box above, or log into your account to see the latest status on any order.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_shipping_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I cancel or change my order after placing it?",
+            "answer": "<p>Email us right away — we can usually make changes if the order hasn't shipped yet, but can't guarantee it once it's on its way.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_shipping_5": {
+          "type": "faq",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Shipping availability depends on your location. Enter your address at checkout to see if delivery is available to you.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_shipping_6": {
+          "type": "faq",
+          "settings": {
+            "question": "Where is my order being shipped from?",
+            "answer": "<p>Orders ship from our fulfillment centre and are handed off to our shipping partners for delivery to your door.<\/p>",
+            "new_badge": false
+          }
+        },
+        "category_safety": {
+          "type": "category",
+          "settings": {
+            "heading": "Product & Safety",
+            "nav_label": "Product & Safety",
+            "bg_style": "dark",
+            "image": "",
+            "image_position": "left"
+          }
+        },
+        "faq_safety_1": {
+          "type": "faq",
+          "settings": {
+            "question": "How often should I use Corvina?",
+            "answer": "<p>Use it in place of your regular shampoo, 2–3 times a week, until you reach your desired shade — then use as needed to maintain it.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_safety_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Who should avoid this product?",
+            "answer": "<p>If you're pregnant, breastfeeding, or have a scalp condition, check with a doctor before use. Always patch test first if you have sensitive skin.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_safety_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I use it on colour-treated or chemically processed hair?",
+            "answer": "<p>Yes. Corvina is gentle enough for colour-treated, permed, or relaxed hair, though we always recommend a patch test first.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_safety_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Will it stain my skin or towels?",
+            "answer": "<p>Rinse thoroughly after use and avoid leaving it on skin or fabric for extended periods, the same as with any hair colour product.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_safety_5": {
+          "type": "faq",
+          "settings": {
+            "question": "How should I store it?",
+            "answer": "<p>Keep in a cool, dry place away from direct sunlight and heat. Reseal the bottle tightly after each use.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_safety_6": {
+          "type": "faq",
+          "settings": {
+            "question": "How long before I see a difference?",
+            "answer": "<p>Most people notice a difference after a few uses, with colour building gradually the more consistently it's used.<\/p>",
+            "new_badge": false
+          }
+        },
+        "category_ingredients": {
+          "type": "category",
+          "settings": {
+            "heading": "Quality & Ingredients",
+            "nav_label": "Ingredients",
+            "bg_style": "white",
+            "image": "shopify://shop_images/hf_20260814_143151_fd845768-aafb-46ec-9750-832b76d9f6ef.png",
+            "image_position": "left"
+          }
+        },
+        "faq_ingredients_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What ingredients are in Corvina?",
+            "answer": "<p>Corvina is formulated with Polygonum multiflorum (he shou wu), coffee bean oil, and henna leaf extract, along with gentle cleansing agents — no ammonia.<\/p>",
+            "new_badge": true
+          }
+        },
+        "faq_ingredients_2": {
+          "type": "faq",
+          "settings": {
+            "question": "Is Corvina cruelty-free?",
+            "answer": "<p>Yes — Corvina is not tested on animals.<\/p>",
+            "new_badge": true
+          }
+        },
+        "faq_ingredients_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Where does this product come from?",
+            "answer": "<p>Corvina is developed using traditional botanical ingredients long used in natural hair care, blended into a modern wash-in formula.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_ingredients_4": {
+          "type": "faq",
+          "settings": {
+            "question": "Is the product tested for quality and safety?",
+            "answer": "<p>Yes — every batch goes through quality checks before it ships.<\/p>",
+            "new_badge": false
+          }
+        },
+        "category_returns": {
+          "type": "category",
+          "settings": {
+            "heading": "Returns & Pricing",
+            "nav_label": "Returns",
+            "bg_style": "cream",
+            "image": "shopify://shop_images/S7c2598b9a5a54b1fb983778d38b03cefB.webp",
+            "image_position": "right"
+          }
+        },
+        "faq_returns_1": {
+          "type": "faq",
+          "settings": {
+            "question": "What's your return policy?",
+            "answer": "<p>If you're not happy with your order, reach out within 30 days of delivery and we'll make it right — see our <a href=\"/pages/refund-policy\">Refund Policy<\/a> for full details.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_returns_2": {
+          "type": "faq",
+          "settings": {
+            "question": "How do I request a refund?",
+            "answer": "<p>Email us with your order number and we'll walk you through the next steps.<\/p>",
+            "new_badge": true
+          }
+        },
+        "faq_returns_3": {
+          "type": "faq",
+          "settings": {
+            "question": "Why does the price on the website differ from what I saw on social media?",
+            "answer": "<p>Promotional pricing shown in ads or social posts is only valid through that specific link — prices on the website reflect our current standing offers.<\/p>",
+            "new_badge": false
+          }
+        },
+        "faq_returns_4": {
+          "type": "faq",
+          "settings": {
+            "question": "What payment methods do you accept?",
+            "answer": "<p>We accept all major credit and debit cards, as well as Shop Pay and other secure checkout options available at checkout.<\/p>",
+            "new_badge": false
           }
         }
       },
       "block_order": [
-        "heading_VR9ngC",
-        "text_Nwnkrp"
+        "contact_card_email",
+        "contact_card_hours",
+        "category_account",
+        "faq_account_1",
+        "faq_account_2",
+        "faq_account_3",
+        "faq_account_4",
+        "faq_account_5",
+        "category_shipping",
+        "faq_shipping_1",
+        "faq_shipping_2",
+        "faq_shipping_3",
+        "faq_shipping_4",
+        "faq_shipping_5",
+        "faq_shipping_6",
+        "category_safety",
+        "faq_safety_1",
+        "faq_safety_2",
+        "faq_safety_3",
+        "faq_safety_4",
+        "faq_safety_5",
+        "faq_safety_6",
+        "category_ingredients",
+        "faq_ingredients_1",
+        "faq_ingredients_2",
+        "faq_ingredients_3",
+        "faq_ingredients_4",
+        "category_returns",
+        "faq_returns_1",
+        "faq_returns_2",
+        "faq_returns_3",
+        "faq_returns_4"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-6",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 12
-      }
-    },
-    "form": {
-      "type": "contact-form",
-      "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-7",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "hero_heading": "How Can We Help You?",
+        "hero_subheading": "Get answers to common questions, track your order, or reach our team directly — we're here for you.",
+        "hero_button_1_label": "Email Us",
+        "hero_button_1_link": "mailto:hp10ne@gmail.com",
+        "hero_button_2_label": "Browse FAQs",
+        "hero_button_2_link": "#account-orders",
+        "track_heading": "Waiting On Your Corvina Order?",
+        "track_subheading": "Enter your order number or tracking code to check your delivery status. You'll find these in your order confirmation email.",
+        "track_card_heading": "Track Your Order",
+        "track_input_placeholder": "Order number or tracking code",
+        "track_button_label": "Track",
+        "reach_eyebrow": "We're Here To Help",
+        "reach_heading": "Reach Out to Our Team",
+        "reach_subheading": "Have a question that isn't answered below? We typically respond within 24 hours.",
+        "support_heading": "Contact Customer Support",
+        "support_text": "<p>You can reach our Customer Support team by email any time at <a href=\"mailto:hp10ne@gmail.com\">hp10ne@gmail.com<\/a>, or by using the message form above. We do our best to reply to every message within 24 hours.<\/p>"
       }
     }
   },
   "order": [
-    "main",
-    "rich_text_cNpxQn",
-    "form"
+    "contact_hub"
   ]
 }

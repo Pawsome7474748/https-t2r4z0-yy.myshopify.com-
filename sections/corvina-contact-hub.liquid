@@ -1,0 +1,476 @@
+{{ 'corvina-contact-hub.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'corvina-contact-hub.js' | asset_url }}" defer="defer"></script>
+
+{% liquid
+  assign contact_card_blocks = section.blocks | where: 'type', 'contact_card'
+  assign category_blocks = section.blocks | where: 'type', 'category'
+%}
+
+<div class="cch">
+
+  {%- comment -%} HERO {%- endcomment -%}
+  <div class="cch-hero">
+    <div class="cch-container">
+      <h1 class="cch-hero__heading">{{ section.settings.hero_heading }}</h1>
+      {%- if section.settings.hero_subheading != blank -%}
+        <p class="cch-hero__subheading">{{ section.settings.hero_subheading }}</p>
+      {%- endif -%}
+      <div class="cch-hero__buttons">
+        {%- if section.settings.hero_button_1_label != blank -%}
+          <a href="{{ section.settings.hero_button_1_link | default: '#' }}" class="cch-btn cch-btn--outline">{{ section.settings.hero_button_1_label }} <span aria-hidden="true">→</span></a>
+        {%- endif -%}
+        {%- if section.settings.hero_button_2_label != blank -%}
+          <a href="{{ section.settings.hero_button_2_link | default: '#' }}" class="cch-btn cch-btn--solid">{{ section.settings.hero_button_2_label }} <span aria-hidden="true">→</span></a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} QUICK NAV {%- endcomment -%}
+  <div class="cch-pillbar">
+    <div class="cch-pillbar__inner">
+      <a href="#track-order" class="cch-pill" data-cch-scroll>Track Order</a>
+      <a href="#contact-us" class="cch-pill" data-cch-scroll>Contact Us</a>
+      {%- for block in category_blocks -%}
+        <a href="#{{ block.settings.heading | handleize }}" class="cch-pill" data-cch-scroll>{{ block.settings.nav_label | default: block.settings.heading }}</a>
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- comment -%} TRACK ORDER {%- endcomment -%}
+  <div class="cch-track" id="track-order">
+    <div class="cch-container cch-container--narrow">
+      <p class="cch-eyebrow">Track Your Order</p>
+      <h2 class="cch-track__heading">{{ section.settings.track_heading }}</h2>
+      <p class="cch-track__subheading">{{ section.settings.track_subheading }}</p>
+      <div class="cch-track__card">
+        <p class="cch-track__card-heading">{{ section.settings.track_card_heading }}</p>
+        <form class="cch-track__form" action="/account" method="get">
+          <input
+            type="text"
+            class="cch-track__input"
+            name="query"
+            placeholder="{{ section.settings.track_input_placeholder }}"
+            aria-label="{{ section.settings.track_input_placeholder }}"
+          >
+          <button type="submit" class="cch-btn cch-btn--solid cch-track__button">{{ section.settings.track_button_label }} <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="cch-track__hint">You can also view your full order history any time by <a href="/account">logging into your account</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="cch-divider">
+
+  {%- comment -%} REACH OUT {%- endcomment -%}
+  <div class="cch-reach" id="contact-us">
+    <div class="cch-container">
+      <p class="cch-eyebrow">{{ section.settings.reach_eyebrow }}</p>
+      <h2 class="cch-reach__heading">{{ section.settings.reach_heading }}</h2>
+      <p class="cch-reach__subheading">{{ section.settings.reach_subheading }}</p>
+
+      <div class="cch-reach__grid">
+        <div class="cch-form-card">
+          <p class="cch-form-card__heading">
+            {% render 'icon-mail' %}
+            Send Us a Message
+          </p>
+          <p class="cch-form-card__subtext">We'll get back to you via email, usually within 24 hours.</p>
+
+          {%- form 'contact', id: 'CchContactForm', class: 'cch-form' -%}
+            {%- if form.posted_successfully? -%}
+              <p class="cch-form__success">Thanks — your message is in. We'll be in touch soon.</p>
+            {%- elsif form.errors -%}
+              <p class="cch-form__error">Please enter a valid email address and try again.</p>
+            {%- endif -%}
+            <div class="cch-form-grid">
+              <div class="cch-field">
+                <input type="text" name="contact[First name]" id="CchContactForm-first" placeholder="First name" class="cch-field__input">
+              </div>
+              <div class="cch-field">
+                <input type="text" name="contact[Last name]" id="CchContactForm-last" placeholder="Last name" class="cch-field__input">
+              </div>
+            </div>
+            <div class="cch-field">
+              <input
+                type="email"
+                name="contact[email]"
+                id="CchContactForm-email"
+                placeholder="Email address"
+                class="cch-field__input"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                required
+              >
+            </div>
+            <div class="cch-field">
+              <input type="tel" name="contact[Phone number]" id="CchContactForm-phone" placeholder="Phone number (optional)" class="cch-field__input">
+            </div>
+            <div class="cch-field">
+              <textarea name="contact[body]" id="CchContactForm-message" rows="5" placeholder="How can we help?" class="cch-field__input cch-field__textarea">{{ form.body }}</textarea>
+            </div>
+            <button type="submit" class="cch-btn cch-btn--solid cch-form__submit">Send Message <span aria-hidden="true">→</span></button>
+          {%- endform -%}
+        </div>
+
+        <div class="cch-side-cards">
+          {%- for block in contact_card_blocks -%}
+            <div class="cch-side-card" {{ block.shopify_attributes }}>
+              <p class="cch-side-card__heading">
+                {%- case block.settings.icon -%}
+                  {%- when 'chat' -%}{% render 'icon-mail' %}
+                  {%- when 'clock' -%}{% render 'icon-clock' %}
+                  {%- else -%}{% render 'icon-mail' %}
+                {%- endcase -%}
+                {{ block.settings.heading }}
+              </p>
+              <p class="cch-side-card__text">{{ block.settings.text }}</p>
+              {%- if block.settings.button_label != blank -%}
+                <a href="{{ block.settings.button_link }}" class="cch-btn cch-btn--dark cch-side-card__btn">{{ block.settings.button_label }} <span aria-hidden="true">→</span></a>
+              {%- endif -%}
+              {%- if block.settings.extra_line != blank -%}
+                <div class="cch-side-card__extra">{{ block.settings.extra_line }}</div>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} SUPPORT TEXT {%- endcomment -%}
+  {%- if section.settings.support_heading != blank or section.settings.support_text != blank -%}
+    <div class="cch-support">
+      <div class="cch-container cch-container--narrow">
+        {%- if section.settings.support_heading != blank -%}
+          <p class="cch-eyebrow">Support</p>
+          <h2 class="cch-support__heading">{{ section.settings.support_heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.support_text != blank -%}
+          <div class="cch-support__text">{{ section.settings.support_text }}</div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} FAQ CATEGORIES {%- endcomment -%}
+  {% liquid
+    assign current_category = nil
+    assign is_open = false
+  %}
+  {%- for block in section.blocks -%}
+    {%- case block.type -%}
+
+      {%- when 'category' -%}
+        {%- if is_open -%}
+              </div>
+              {%- if current_category.settings.image != blank and current_category.settings.image_position == 'right' -%}
+                <div class="cch-category__image">
+                  <img
+                    src="{{ current_category.settings.image | image_url: width: 800 }}"
+                    alt="{{ current_category.settings.heading | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="{{ 800 | divided_by: current_category.settings.image.aspect_ratio | default: 800 }}"
+                  >
+                </div>
+              {%- endif -%}
+            </div>
+          </div>
+        </div>
+        {%- endif -%}
+        {%- assign current_category = block -%}
+        {%- assign is_open = true -%}
+        <div class="cch-category{% if block.settings.bg_style != 'white' %} cch-category--{{ block.settings.bg_style }}{% endif %}" id="{{ block.settings.heading | handleize }}" {{ block.shopify_attributes }}>
+          <div class="cch-container">
+            <p class="cch-eyebrow">FAQs</p>
+            <h2 class="cch-category__heading">{{ block.settings.heading }}</h2>
+            <div class="cch-category__layout{% if block.settings.image != blank %} has-image{% endif %}">
+              {%- if block.settings.image != blank and block.settings.image_position == 'left' -%}
+                <div class="cch-category__image">
+                  <img
+                    src="{{ block.settings.image | image_url: width: 800 }}"
+                    alt="{{ block.settings.heading | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="{{ 800 | divided_by: block.settings.image.aspect_ratio | default: 800 }}"
+                  >
+                </div>
+              {%- endif -%}
+              <div class="cch-category__faqs{% if block.settings.image == blank %} cch-category__faqs--grid{% endif %}">
+
+      {%- when 'faq' -%}
+                <details class="cch-faq__item" {{ block.shopify_attributes }}>
+                  <summary class="cch-faq__question">
+                    <span>{{ block.settings.question }}{% if block.settings.new_badge %} <span class="cch-badge">New</span>{% endif %}</span>
+                    <svg class="cch-faq__icon" width="14" height="14" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor" />
+                    </svg>
+                  </summary>
+                  <div class="cch-faq__answer">{{ block.settings.answer }}</div>
+                </details>
+
+    {%- endcase -%}
+  {%- endfor -%}
+  {%- if is_open -%}
+          </div>
+          {%- if current_category.settings.image != blank and current_category.settings.image_position == 'right' -%}
+            <div class="cch-category__image">
+              <img
+                src="{{ current_category.settings.image | image_url: width: 800 }}"
+                alt="{{ current_category.settings.heading | escape }}"
+                loading="lazy"
+                width="800"
+                height="{{ 800 | divided_by: current_category.settings.image.aspect_ratio | default: 800 }}"
+              >
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+{
+  "name": "Corvina Contact Hub",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Hero"
+    },
+    {
+      "type": "text",
+      "id": "hero_heading",
+      "label": "Heading",
+      "default": "How can we help you?"
+    },
+    {
+      "type": "text",
+      "id": "hero_subheading",
+      "label": "Subheading",
+      "default": "Get answers to common questions, track your order, or reach our team directly — we're here for you."
+    },
+    {
+      "type": "text",
+      "id": "hero_button_1_label",
+      "label": "Button 1 label",
+      "default": "Email Us"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "text",
+      "id": "hero_button_2_label",
+      "label": "Button 2 label",
+      "default": "Browse FAQs"
+    },
+    {
+      "type": "url",
+      "id": "hero_button_2_link",
+      "label": "Button 2 link"
+    },
+    {
+      "type": "header",
+      "content": "Track order"
+    },
+    {
+      "type": "text",
+      "id": "track_heading",
+      "label": "Heading",
+      "default": "Waiting On Your Corvina Order?"
+    },
+    {
+      "type": "text",
+      "id": "track_subheading",
+      "label": "Subheading",
+      "default": "Enter your order number or tracking code to check your delivery status. You'll find these in your order confirmation email."
+    },
+    {
+      "type": "text",
+      "id": "track_card_heading",
+      "label": "Card heading",
+      "default": "Track Your Order"
+    },
+    {
+      "type": "text",
+      "id": "track_input_placeholder",
+      "label": "Input placeholder",
+      "default": "Order number or tracking code"
+    },
+    {
+      "type": "text",
+      "id": "track_button_label",
+      "label": "Button label",
+      "default": "Track"
+    },
+    {
+      "type": "header",
+      "content": "Reach out"
+    },
+    {
+      "type": "text",
+      "id": "reach_eyebrow",
+      "label": "Eyebrow",
+      "default": "We're Here To Help"
+    },
+    {
+      "type": "text",
+      "id": "reach_heading",
+      "label": "Heading",
+      "default": "Reach Out to Our Team"
+    },
+    {
+      "type": "text",
+      "id": "reach_subheading",
+      "label": "Subheading",
+      "default": "Have a question that isn't answered below? We typically respond within 24 hours."
+    },
+    {
+      "type": "header",
+      "content": "Support text"
+    },
+    {
+      "type": "text",
+      "id": "support_heading",
+      "label": "Heading",
+      "default": "Contact Customer Support"
+    },
+    {
+      "type": "richtext",
+      "id": "support_text",
+      "label": "Text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "contact_card",
+      "name": "Contact card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "chat", "label": "Message" },
+            { "value": "clock", "label": "Clock" }
+          ],
+          "default": "chat"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Email Support"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Message our support inbox directly and we'll get back to you fast."
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Email Us"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "richtext",
+          "id": "extra_line",
+          "label": "Extra line (optional)"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "name": "FAQ category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Category heading",
+          "default": "Category"
+        },
+        {
+          "type": "text",
+          "id": "nav_label",
+          "label": "Quick-nav label (optional)",
+          "info": "Shorter label for the pill navigation. Defaults to the heading."
+        },
+        {
+          "type": "select",
+          "id": "bg_style",
+          "label": "Background",
+          "options": [
+            { "value": "white", "label": "White" },
+            { "value": "cream", "label": "Cream" },
+            { "value": "dark", "label": "Dark" }
+          ],
+          "default": "white"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image (optional)"
+        },
+        {
+          "type": "select",
+          "id": "image_position",
+          "label": "Image position",
+          "options": [
+            { "value": "left", "label": "Left" },
+            { "value": "right", "label": "Right" }
+          ],
+          "default": "left"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Question goes here?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Answer goes here.</p>"
+        },
+        {
+          "type": "checkbox",
+          "id": "new_badge",
+          "label": "Show \"New\" badge",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Corvina Contact Hub",
+      "blocks": [
+        { "type": "contact_card" },
+        { "type": "contact_card" },
+        { "type": "category" },
+        { "type": "faq" },
+        { "type": "faq" },
+        { "type": "faq" }
+      ]
+    }
+  ]
+}
+{% endschema %}
