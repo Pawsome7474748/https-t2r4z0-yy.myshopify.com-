@@ -1,0 +1,448 @@
+{% comment %}
+========================================================================
+  CORVINA — Black Hair Dye Shampoo Presell (Story angle)
+  Theme: black & gold, matching the product packaging.
+
+  COMPLIANCE NOTES (keep as written):
+  - Cosmetic claims only: "colours the look of hair", "helps cover grey".
+    NO health claims (no "eliminate mites", no scalp-treatment claims).
+  - Honest about results: builds gradually, depends on starting colour.
+  - Patch-test safety note included — keep it.
+  - Testimonials must be REAL consented reviews only.
+========================================================================
+{% endcomment %}
+
+<style>
+  .cv{
+    --black:#0E0E10; --ink:#1A1A1D; --paper:#FBF7EF; --cream:#F3EAD8;
+    --gold:#C9A24B; --gold-deep:#A67C2E; --gold-soft:#E7D3A1;
+    --line:#E4DAC5; --muted:#7C7466;
+    --shadow:0 22px 60px -30px rgba(14,14,16,.55);
+    font-family:{{ section.settings.body_font.family }}, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color:var(--ink); background:var(--paper); line-height:1.75; -webkit-font-smoothing:antialiased;
+  }
+  .cv *{ box-sizing:border-box; }
+  .cv__wrap{ max-width:1040px; margin:0 auto; padding:0 40px; }
+  .cv__col{ max-width:840px; }
+
+  .cv__masthead{ background:var(--black); margin:0 -9999px 0 -9999px; padding:22px 9999px; text-align:center; }
+  .cv__logo{ font-family:{{ section.settings.heading_font.family }}, Georgia, serif; font-weight:600;
+    font-size:26px; letter-spacing:.14em; color:var(--gold); margin:0; text-transform:uppercase; }
+  .cv__eyebrow{ color:var(--gold-soft); font-size:11px; letter-spacing:.2em; text-transform:uppercase; margin-top:4px; }
+
+  .cv__intro{ padding-top:46px; }
+  .cv h1{ font-family:{{ section.settings.heading_font.family }}, Georgia, serif; font-weight:600;
+    font-size:clamp(30px,4.6vw,50px); line-height:1.12; letter-spacing:-.01em; margin:0 0 22px; color:var(--black); max-width:20ch; }
+  .cv h2{ font-family:{{ section.settings.heading_font.family }}, Georgia, serif; font-weight:600;
+    font-size:clamp(23px,3vw,32px); line-height:1.2; margin:50px 0 16px; color:var(--black); }
+  .cv h2 .cv__accent{ color:var(--gold-deep); }
+
+  .cv p{ margin:0 0 16px; font-size:19px; }
+  .cv__story p{ margin:0 0 14px; }
+  .cv__lead{ font-size:22px; color:var(--ink); }
+  .cv__tight p{ margin:0 0 6px; }            /* for the short punchy story lines */
+
+  .cv__rule{ width:60px; height:3px; background:var(--gold); border:0; margin:30px 0; border-radius:3px; }
+
+  .cv__pull{ border-left:4px solid var(--gold); background:#fff; padding:22px 28px; border-radius:0 10px 10px 0;
+    margin:28px 0; font-size:21px; color:var(--black); box-shadow:var(--shadow); }
+
+  .cv__figure{ margin:32px 0; } .cv__figure img{ width:100%; border-radius:14px; display:block; box-shadow:var(--shadow); }
+  .cv__cap{ font-size:13px; color:var(--muted); margin-top:10px; text-align:center; }
+
+  .cv__points{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin:22px 0; }
+  .cv__point{ background:#fff; border:1px solid var(--line); border-top:3px solid var(--gold); border-radius:10px; padding:22px 24px; }
+  .cv__point h3{ margin:0 0 8px; font-size:18px; font-weight:700; color:var(--black); }
+  .cv__point p{ margin:0; font-size:16px; }
+
+  .cv__offer{ background:var(--black); color:var(--paper); border-radius:18px; padding:42px 34px; text-align:center; margin:46px 0; }
+  .cv__offer h2{ color:#fff; margin:0 0 8px; }
+  .cv__price{ font-size:21px; margin:6px 0 4px; color:var(--gold-soft); }
+  .cv__price s{ color:#8a8272; margin-right:10px; } .cv__price b{ color:var(--gold); font-size:32px; }
+  .cv__cta{ display:inline-block; background:var(--gold); color:var(--black); font-size:19px; font-weight:700;
+    text-decoration:none; padding:18px 48px; border-radius:999px; margin:18px 0 10px; letter-spacing:.02em;
+    transition:transform .12s, background .2s; }
+  .cv__cta:hover{ background:var(--gold-soft); transform:translateY(-1px); }
+  .cv__reassure{ font-size:14px; color:var(--gold-soft); margin:8px 0 0; }
+
+  .cv__reviews{ display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:22px 0; }
+  .cv__review{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px 24px; font-size:16px; }
+  .cv__review .who{ margin-top:12px; font-weight:700; color:var(--gold-deep); font-size:14px; }
+  .cv__stars{ color:var(--gold); letter-spacing:2px; }
+
+  .cv__faq details{ border-bottom:1px solid var(--line); padding:18px 0; }
+  .cv__faq summary{ font-weight:600; font-size:18px; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; color:var(--black); }
+  .cv__faq summary::after{ content:"+"; color:var(--gold-deep); font-size:24px; } .cv__faq details[open] summary::after{ content:"\2013"; }
+  .cv__faq p{ margin:12px 0 0; font-size:16px; }
+
+  .cv__safety{ background:#FFF9EC; border:1px solid var(--gold-soft); border-radius:12px; padding:22px 24px; margin:28px 0; font-size:15px; }
+  .cv__safety strong{ color:var(--gold-deep); }
+
+  .cv__disc{ background:#F1ECE0; color:#6b6257; font-size:12.5px; line-height:1.65; padding:24px; border-radius:10px; margin:40px 0 12px; }
+  .cv__foot{ text-align:center; font-size:12px; color:var(--muted); padding:22px 0 60px; }
+
+  @media (max-width:760px){
+    .cv__wrap{ padding:0 22px; }
+    .cv__points,.cv__reviews{ grid-template-columns:1fr; }
+    .cv p{ font-size:18px; } .cv__lead{ font-size:20px; } .cv h1{ max-width:none; }
+  }
+</style>
+
+<section class="cv">
+  <div class="cv__masthead">
+    <p class="cv__logo">{{ section.settings.brand_name }}</p>
+    <p class="cv__eyebrow">{{ section.settings.eyebrow }}</p>
+  </div>
+
+  <div class="cv__wrap">
+    <div class="cv__col cv__intro">
+      <h1>{{ section.settings.headline }}</h1>
+
+      <div class="cv__story cv__rte">{{ section.settings.story_1 }}</div>
+
+      {% if section.settings.hero_image != blank %}
+      <div class="cv__figure"><img src="{{ section.settings.hero_image | image_url: width:1400 }}" alt="{{ section.settings.brand_name }}" loading="lazy">
+      {% if section.settings.hero_caption != blank %}<p class="cv__cap">{{ section.settings.hero_caption }}</p>{% endif %}</div>{% endif %}
+
+      <div class="cv__story cv__rte">{{ section.settings.story_2 }}</div>
+
+      <div class="cv__pull">{{ section.settings.pullquote }}</div>
+
+      <div class="cv__story cv__rte">{{ section.settings.story_3 }}</div>
+
+      <hr class="cv__rule">
+
+      <h2>{{ section.settings.s2_title }}</h2>
+      <div class="cv__rte">{{ section.settings.s2_body }}</div>
+
+      <div class="cv__points">
+        <div class="cv__point"><h3>{{ section.settings.p1_title }}</h3><p>{{ section.settings.p1_body }}</p></div>
+        <div class="cv__point"><h3>{{ section.settings.p2_title }}</h3><p>{{ section.settings.p2_body }}</p></div>
+        <div class="cv__point"><h3>{{ section.settings.p3_title }}</h3><p>{{ section.settings.p3_body }}</p></div>
+        <div class="cv__point"><h3>{{ section.settings.p4_title }}</h3><p>{{ section.settings.p4_body }}</p></div>
+      </div>
+
+      <div class="cv__offer">
+        <h2>{{ section.settings.offer_title }}</h2>
+        <p class="cv__price">{% if section.settings.compare_price != blank %}<s>{{ section.settings.compare_price }}</s>{% endif %}<b>{{ section.settings.price }}</b></p>
+        <a class="cv__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a>
+        <p class="cv__reassure">{{ section.settings.reassure }}</p>
+      </div>
+
+      {% if section.settings.show_reviews %}
+      <h2>{{ section.settings.reviews_title }}</h2>
+      <div class="cv__reviews">{% for block in section.blocks %}{% if block.type == 'review' %}
+        <div class="cv__review" {{ block.shopify_attributes }}><div class="cv__stars">★★★★★</div><div>{{ block.settings.text }}</div><div class="who">— {{ block.settings.name }}</div></div>
+      {% endif %}{% endfor %}</div>{% endif %}
+
+      <h2>{{ section.settings.faq_title }}</h2>
+      <div class="cv__faq">{% for block in section.blocks %}{% if block.type == 'faq' %}
+        <details {{ block.shopify_attributes }}><summary>{{ block.settings.q }}</summary><p>{{ block.settings.a }}</p></details>
+      {% endif %}{% endfor %}</div>
+
+      <div class="cv__safety">{{ section.settings.safety }}</div>
+
+      <div class="cv__offer">
+        <h2>{{ section.settings.offer_title }}</h2>
+        <p class="cv__price">{% if section.settings.compare_price != blank %}<s>{{ section.settings.compare_price }}</s>{% endif %}<b>{{ section.settings.price }}</b></p>
+        <a class="cv__cta" href="{{ section.settings.cta_url }}">{{ section.settings.cta_label }}</a>
+        <p class="cv__reassure">{{ section.settings.reassure }}</p>
+      </div>
+
+      <div class="cv__disc">{{ section.settings.disclaimer }}</div>
+      <div class="cv__foot">© {{ 'now' | date: '%Y' }} {{ section.settings.brand_name }}. {{ section.settings.footer_note }}</div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Corvina — Maintenance",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Fonts"
+    },
+    {
+      "type": "font_picker",
+      "id": "heading_font",
+      "label": "Heading font",
+      "default": "assistant_n6"
+    },
+    {
+      "type": "font_picker",
+      "id": "body_font",
+      "label": "Body font",
+      "default": "assistant_n4"
+    },
+    {
+      "type": "header",
+      "content": "Masthead"
+    },
+    {
+      "type": "text",
+      "id": "brand_name",
+      "label": "Brand",
+      "default": "Corvina"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "A simpler way to deal with grey"
+    },
+    {
+      "type": "header",
+      "content": "Headline & story"
+    },
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Headline",
+      "default": "I did not hate my grey hair. I hated what it cost me."
+    },
+    {
+      "type": "richtext",
+      "id": "story_1",
+      "label": "Story part 1",
+      "default": "<p>The time. The appointments. The Saturday I kept promising myself. It is Tuesday. I catch myself in the bathroom mirror. There they are again. The greys at my temples. I told myself last week I would deal with it. I did not.</p><p>I know how this goes now. I say I will do it Saturday. Saturday comes. I have ten other things to do. Then it is Tuesday again. And there they are again.</p><p>It is not that I could not cover it. I had a box in the cabinet right then. It is that covering it turned into a chore I never finished.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image (product or lifestyle)"
+    },
+    {
+      "type": "text",
+      "id": "hero_caption",
+      "label": "Caption"
+    },
+    {
+      "type": "richtext",
+      "id": "story_2",
+      "label": "Story part 2",
+      "default": "<p>Box dye works. But it takes an afternoon. The bowl. The gloves. The timer. The stained towels. So I put it off. The salon works too. But it is expensive and a booking I have to plan around. And six weeks later the roots are back and I start over. Root sprays rub off on my collar. Every option asked for time I did not have.</p><p>So I stopped looking for a better dye. I started looking for a simpler routine. Something that fit into a day I was already living. That is when Corvina made sense.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "pullquote",
+      "label": "Pull quote",
+      "default": "Sometimes it is not the grey hair itself that bothers you. It is the constant maintenance, and the feeling you are always one week from noticing it again."
+    },
+    {
+      "type": "richtext",
+      "id": "story_3",
+      "label": "Story part 3",
+      "default": "<p>After a few washes it was blending in, more even. A couple of weeks in, I stopped checking my temples in every mirror. That was the real change. Not just darker hair. The mental space I got back when it stopped running my week.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Section 2 — what it is"
+    },
+    {
+      "type": "text",
+      "id": "s2_title",
+      "label": "Title",
+      "default": "A simpler way to deal with grey"
+    },
+    {
+      "type": "richtext",
+      "id": "s2_body",
+      "label": "Body",
+      "default": "<p>Corvina Black Hair Dye Shampoo is a wash-in colouring shampoo, marketed as a 3-in-1 that cleanses, conditions and colours. It's made for people who want a simpler alternative to the traditional box-dye routine — you use it in the shower, following the directions, instead of mixing and applying a separate dye. That's what made the difference for me. Not a dramatic overnight transformation. Just a simpler routine I could actually stick with.</p>"
+    },
+    {
+      "type": "text",
+      "id": "p1_title",
+      "label": "Point 1",
+      "default": "Used in the shower"
+    },
+    {
+      "type": "textarea",
+      "id": "p1_body",
+      "label": "Point 1 body",
+      "default": "Lather through wet hair, leave on for the time on the pack, then rinse. No brushes, bowls or gloves-and-timer routine."
+    },
+    {
+      "type": "text",
+      "id": "p2_title",
+      "label": "Point 2",
+      "default": "Helps cover grey"
+    },
+    {
+      "type": "textarea",
+      "id": "p2_body",
+      "label": "Point 2 body",
+      "default": "Blends and covers grey strands for a fuller, more even look — colour that builds gradually over repeated use, so you stay in control."
+    },
+    {
+      "type": "text",
+      "id": "p3_title",
+      "label": "Point 3",
+      "default": "Conditions as it colours"
+    },
+    {
+      "type": "textarea",
+      "id": "p3_body",
+      "label": "Point 3 body",
+      "default": "A 3-in-1 formula, so hair is left feeling soft and looking shiny — not dry and straw-like."
+    },
+    {
+      "type": "text",
+      "id": "p4_title",
+      "label": "Point 4",
+      "default": "One nourishing formula"
+    },
+    {
+      "type": "textarea",
+      "id": "p4_body",
+      "label": "Point 4 body",
+      "default": "A 100ml bottle formulated to build colour gradually — a routine simple enough that you'll actually keep it up."
+    },
+    {
+      "type": "header",
+      "content": "Offer"
+    },
+    {
+      "type": "text",
+      "id": "offer_title",
+      "label": "Offer title",
+      "default": "Try Corvina today"
+    },
+    {
+      "type": "text",
+      "id": "price",
+      "label": "Price",
+      "default": "$24.90"
+    },
+    {
+      "type": "text",
+      "id": "compare_price",
+      "label": "Compare-at (genuine only)"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button",
+      "default": "Discover Corvina →"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Button link (product page)"
+    },
+    {
+      "type": "text",
+      "id": "reassure",
+      "label": "Reassurance",
+      "default": "Free shipping · Easy returns · 100ml bottle"
+    },
+    {
+      "type": "header",
+      "content": "Reviews"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show reviews",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "reviews_title",
+      "label": "Reviews title",
+      "default": "What customers say"
+    },
+    {
+      "type": "header",
+      "content": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "faq_title",
+      "label": "FAQ title",
+      "default": "Common questions"
+    },
+    {
+      "type": "header",
+      "content": "Safety (keep this)"
+    },
+    {
+      "type": "richtext",
+      "id": "safety",
+      "label": "Safety note",
+      "default": "<p><strong>Please patch test first.</strong> Before your first use, do a skin patch test at least 48 hours ahead, as directed on the pack, and do not use if you've ever reacted to a hair colourant. Avoid contact with eyes; if it gets in your eyes, rinse thoroughly with water. Keep out of reach of children. For external use on hair only.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Legal"
+    },
+    {
+      "type": "textarea",
+      "id": "disclaimer",
+      "label": "Disclaimer",
+      "default": "This page includes a personal account of one person's experience; individual results vary and depend on your starting hair colour and how often the product is used. Corvina Black Hair Dye Shampoo is a cosmetic hair-colouring product that colours the appearance of hair. It is not intended to treat any scalp or skin condition. Always read and follow the directions and safety information on the pack."
+    },
+    {
+      "type": "text",
+      "id": "footer_note",
+      "label": "Footer",
+      "default": "All rights reserved."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review (REAL only)",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Review",
+          "default": "[Replace with a real, consented customer review before publishing. Do not invent reviews.]"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Name",
+          "default": "Customer name"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "FAQ",
+      "settings": [
+        {
+          "type": "text",
+          "id": "q",
+          "label": "Q",
+          "default": "How long until I see a difference?"
+        },
+        {
+          "type": "textarea",
+          "id": "a",
+          "label": "A",
+          "default": "Colour builds gradually over repeated use rather than in one wash, so how dark you go stays in your control. Results depend on your starting hair colour. Follow the directions on the pack."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Corvina Presell",
+      "blocks": [
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        },
+        {
+          "type": "faq"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

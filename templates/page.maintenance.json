@@ -1,0 +1,57 @@
+{
+  "sections": {
+    "presell": {
+      "type": "corvina-presell-maintenance",
+      "blocks": {
+        "review_1": {
+          "type": "review",
+          "settings": {
+            "text": "For years I had a little routine every few weeks — book the appointment, sit at the salon, pay for the colour, then start worrying about the roots again a few weeks later. A friend told me about black dye shampoo and I figured I had nothing to lose. Now instead of feeling like I'm constantly chasing my roots, I have something quick I can use when they start becoming noticeable.",
+            "name": "Jessica P."
+          }
+        },
+        "review_2": {
+          "type": "review",
+          "settings": {
+            "text": "I started noticing more grey whenever I washed my hair, and eventually I got tired of pretending I didn't care. I saw this dye shampoo and figured I'd give it a try because using it in the shower sounded so much easier. Now I keep it in the shower and use it as part of my normal routine. I used to plan my hair appointments around when my roots would show. Now I barely think about them.",
+            "name": "Amy L."
+          }
+        },
+        "faq_1": {
+          "type": "faq",
+          "settings": {
+            "q": "How long until I see a difference?",
+            "a": "Colour builds gradually over repeated use rather than in one wash, so how dark you go stays in your control. Results depend on your starting hair colour. Follow the directions on the pack."
+          }
+        },
+        "faq_2": {
+          "type": "faq",
+          "settings": {
+            "q": "How does it work?",
+            "a": "Rich botanical pigments, including Polygonum multiflorum (he shou wu), coat each strand as you wash, gradually building colour with repeated use — no ammonia, no mixing, no timer."
+          }
+        },
+        "faq_3": {
+          "type": "faq",
+          "settings": {
+            "q": "How do I use it?",
+            "a": "Apply to wet hair, massage into a lather, leave for a few minutes, then rinse. Repeat with each wash until you reach your desired shade, then use as needed to maintain it."
+          }
+        }
+      },
+      "block_order": [
+        "review_1",
+        "review_2",
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "settings": {
+        "cta_url": "/products/eelhoe-black-hair-dye-shampoo-3-in-1-growth-clean-hair-darkening-deep-nourishing-black-hair-dye-shampoo-natural-organic-herbal"
+      }
+    }
+  },
+  "order": [
+    "presell"
+  ]
+}
