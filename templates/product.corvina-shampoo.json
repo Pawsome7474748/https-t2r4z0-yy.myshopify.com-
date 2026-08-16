@@ -40,14 +40,14 @@
           "type": "tier",
           "settings": {
             "variant_title": "1 Bottle",
-            "label": "1 Bottle"
+            "label": "1 Bottle (100ml)"
           }
         },
         "tier_2": {
           "type": "tier",
           "settings": {
             "variant_title": "2 Bottles",
-            "label": "2 Bottles",
+            "label": "2 Bottles (200ml)",
             "sublabel": "Save 14%",
             "badge": "Most Popular"
           }
@@ -56,7 +56,7 @@
           "type": "tier",
           "settings": {
             "variant_title": "3 Bottles",
-            "label": "3 Bottles",
+            "label": "3 Bottles (300ml)",
             "sublabel": "Save 22%",
             "badge": "Best Value"
           }
@@ -261,7 +261,7 @@
         "show_rating": false,
         "rating_value": 4.8,
         "heading": "Black Hair Dye Shampoo",
-        "subheading": "<p>A wash-in herbal shampoo that gradually covers grey — no mixing, no mess, no salon appointment.</p>",
+        "subheading": "<p>A wash-in herbal shampoo that gradually covers grey — no mixing, no mess, no salon appointment. Each bottle is 100ml.</p>",
         "buy_button_text": "Add to Cart",
         "show_stock_urgency": true,
         "stock_urgency_text": "Almost out of stock",
