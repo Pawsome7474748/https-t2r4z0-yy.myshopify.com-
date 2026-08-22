@@ -1,0 +1,573 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "product_title_DXtTRC": {
+          "type": "product-title",
+          "settings": {
+            "product_title_heading_size": "h1",
+            "product_title_heading_alignment": "left",
+            "product_title_heading_mobilealignment": "left",
+            "product_title_heading_color": "#000000",
+            "product_title_padding_top": 0,
+            "product_title_padding_bottom": 0
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "price_text_color": "#000000",
+            "pricecomparedat_text_color": "#af032a",
+            "price_show_badge": false
+          }
+        },
+        "pp_text_VLf9ic": {
+          "type": "pp-text",
+          "settings": {
+            "pp_text": "<strong>A high-pigment matte liner that glides on smooth, sets in seconds, and stays put through heat, humidity and tears — in seven wearable shades.</strong>",
+            "pp_text_size": "body",
+            "pp_text_color": "#000000",
+            "pp_text_alignment": "left",
+            "pp_text_mobilealignment": "left",
+            "pp_text_border_top": 0,
+            "pp_text_border_bottom": 1,
+            "pp_text_border_color": "#ece2e4",
+            "pp_text_padding_top": 0,
+            "pp_text_padding_bottom": 16
+          }
+        },
+        "pp_benefits_Lfapdf": {
+          "type": "pp-benefits",
+          "settings": {
+            "pp_benefits_text1": "✔️ Waterproof, smudge-proof wear",
+            "pp_benefits_text2": "✔️ Rich matte payoff in one stroke",
+            "pp_benefits_text3": "✔️ Fine tip for liner or brows",
+            "pp_benefits_text4": "✔️ Seven shades, from Stone to Black",
+            "pp_benefits_text_size": "body",
+            "pp_benefits_text_color": "#000000",
+            "pp_benefits_text_alignment": "left",
+            "pp_benefits_text_mobilealignment": "left",
+            "pp_benefits_border_top": 0,
+            "pp_benefits_border_bottom": 1,
+            "pp_benefits_border_color": "#ece2e4",
+            "pp_benefits_padding_top": 0,
+            "pp_benefits_padding_bottom": 12
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_text": "Add To Cart 💄",
+            "sold_out_text": "Sold Out",
+            "unavailable_text": "Unavailable",
+            "button_color": "#5e2a3b",
+            "text_color": "#ffffff",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 20,
+            "button_padding_horizontal": 15
+          }
+        },
+        "pp_guarantees_JzRPwy": {
+          "type": "pp-guarantees",
+          "settings": {
+            "pp_guarantees_icon1": "truck",
+            "pp_guarantees_text1": "Worldwide Shipping",
+            "pp_guarantees_icon2": "heart",
+            "pp_guarantees_text2": "100% Money Back Guarantee",
+            "pp_guarantees_icon3": "box",
+            "pp_guarantees_text3": "Free Returns",
+            "pp_guarantees_icon_size": 28,
+            "pp_guarantees_icon_color": "#000000",
+            "pp_guarantees_text_size": "small",
+            "pp_guarantees_text_color": "#000000",
+            "pp_guarantees_border_top": 0,
+            "pp_guarantees_border_bottom": 1,
+            "pp_guarantees_border_color": "#ece2e4",
+            "pp_guarantees_padding_top": 0,
+            "pp_guarantees_padding_bottom": 16
+          }
+        },
+        "pp_expandable_r43w6T": {
+          "type": "pp-expandable",
+          "settings": {
+            "pp_expandable_title1": "🚚 Shipping",
+            "pp_expandable_content1": "<p><p>Enjoy insured shipping on all orders. We process orders within 1-3 business days before dispatching. Upon shipment, the anticipated delivery times are as follows:</p><ul><li>USA: 3-7 business days</li><li>UK: 7-18 business days</li><li>Australia: 7-18 business days</li><li>Canada: 7-18 business days</li><li>Europe: 7-18 business days</li><li>Rest of world: 14-20 business days</li></ul></p>",
+            "pp_expandable_title2": "📦 Returns",
+            "pp_expandable_content2": "<p><p>We are certain you will adore our products, just as we do! If, however, things do not work out as expected, our return and refund policy is crafted to simplify the process for you. You can return the product for a full refund within 30 days of purchase.</p></p>",
+            "pp_expandable_title3": "🏅 Money Back Guarantee",
+            "pp_expandable_content3": "<p><p>You can try our products risk-free with our 30-day Money-Back Guarantee. If you are not completely satisfied, simply return it for a full refund.</p></p>",
+            "pp_expandable_text_size": "medium",
+            "pp_expandable_answer_size": "small",
+            "pp_expandable_text_color": "#000000",
+            "pp_expandable_arrow_color": "#000000",
+            "pp_expandable_text_border_color": "#ece2e4",
+            "pp_expandable_border_top": 1,
+            "pp_expandable_border_bottom": 0,
+            "pp_expandable_border_color": "#ece2e4",
+            "pp_expandable_padding_top": 12,
+            "pp_expandable_padding_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "product_title_DXtTRC",
+        "price",
+        "pp_text_VLf9ic",
+        "pp_benefits_Lfapdf",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "pp_guarantees_JzRPwy",
+        "pp_expandable_r43w6T"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "scheme-1",
+        "media_size": "medium",
+        "image_rounded_corners": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "hide",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12,
+        "mobile_padding_top": 12,
+        "mobile_padding_bottom": 0
+      }
+    },
+    "pp_image_with_benefits_gkXTTj": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7CB6Bn": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "💧",
+            "emoji_size": "medium",
+            "heading": "Waterproof",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Holds through sweat, humidity and happy tears</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_7HpQgA": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🖤",
+            "emoji_size": "medium",
+            "heading": "Matte",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Velvet finish with no shine and no transfer</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_erNb6q": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "✏️",
+            "emoji_size": "medium",
+            "heading": "Precise",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Fine tip for tightlining, wings and brow strokes</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_gJWaeR": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🎨",
+            "emoji_size": "medium",
+            "heading": "Versatile",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Seven shades to suit any hair colour or mood</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7CB6Bn",
+        "benefit_7HpQgA",
+        "benefit_erNb6q",
+        "benefit_gJWaeR"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Saf4c250fa2064ad6a401d068fa72f9033.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 100,
+        "heading": "<strong>Define Your Eyes in One Smooth Stroke</strong>",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>A creamy matte formula that sets waterproof and stays sharp from your morning coffee to the last song of the night.</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "linear-gradient(176deg, rgba(255, 255, 255, 0), #f5e9ec 100%)",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 20,
+        "margin_bottom": 36
+      }
+    },
+    "pp_image_with_text_BVEaDq": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_aFxCRe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Liner and Brow Definition in a Single Pencil",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "left",
+            "heading_color": "#000000"
+          }
+        },
+        "text_ifpgzE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One pencil, two jobs. The fine matte tip draws a crisp line along the lash for definition, then feathers into short strokes that fill and shape the brow. The formula sets waterproof within seconds and resists smudging, so a morning application still reads clean at the end of the day. Choose from Black and Graphite for a defined look, or Bronze, Brown, Chocolate, Plum and Stone for something softer.</p>",
+            "text_style": "body",
+            "text_alignment": "left",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_cPWTPH": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now 💄",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5e2a3b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_aFxCRe",
+        "text_ifpgzE",
+        "button_cPWTPH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/S223281b50c674761bab3f8f40605f64fQ.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_comparison_table_ttamEN": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_Wjx9pp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>The Difference in Every Stroke</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4ad9ba": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A matte waterproof formula with a fine tip that works for both liner and brows, in seven shades — where most pencils give you one finish, one job and a line that fades by lunch.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_6hMT9z": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Waterproof",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_KNWAfa": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Matte finish",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_jB68ak": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Precise tip",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_CVBp68": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Long wear",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_6Crhhq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Seven shades",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wjx9pp",
+        "text_4ad9ba",
+        "tableitem_6hMT9z",
+        "tableitem_KNWAfa",
+        "tableitem_jB68ak",
+        "tableitem_CVBp68",
+        "tableitem_6Crhhq"
+      ],
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#7a4257",
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_faq_TtURdM": {
+      "type": "pp-faq",
+      "blocks": {
+        "question_UUEbPG": {
+          "type": "question",
+          "settings": {
+            "heading": "Is it really waterproof?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Yes. Once the formula sets it resists water, sweat and humidity, so it holds through workouts, hot weather and teary moments without running.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_iwgzRn": {
+          "type": "question",
+          "settings": {
+            "heading": "Can I use it on my brows as well as my eyes?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>That is what the fine tip is designed for. Use long strokes along the lash line for liner, and short feathered strokes through the brow to fill sparse areas and shape the arch.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_gNmdPq": {
+          "type": "question",
+          "settings": {
+            "heading": "Which shade should I choose?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Black and Graphite give the most definition. Brown, Chocolate and Bronze suit lighter hair and a softer daytime look. Plum flatters green and hazel eyes, and Stone works as a subtle everyday brow shade.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_NpRfRa": {
+          "type": "question",
+          "settings": {
+            "heading": "Will it smudge or transfer onto my lids?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>The matte formula sets within seconds of application and stays put. Allow a moment to dry before blinking hard or applying other products over the top.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "How do I remove it?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Because it is waterproof, water alone will not lift it. Use an oil-based or bi-phase makeup remover on a cotton pad, hold it against the lash line for a few seconds, then wipe gently.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
+      ],
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#f3e7e9",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#000000",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_guarantee_NNKyJ6": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_tVTcmU": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "heart",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#5e2a3b"
+          }
+        },
+        "heading_jfhp4z": {
+          "type": "heading",
+          "settings": {
+            "heading": "Try It Risk-Free for 30 Days",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_N44eGB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Line, define and shape with confidence. If the shade is not right or the wear is not what you expected, return it within 30 days for a full refund — no fuss.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_8tJzYX": {
+          "type": "button",
+          "settings": {
+            "button_label": "Buy Now 💄",
+            "button_link": "",
+            "button_link_newtab": true,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5e2a3b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "left",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "100% Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_tVTcmU",
+        "heading_jfhp4z",
+        "text_N44eGB",
+        "button_8tJzYX"
+      ],
+      "settings": {
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_benefits_gkXTTj",
+    "pp_image_with_text_BVEaDq",
+    "pp_comparison_table_ttamEN",
+    "pp_faq_TtURdM",
+    "pp_guarantee_NNKyJ6"
+  ]
+}
