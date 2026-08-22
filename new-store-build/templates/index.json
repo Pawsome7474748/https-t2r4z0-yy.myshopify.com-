@@ -1,0 +1,309 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Eyes defined from first coffee to last call.",
+            "heading_size": "h0"
+          }
+        },
+        "buttons_pVK3W7": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop The Liner 💄",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false,
+            "button_rounded_corners": "medium",
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5e2a3b",
+            "button_padding_vertical": 20
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "buttons_pVK3W7"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Sc588de4247e347bab14fc97c051f299bm.webp",
+        "image_overlay_opacity": 40,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-3",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "pp_image_with_text_HNW9yr": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_XBqRa6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to Ligne — where a single line does the work.",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_BnFjzQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ligne is built on one idea: the right line changes a face. We make precise, long-wearing eye products in shades you will actually reach for — matte, waterproof, and easy enough to do in a hurry. Shipped across Australia and worldwide, with 30-day returns.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "button_ewqPQY": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Our Story 💄",
+            "button_link": "/pages/about-us",
+            "button_link_newtab": false,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5e2a3b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "Find out what we stand for",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "link",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_XBqRa6",
+        "text_BnFjzQ",
+        "button_ewqPQY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Sd7aff7adb6104154b61e81d9123129dci.webp",
+        "desktop_image_width": "large",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 40,
+        "margin_bottom": 0
+      }
+    },
+    "pp_image_with_benefits_YnG9hi": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_D6UzNR": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🚚",
+            "emoji_size": "medium",
+            "heading": "Fast Shipping",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Dispatched within 1-3 business days, tracked to your door.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_QgKXFK": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "💸",
+            "emoji_size": "medium",
+            "heading": "Fair Prices",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Salon-worthy pigment without the department store markup.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_47AwEj": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "↩️",
+            "emoji_size": "medium",
+            "heading": "Easy Returns",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Wrong shade? Send it back within 30 days for a full refund.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "benefit_EKiWTc": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "💬",
+            "emoji_size": "medium",
+            "heading": "Shade Help",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Not sure which to pick? Message us and we will talk you through it.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_D6UzNR",
+        "benefit_QgKXFK",
+        "benefit_47AwEj",
+        "benefit_EKiWTc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/S2498250e4edf4e50a2f92a2cb62b83e5c.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 100,
+        "heading": "Why shop with Ligne",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "text": "<p>Considered formulas, honest pricing and a returns policy that assumes you are telling the truth.</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#000000",
+        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), #f5e9ec 100%)",
+        "padding_top": 52,
+        "padding_bottom": 44,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Shop The Collection",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#000000",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "all",
+        "products_to_show": 10,
+        "columns_desktop": 5,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "image_rounded_corners": "high",
+        "color_scheme": "scheme-1",
+        "button_rounded_corners": "medium",
+        "button_width": "fit",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 52,
+        "padding_bottom": 52
+      }
+    },
+    "pp_guarantee_d8zzPK": {
+      "type": "pp-guarantee",
+      "blocks": {
+        "icon_XHDhV4": {
+          "type": "icon",
+          "settings": {
+            "icon_type": "heart",
+            "icon_size": 65,
+            "icon_alignment": "center",
+            "icon_mobilealignment": "center",
+            "icon_color": "#5e2a3b"
+          }
+        },
+        "heading_CQ6HWW": {
+          "type": "heading",
+          "settings": {
+            "heading": "30-day money-back guarantee — try risk-free",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4XnaxC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Shades are hard to judge on a screen. If the one you picked is not right, send it back within 30 days for a full refund — no stress, no fuss, and our team helps every step of the way.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "center",
+            "text_mobilealignment": "center",
+            "text_color": "#000000"
+          }
+        },
+        "button_nd9nGW": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now 💄",
+            "button_link": "/collections/all",
+            "button_link_newtab": false,
+            "button_text_color": "#ffffff",
+            "button_background_color": "#5e2a3b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "fit",
+            "button_width_mobile": "full",
+            "button_alignment": "center",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 25,
+            "button_subtext": "Enjoy 30-Day Money Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "link",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "icon_XHDhV4",
+        "heading_CQ6HWW",
+        "text_4XnaxC",
+        "button_nd9nGW"
+      ],
+      "settings": {
+        "gradient": "",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "pp_image_with_text_HNW9yr",
+    "pp_image_with_benefits_YnG9hi",
+    "featured_collection",
+    "pp_guarantee_d8zzPK"
+  ]
+}

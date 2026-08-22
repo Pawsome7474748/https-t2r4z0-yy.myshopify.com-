@@ -1,0 +1,164 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "pp_image_with_text_Mwp9Hi": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_GVL4Hb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Welcome — glad you are here</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_juioQH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ligne started with a simple frustration: liner that looked sharp at 8am and had migrated down someone's cheek by lunch. So we went looking for a formula that actually holds — matte, waterproof, and pigmented enough to work in one pass. That is what we sell, and we would rather do a few things properly than fill a catalogue.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "button_zWUYxa": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now 💄",
+            "button_link": "/collections/all",
+            "button_link_newtab": false,
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#5e2a3b",
+            "button_border_width": 0,
+            "button_border_color": "#000000",
+            "button_width": "full",
+            "button_alignment": "left",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 15,
+            "button_padding_horizontal": 15,
+            "button_subtext": "",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#000000",
+            "button_action": "link",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_GVL4Hb",
+        "text_juioQH",
+        "button_zWUYxa"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Sd7aff7adb6104154b61e81d9123129dci.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_image_with_text_ttLHQy": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_pnf3ak": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Shades worth having</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_tfexQH": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most liners give you black and hope you are happy. We carry seven — Black and Graphite when you want definition, Bronze, Brown and Chocolate for something softer, Plum for green and hazel eyes, and Stone as a quiet everyday brow shade. One pencil does liner and brows, so there is less to carry and less to think about.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pnf3ak",
+        "text_tfexQH"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/S2498250e4edf4e50a2f92a2cb62b83e5c.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 50,
+        "layout": "text_first",
+        "mobile_layout": "image_first",
+        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 0.68), #f5e9ec 100%)",
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 52,
+        "margin_bottom": 52
+      }
+    },
+    "pp_image_with_text_xd44KG": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "heading_hH8Xcf": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Our mission</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_qzgWdQ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Make eye makeup that behaves, priced so it is not a decision. Honest descriptions, shades shown as they really look, and a 30-day refund if the one you chose is not right. If you are stuck between two, message us — we would rather help you pick than take a return.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hH8Xcf",
+        "text_qzgWdQ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Saf4c250fa2064ad6a401d068fa72f9033.webp",
+        "desktop_image_width": "medium",
+        "image_border_radius": 50,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "",
+        "padding_top": 20,
+        "padding_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "pp_image_with_text_Mwp9Hi",
+    "pp_image_with_text_ttLHQy",
+    "pp_image_with_text_xd44KG"
+  ]
+}
