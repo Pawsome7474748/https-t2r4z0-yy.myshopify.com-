@@ -318,3 +318,58 @@ on a one-product catalog. Re-add them once there is a second product.
    (AUD 5.96–6.08), so the price block shows no strike-through.
 6. **Vendor is "My Store 4"** on the product record.
 7. **No review metafield definitions** — harmless now, needed if a review app is added.
+
+---
+
+## 8. Ligne rebrand — homepage and About page (22 Aug 2026)
+
+Brand name resolved: **Ligne** (already the Shopify shop name; French for "line").
+InteriorBloom retired.
+
+### 8.1 Deployed to the draft theme
+
+| File | MD5 | Bytes |
+|---|---|---|
+| `templates/product.220.json` | `7212dc29a8d1d2e8e0813d9f5a946400` | 14,252 |
+| `templates/index.json` | `5f7a1f93bc393ea7887d4643ead266d5` | 7,031 |
+| `templates/page.aboutus.json` | `524fbc02f76ef26fadd135e1ef1355ca` | 4,047 |
+| `config/settings_data.json` | `4e15a9ab13eb3bc0b621662d26e47d66` | 10,286 |
+
+All four confirmed byte-exact against the local build.
+
+### 8.2 Fabricated content removed across the store
+
+| Location | Removed |
+|---|---|
+| Product page | 19 testimonials, "205 Reviews", invented survey %, "As Seen On" |
+| Homepage | 15 testimonials, "Rated 4.9/5 by 5,000+ Happy Customers" |
+| About page | "we quietly partner with small makers and smart factories" |
+
+Running total: **34 invented customer testimonials** carrying "Verified Purchase"
+badges, two fabricated aggregate ratings, and one unverifiable supply-chain claim —
+all on a store with zero orders, trading in Australia.
+
+### 8.3 Resolved since §7.5
+
+- ~~Homepage still InteriorBloom~~ → rebuilt for Ligne
+- ~~About Us page home-decor copy~~ → rebuilt for Ligne
+- ~~Brand identity unresolved~~ → Ligne
+- Section imagery now uses the product's own photos, not `theme_image_*` stock
+
+### 8.4 Still outstanding
+
+1. **Publish the draft theme.** `themePublish` is blocked via API — do it from
+   Online Store → Themes. Nothing in §8.1 is live until then.
+2. **No discount displays.** Every variant has `compareAtPrice` == `price`
+   (AUD 5.96–6.08). Set a higher compare-at price if you want a strike-through.
+3. **Vendor reads "My Store 4"** on the product record.
+4. **Contact page** (`page.contact.json`) not reviewed — stock `rich-text` +
+   `contact-form`, likely fine but unverified.
+5. **Policy pages** (terms, refund, privacy) not reviewed for niche-specific content.
+6. **No reviews app installed.** Fitting one (Judge.me, Loox) repopulates the
+   `pp-reviews` sections with genuine reviews as orders come in.
+7. **Templates 189–219 remain orphaned**, left in place by choice.
+8. **Storefront rendering was never visually verified** — this session's network
+   policy blocks outbound requests to `masdch-r1.myshopify.com`, so correctness was
+   established by server-side schema validation plus MD5 comparison, not by loading
+   the page. Preview before publishing.
