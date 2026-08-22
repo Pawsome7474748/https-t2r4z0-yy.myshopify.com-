@@ -229,3 +229,92 @@ Given the niche mismatch, the repo's value is **structure, not content**:
 
 The port is therefore **not a file migration**. It is a content build for the
 new catalog on a section library that is already in place.
+
+---
+
+## 7. Build log — eyeliner page on the new store (22 Aug 2026)
+
+Direction confirmed by the store owner: **beauty/cosmetics**, orphaned templates
+189–219 left untouched.
+
+### 7.1 What was deployed
+
+Work went to a **duplicate draft theme**, not the live one — the Admin API blocks
+theme-file writes to the published theme, and the store is public with no password.
+
+| Item | Value |
+|---|---|
+| Draft theme | `PagePilot.ai Theme — Eyeliner build (draft)` |
+| Theme id | `190326308937` (UNPUBLISHED) |
+| New template | `templates/product.220.json` |
+| Updated | `config/settings_data.json` |
+
+Both verified byte-exact against the local build by MD5 after upload.
+
+### 7.2 Product record cleaned up
+
+| Field | Before | After |
+|---|---|---|
+| Title | `Waterproof Eyeliner Brown Smooth Matte Eye Liner Long Lasting Non Smudging High Pigmented Eyebrow Pencil Punk Eye Makeup` | `Waterproof Matte Eyeliner & Brow Pencil` |
+| Handle | `waterproof-eyeliner-brown-smooth-…-punk-eye-makeup` | `waterproof-matte-eyeliner-brow-pencil` |
+| Description | AliExpress spec dump + 16 hotlinked `alicdn.com` images | Structured HTML: overview, shades, details, how to use, how to remove |
+| Product type | *(empty)* | `Eyeliner` |
+| Tags | *(none)* | eyeliner, brow pencil, waterproof, matte, eye makeup |
+| Template suffix | *(none)* | `220` |
+| Online Store | **not published** | published |
+
+The hotlinked `alicdn.com` images in the old description were a live dependency on
+a third-party CDN — they can vanish or be swapped at any time. Removed.
+
+### 7.3 Palette, re-derived from the product
+
+Inherited terracotta `#b66d4c` (and a stray `#ff03ac` / `#00ffba` scheme) replaced
+with a palette taken from the product's own shades:
+
+| Token | Value | Applied to |
+|---|---|---|
+| Plum | `#5e2a3b` | primary CTA, scheme-1 button, cart drawer, guarantee icon |
+| Deep plum | `#7a4257` | comparison table band |
+| Plum nude | `#f3e7e9` | FAQ borders |
+| Blush | `#f5e9ec` | benefits gradient |
+| Warm neutral | `#ece2e4` | hairline borders |
+
+The comparison table band was darkened from the inherited light tint so its white
+text clears WCAG AA (7.6:1, was roughly 1.4:1).
+
+### 7.4 Sections deliberately omitted
+
+The inherited PagePilot layout carries fabricated social proof. Building it out for
+a product with **zero sales** on a **live Australian store** would mean inventing
+customer testimonials — the ACCC treats fake reviews and testimonials as misleading
+conduct under the Australian Consumer Law, and it actively enforces against it.
+
+Omitted rather than rewritten:
+
+| Element | What it fabricates |
+|---|---|
+| `pp-reviews` | 19 named testimonials with "Verified Purchase" badges and reviewer photos |
+| `reviews-number` | "205 Reviews" with a 5-star rating |
+| `pp-review` (buy box) | a single named testimonial |
+| `pp-image-with-percentage` | survey statistics ("% who experienced…") |
+| `pp-partners` | "As Seen On" media logos |
+
+Everything omitted is recoverable: install a review app (Judge.me, Loox, Shopify
+Product Reviews) and the same sections repopulate with genuine reviews as they come in.
+
+`related-products` and `featured-collection` were also dropped — they render empty
+on a one-product catalog. Re-add them once there is a second product.
+
+### 7.5 Still outstanding
+
+1. **The draft theme is not published.** Preview it, then publish from
+   Online Store → Themes. The API blocks `themePublish`.
+2. **Homepage is still InteriorBloom.** `templates/index.json` sells home decor —
+   "Make your home feel like you with easy, stylish decor". Needs a rebuild.
+3. **About Us page** (`page.aboutus.json`) is likewise home-decor copy.
+4. **Brand identity is unresolved** — shop name is "Ligne", homepage says
+   "InteriorBloom", catalog is makeup.
+5. **No discount displays.** Every variant has `compareAtPrice` equal to `price`
+   (AUD 5.96–6.08), so the price block shows no strike-through.
+6. **Vendor is "My Store 4"** on the product record.
+7. **No review metafield definitions** — harmless now, needed if a review app is added.
