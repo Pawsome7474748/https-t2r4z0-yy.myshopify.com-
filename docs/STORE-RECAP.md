@@ -146,3 +146,86 @@ These do **not** live in this repo and must be recreated on the new store.
 6. Re-apply brand settings (fonts, colours, logo, favicon).
 7. Rebuild menus, policies, and checkout settings.
 8. Replace the placeholder link in `pp-comparison-table.liquid`.
+
+---
+
+## 6. Target store audit — `masdch-r1.myshopify.com`
+
+Audited live via the Shopify Admin API on 22 Aug 2026.
+
+| Fact | Value |
+|---|---|
+| Store name | Ligne (`masdch-r1.myshopify.com`) |
+| Plan / currency / region | Basic · AUD · Australia (AEST) |
+| Published theme | **PagePilot.ai Theme** (MAIN) |
+| Other theme | Horizon (unpublished, Theme Store #2481) |
+| Products in catalog | **1** |
+| Collections | 1 (`frontpage`, 0 products) |
+| Pages | About Us, Contact, Terms, Refund, Privacy |
+| Product metafield definitions | **none** |
+
+### 6.1 The `pp-*` sections are already installed — byte-identical
+
+No section porting is required. All seven match the repo snapshot exactly:
+
+| Section | Repo | Target |
+|---|---|---|
+| pp-guarantee | 99,650 | 99,650 |
+| pp-reviews | 27,709 | 27,709 |
+| pp-image-with-percentage | 21,677 | 21,677 |
+| pp-image-with-text | 18,540 | 18,540 |
+| pp-comparison-table | 16,099 | 16,099 |
+| pp-image-with-benefits | 13,614 | 13,614 |
+| pp-faq | 10,847 | 10,847 |
+
+`config/settings_schema.json` also matches at 43,132 bytes. Same PagePilot
+theme version on both stores.
+
+### 6.2 Correction to §4 — review metafields are NOT blocking
+
+`metafields.reviews.rating` appears only in stock Dawn files
+(`main-product.liquid`, `featured-product.liquid`, `card-product.liquid`),
+every reference guarded by `!= blank`. The `pp-reviews` section takes its
+star counts and review text from hard-coded template settings instead
+(e.g. `"reviews_text": "205 Reviews"`). Missing definitions degrade
+gracefully — they do not break the page.
+
+### 6.3 Three-way niche mismatch
+
+The target store carries a **complete PagePilot build for a different niche
+again**, and its catalog matches neither.
+
+| Layer | Niche | Detail |
+|---|---|---|
+| Repo snapshot (old store) | **Pet supplies** | templates `product.157`–`188` (30) |
+| Target store theme | **Home decor / homeware** | templates `product.189`–`219` (31, 197 absent) |
+| Target store catalog | **Beauty** | 1 product: waterproof eyeliner / brow pencil |
+
+Target store's homepage brand identity is **"InteriorBloom — Where simple,
+beautiful home style grows with you."** — home decor, not "Ligne" and not beauty.
+
+Sampled target templates confirm the homeware niche: LED wall sconce (189),
+wall decor (195), wooden-handled cookware set (210), RGB USB lamp (219).
+
+Consequences:
+
+- All 31 target templates are **orphaned** — the products they were written
+  for do not exist in the catalog.
+- The one real product (eyeliner, ID `15677807296585`, 7 variants, from
+  AUD 5.96, vendor "My Store 4") has **no landing page and no matching template**.
+- Storefront brand copy says home decor; the only thing purchasable is makeup.
+
+### 6.4 What actually transfers from the repo
+
+Given the niche mismatch, the repo's value is **structure, not content**:
+
+- ✅ Section library — already present, nothing to do
+- ✅ The 10-section product funnel pattern (benefits → story → stats → reviews
+  → comparison → FAQ → guarantee → related → upsell) — already replicated
+- ❌ All 30 pet landing pages' copy — not reusable for beauty
+- ❌ Pet imagery — not reusable
+- ⚠️ Brand config — target already has its own (InteriorBloom), differs from
+  the pet store's Harmonia Sans / `#f8663b`
+
+The port is therefore **not a file migration**. It is a content build for the
+new catalog on a section library that is already in place.
