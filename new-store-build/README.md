@@ -8,8 +8,9 @@ against these copies.
 
 | File | Deployed MD5 | Size |
 |---|---|---|
-| `templates/product.220.json`   | `7212dc29a8d1d2e8e0813d9f5a946400` | 14,252 |
-| `templates/index.json`         | `5f7a1f93bc393ea7887d4643ead266d5` |  7,031 |
+| `templates/product.220.json`   | `2def880791c1745d4bd24db4fce70cb6` | 16,074 |
+| `templates/index.json`         | `f8e3608ac915ba8cb89f2ae94dadf8a2` |  7,162 |
+| `sections/header-group.json`   | `fcb39b165f2f7d08e737f579b64a8286` |  1,300 |
 | `templates/page.aboutus.json`  | `524fbc02f76ef26fadd135e1ef1355ca` |  4,047 |
 | `config/settings_data.json`    | `4e15a9ab13eb3bc0b621662d26e47d66` | 10,286 |
 
@@ -72,3 +73,47 @@ dropshipped catalog. Replaced with the product's actual seven-shade range.
 All section imagery now points at the product's own photography in Files
 (`Saf4c250f…`, `S223281b5…`, `Sd7aff7ad…`, `Sc588de42…`, `S2498250e…`),
 replacing the home-decor `theme_image_*` stock shots.
+
+## Urgency & bundle pass
+
+### Pricing ladder
+
+| Pack | Price | Compare-at | Save |
+|---|---|---|---|
+| 1 Pencil | $21.95 | *(none)* | — |
+| 2 Pencils | $38.95 | $43.90 | 11% |
+| 3 Pencils | $49.95 | $65.85 | 24% |
+
+Built as a real second product option (`Pack`) alongside `Shade`, giving 21
+variants. Compare-at prices are the genuine cost of buying that many singles at
+$21.95 — not invented historical prices. **The single carries no compare-at**,
+because it has never sold at a higher price and a "was" price that was never
+charged is a false discount claim under Australian Consumer Law.
+
+### Low-stock indicator
+
+Uses the theme's native `inventory` block, which reads `variant.inventory_quantity`
+and is re-rendered on variant change by `product-info.js` (its `Inventory` id is in
+that file's swap list at line 236). Threshold 8.
+
+A `custom_liquid` block sits after it and:
+- recolours the dot from PagePilot's orange `rgb(238,148,65)` to red `#dc2626`
+  with a pulse, via attribute selectors on the SVG `fill`, plus `:has()` to tint
+  the whole row
+- rewords "Low stock: N left" → "Almost gone — only N left" client-side, guarded
+  by a MutationObserver so it survives variant swaps
+- honours `prefers-reduced-motion`
+
+It only appears when stock is genuinely at or below 8. Stock set to 10 / 5 / 3 for
+the 1 / 2 / 3 packs.
+
+### Announcement bar
+
+Replaced PagePilot's **"🎉 UP TO 50% OFF — LIMITED TIME SALE 🎉"** — no such
+discount exists; the deepest is 24% — with three rotating truthful lines on a plum
+gradient: the bundle saving, the dispatch window, and the returns guarantee.
+
+### Shade names
+
+Option renamed `Color` → `Shade`; `Graphite color` → `Graphite`, `Chocolate color`
+→ `Chocolate`.

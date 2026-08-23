@@ -32,7 +32,7 @@
       ],
       "settings": {
         "image": "shopify://shop_images/Sc588de4247e347bab14fc97c051f299bm.webp",
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 50,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
@@ -130,10 +130,10 @@
           "settings": {
             "emoji": "💸",
             "emoji_size": "medium",
-            "heading": "Fair Prices",
+            "heading": "Bundle & Save",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Salon-worthy pigment without the department store markup.</p>",
+            "text": "<p>Two pencils save 11%, three save 24%.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
@@ -195,14 +195,14 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Shop The Collection",
+        "heading": "Bundle & Save Up to 24%",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
+        "description": "<p>One pencil $21.95. Two for $38.95 (save 11%). Three for $49.95 (save 24%).</p>",
+        "show_description": true,
+        "description_style": "subtitle",
         "collection": "all",
         "products_to_show": 10,
         "columns_desktop": 5,
@@ -291,7 +291,7 @@
         "button_nd9nGW"
       ],
       "settings": {
-        "gradient": "",
+        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), #f5e9ec 100%)",
         "padding_top": 64,
         "padding_bottom": 64,
         "margin_top": 0,
