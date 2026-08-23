@@ -240,3 +240,45 @@ re-serialized the upload — pretty-printed with its auto-generated header — s
 stored bytes no longer match the minified payload. Correctness was confirmed by
 reading the deployed file back and checking block order, the mix panel markup, the
 property inputs and the absence of `<img>` tags.
+
+## Bug: every shade dropdown rendered regardless of pack
+
+Reported from the storefront: picking the 2-pack still showed three shade
+selectors.
+
+**Cause.** The rows are toggled with the HTML `hidden` attribute, which works via
+the user-agent rule `[hidden]{display:none}`. But `pp_ui` also carried
+`.pp-mix__row{display:flex}` — and an **author** declaration beats a user-agent
+one regardless of selector specificity, because origin outranks specificity in the
+cascade. So `row.hidden = true` was set correctly and had no visual effect.
+
+The cart was never wrong: the `properties[Pencil N shade]` inputs are gated by
+`disabled`, not by CSS, so only 0/1/2 extra shades were ever submitted. The defect
+was purely what the shopper saw.
+
+**Fix.** Restate the rule at author level:
+
+```css
+.pp-mix[hidden],.pp-mix__row[hidden],.pp-stock[hidden]{display:none !important}
+```
+
+**Why the tests missed it.** `test-mix.js` and `test-initial.js` assert
+`row.hidden`, the DOM property — which was always correct. jsdom's
+`getComputedStyle` also disagrees with real browsers here: it reported
+`display:none` for a `[hidden]` element carrying an author `display:flex`, so even
+a computed-style assertion under jsdom would have passed a broken page.
+
+**New harness.** `test/test-browser.js` runs the real script *and the real CSS* in
+headless Chromium and counts rows by `offsetParent !== null` — actual rendered
+visibility, not an attribute. It reproduced the bug (3 rows on every pack) before
+the fix and passes 6/6 after.
+
+Chromium is pre-installed; Playwright must be pointed at it rather than
+downloading its own:
+
+```js
+chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chrome'})
+```
+
+Lesson for anything else toggled by `hidden` in this theme: if a rule sets
+`display` on the element, the attribute alone will not hide it.
