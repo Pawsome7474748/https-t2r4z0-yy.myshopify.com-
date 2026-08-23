@@ -28,7 +28,7 @@
           "settings": {
             "price_text_color": "#000000",
             "pricecomparedat_text_color": "#af032a",
-            "price_show_badge": false
+            "price_show_badge": true
           }
         },
         "pp_text_VLf9ic": {
@@ -52,7 +52,7 @@
             "pp_benefits_text1": "✔️ Waterproof, smudge-proof wear",
             "pp_benefits_text2": "✔️ Rich matte payoff in one stroke",
             "pp_benefits_text3": "✔️ Fine tip for liner or brows",
-            "pp_benefits_text4": "✔️ Seven shades, from Stone to Black",
+            "pp_benefits_text4": "✔️ Save 24% on the 3-pencil pack",
             "pp_benefits_text_size": "body",
             "pp_benefits_text_color": "#000000",
             "pp_benefits_text_alignment": "left",
@@ -130,6 +130,20 @@
             "pp_expandable_padding_top": 12,
             "pp_expandable_padding_bottom": 0
           }
+        },
+        "inventory_urgency": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "subtitle",
+            "inventory_threshold": 8,
+            "show_inventory_quantity": true
+          }
+        },
+        "pp_lowstock_style": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<style>\n  #Inventory-{{ section.id }}{display:flex;align-items:center;gap:.5rem;margin-top:1rem}\n  #Inventory-{{ section.id }}:has(circle[fill=\"rgb(238,148,65)\"]){\n    color:#c0261c;font-weight:600;background:rgba(220,38,38,.06);\n    border:1px solid rgba(220,38,38,.3);border-radius:8px;padding:.7rem .9rem}\n  #Inventory-{{ section.id }} circle[fill=\"rgb(238,148,65, 0.3)\"]{fill:rgba(220,38,38,.25)}\n  #Inventory-{{ section.id }} circle[fill=\"rgb(238,148,65)\"]{fill:#dc2626;\n    animation:ppPulse 1.6s ease-in-out infinite;transform-origin:center}\n  @keyframes ppPulse{0%,100%{opacity:1}50%{opacity:.3}}\n  @media (prefers-reduced-motion:reduce){#Inventory-{{ section.id }} circle{animation:none}}\n</style>\n<script>\n(function(){\n  var id='Inventory-{{ section.id }}';\n  function rewrite(){\n    var el=document.getElementById(id); if(!el) return;\n    (function walk(node){\n      node.childNodes.forEach(function(n){\n        if(n.nodeType===3){\n          var t=n.nodeValue,nv=t\n            .replace(/Low stock:\\s*(\\d+)\\s*left/i,'Almost gone \\u2014 only $1 left')\n            .replace(/^(\\s*)Low stock(\\s*)$/i,'$1Almost gone$2');\n          if(nv!==t) n.nodeValue=nv;\n        } else if(n.nodeType===1) walk(n);\n      });\n    })(el);\n  }\n  function init(){\n    var el=document.getElementById(id); if(!el) return;\n    rewrite();\n    new MutationObserver(rewrite).observe(el,{childList:true,subtree:true,characterData:true});\n  }\n  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();\n})();\n</script>"
+          }
         }
       },
       "block_order": [
@@ -140,6 +154,8 @@
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
+        "inventory_urgency",
+        "pp_lowstock_style",
         "pp_guarantees_JzRPwy",
         "pp_expandable_r43w6T"
       ],
