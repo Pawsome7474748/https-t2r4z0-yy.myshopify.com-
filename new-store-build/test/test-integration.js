@@ -9,8 +9,8 @@ const VARIANTS=[]; let vid=1000;
 SHADES.forEach(s=>PACKS.forEach(([p,q])=>VARIANTS.push({id:++vid,s,p,q,st:q===1?10:q===2?5:3})));
 
 const src=fs.readFileSync('liquid/ui.liquid','utf8');
-const CSS=src.match(/<style>([\s\S]*?)<\/style>/)[1].replace(/\{\{ section\.id \}\}/g,SID);
-const JS_SRC=fs.readFileSync('ui.test.js','utf8');
+const CSS=fs.readFileSync('assets/pp-ligne.css','utf8');
+const JS_SRC=fs.readFileSync('assets/pp-ligne.js','utf8');
 const VMAP=Object.fromEntries(VARIANTS.map(v=>[v.id,{q:v.q,s:v.s,st:v.st}]));
 
 // Dawn's own variant-selects implementation
@@ -35,6 +35,7 @@ const radios=(n,vals,ci)=>vals.map((x,i)=>
    <label for="${n}-${i}">${x}</label>`).join('');
 
 const html=`<!doctype html><html><head><style>${CSS}</style></head><body>
+<div id="pp-ligne" data-section="${SID}" hidden></div>
 <variant-selects id="variant-selects-${SID}" data-section="${SID}">
   <fieldset class="js product-form__input">${radios('Shade-1',SHADES,3)}</fieldset>
   <fieldset class="js product-form__input">${radios('Pack-2',PACKS.map(p=>p[0]),0)}</fieldset>
@@ -42,7 +43,7 @@ const html=`<!doctype html><html><head><style>${CSS}</style></head><body>
 <div id="price-${SID}">$21.95</div>
 <form id="product-form-${SID}"><input type="hidden" name="id" value="1004"></form>
 <div class="pp-stock" id="pp-stock-${SID}" hidden><div class="pp-stock__bar"><span class="pp-stock__fill"></span></div><span class="pp-stock__label"></span></div>
-<p id="Inventory-${SID}"></p>
+<p class="product__inventory" id="Inventory-${SID}"></p>
 <div class="pp-bundles" id="pp-bundles-${SID}" data-pack-name="Pack-2">
   ${PACKS.map(([v,q])=>`<button type="button" class="pp-bundle" data-value="${v}" data-qty="${q}"></button>`).join('')}
   <div class="pp-mix" id="pp-mix-${SID}" data-shade-name="Shade-1">

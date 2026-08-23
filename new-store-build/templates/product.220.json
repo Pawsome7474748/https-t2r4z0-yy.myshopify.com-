@@ -142,7 +142,7 @@
         "pp_ui": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "<style>\n  :root{--pp-plum:#5e2a3b;--pp-plum2:#7a4257;--pp-blush:#f5e9ec;--pp-red:#dc2626}\n  .pp-opt-hidden{display:none !important}\n  /* author display rules outrank the UA [hidden] rule, so restate it */\n  .pp-mix[hidden],.pp-mix__row[hidden],.pp-stock[hidden]{display:none !important}\n\n  .pp-bundles{display:flex;flex-direction:column;gap:1rem;margin:1.4rem 0 0}\n  .pp-bundle{position:relative;display:block;width:100%;text-align:left;cursor:pointer;\n    background:#fff;border:1.5px solid #e3d9dc;border-radius:12px;padding:1.4rem 1.5rem;\n    font:inherit;color:inherit;transition:border-color .15s,background .15s,box-shadow .15s}\n  .pp-bundle:hover{border-color:var(--pp-plum2)}\n  .pp-bundle.is-active{border-color:var(--pp-plum);background:var(--pp-blush);\n    box-shadow:0 0 0 1px var(--pp-plum)}\n  .pp-bundle__ribbon{position:absolute;top:-11px;right:14px;background:var(--pp-plum2);\n    color:#fff;font-size:1.1rem;font-weight:600;letter-spacing:.02em;\n    padding:.35rem .9rem;border-radius:999px;white-space:nowrap}\n  .pp-bundle__ribbon--best{background:var(--pp-plum)}\n  .pp-bundle__row{display:flex;align-items:center;gap:1.2rem}\n  .pp-bundle__qty{flex:0 0 auto;display:flex;align-items:center;justify-content:center;\n    width:42px;height:42px;border-radius:10px;background:var(--pp-blush);\n    color:var(--pp-plum);font-weight:700;font-size:1.8rem;line-height:1}\n  .pp-bundle__qty small{font-size:1.1rem;margin-left:1px;opacity:.7}\n  .pp-bundle.is-active .pp-bundle__qty{background:var(--pp-plum);color:#fff}\n  .pp-bundle__text{flex:1 1 auto;min-width:0}\n  .pp-bundle__title{display:block;font-weight:700;font-size:1.6rem;line-height:1.25}\n  .pp-bundle__sub{display:block;font-size:1.3rem;opacity:.72;margin-top:.2rem}\n  .pp-bundle__price{flex:0 0 auto;text-align:right;line-height:1.3}\n  .pp-bundle__now{display:block;font-weight:700;font-size:1.7rem;color:var(--pp-plum)}\n  .pp-bundle__was{display:block;font-size:1.3rem;opacity:.55}\n  .pp-bundle__note{display:flex;align-items:center;gap:.5rem;margin-top:1rem;\n    padding-top:1rem;border-top:1px solid rgba(94,42,59,.18);\n    font-size:1.3rem;color:var(--pp-plum);font-weight:600}\n\n  .pp-mix{margin:.4rem 0 0;padding:1.3rem 1.5rem;border:1.5px solid var(--pp-plum);\n    border-radius:12px;background:var(--pp-blush)}\n  .pp-mix__head{margin:0 0 1rem;font-weight:700;font-size:1.4rem;color:var(--pp-plum)}\n  .pp-mix__head span{font-weight:400;opacity:.75}\n  .pp-mix__row{display:flex;align-items:center;gap:1rem;margin-top:.7rem}\n  .pp-mix__label{flex:0 0 78px;font-size:1.3rem;font-weight:600}\n  .pp-mix__select{flex:1 1 auto;min-width:0;padding:.7rem .9rem;font:inherit;font-size:1.4rem;\n    border:1px solid #cbb8be;border-radius:8px;background:#fff;color:inherit}\n\n  .pp-delivery{display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;\n    margin:.3rem 0 0;padding-top:1.1rem;border-top:1px dashed #d9cdd1;font-size:1.35rem}\n  .pp-delivery__dot{width:8px;height:8px;border-radius:50%;background:#1f9d55;flex:0 0 auto}\n  .pp-delivery strong{color:var(--pp-plum)}\n\n  .pp-stock{margin:1.4rem 0 .6rem}\n  .pp-stock__bar{height:9px;border-radius:999px;background:#e8e2e4;overflow:hidden}\n  .pp-stock__fill{display:block;height:100%;border-radius:999px;background:var(--pp-red);\n    transition:width .5s ease}\n  .pp-stock__label{display:inline-block;margin-top:.5rem;font-size:1.3rem;\n    font-weight:700;color:var(--pp-red)}\n\n  .pp-pay{margin:1.2rem 0 0;text-align:center}\n  .pp-pay__label{display:block;font-size:1.2rem;opacity:.65;margin-bottom:.6rem}\n  .pp-pay__list{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;\n    list-style:none;margin:0;padding:0}\n  .pp-pay__list li{display:flex}\n  .pp-pay__icon{height:24px;width:auto}\n\n  .pp-rating{display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;\n    margin:0 0 1rem;font-size:1.35rem}\n  .pp-rating__stars{color:#f5a623;letter-spacing:.1em}\n\n  #Inventory-{{ section.id }}{display:flex;align-items:center;gap:.6rem;margin-top:1rem}\n  #Inventory-{{ section.id }}:has(circle[fill=\"rgb(238,148,65)\"]){\n    color:var(--pp-red);font-weight:700;background:#151515;border-radius:8px;\n    padding:.8rem 1rem;border:1px solid rgba(220,38,38,.4)}\n  #Inventory-{{ section.id }} circle[fill=\"rgb(238,148,65, 0.3)\"]{fill:rgba(220,38,38,.3)}\n  #Inventory-{{ section.id }} circle[fill=\"rgb(238,148,65)\"]{fill:var(--pp-red);\n    animation:ppFlash 1s steps(1,end) infinite;transform-origin:center}\n  @keyframes ppFlash{0%,49%{opacity:1}50%,100%{opacity:.15}}\n  @media (prefers-reduced-motion:reduce){\n    #Inventory-{{ section.id }} circle{animation:none}\n    .pp-stock__fill{transition:none}\n  }\n</style>\n<script type=\"application/json\" id=\"pp-variants-{{ section.id }}\">\n{%- capture pp_vmap -%}\n{%- for v in product.variants -%}\n{%- assign q = 1 -%}\n{%- if v.option2 contains '3' -%}{%- assign q = 3 -%}{%- elsif v.option2 contains '2' -%}{%- assign q = 2 -%}{%- endif -%}\n\"{{ v.id }}\":{\"q\":{{ q }},\"s\":{{ v.option1 | json }},\"st\":{{ v.inventory_quantity | default: 0 }}}{%- unless forloop.last -%},{%- endunless -%}\n{%- endfor -%}\n{%- endcapture -%}\n{ {{- pp_vmap -}} }\n</script>\n<script>\n(function(){\n  var SID={{ section.id | json }};\n  var DELIVERY_DAYS=7;\n  var STOCK_SCALE=10, STOCK_SHOW_AT=10;\n\n  function $(s,r){return (r||document).querySelector(s);}\n  function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}\n  function form(){return document.getElementById('product-form-'+SID);}\n  function idInput(){var f=form();return f?f.querySelector('input[name=\"id\"]'):null;}\n  function bundles(){return document.getElementById('pp-bundles-'+SID);}\n  function mix(){return document.getElementById('pp-mix-'+SID);}\n\n  var VMAP={};\n  try{ VMAP=JSON.parse(($('#pp-variants-'+SID)||{}).textContent||'{}'); }catch(e){}\n\n  function variantSelects(){return document.getElementById('variant-selects-'+SID);}\n  function allRadios(){\n    var vs=variantSelects();\n    return vs?$$('input[type=\"radio\"]',vs):[];\n  }\n  /* the selected variant is the source of truth for pack size and shade */\n  function current(){\n    var i=idInput();\n    return (i && VMAP[i.value]) ? VMAP[i.value] : null;\n  }\n  function currentQty(){ var v=current(); return v?v.q:1; }\n  function currentShade(){ var v=current(); return v?v.s:null; }\n\n  function pickByValue(value){\n    var t=allRadios().filter(function(i){return i.value===value;})[0];\n    if(t && !t.disabled && !t.checked){ t.click(); return true; }\n    return false;\n  }\n\n  function setDelivery(){\n    var el=$('[data-pp-deliver-by]'); if(!el) return;\n    var d=new Date(Date.now()+DELIVERY_DAYS*864e5);\n    el.textContent=d.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'});\n  }\n\n  function hideNativeOptions(){\n    var vs=variantSelects(); if(!vs) return;\n    $$('fieldset,.product-form__input',vs).forEach(function(fs){\n      fs.classList.add('pp-opt-hidden');\n    });\n  }\n\n  function syncCards(qtyOverride){\n    var b=bundles(); if(!b) return;\n    var qty=qtyOverride||currentQty();\n    $$('.pp-bundle',b).forEach(function(c){\n      var on=+c.dataset.qty===qty;\n      c.classList.toggle('is-active',on);\n      c.setAttribute('aria-pressed',on?'true':'false');\n    });\n  }\n\n  /* show one shade dropdown per pencil; slots 2-3 ride along as line item properties */\n  function syncMix(qtyOverride){\n    var m=mix(); if(!m) return;\n    var qty=qtyOverride||currentQty(), shade=currentShade();\n    m.hidden=false;\n    $$('.pp-mix__row',m).forEach(function(row){\n      var slot=+row.dataset.slot;\n      row.hidden = slot>qty;\n      if(slot===1 && shade){ $('select',row).value=shade; }\n    });\n    $$('input[data-prop]',m).forEach(function(inp){\n      var slot=+inp.dataset.prop;\n      if(slot<=qty){\n        var sel=$('.pp-mix__select[data-slot=\"'+slot+'\"]',m);\n        inp.disabled=false;\n        inp.value=sel?sel.value:'';\n      } else {\n        inp.disabled=true;\n        inp.value='';\n      }\n    });\n  }\n\n  function wire(){\n    var b=bundles(); if(b){\n      $$('.pp-bundle',b).forEach(function(c){\n        c.addEventListener('click',function(){\n          var q=+c.dataset.qty||1;\n          syncCards(q); syncMix(q);          /* instant, from the card itself */\n          pickByValue(c.dataset.value);      /* Shopify swaps the variant async */\n          setTimeout(update,80);\n        });\n      });\n    }\n    var m=mix(); if(m){\n      $$('.pp-mix__select',m).forEach(function(sel){\n        sel.addEventListener('change',function(){\n          if(+sel.dataset.slot===1){ pickByValue(sel.value); }\n          syncMix();\n          setTimeout(syncMix,80);\n        });\n      });\n    }\n  }\n\n  function setStock(){\n    var el=document.getElementById('pp-stock-'+SID); if(!el) return;\n    var v=current(); var q=v?v.st:undefined;\n    if(typeof q!=='number'||q<=0||q>STOCK_SHOW_AT){el.hidden=true;return;}\n    el.hidden=false;\n    var pct=Math.max(6,Math.min(100,Math.round(q/STOCK_SCALE*100)));\n    $('.pp-stock__fill',el).style.width=pct+'%';\n    $('.pp-stock__label',el).textContent='Only '+q+' left in stock';\n  }\n\n  function reword(){\n    var el=document.getElementById('Inventory-'+SID); if(!el) return;\n    (function walk(n){\n      n.childNodes.forEach(function(c){\n        if(c.nodeType===3){\n          var t=c.nodeValue,v=t\n            .replace(/Low stock:\\s*(\\d+)\\s*left/i,'Almost out of stock')\n            .replace(/^(\\s*)Low stock(\\s*)$/i,'$1Almost out of stock$2');\n          if(v!==t) c.nodeValue=v;\n        } else if(c.nodeType===1) walk(c);\n      });\n    })(el);\n  }\n\n  function update(){ syncCards(); syncMix(); setStock(); reword(); }\n\n  function init(){\n    setDelivery(); hideNativeOptions(); wire(); update();\n    var ii=idInput();\n    if(ii) ii.addEventListener('change',update);\n    var price=document.getElementById('price-'+SID);\n    if(price) new MutationObserver(update).observe(price,{childList:true,subtree:true});\n    var inv=document.getElementById('Inventory-'+SID);\n    if(inv) new MutationObserver(reword).observe(inv,{childList:true,subtree:true,characterData:true});\n    document.addEventListener('change',function(e){\n      if(e.target && e.target.name && e.target.name.indexOf('-')>-1) setTimeout(update,60);\n    });\n  }\n  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',init):init();\n})();\n</script>"
+            "custom_liquid": "{{ 'pp-ligne.css' | asset_url | stylesheet_tag }}\n<div id=\"pp-ligne\" data-section=\"{{ section.id }}\" hidden></div>\n<script type=\"application/json\" id=\"pp-variants-{{ section.id }}\">\n{%- capture pp_vmap -%}\n{%- for v in product.variants -%}\n{%- assign q = 1 -%}\n{%- if v.option2 contains '3' -%}{%- assign q = 3 -%}{%- elsif v.option2 contains '2' -%}{%- assign q = 2 -%}{%- endif -%}\n\"{{ v.id }}\":{\"q\":{{ q }},\"s\":{{ v.option1 | json }},\"st\":{{ v.inventory_quantity | default: 0 }}}{%- unless forloop.last -%},{%- endunless -%}\n{%- endfor -%}\n{%- endcapture -%}\n{ {{- pp_vmap -}} }\n</script>\n<script src=\"{{ 'pp-ligne.js' | asset_url }}\" defer></script>"
           }
         },
         "pp_rating": {
@@ -168,6 +168,12 @@
           "settings": {
             "custom_liquid": "{%- if shop.enabled_payment_types.size > 0 -%}\n<div class=\"pp-pay\">\n  <span class=\"pp-pay__label\">Secure checkout with</span>\n  <ul class=\"pp-pay__list\" role=\"list\">\n    {%- for type in shop.enabled_payment_types -%}\n      <li>{{ type | payment_type_svg_tag: class: 'pp-pay__icon' }}</li>\n    {%- endfor -%}\n  </ul>\n</div>\n{%- endif -%}"
           }
+        },
+        "pp_ugc": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"pp-ugc\" id=\"pp-ugc-{{ section.id }}\">\n  <div class=\"pp-ugc__head\">\n    <span class=\"pp-ugc__eyebrow\">as seen on TikTok</span>\n    <span class=\"pp-ugc__nav\">\n      <button type=\"button\" class=\"pp-ugc__arrow\" data-dir=\"-1\" aria-label=\"Previous videos\">&#8249;</button>\n      <button type=\"button\" class=\"pp-ugc__arrow\" data-dir=\"1\" aria-label=\"More videos\">&#8250;</button>\n    </span>\n  </div>\n  <ul class=\"pp-ugc__track\" role=\"list\">\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/2d8a9b7490c749ebba15598beaed95fa.thumbnail.0000000000.jpg?v=1787495913\"\n        src=\"https://cdn.shopify.com/videos/c/vp/2d8a9b7490c749ebba15598beaed95fa/2d8a9b7490c749ebba15598beaed95fa.HD-720p-1.6Mbps-92385254.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/530ccd41f6de4873900c1d2cfa0ce8bd.thumbnail.0000000000.jpg?v=1787495908\"\n        src=\"https://cdn.shopify.com/videos/c/vp/530ccd41f6de4873900c1d2cfa0ce8bd/530ccd41f6de4873900c1d2cfa0ce8bd.HD-720p-1.6Mbps-92385256.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/77550f0c094e4a3d8e1b7a4580b01102.thumbnail.0000000000.jpg?v=1787495924\"\n        src=\"https://cdn.shopify.com/videos/c/vp/77550f0c094e4a3d8e1b7a4580b01102/77550f0c094e4a3d8e1b7a4580b01102.HD-720p-1.6Mbps-92385257.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/c60e7f893053483792cd8e0c3fa526c5.thumbnail.0000000000.jpg?v=1787495920\"\n        src=\"https://cdn.shopify.com/videos/c/vp/c60e7f893053483792cd8e0c3fa526c5/c60e7f893053483792cd8e0c3fa526c5.HD-720p-1.6Mbps-92385259.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n  </ul>\n</div>"
+          }
         }
       },
       "block_order": [
@@ -177,6 +183,7 @@
         "price",
         "pp_text_VLf9ic",
         "pp_benefits_Lfapdf",
+        "pp_ugc",
         "pp_stock_meter",
         "variant_picker",
         "pp_bundles",
@@ -204,89 +211,6 @@
         "padding_bottom": 12,
         "mobile_padding_top": 12,
         "mobile_padding_bottom": 0
-      }
-    },
-    "pp_image_with_benefits_gkXTTj": {
-      "type": "pp-image-with-benefits",
-      "blocks": {
-        "benefit_7CB6Bn": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "💧",
-            "emoji_size": "medium",
-            "heading": "Waterproof",
-            "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Holds through sweat, humidity and happy tears</p>",
-            "text_style": "body",
-            "text_color": "#000000"
-          }
-        },
-        "benefit_7HpQgA": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "🖤",
-            "emoji_size": "medium",
-            "heading": "Matte",
-            "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Velvet finish with no shine and no transfer</p>",
-            "text_style": "body",
-            "text_color": "#000000"
-          }
-        },
-        "benefit_erNb6q": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "✏️",
-            "emoji_size": "medium",
-            "heading": "Precise",
-            "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Fine tip for tightlining, wings and brow strokes</p>",
-            "text_style": "body",
-            "text_color": "#000000"
-          }
-        },
-        "benefit_gJWaeR": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "🎨",
-            "emoji_size": "medium",
-            "heading": "Versatile",
-            "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Seven shades to suit any hair colour or mood</p>",
-            "text_style": "body",
-            "text_color": "#000000"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_7CB6Bn",
-        "benefit_7HpQgA",
-        "benefit_erNb6q",
-        "benefit_gJWaeR"
-      ],
-      "settings": {
-        "image": "shopify://shop_images/Saf4c250fa2064ad6a401d068fa72f9033.webp",
-        "desktop_image_width": "medium",
-        "image_border_radius": 100,
-        "heading": "<strong>Define Your Eyes in One Smooth Stroke</strong>",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "text": "<p>A creamy matte formula that sets waterproof and stays sharp from your morning coffee to the last song of the night.</p>",
-        "text_style": "subtitle",
-        "text_alignment": "center",
-        "text_mobilealignment": "center",
-        "text_color": "#000000",
-        "gradient": "linear-gradient(176deg, rgba(255, 255, 255, 0), #f5e9ec 100%)",
-        "padding_top": 32,
-        "padding_bottom": 32,
-        "margin_top": 20,
-        "margin_bottom": 36
       }
     },
     "pp_image_with_text_BVEaDq": {
@@ -604,12 +528,21 @@
         "margin_top": 0,
         "margin_bottom": 0
       }
+    },
+    "pp_love": {
+      "type": "pp-love",
+      "settings": {}
+    },
+    "pp_realbenefits": {
+      "type": "pp-realbenefits",
+      "settings": {}
     }
   },
   "order": [
     "main",
-    "pp_image_with_benefits_gkXTTj",
+    "pp_love",
     "pp_image_with_text_BVEaDq",
+    "pp_realbenefits",
     "pp_comparison_table_ttamEN",
     "pp_faq_TtURdM",
     "pp_guarantee_NNKyJ6"

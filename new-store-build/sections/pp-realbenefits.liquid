@@ -1,0 +1,88 @@
+<div class="pp-html" style="padding:56px 0;background:#ffffff">
+  <div class="page-width">
+<div class="pp-rb">
+  <h2 class="pp-rb__title"><span>Made for real eyes.</span> Not just the ones in ads.</h2>
+  <p class="pp-rb__sub">Hooded, watery, mature, sparse — whatever your lids are doing, there is a way to line
+    them. Tap a card for how.</p>
+  <div class="pp-rb__grid">
+    <article class="pp-rb__card">
+      <div class="pp-rb__inner">
+        <div class="pp-rb__face pp-rb__face--front">
+          <img src="{{ product.images[1] | image_url: width: 300 }}" alt="" loading="lazy" width="80" height="80">
+          <div class="pp-rb__txt"><h3>Hooded Eyes</h3><p>Lines that still show when your eyes are open.</p></div>
+          <button type="button" class="pp-rb__btn" aria-label="How it works for hooded eyes">+</button>
+        </div>
+        <div class="pp-rb__face pp-rb__face--back">
+          <h3>Hooded Eyes</h3>
+          <p>Draw the line slightly above your natural lash line and keep it thin at the inner corner, thicker
+            through the outer third. When the lid drops, that is the part still on show. The matte finish helps
+            too: shimmer catches light in the fold and draws the eye straight to it.</p>
+          <button type="button" class="pp-rb__btn pp-rb__btn--close" aria-label="Close">&times;</button>
+        </div>
+      </div>
+    </article>
+    <article class="pp-rb__card">
+      <div class="pp-rb__inner">
+        <div class="pp-rb__face pp-rb__face--front">
+          <img src="{{ product.images[2] | image_url: width: 300 }}" alt="" loading="lazy" width="80" height="80">
+          <div class="pp-rb__txt"><h3>Mature Eyes</h3><p>Definition that does not sit in fine lines.</p></div>
+          <button type="button" class="pp-rb__btn" aria-label="How it works for mature eyes">+</button>
+        </div>
+        <div class="pp-rb__face pp-rb__face--back">
+          <h3>Mature Eyes</h3>
+          <p>Skip the solid band. Short feathered strokes pressed into the lash roots read softer and do not
+            emphasise texture. A matte formula matters here — glitter and satin finishes reflect light off every
+            crease. Chocolate, Bronze and Stone are gentler than a hard black.</p>
+          <button type="button" class="pp-rb__btn pp-rb__btn--close" aria-label="Close">&times;</button>
+        </div>
+      </div>
+    </article>
+    <article class="pp-rb__card">
+      <div class="pp-rb__inner">
+        <div class="pp-rb__face pp-rb__face--front">
+          <img src="{{ product.images[3] | image_url: width: 300 }}" alt="" loading="lazy" width="80" height="80">
+          <div class="pp-rb__txt"><h3>Watery Eyes</h3><p>Holds when your eyes will not behave.</p></div>
+          <button type="button" class="pp-rb__btn" aria-label="How it works for watery eyes">+</button>
+        </div>
+        <div class="pp-rb__face pp-rb__face--back">
+          <h3>Watery Eyes</h3>
+          <p>Give it twenty seconds to set before you blink hard — that is when the waterproof finish locks.
+            Tightline along the upper lash line rather than the lower waterline, which floods first. Blot once
+            with a tissue, do not rub.</p>
+          <button type="button" class="pp-rb__btn pp-rb__btn--close" aria-label="Close">&times;</button>
+        </div>
+      </div>
+    </article>
+    <article class="pp-rb__card">
+      <div class="pp-rb__inner">
+        <div class="pp-rb__face pp-rb__face--front">
+          <img src="{{ product.images[4] | image_url: width: 300 }}" alt="" loading="lazy" width="80" height="80">
+          <div class="pp-rb__txt"><h3>Sparse Brows</h3><p>Fills gaps without the drawn-on look.</p></div>
+          <button type="button" class="pp-rb__btn" aria-label="How it works for sparse brows">+</button>
+        </div>
+        <div class="pp-rb__face pp-rb__face--back">
+          <h3>Sparse Brows</h3>
+          <p>Flick short strokes in the direction the hair grows, then brush through so nothing reads as a line.
+            Match undertone, not depth: Chocolate and Bronze for warm or red hair, Graphite and Stone for cool,
+            ashy or greying brows.</p>
+          <button type="button" class="pp-rb__btn pp-rb__btn--close" aria-label="Close">&times;</button>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PP - realbenefits",
+  "tag": "section",
+  "class": "pp-realbenefits-section",
+  "presets": [
+    {
+      "name": "PP - realbenefits"
+    }
+  ]
+}
+{% endschema %}

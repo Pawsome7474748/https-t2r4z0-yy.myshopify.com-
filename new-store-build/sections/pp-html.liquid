@@ -1,0 +1,23 @@
+{%- if section.settings.content != blank -%}
+  <div class="pp-html pp-html--{{ section.id }}" style="
+    padding-top:{{ section.settings.padding_top }}px;
+    padding-bottom:{{ section.settings.padding_bottom }}px;
+    {% if section.settings.background != blank %}background:{{ section.settings.background }};{% endif %}">
+    <div class="page-width">{{ section.settings.content }}</div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "PP - Custom HTML",
+  "tag": "section",
+  "class": "pp-html-section",
+  "settings": [
+    { "type": "liquid", "id": "content", "label": "Content" },
+    { "type": "text", "id": "background", "label": "Background (CSS)", "default": "" },
+    { "type": "range", "id": "padding_top", "label": "Padding top", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding bottom", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 }
+  ],
+  "presets": [{ "name": "PP - Custom HTML" }]
+}
+{% endschema %}

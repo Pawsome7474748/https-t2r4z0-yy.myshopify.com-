@@ -339,3 +339,67 @@ pencil 1 moves the variant to that shade while staying on the same pack.
 **Caveat.** This harness would likely have passed with the old code too, since the
 fixture names its radios `Pack-2`. It proves the new implementation is correct; it
 does not prove what the original failure was. That remains unreproduced from here.
+
+## Refactor: code out of the template
+
+The template had grown to 46 KB because CSS, JS and section markup all lived
+inside `custom_liquid` settings — every one-line tweak meant re-uploading the lot.
+Now:
+
+| File | Holds |
+|---|---|
+| `assets/pp-ligne.css` | every component style (8,955 b) |
+| `assets/pp-ligne.js` | all behaviour (7,705 b) |
+| `sections/pp-love.liquid` | the benefits grid |
+| `sections/pp-realbenefits.liquid` | the flip cards |
+| `sections/pp-html.liquid` | generic custom-HTML section, for future use |
+| `templates/product.220.json` | **21,482 b**, down from 46,267 |
+
+The `pp_ui` block is now a 654-byte loader: it links the stylesheet, emits the
+variant map, and drops `<div id="pp-ligne" data-section="…">` for the script to
+read its section id from. Asset files carry no Liquid, so the inventory CSS targets
+the theme's own `.product__inventory` class instead of `#Inventory-{section.id}`.
+
+## New on the product page
+
+**`as seen on TikTok` carousel** — sits directly above the stock meter. Four
+vertical cards, horizontal scroll with snap, arrows that hide themselves when
+nothing overflows and disable at each end. Tapping a card unmutes and plays it
+inline with native controls and pauses any other that was running; a blocked
+autoplay falls back to muted, and a hard failure resets the card rather than
+surfacing an unhandled rejection.
+
+**Benefits grid** (`pp-love`) replaces the old *Define Your Eyes in One Smooth
+Stroke* section: six items with inline line-art SVG icons under
+*"Everything a liner should do. Most don't."* Three columns on desktop, two on
+mobile.
+
+**Flip cards** (`pp-realbenefits`) — four cards under *"Made for real eyes. Not
+just the ones in ads."* The `+` rotates the card on the Y axis to reveal
+application technique; `×` flips it back. Backs are hidden via
+`backface-visibility`, not `display`, so the earlier `[hidden]` trap does not apply.
+
+Content covers Hooded Eyes, Mature Eyes, Watery Eyes and Sparse Brows — technique
+and formula, not invented outcomes. Deliberately **not** titled "Backed by
+Research": there is no research behind a dropshipped pencil, and that phrasing is a
+specific evidentiary claim. The requested "covers eye bags and wrinkles" angle was
+also dropped — eyeliner does not conceal either, so it would be a false claim.
+"Mature Eyes" makes the honest version of that point instead (matte does not
+reflect off texture the way shimmer does).
+
+**Low-stock pill** — black plate removed, now plain red text with the dot blinking
+on a 2.4 s ease cycle instead of a 1 s hard step.
+
+## Testing
+
+`test/test-components.js` — 19 assertions in headless Chromium against the real
+CSS and JS: carousel structure, CDN sources, posters, arrow scrolling, play state,
+the six-item grid, flip mechanics, and the low-stock pill's computed background,
+colour and animation duration.
+
+`test/test-integration.js` — 17 assertions, unchanged behaviour after the refactor.
+
+`test-browser.js` was retired: it predated the variant-driven rewrite and its
+fixture had no variant-swap, so it asserted the old radio-parsing behaviour. Its
+coverage now lives in the integration harness, which checks rendered visibility
+with the real stylesheet loaded.
