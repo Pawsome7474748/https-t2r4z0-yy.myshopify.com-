@@ -213,7 +213,12 @@ badge that inverts to plum when the card is selected.
 mirrors the theme's markup (radio pickers from `product-variant-options.liquid`,
 `#price-{id}`, `#Inventory-{id}`, the product form's `input[name="id"]`).
 
-22 assertions cover: both native pickers hidden, correct row count per pack,
+`test/test-initial.js` adds 9 more, building the page fresh with each pack already
+checked — the deep-link case (`?variant=`) where no click ever happens. It asserts
+the dropdown count equals the pack size on first paint, and that slots beyond the
+pack are disabled and empty.
+
+31 assertions in total. The 22 in `test-mix.js` cover: both native pickers hidden, correct row count per pack,
 card active state, pencil 1 driving the real variant, pencils 2-3 writing
 properties, properties disabling and clearing when the pack shrinks, the delivery
 date, the stock meter, and the low-stock rewording.
