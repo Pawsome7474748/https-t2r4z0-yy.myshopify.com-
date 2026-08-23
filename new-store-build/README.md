@@ -282,3 +282,60 @@ chromium.launch({executablePath:'/opt/pw-browsers/chromium-1194/chrome-linux/chr
 
 Lesson for anything else toggled by `hidden` in this theme: if a rule sets
 `display` on the element, the attribute alone will not hide it.
+
+## State is now driven by the variant, not the radio labels
+
+Follow-up report: after the `[hidden]` fix, only one shade dropdown appeared for
+every pack — the opposite failure.
+
+The old code derived pack size by reading the checked radio and parsing its label:
+
+```js
+parseInt(checkedVal('Pack-2'), 10)   // "2 Pencils (Save 11%)" -> 2
+```
+
+That carried three assumptions: the option is named `Pack`, it sits at position 2,
+and `document`-wide `input[name="Pack-2"]` matches only this section's radios. The
+first two check out against the live product (`Shade` = 1, `Pack` = 2), so the
+naming was never wrong — but the third is not safe on a page that can render the
+same product form more than once, and any of them failing silently yields
+`qty = 1`, which is exactly the symptom.
+
+Rather than keep guessing at a failure that cannot be reproduced without storefront
+access, the assumption was removed. Liquid now emits a variant map:
+
+```json
+{"55933725343817":{"q":2,"s":"Bronze","st":5}, ...}
+```
+
+`q` (pack size) and `s` (shade) are computed server-side where the variant data is
+authoritative. At runtime the selected variant is read from
+`#product-form-{section.id} input[name="id"]` — the input `product-info.js` updates
+and fires a `change` event on. Everything else follows from it:
+
+- `currentQty()` / `currentShade()` read the map, never a label
+- `allRadios()` is scoped to `#variant-selects-{section.id}`, so a second copy of
+  the form elsewhere on the page cannot interfere
+- `hideNativeOptions()` hides every fieldset inside that element, no name lookup
+- `pickByValue()` finds the radio by its value within that scope
+- the stock meter reads `st` from the same map
+
+Because Shopify swaps the variant asynchronously, a card click now applies its own
+`data-qty` immediately and reconciles when the variant actually lands — the UI no
+longer waits on a network round-trip.
+
+### Integration harness
+
+`test/test-integration.js` loads Dawn's real `constants.js`, `pubsub.js` and the
+`VariantSelects` class straight out of `assets/global.js`, plus a faithful stand-in
+for `updateVariantInputs` that resolves the variant from the checked radios and
+fires `change` on the id input after a delay, as the real fetch does. 21 variants,
+same shape as the live product.
+
+17 assertions: rows update on click *and* stay correct after the variant settles,
+the variant id really switches pack size, property count matches, and changing
+pencil 1 moves the variant to that shade while staying on the same pack.
+
+**Caveat.** This harness would likely have passed with the old code too, since the
+fixture names its radios `Pack-2`. It proves the new implementation is correct; it
+does not prove what the original failure was. That remains unreproduced from here.

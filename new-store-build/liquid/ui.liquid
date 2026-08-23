@@ -76,8 +76,15 @@
     .pp-stock__fill{transition:none}
   }
 </style>
-<script type="application/json" id="pp-stock-data-{{ section.id }}">
-{% capture pp_stock %}{% for v in product.variants %}"{{ v.id }}":{{ v.inventory_quantity | default: 0 }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}{ {{- pp_stock -}} }
+<script type="application/json" id="pp-variants-{{ section.id }}">
+{%- capture pp_vmap -%}
+{%- for v in product.variants -%}
+{%- assign q = 1 -%}
+{%- if v.option2 contains '3' -%}{%- assign q = 3 -%}{%- elsif v.option2 contains '2' -%}{%- assign q = 2 -%}{%- endif -%}
+"{{ v.id }}":{"q":{{ q }},"s":{{ v.option1 | json }},"st":{{ v.inventory_quantity | default: 0 }}}{%- unless forloop.last -%},{%- endunless -%}
+{%- endfor -%}
+{%- endcapture -%}
+{ {{- pp_vmap -}} }
 </script>
 <script>
 (function(){
@@ -92,18 +99,24 @@
   function bundles(){return document.getElementById('pp-bundles-'+SID);}
   function mix(){return document.getElementById('pp-mix-'+SID);}
 
-  var stock={};
-  try{ stock=JSON.parse(($('#pp-stock-data-'+SID)||{}).textContent||'{}'); }catch(e){}
+  var VMAP={};
+  try{ VMAP=JSON.parse(($('#pp-variants-'+SID)||{}).textContent||'{}'); }catch(e){}
 
-  function radios(name){return $$('input[name="'+name+'"]');}
-  function packName(){var b=bundles();return b?b.dataset.packName:null;}
-  function shadeName(){var m=mix();return m?m.dataset.shadeName:null;}
-  function checkedVal(name){
-    var r=radios(name).filter(function(i){return i.checked;})[0];
-    return r?r.value:null;
+  function variantSelects(){return document.getElementById('variant-selects-'+SID);}
+  function allRadios(){
+    var vs=variantSelects();
+    return vs?$$('input[type="radio"]',vs):[];
   }
-  function pick(name,value){
-    var t=radios(name).filter(function(i){return i.value===value;})[0];
+  /* the selected variant is the source of truth for pack size and shade */
+  function current(){
+    var i=idInput();
+    return (i && VMAP[i.value]) ? VMAP[i.value] : null;
+  }
+  function currentQty(){ var v=current(); return v?v.q:1; }
+  function currentShade(){ var v=current(); return v?v.s:null; }
+
+  function pickByValue(value){
+    var t=allRadios().filter(function(i){return i.value===value;})[0];
     if(t && !t.disabled && !t.checked){ t.click(); return true; }
     return false;
   }
@@ -115,34 +128,26 @@
   }
 
   function hideNativeOptions(){
-    [packName(),shadeName()].forEach(function(n){
-      if(!n) return;
-      var i=radios(n)[0]; if(!i) return;
-      var fs=i.closest('fieldset,.product-form__input');
-      if(fs) fs.classList.add('pp-opt-hidden');
+    var vs=variantSelects(); if(!vs) return;
+    $$('fieldset,.product-form__input',vs).forEach(function(fs){
+      fs.classList.add('pp-opt-hidden');
     });
   }
 
-  function currentQty(){
-    var v=checkedVal(packName())||'';
-    var n=parseInt(v,10);
-    return (n>=1&&n<=3)?n:1;
-  }
-
-  function syncCards(){
+  function syncCards(qtyOverride){
     var b=bundles(); if(!b) return;
-    var val=checkedVal(packName());
+    var qty=qtyOverride||currentQty();
     $$('.pp-bundle',b).forEach(function(c){
-      var on=c.dataset.value===val;
+      var on=+c.dataset.qty===qty;
       c.classList.toggle('is-active',on);
       c.setAttribute('aria-pressed',on?'true':'false');
     });
   }
 
   /* show one shade dropdown per pencil; slots 2-3 ride along as line item properties */
-  function syncMix(){
+  function syncMix(qtyOverride){
     var m=mix(); if(!m) return;
-    var qty=currentQty(), shade=checkedVal(shadeName());
+    var qty=qtyOverride||currentQty(), shade=currentShade();
     m.hidden=false;
     $$('.pp-mix__row',m).forEach(function(row){
       var slot=+row.dataset.slot;
@@ -166,16 +171,17 @@
     var b=bundles(); if(b){
       $$('.pp-bundle',b).forEach(function(c){
         c.addEventListener('click',function(){
-          pick(packName(),c.dataset.value);
-          syncCards(); syncMix();
-          setTimeout(function(){syncCards();syncMix();},80);
+          var q=+c.dataset.qty||1;
+          syncCards(q); syncMix(q);          /* instant, from the card itself */
+          pickByValue(c.dataset.value);      /* Shopify swaps the variant async */
+          setTimeout(update,80);
         });
       });
     }
     var m=mix(); if(m){
       $$('.pp-mix__select',m).forEach(function(sel){
         sel.addEventListener('change',function(){
-          if(+sel.dataset.slot===1){ pick(shadeName(),sel.value); }
+          if(+sel.dataset.slot===1){ pickByValue(sel.value); }
           syncMix();
           setTimeout(syncMix,80);
         });
@@ -185,7 +191,7 @@
 
   function setStock(){
     var el=document.getElementById('pp-stock-'+SID); if(!el) return;
-    var inp=idInput(); var q=inp?stock[inp.value]:undefined;
+    var v=current(); var q=v?v.st:undefined;
     if(typeof q!=='number'||q<=0||q>STOCK_SHOW_AT){el.hidden=true;return;}
     el.hidden=false;
     var pct=Math.max(6,Math.min(100,Math.round(q/STOCK_SCALE*100)));
@@ -211,6 +217,8 @@
 
   function init(){
     setDelivery(); hideNativeOptions(); wire(); update();
+    var ii=idInput();
+    if(ii) ii.addEventListener('change',update);
     var price=document.getElementById('price-'+SID);
     if(price) new MutationObserver(update).observe(price,{childList:true,subtree:true});
     var inv=document.getElementById('Inventory-'+SID);
