@@ -8,7 +8,7 @@ against these copies.
 
 | File | Deployed MD5 | Size |
 |---|---|---|
-| `templates/product.220.json`   | `6e2d0089a4315f323130e5c1cbfadd20` | 26,625 |
+| `templates/product.220.json`   | re-serialized by Shopify (see below) | 29,646 |
 | `templates/index.json`         | `f8e3608ac915ba8cb89f2ae94dadf8a2` |  7,162 |
 | `sections/header-group.json`   | `fcb39b165f2f7d08e737f579b64a8286` |  1,300 |
 | `templates/page.aboutus.json`  | `524fbc02f76ef26fadd135e1ef1355ca` |  4,047 |
@@ -174,3 +174,64 @@ Restyled to the dark pill from the reference, with the dot flashing on a 1s
 `steps(1,end)` cycle and the label reworded to "Almost out of stock". Still driven
 by the native `inventory` block, so it only appears at or below 8 real units and
 follows variant changes. Suppressed under `prefers-reduced-motion`.
+
+## Mix-and-match shades
+
+A bundle no longer forces the same shade on every pencil.
+
+The `Pack` variant still carries the price (Shopify needs a real variant for that),
+and the **first** pencil's shade selects the actual variant. Pencils 2 and 3 ride
+along as line item properties:
+
+```
+properties[Pencil 2 shade] = "Bronze"
+properties[Pencil 3 shade] = "Stone"
+```
+
+Both inputs live in `pp_bundles`, carry `form="product-form-{section.id}"` so they
+submit with the buy form, and are `disabled` (so Shopify drops them) whenever the
+selected pack is smaller than that slot. Order lines therefore show exactly as many
+shades as were bought — never a stale third shade from an earlier click.
+
+Both native option pickers (`Shade`, `Pack`) are hidden via `.pp-opt-hidden`; the
+bundle cards and the three dropdowns drive them.
+
+**Inventory caveat:** only the pencil-1 shade decrements stock. Pencils 2 and 3 are
+text properties, so per-shade stock for them is not tracked. On a dropshipped
+catalog with nominal inventory this is usually fine, but it compounds the
+existing bundle/stock mismatch — a real fix needs a bundle app that maps
+components to a shared pool.
+
+### Bundle card images removed
+
+The repeated product thumbnails are gone, replaced by a `1× / 2× / 3×` quantity
+badge that inverts to plum when the card is selected.
+
+## Testing
+
+`test/test-mix.js` drives the real `pp_ui` script under jsdom against a DOM that
+mirrors the theme's markup (radio pickers from `product-variant-options.liquid`,
+`#price-{id}`, `#Inventory-{id}`, the product form's `input[name="id"]`).
+
+22 assertions cover: both native pickers hidden, correct row count per pack,
+card active state, pencil 1 driving the real variant, pencils 2-3 writing
+properties, properties disabling and clearing when the pack shrinks, the delivery
+date, the stock meter, and the low-stock rewording.
+
+Run with `node test/test-mix.js` after extracting the script:
+
+```
+python3 -c "import re;print(re.findall(r'<script>(.*?)</script>',open('liquid/ui.liquid').read(),re.S)[-1].replace('{{ section.id | json }}','\"t\"'))" > ui.test.js
+```
+
+A first run caught a real bug: card highlight and the shade rows only updated on a
+60 ms timer, so the UI lagged a click behind. Sync now runs synchronously on
+interaction and again after Dawn's fetch settles.
+
+### Note on verification
+
+Earlier deploys were confirmed byte-exact by MD5. For this revision Shopify
+re-serialized the upload — pretty-printed with its auto-generated header — so the
+stored bytes no longer match the minified payload. Correctness was confirmed by
+reading the deployed file back and checking block order, the mix panel markup, the
+property inputs and the absence of `<img>` tags.

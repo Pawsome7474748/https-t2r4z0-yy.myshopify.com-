@@ -1,8 +1,13 @@
 {%- liquid
   assign pack_pos = 0
+  assign shade_pos = 0
   for o in product.options_with_values
     if o.name == 'Pack'
       assign pack_pos = o.position
+    endif
+    if o.name == 'Shade'
+      assign shade_pos = o.position
+      assign shade_opt = o
     endif
   endfor
 -%}
@@ -15,18 +20,12 @@
       {%- if v.option2 contains '3' -%}{%- assign qty = 3 -%}
       {%- elsif v.option2 contains '2' -%}{%- assign qty = 2 -%}
       {%- else -%}{%- assign qty = 1 -%}{%- endif -%}
-      <button type="button" class="pp-bundle" data-value="{{ v.option2 | escape }}" aria-pressed="false">
+      <button type="button" class="pp-bundle" data-value="{{ v.option2 | escape }}" data-qty="{{ qty }}" aria-pressed="false">
         {%- if qty == 2 -%}<span class="pp-bundle__ribbon">Save 11%</span>
         {%- elsif qty == 3 -%}<span class="pp-bundle__ribbon pp-bundle__ribbon--best">Best Value</span>
         {%- endif -%}
         <span class="pp-bundle__row">
-          <span class="pp-bundle__imgs pp-bundle__imgs--{{ qty }}">
-            {%- for i in (1..qty) -%}
-              {%- if product.featured_image -%}
-                <img src="{{ product.featured_image | image_url: width: 120 }}" alt="" loading="lazy" width="56" height="56">
-              {%- endif -%}
-            {%- endfor -%}
-          </span>
+          <span class="pp-bundle__qty" aria-hidden="true">{{ qty }}<small>×</small></span>
           <span class="pp-bundle__text">
             <span class="pp-bundle__title">
               {%- if qty == 1 -%}Buy One{%- elsif qty == 2 -%}Buy Two{%- else -%}Buy Three{%- endif -%}
@@ -49,12 +48,31 @@
         {%- if qty > 1 -%}
           <span class="pp-bundle__note">
             <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Works out to {{ v.price | divided_by: qty | money }} per pencil
+            Mix any shades · {{ v.price | divided_by: qty | money }} per pencil
           </span>
         {%- endif -%}
       </button>
     {%- endunless -%}
   {%- endfor -%}
+
+  {%- if shade_pos > 0 -%}
+  <div class="pp-mix" id="pp-mix-{{ section.id }}" data-shade-name="Shade-{{ shade_pos }}">
+    <p class="pp-mix__head">Choose your shades <span>— mix and match, one per pencil</span></p>
+    {%- for i in (1..3) -%}
+      <label class="pp-mix__row" data-slot="{{ i }}" hidden>
+        <span class="pp-mix__label">Pencil {{ i }}</span>
+        <select class="pp-mix__select" data-slot="{{ i }}" aria-label="Shade for pencil {{ i }}">
+          {%- for val in shade_opt.values -%}
+            <option value="{{ val | escape }}">{{ val }}</option>
+          {%- endfor -%}
+        </select>
+      </label>
+    {%- endfor -%}
+    <input type="hidden" data-prop="2" name="properties[Pencil 2 shade]" form="product-form-{{ section.id }}" disabled>
+    <input type="hidden" data-prop="3" name="properties[Pencil 3 shade]" form="product-form-{{ section.id }}" disabled>
+  </div>
+  {%- endif -%}
+
   <p class="pp-delivery">
     <span class="pp-delivery__dot" aria-hidden="true"></span>
     Order today for delivery by <strong data-pp-deliver-by>—</strong>
