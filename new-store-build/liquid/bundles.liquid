@@ -1,0 +1,63 @@
+{%- liquid
+  assign pack_pos = 0
+  for o in product.options_with_values
+    if o.name == 'Pack'
+      assign pack_pos = o.position
+    endif
+  endfor
+-%}
+{%- if pack_pos > 0 -%}
+<div class="pp-bundles" id="pp-bundles-{{ section.id }}" data-pack-name="Pack-{{ pack_pos }}">
+  {%- assign seen = '|' -%}
+  {%- for v in product.variants -%}
+    {%- unless seen contains v.option2 -%}
+      {%- assign seen = seen | append: v.option2 | append: '|' -%}
+      {%- if v.option2 contains '3' -%}{%- assign qty = 3 -%}
+      {%- elsif v.option2 contains '2' -%}{%- assign qty = 2 -%}
+      {%- else -%}{%- assign qty = 1 -%}{%- endif -%}
+      <button type="button" class="pp-bundle" data-value="{{ v.option2 | escape }}" aria-pressed="false">
+        {%- if qty == 2 -%}<span class="pp-bundle__ribbon">Save 11%</span>
+        {%- elsif qty == 3 -%}<span class="pp-bundle__ribbon pp-bundle__ribbon--best">Best Value</span>
+        {%- endif -%}
+        <span class="pp-bundle__row">
+          <span class="pp-bundle__imgs pp-bundle__imgs--{{ qty }}">
+            {%- for i in (1..qty) -%}
+              {%- if product.featured_image -%}
+                <img src="{{ product.featured_image | image_url: width: 120 }}" alt="" loading="lazy" width="56" height="56">
+              {%- endif -%}
+            {%- endfor -%}
+          </span>
+          <span class="pp-bundle__text">
+            <span class="pp-bundle__title">
+              {%- if qty == 1 -%}Buy One{%- elsif qty == 2 -%}Buy Two{%- else -%}Buy Three{%- endif -%}
+            </span>
+            <span class="pp-bundle__sub">
+              {%- if v.compare_at_price > v.price -%}
+                You save {{ v.compare_at_price | minus: v.price | money }}
+              {%- else -%}
+                Single pencil
+              {%- endif -%}
+            </span>
+          </span>
+          <span class="pp-bundle__price">
+            <span class="pp-bundle__now">{{ v.price | money }}</span>
+            {%- if v.compare_at_price > v.price -%}
+              <s class="pp-bundle__was">{{ v.compare_at_price | money }}</s>
+            {%- endif -%}
+          </span>
+        </span>
+        {%- if qty > 1 -%}
+          <span class="pp-bundle__note">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Works out to {{ v.price | divided_by: qty | money }} per pencil
+          </span>
+        {%- endif -%}
+      </button>
+    {%- endunless -%}
+  {%- endfor -%}
+  <p class="pp-delivery">
+    <span class="pp-delivery__dot" aria-hidden="true"></span>
+    Order today for delivery by <strong data-pp-deliver-by>—</strong>
+  </p>
+</div>
+{%- endif -%}

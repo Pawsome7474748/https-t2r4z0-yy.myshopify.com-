@@ -8,7 +8,7 @@ against these copies.
 
 | File | Deployed MD5 | Size |
 |---|---|---|
-| `templates/product.220.json`   | `2def880791c1745d4bd24db4fce70cb6` | 16,074 |
+| `templates/product.220.json`   | `6e2d0089a4315f323130e5c1cbfadd20` | 26,625 |
 | `templates/index.json`         | `f8e3608ac915ba8cb89f2ae94dadf8a2` |  7,162 |
 | `sections/header-group.json`   | `fcb39b165f2f7d08e737f579b64a8286` |  1,300 |
 | `templates/page.aboutus.json`  | `524fbc02f76ef26fadd135e1ef1355ca` |  4,047 |
@@ -117,3 +117,60 @@ gradient: the bundle saving, the dispatch window, and the returns guarantee.
 
 Option renamed `Color` → `Shade`; `Graphite color` → `Graphite`, `Chocolate color`
 → `Chocolate`.
+
+## Conversion UI pass
+
+The buy box now runs a custom bundle selector and supporting components, all as
+`custom_liquid` blocks (`liquid/` holds the readable sources). Buy-box order:
+
+`pp_ui` → `pp_rating` → title → price → text → benefits → `pp_stock_meter` →
+variant picker → `pp_bundles` → quantity → buy buttons → `inventory_urgency` →
+`pp_pay` → guarantees → expandables
+
+### How the bundle cards work
+
+The three cards are rendered from the real `Pack` option. Clicking one finds the
+native radio (`input[name="Pack-2"]`) and clicks it, so Shopify's own variant
+logic still drives price, availability and add-to-cart. The native Pack fieldset
+is hidden with `.pp-pack-hidden`. Card state re-syncs from a `MutationObserver`
+on `#price-{section}`, which `product-info.js` swaps on every variant change.
+
+Prices, compare-at values, savings and the per-pencil maths all read from
+`product.variants` — nothing is hard-coded.
+
+### Substitutions made against the reference design
+
+The reference screenshot's numbers describe a store with sales history. This one
+has none, so three elements were built to read from real data instead of being
+transcribed:
+
+| Reference | Built instead | Why |
+|---|---|---|
+| "Rated 4.9 · Thousands of 5-Star Reviews" + reviewer avatars | `pp_rating`, gated on `product.metafields.reviews.rating` — renders nothing until real reviews exist | zero orders, zero reviews |
+| "93% Sold" progress bar | `pp_stock_meter` — red bar + "Only N left in stock", driven by `variant.inventory_quantity` | nothing has sold, so 93% is not a number that exists |
+| "Most Popular" / "Free Shipping" ribbons | "Save 11%" / "Best Value" | popularity claim needs sales data; no free-shipping rate is configured |
+| "Buy 2 Get 1 Free Gift" + "$35.99 Value" gift | "Buy Two" / "Buy Three" with real savings | no gift product exists in the catalog |
+
+### Delivery promise — needs reconciling
+
+`DELIVERY_DAYS=7` in `pp_ui` drives "Order today for delivery by <date>",
+computed client-side so it never goes stale in CDN cache.
+
+**This contradicts the store's own shipping text**, which is still PagePilot's and
+says Australia 7–18 business days, rest of world up to 20. Either shorten the
+published policy to match the 7-day promise, or raise `DELIVERY_DAYS`. As it
+stands the product page promises faster than the shipping tab admits.
+
+### Payment icons
+
+`pp_pay` iterates `shop.enabled_payment_types` through `payment_type_svg_tag`, so
+it shows exactly what the store actually accepts and updates itself if the
+merchant enables or removes a gateway. Digital wallets currently active: Shopify
+Pay, Apple Pay, Google Pay.
+
+### Low-stock pill
+
+Restyled to the dark pill from the reference, with the dot flashing on a 1s
+`steps(1,end)` cycle and the label reworded to "Almost out of stock". Still driven
+by the native `inventory` block, so it only appears at or below 8 real units and
+follows variant changes. Suppressed under `prefers-reduced-motion`.

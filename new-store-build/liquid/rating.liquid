@@ -1,0 +1,13 @@
+{%- assign r = product.metafields.reviews.rating.value -%}
+{%- if r != blank and r.rating > 0 -%}
+  {%- assign rounded = r.rating | round -%}
+  <div class="pp-rating">
+    <span class="pp-rating__stars" aria-hidden="true">
+      {%- for i in (1..5) -%}{%- if i <= rounded -%}★{%- else -%}☆{%- endif -%}{%- endfor -%}
+    </span>
+    <span>Rated {{ r.rating }} out of {{ r.scale_max }}
+      {%- assign c = product.metafields.reviews.rating_count -%}
+      {%- if c > 0 %} · {{ c }} review{% if c != 1 %}s{% endif %}{% endif -%}
+    </span>
+  </div>
+{%- endif -%}
