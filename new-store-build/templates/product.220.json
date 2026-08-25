@@ -536,6 +536,50 @@
     "pp_realbenefits": {
       "type": "pp-realbenefits",
       "settings": {}
+    },
+    "pp_reviews_story": {
+      "type": "pp-reviews-story",
+      "blocks": {
+        "rev_jennifer": {
+          "type": "review",
+          "settings": {
+            "name": "Jennifer S",
+            "stars": 4,
+            "body": "<p>I didn't realise how much I had stopped trusting my own face until I started avoiding photos.</p><p>It sounds silly until you've done it yourself.</p><p>I'd get ready, spend ages on my eyes, feel really confident walking out the door, then someone would pull out their phone and I'd immediately think about my eyeliner.</p><p>Not the photo.</p><p>Not how I looked.</p><p>My eyeliner.</p><p>Was it still even? Had the corner smudged? Was there black under my eye?</p><p>Eventually I started checking reflective windows and bathroom mirrors without even thinking about it.</p><p>The first few times I thought I was just being picky.</p><p>Then I realised I wasn't enjoying getting dressed up anymore.</p><p>I was managing my makeup.</p><p>Finding something that stayed put changed that more than I expected.</p><p>Now when someone says “let's take a photo,” my first thought isn't “wait.”</p><p>It's actually just “sure.”</p><p>And I didn't realise how much I'd missed that feeling.</p>"
+          }
+        },
+        "rev_holly": {
+          "type": "review",
+          "settings": {
+            "name": "Holly E",
+            "stars": 4.5,
+            "body": "<p>The most annoying thing about bad eyeliner isn't the smudge.</p><p>It's what the smudge does to your confidence.</p><p>I'd leave the house feeling put together and completely forget about my makeup.</p><p>Then I'd see a photo later and suddenly everything I felt good about was gone.</p><p>I wouldn't even notice the outfit anymore.</p><p>I'd zoom straight into my eyes.</p><p>One side looked heavier.</p><p>The wing had softened.</p><p>There was a little black mark underneath that I somehow hadn't felt happen.</p><p>It made me start deleting photos.</p><p>Not because I hated how I looked.</p><p>Because I hated how unpredictable my makeup had become.</p><p>I eventually realised I wasn't trying to find better eyeliner because I loved makeup.</p><p>I was trying to find it because I wanted to stop thinking about my makeup.</p><p>That difference sounds small.</p><p>It isn't.</p><p>Now I can actually get ready and move on with my day instead of wondering when my eyeliner is going to betray me.</p>"
+          }
+        },
+        "rev_chloe": {
+          "type": "review",
+          "settings": {
+            "name": "Chloe M",
+            "stars": 5,
+            "body": "<p>I used to carry eyeliner everywhere.</p><p>Not because I was obsessed with makeup.</p><p>Because I didn't trust the eyeliner I had on.</p><p>There was always this little voice in my head saying, “You should probably check.”</p><p>So I'd go to the bathroom.</p><p>Look in the mirror.</p><p>Fix the corner.</p><p>Come back.</p><p>An hour later, I'd do it again.</p><p>I didn't realise how exhausting that was until I stopped doing it.</p><p>The first time I went through a full night without checking my eyes, I actually forgot about them completely.</p><p>I was talking.</p><p>Laughing.</p><p>Taking photos.</p><p>Going outside.</p><p>Just living.</p><p>And then I got home and looked in the mirror.</p><p>My makeup still looked like the makeup I'd put on hours earlier.</p><p>That was the moment I realised the problem wasn't that I was “too high maintenance.”</p><p>I just wanted makeup I could put on and stop managing.</p><p>Honestly, that feels so much better.</p>"
+          }
+        },
+        "rev_emma": {
+          "type": "review",
+          "settings": {
+            "name": "Emma A",
+            "stars": 5,
+            "body": "<p>I almost stopped doing winged eyeliner altogether.</p><p>Not because I stopped liking it.</p><p>I stopped liking what happened after I finished it.</p><p>I'd spend ten minutes getting both wings symmetrical and then spend the rest of the night protecting them.</p><p>Don't touch your eyes.</p><p>Don't rub them.</p><p>Don't get too hot.</p><p>Check before taking a photo.</p><p>Check after taking a photo.</p><p>It became ridiculous.</p><p>Something that was supposed to make me feel more confident had turned into something I was constantly worrying about.</p><p>Then I found an eyeliner that actually stayed looking the way I wanted for much longer.</p><p>And weirdly, the biggest change wasn't my makeup.</p><p>It was me.</p><p>I stopped thinking about my eyes every five minutes.</p><p>I stopped avoiding close-up photos.</p><p>I stopped carrying a backup pencil.</p><p>I just wore the makeup and went about my night.</p><p>Sometimes the thing you want from a makeup product isn't a more dramatic look.</p><p>It's getting your attention back.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rev_jennifer",
+        "rev_holly",
+        "rev_chloe",
+        "rev_emma"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -543,6 +587,7 @@
     "pp_love",
     "pp_image_with_text_BVEaDq",
     "pp_realbenefits",
+    "pp_reviews_story",
     "pp_comparison_table_ttamEN",
     "pp_faq_TtURdM",
     "pp_guarantee_NNKyJ6"

@@ -154,6 +154,24 @@
     });
   }
 
+  /* ---- story reviews: clamp long bodies behind a Read more ---- */
+  function wireReviews(){
+    $$('.pp-rev__card').forEach(function(card){
+      var body=$('[data-pp-clamp]',card), btn=$('.pp-rev__more',card);
+      if(!body||!btn) return;
+      body.classList.add('is-clamped');
+      if(body.scrollHeight-body.clientHeight<8){   /* short enough to show whole */
+        body.classList.remove('is-clamped');
+        return;
+      }
+      btn.hidden=false;
+      btn.addEventListener('click',function(){
+        var clamped=body.classList.toggle('is-clamped');
+        btn.textContent=clamped?'Read more':'Show less';
+      });
+    });
+  }
+
   /* ---- flip cards ---- */
   function wireFlips(){
     $$('.pp-rb__card').forEach(function(card){
@@ -193,7 +211,7 @@
   function update(){ syncCards(); syncMix(); setStock(); reword(); }
 
   function init(){
-    setDelivery(); hideNativeOptions(); wire(); wireUgc(); wireFlips(); update();
+    setDelivery(); hideNativeOptions(); wire(); wireUgc(); wireFlips(); wireReviews(); update();
     var ii=idInput();
     if(ii) ii.addEventListener('change',update);
     var price=document.getElementById('price-'+SID);

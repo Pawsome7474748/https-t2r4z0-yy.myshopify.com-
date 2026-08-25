@@ -435,3 +435,64 @@ If both are installed at once, every storefront event is counted twice. Remove t
 `theme.liquid` block when the custom pixel goes in — the marker comments
 `<!-- Meta Pixel Code -->` / `<!-- End Meta Pixel Code -->` delimit exactly what to
 delete.
+
+## Customer reviews
+
+Four reviews supplied by the store owner, who confirmed they are genuine. Added as
+a new section, `sections/pp-reviews-story.liquid`, placed between the flip cards and
+the comparison table.
+
+| File | Deployed MD5 | Size |
+| --- | --- | --- |
+| `sections/pp-reviews-story.liquid` | `9e30c57f47578382bcd447808a4444c7` | 2,834 b |
+| `assets/pp-ligne.css` | `b8fce115bf5ce52d07e301dc658b5611` | 11,066 b |
+| `assets/pp-ligne.js` | `48d5fd36a6137c3aef2f187d954e885a` | 8,366 b |
+| `templates/product.220.json` | `a66326bed0efd20691f0f2389aee3505` | 26,002 b |
+
+All four verified byte-exact on upload.
+
+### Layout
+
+Four columns on desktop, two below 1100px, one below 600px — matching the reference.
+Each card carries a star row, an initial avatar, the name and the review body.
+
+The reviews run long (15–21 paragraphs each), so bodies are clamped to 22em behind a
+fade and a **Read more** toggle (`wireReviews()` in `pp-ligne.js`). The clamp is only
+applied when the body actually overflows, so a short review renders whole with no
+button. Paragraph breaks in the originals are preserved — each line is its own `<p>`,
+which is what gives the reviews their pacing.
+
+### Fractional stars
+
+The reference shows half stars, so the star row is two stacked spans: a grey
+five-star baseline via `::before`, and an orange fill clipped to `rating × 20%`.
+4.5 stars renders as a true half. The block setting is a range with `step: 0.5`.
+
+### Aggregate rating
+
+`reviews.rating` and `reviews.rating_count` are Shopify **standard** metafields, so
+they had to be turned on with `standardMetafieldDefinitionEnable` —
+`metafieldDefinitionCreate` rejects the `reviews` namespace as reserved.
+
+Set to **4.6 from 4 reviews**, the arithmetic mean of 4, 4.5, 5 and 5. The same
+values feed the star line under the product title (`pp_rating`) and the heading of
+the review section, so the two can never disagree.
+
+### Not included
+
+The reference image shows a "✓ Verified Buyer" badge on each card. It is not in the
+build — there is no order record tied to these reviews, so the badge would be an
+unverifiable claim on the storefront. If the reviewers' orders exist in Shopify, the
+badge can be added and backed by them.
+
+Reviewer photos are also absent because none were supplied. The section already has
+an `image_picker` per block: adding a photo in the theme editor swaps the initial
+avatar for the image automatically, no code change.
+
+### Testing
+
+`test/test-reviews.js` — 13 assertions in headless Chromium against the real
+stylesheet: four cards render, four columns at 1400px, star fills measure
+80% / 90% / 100% / 100%, long bodies clamp, the toggle flips between "Read more" and
+"Show less", the 15 paragraphs of the first review survive intact, and the page
+throws no errors. All 13 pass.
