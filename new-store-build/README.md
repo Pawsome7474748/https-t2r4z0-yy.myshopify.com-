@@ -403,3 +403,35 @@ colour and animation duration.
 fixture had no variant-swap, so it asserted the old radio-parsing behaviour. Its
 coverage now lives in the integration harness, which checks rendered visibility
 with the real stylesheet loaded.
+
+## Meta Pixel
+
+Pixel `1971673717554164` installed in `layout/theme.liquid`, immediately before
+`</head>` as Meta's instructions specify. Verified byte-exact on upload
+(`468ee2e82131fc03dfb757a145498411`, 22,665 b); the diff is a single hunk — nothing
+else in the layout moved.
+
+Fires `PageView` on every **storefront** page, with the `<noscript>` fallback pixel.
+
+### What this does not cover
+
+Shopify's checkout is not rendered by the theme, so a pixel in `theme.liquid`
+never fires there. That means **no `InitiateCheckout`, `AddPaymentInfo` or
+`Purchase` events** — and `Purchase` is the one Meta needs to attribute revenue and
+optimise campaigns for conversions. Ad delivery optimised on `PageView` alone is
+close to useless.
+
+It also runs outside Shopify's customer-privacy API, so it ignores consent state.
+The store ships to the UK and EU, where that matters.
+
+The fix is Shopify's own sandbox rather than the theme:
+
+**Settings → Customer events → Add custom pixel.** Paste the same `fbq` snippet
+there and add the event mappings. That sandbox runs on every page *including
+checkout and the thank-you page*, is wired to the consent banner automatically, and
+survives a theme change — the theme copy does not.
+
+If both are installed at once, every storefront event is counted twice. Remove the
+`theme.liquid` block when the custom pixel goes in — the marker comments
+`<!-- Meta Pixel Code -->` / `<!-- End Meta Pixel Code -->` delimit exactly what to
+delete.
