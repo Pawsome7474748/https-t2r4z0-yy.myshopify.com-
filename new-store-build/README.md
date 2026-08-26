@@ -636,3 +636,54 @@ the original bundle bug through. Their coverage is in `test-integration.js`.
   add them.
 - **Support hours** say "Monday to Friday" with no times or timezone.
 - **Verified Buyer** — see above.
+
+## Presell pages
+
+`sections/pp-presell.liquid` (`54f54588d170545d47f90b4286a5f067`, 4,055 b) and
+`assets/pp-presell.css` (`2978089ed339edbdab2edbdb330e812a`, 3,668 b) are the reusable
+advertorial format: disclosure label, headline, standfirst, byline, hero image, the
+article body, then a product card with the link. One section per page — drop it on a
+new page template, paste the body, pick the product.
+
+660px measure, 17.5px body type, the opening line set larger to carry the hook, `h2`
+subheads to break up the run of one-line paragraphs, and a pull-quote style for the
+lines worth landing on.
+
+### Page 1
+
+| File | Deployed MD5 | Size |
+| --- | --- | --- |
+| `templates/page.presell-01.json` | `97c2c6dec7a431ca26e356bdea6dbeea` | 11,019 b |
+
+Page created at `/pages/eyeliner-that-stays` (Page id `704861208649`), published.
+Source copy kept in `copy/presell-01-body.html` — 160 paragraphs, 8 subheads, 2 pull
+quotes, every line of the original preserved.
+
+The closing CTA is a plain `<a>` to
+`/products/waterproof-matte-eyeliner-brow-pencil`, and it is the last element on the
+page, below every paragraph — which is what the brief asked for.
+
+### The disclosure label
+
+Every page carries an **Advertorial** pill above the headline, and the byline reads
+"A Ligne customer story" rather than naming a person. The copy is written in the
+first person and sits on the seller's own domain, so it needs to be identifiable as
+marketing — that is the FTC endorsement guides and the UK CAP code. Both are section
+settings, so a real author's name can replace the byline whenever there is one.
+
+### Testing
+
+`test/test-presell.js` — 19 assertions in Chromium: paragraph count matches the
+source with no empty ones, subheads and pull quotes render, the opening line is set
+larger, the CTA is the last element and sits below every paragraph, the button is a
+real link to the product page, the reading measure stays in the readable band, no
+sideways scroll at 1280 / 900 / 700 / 375px, and the CTA stacks on mobile.
+
+### Pages 2 and 3 are blocked
+
+Only one of the three drafts sent is still recoverable. The other two were in the
+part of the conversation that was compacted away, and this project's transcript on
+disk begins at the compaction summary, so the full text of
+"It took me eleven eyeliners…" and "You know that moment when someone sends you a
+photo from the night before…" is gone. They need to be re-sent; the format above then
+takes about a minute each.

@@ -1,0 +1,86 @@
+{{ 'pp-presell.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign p = section.settings.product
+-%}
+<article class="pp-ps">
+  {%- if section.settings.label != blank -%}
+    <p class="pp-ps__label">{{ section.settings.label }}</p>
+  {%- endif -%}
+
+  <header class="pp-ps__head">
+    <h1 class="pp-ps__title">{{ section.settings.headline }}</h1>
+    {%- if section.settings.standfirst != blank -%}
+      <p class="pp-ps__standfirst">{{ section.settings.standfirst }}</p>
+    {%- endif -%}
+    {%- if section.settings.byline != blank -%}
+      <p class="pp-ps__byline">
+        <span>{{ section.settings.byline }}</span>
+        {%- if section.settings.dateline != blank -%}
+          <span class="pp-ps__dot" aria-hidden="true">&middot;</span>
+          <span>{{ section.settings.dateline }}</span>
+        {%- endif -%}
+      </p>
+    {%- endif -%}
+  </header>
+
+  {%- if section.settings.hero != blank -%}
+    <img class="pp-ps__hero"
+         src="{{ section.settings.hero | image_url: width: 1400 }}"
+         alt="{{ section.settings.hero_alt | escape }}" loading="eager"
+         width="1400" height="933">
+  {%- endif -%}
+
+  <div class="pp-ps__body">{{ section.settings.body }}</div>
+
+  {%- if p != blank -%}
+    <aside class="pp-ps__cta" id="{{ section.settings.cta_anchor | escape }}">
+      {%- if p.featured_image != blank -%}
+        <img class="pp-ps__cta-img" src="{{ p.featured_image | image_url: width: 600 }}"
+             alt="{{ p.title | escape }}" loading="lazy" width="300" height="300">
+      {%- endif -%}
+      <div class="pp-ps__cta-text">
+        {%- if section.settings.cta_eyebrow != blank -%}
+          <p class="pp-ps__cta-eyebrow">{{ section.settings.cta_eyebrow }}</p>
+        {%- endif -%}
+        <h2 class="pp-ps__cta-title">{{ section.settings.cta_heading }}</h2>
+        <div class="pp-ps__cta-body">{{ section.settings.cta_body }}</div>
+        <p class="pp-ps__cta-price">
+          <strong>{{ p.price | money }}</strong>
+          {%- if p.compare_at_price > p.price -%}
+            <s>{{ p.compare_at_price | money }}</s>
+          {%- endif -%}
+        </p>
+        <a class="pp-ps__btn" href="{{ p.url }}">{{ section.settings.cta_button }}</a>
+        {%- if section.settings.cta_note != blank -%}
+          <p class="pp-ps__cta-note">{{ section.settings.cta_note }}</p>
+        {%- endif -%}
+      </div>
+    </aside>
+  {%- endif -%}
+</article>
+
+{% schema %}
+{
+  "name": "PP - Presell article",
+  "tag": "section",
+  "class": "pp-presell-section",
+  "settings": [
+    { "type": "text", "id": "label", "label": "Disclosure label", "default": "Advertorial" },
+    { "type": "text", "id": "headline", "label": "Headline", "default": "Headline" },
+    { "type": "text", "id": "standfirst", "label": "Standfirst", "default": "One line that sets up the story." },
+    { "type": "text", "id": "byline", "label": "Byline", "default": "By the Ligne team" },
+    { "type": "text", "id": "dateline", "label": "Dateline", "default": "Ligne" },
+    { "type": "image_picker", "id": "hero", "label": "Hero image" },
+    { "type": "text", "id": "hero_alt", "label": "Hero image alt text", "default": "Ligne eyeliner pencil" },
+    { "type": "liquid", "id": "body", "label": "Article body (HTML)" },
+    { "type": "product", "id": "product", "label": "Product for the closing link" },
+    { "type": "text", "id": "cta_anchor", "label": "CTA anchor id", "default": "get-it" },
+    { "type": "text", "id": "cta_eyebrow", "label": "CTA eyebrow", "default": "THE ONE I USE" },
+    { "type": "text", "id": "cta_heading", "label": "CTA heading", "default": "Waterproof Matte Eyeliner & Brow Pencil" },
+    { "type": "richtext", "id": "cta_body", "label": "CTA body", "default": "<p>See the shades and the current offer on the product page.</p>" },
+    { "type": "text", "id": "cta_button", "label": "CTA button", "default": "See the shades and price" },
+    { "type": "text", "id": "cta_note", "label": "CTA note", "default": "30-day money-back guarantee" }
+  ],
+  "presets": [{ "name": "PP - Presell article" }]
+}
+{% endschema %}
