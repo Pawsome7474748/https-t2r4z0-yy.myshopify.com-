@@ -184,6 +184,46 @@
     });
   }
 
+  /* ---- home page buy box ----
+     featured-product renders a single hero image (product-media-gallery is
+     called with limit:1), so the thumbnails are ours: build them from the
+     variant map's images, then move the strip into the media column. */
+  function wireHeroThumbs(){
+    var strip=document.getElementById('pp-thumbs-'+SID); if(!strip) return;
+    var media=$('.product__media-wrapper');
+    if(media) media.appendChild(strip);
+    strip.hidden=false;
+    var hero=media?$('.product__media img',media):null;
+    if(!hero){ strip.hidden=true; return; }
+    var thumbs=$$('.pp-thumb',strip);
+    function select(btn){
+      thumbs.forEach(function(t){
+        var on=t===btn;
+        t.classList.toggle('is-active',on);
+        t.setAttribute('aria-current',on?'true':'false');
+      });
+    }
+    thumbs.forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var full=btn.dataset.full; if(!full) return;
+        hero.removeAttribute('srcset');   /* or the browser keeps the old candidate */
+        hero.removeAttribute('sizes');
+        hero.src=full;
+        select(btn);
+      });
+    });
+    if(thumbs[0]) select(thumbs[0]);
+  }
+
+  /* the home page has no Dawn inventory block, so drive our own line */
+  function setLowStock(){
+    var el=document.getElementById('pp-lowstock-'+SID); if(!el) return;
+    var v=current(); var q=v?v.st:undefined;
+    if(typeof q!=='number'||q<=0||q>STOCK_SHOW_AT){el.hidden=true;return;}
+    el.hidden=false;
+    $('.pp-lowstock__txt',el).textContent='Almost out of stock';
+  }
+
   function setStock(){
     var el=document.getElementById('pp-stock-'+SID); if(!el) return;
     var v=current(); var q=v?v.st:undefined;
@@ -208,10 +248,11 @@
     })(el);
   }
 
-  function update(){ syncCards(); syncMix(); setStock(); reword(); }
+  function update(){ syncCards(); syncMix(); setStock(); setLowStock(); reword(); }
 
   function init(){
-    setDelivery(); hideNativeOptions(); wire(); wireUgc(); wireFlips(); wireReviews(); update();
+    setDelivery(); hideNativeOptions(); wire(); wireUgc(); wireFlips(); wireReviews();
+    wireHeroThumbs(); update();
     var ii=idInput();
     if(ii) ii.addEventListener('change',update);
     var price=document.getElementById('price-'+SID);

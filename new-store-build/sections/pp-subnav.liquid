@@ -1,0 +1,33 @@
+{{ 'pp-support.css' | asset_url | stylesheet_tag }}
+<nav class="pp-sub" aria-label="{{ section.settings.aria | escape }}">
+  <ul class="pp-sub__list" role="list">
+    {%- for block in section.blocks -%}
+      <li {{ block.shopify_attributes }}>
+        <a class="pp-sub__pill" href="{{ block.settings.target }}">{{ block.settings.label }}</a>
+      </li>
+    {%- endfor -%}
+  </ul>
+</nav>
+
+{% schema %}
+{
+  "name": "PP - Anchor nav",
+  "tag": "section",
+  "class": "pp-subnav-section",
+  "max_blocks": 10,
+  "settings": [
+    { "type": "text", "id": "aria", "label": "Screen reader label", "default": "Support sections" }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "Link",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label", "default": "Section" },
+        { "type": "text", "id": "target", "label": "Anchor or URL", "default": "#section" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "PP - Anchor nav", "blocks": [{ "type": "link" }] }]
+}
+{% endschema %}

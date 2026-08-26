@@ -7,6 +7,80 @@
         "padding_bottom": 28
       }
     },
+    "pp_subnav": {
+      "type": "pp-subnav",
+      "blocks": {
+        "nav-0": {
+          "type": "link",
+          "settings": {
+            "label": "Our Story",
+            "target": "#shopify-section-pp_image_with_text_Mwp9Hi"
+          }
+        },
+        "nav-1": {
+          "type": "link",
+          "settings": {
+            "label": "Track Order",
+            "target": "#track-order"
+          }
+        },
+        "nav-2": {
+          "type": "link",
+          "settings": {
+            "label": "Contact Us",
+            "target": "#contact-us"
+          }
+        },
+        "nav-3": {
+          "type": "link",
+          "settings": {
+            "label": "Orders & Account",
+            "target": "#orders-account"
+          }
+        },
+        "nav-4": {
+          "type": "link",
+          "settings": {
+            "label": "Shipping",
+            "target": "#shipping"
+          }
+        },
+        "nav-5": {
+          "type": "link",
+          "settings": {
+            "label": "Product & Safety",
+            "target": "#product-safety"
+          }
+        },
+        "nav-6": {
+          "type": "link",
+          "settings": {
+            "label": "Ingredients",
+            "target": "#ingredients"
+          }
+        },
+        "nav-7": {
+          "type": "link",
+          "settings": {
+            "label": "Returns",
+            "target": "#returns"
+          }
+        }
+      },
+      "block_order": [
+        "nav-0",
+        "nav-1",
+        "nav-2",
+        "nav-3",
+        "nav-4",
+        "nav-5",
+        "nav-6",
+        "nav-7"
+      ],
+      "settings": {
+        "aria": "Jump to a section"
+      }
+    },
     "pp_image_with_text_Mwp9Hi": {
       "type": "pp-image-with-text",
       "blocks": {
@@ -34,7 +108,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop Now 💄",
-            "button_link": "/collections/all",
+            "button_link": "/products/waterproof-matte-eyeliner-brow-pencil",
             "button_link_newtab": false,
             "button_text_color": "#FFFFFF",
             "button_background_color": "#5e2a3b",
@@ -153,12 +227,295 @@
         "margin_top": 0,
         "margin_bottom": 0
       }
+    },
+    "pp_track": {
+      "type": "pp-track",
+      "settings": {
+        "anchor": "track-order",
+        "eyebrow": "TRACK YOUR ORDER",
+        "heading": "Waiting on your Ligne order?",
+        "sub": "Every parcel is tracked. Here is how to find yours.",
+        "card_title": "Where is my tracking number?",
+        "card_body": "<p>We email your tracking number the moment the parcel leaves us &mdash; check the inbox you used at checkout, and the spam folder while you are there.</p><p>Orders are packed within 1&ndash;3 business days, so if you ordered today the email is on its way, not late.</p><p>Already have an account? Every order and its tracking link is listed there.</p>",
+        "button_label": "View my orders"
+      }
+    },
+    "pp_contact": {
+      "type": "pp-contact",
+      "settings": {
+        "anchor": "contact-us",
+        "eyebrow": "WE ARE HERE TO HELP",
+        "heading": "Reach out to our team",
+        "sub": "Shade advice, order questions, returns &mdash; ask us anything.",
+        "form_title": "Send us a message",
+        "submit_label": "Send message",
+        "success": "Thanks. Your message is with us and we will reply to the email address you gave.",
+        "email_title": "Email support",
+        "email_body": "<p>Prefer your own inbox? Write to us directly and include your order number if you have one.</p>",
+        "hours_title": "Support hours",
+        "hours_body": "<p>Monday to Friday. Messages sent at the weekend are answered on the next working day.</p>"
+      }
+    },
+    "faq_orders": {
+      "type": "pp-faqgroup",
+      "blocks": {
+        "orders-account-q0": {
+          "type": "qa",
+          "settings": {
+            "q": "Do I need an account to order?",
+            "a": "<p>No. You can check out as a guest. An account just keeps your orders and tracking links in one place for next time.</p>"
+          }
+        },
+        "orders-account-q1": {
+          "type": "qa",
+          "settings": {
+            "q": "I did not get an order confirmation email &mdash; what now?",
+            "a": "<p>Check your spam folder first, since order emails often land there. If it is not there, the address may have a typo. Message us with your name and we will find the order and resend it.</p>"
+          }
+        },
+        "orders-account-q2": {
+          "type": "qa",
+          "settings": {
+            "q": "Can I change my shade or address after ordering?",
+            "a": "<p>If the parcel has not been packed yet, yes. Message us as soon as you can with your order number and what needs changing. Once it has shipped we cannot redirect it.</p>"
+          }
+        },
+        "orders-account-q3": {
+          "type": "qa",
+          "settings": {
+            "q": "Can I cancel my order?",
+            "a": "<p>If it has not shipped, we will cancel and refund it in full. If it is already on its way, use the 30-day return instead.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "orders-account-q0",
+        "orders-account-q1",
+        "orders-account-q2",
+        "orders-account-q3"
+      ],
+      "settings": {
+        "anchor": "orders-account",
+        "eyebrow": "FAQS",
+        "heading": "Orders & Account",
+        "tint": false,
+        "dark": false
+      }
+    },
+    "faq_shipping": {
+      "type": "pp-faqgroup",
+      "blocks": {
+        "shipping-q0": {
+          "type": "qa",
+          "settings": {
+            "q": "When will my order ship?",
+            "a": "<p>We pack orders within 1&ndash;3 business days. You will get a tracking email as soon as it leaves us.</p>"
+          }
+        },
+        "shipping-q1": {
+          "type": "qa",
+          "settings": {
+            "q": "How long does delivery take?",
+            "a": "<p>Once shipped:</p><ul><li>USA: 3&ndash;7 business days</li><li>UK: 7&ndash;18 business days</li><li>Australia: 7&ndash;18 business days</li><li>Canada: 7&ndash;18 business days</li><li>Europe: 7&ndash;18 business days</li><li>Rest of world: 14&ndash;20 business days</li></ul><p>These are business days and do not include the 1&ndash;3 days we take to pack.</p>"
+          }
+        },
+        "shipping-q2": {
+          "type": "qa",
+          "settings": {
+            "q": "Do you ship worldwide?",
+            "a": "<p>Yes. Shipping is insured on every order, wherever it is going.</p>"
+          }
+        },
+        "shipping-q3": {
+          "type": "qa",
+          "settings": {
+            "q": "My tracking has not moved for a few days &mdash; is that normal?",
+            "a": "<p>It happens, particularly on international routes where a parcel can sit between scans. If there has been no movement for more than seven days, message us and we will chase it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "shipping-q0",
+        "shipping-q1",
+        "shipping-q2",
+        "shipping-q3"
+      ],
+      "settings": {
+        "anchor": "shipping",
+        "eyebrow": "FAQS",
+        "heading": "Order & Shipping",
+        "tint": true,
+        "dark": false
+      }
+    },
+    "faq_product": {
+      "type": "pp-faqgroup",
+      "blocks": {
+        "product-safety-q0": {
+          "type": "qa",
+          "settings": {
+            "q": "Is it really waterproof?",
+            "a": "<p>Yes. Once the formula sets it resists water, sweat and humidity, so it holds through workouts, hot weather and teary moments without running.</p>"
+          }
+        },
+        "product-safety-q1": {
+          "type": "qa",
+          "settings": {
+            "q": "How long does it last on the eye?",
+            "a": "<p>It is formulated for up to 24-hour wear. In practice that means a line you put on in the morning still reads clean at the end of a long day.</p>"
+          }
+        },
+        "product-safety-q2": {
+          "type": "qa",
+          "settings": {
+            "q": "Can I use it on my brows as well as my eyes?",
+            "a": "<p>That is what the fine tip is for. Long strokes along the lash line for liner, short feathered strokes through the brow to fill sparse areas and shape the arch.</p>"
+          }
+        },
+        "product-safety-q3": {
+          "type": "qa",
+          "settings": {
+            "q": "Will it smudge or transfer onto my lids?",
+            "a": "<p>The matte formula sets within seconds. Give it a moment to dry before blinking hard or layering anything over the top.</p>"
+          }
+        },
+        "product-safety-q4": {
+          "type": "qa",
+          "settings": {
+            "q": "I have sensitive eyes or wear contact lenses &mdash; can I use it?",
+            "a": "<p>Everyone reacts differently, so patch test on the inside of your wrist first and stop using it if your eyes feel irritated. If you wear lenses and are unsure, check with your optician before use. We are not able to give medical advice.</p>"
+          }
+        },
+        "product-safety-q5": {
+          "type": "qa",
+          "settings": {
+            "q": "How do I take it off?",
+            "a": "<p>Because it is waterproof, water alone will not shift it. Use an oil-based or bi-phase remover on a cotton pad, hold it against the lash line for a few seconds, then wipe gently rather than rubbing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "product-safety-q0",
+        "product-safety-q1",
+        "product-safety-q2",
+        "product-safety-q3",
+        "product-safety-q4",
+        "product-safety-q5"
+      ],
+      "settings": {
+        "anchor": "product-safety",
+        "eyebrow": "FAQS",
+        "heading": "Product & Safety",
+        "tint": false,
+        "dark": true
+      }
+    },
+    "faq_quality": {
+      "type": "pp-faqgroup",
+      "blocks": {
+        "ingredients-q0": {
+          "type": "qa",
+          "settings": {
+            "q": "Where can I find the full ingredient list?",
+            "a": "<p>It is printed on the outer carton of every pencil. If you want to read it before you order &mdash; because of a known sensitivity, for example &mdash; message us and we will send it over.</p>"
+          }
+        },
+        "ingredients-q1": {
+          "type": "qa",
+          "settings": {
+            "q": "How should I store it?",
+            "a": "<p>Somewhere cool and dry, with the cap on. Heat softens the formula and makes the tip crumble when you sharpen it.</p>"
+          }
+        },
+        "ingredients-q2": {
+          "type": "qa",
+          "settings": {
+            "q": "How long is it good for after opening?",
+            "a": "<p>Look for the small open-jar symbol on the carton: the number inside it is how many months the pencil stays good once opened. As with any eye product, stop using it if the texture or smell changes.</p>"
+          }
+        },
+        "ingredients-q3": {
+          "type": "qa",
+          "settings": {
+            "q": "How do I keep the tip sharp?",
+            "a": "<p>Sharpen little and often with a standard cosmetic sharpener, and let the pencil come to room temperature first so the formula does not drag.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "ingredients-q0",
+        "ingredients-q1",
+        "ingredients-q2",
+        "ingredients-q3"
+      ],
+      "settings": {
+        "anchor": "ingredients",
+        "eyebrow": "FAQS",
+        "heading": "Quality & Ingredients",
+        "tint": false,
+        "dark": false,
+        "image": "shopify://shop_images/S223281b50c674761bab3f8f40605f64fQ.webp"
+      }
+    },
+    "faq_returns": {
+      "type": "pp-faqgroup",
+      "blocks": {
+        "returns-q0": {
+          "type": "qa",
+          "settings": {
+            "q": "What is your returns policy?",
+            "a": "<p>You have 30 days from purchase to return the pencil for a full refund. If the shade is not right or the wear is not what you expected, that is reason enough.</p>"
+          }
+        },
+        "returns-q1": {
+          "type": "qa",
+          "settings": {
+            "q": "How do I start a return?",
+            "a": "<p>Message us with your order number and we will send you the return details. Returns are free.</p>"
+          }
+        },
+        "returns-q2": {
+          "type": "qa",
+          "settings": {
+            "q": "When will I get my refund?",
+            "a": "<p>We refund to the original payment method as soon as the return reaches us. Your bank usually takes a few more days to show it.</p>"
+          }
+        },
+        "returns-q3": {
+          "type": "qa",
+          "settings": {
+            "q": "Why is the bundle cheaper per pencil?",
+            "a": "<p>Two pencils save you 11% and three save you 24%, because packing and shipping one parcel costs us less than packing three. With the mix-and-match option you can put a different shade in each slot, so a bundle is not three of the same thing.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "returns-q0",
+        "returns-q1",
+        "returns-q2",
+        "returns-q3"
+      ],
+      "settings": {
+        "anchor": "returns",
+        "eyebrow": "FAQS",
+        "heading": "Returns & Pricing",
+        "tint": true,
+        "dark": false
+      }
     }
   },
   "order": [
     "main",
+    "pp_subnav",
     "pp_image_with_text_Mwp9Hi",
     "pp_image_with_text_ttLHQy",
-    "pp_image_with_text_xd44KG"
+    "pp_image_with_text_xd44KG",
+    "pp_track",
+    "pp_contact",
+    "faq_orders",
+    "faq_shipping",
+    "faq_product",
+    "faq_quality",
+    "faq_returns"
   ]
 }

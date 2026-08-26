@@ -1,235 +1,464 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "main": {
+      "type": "featured-product",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "pp_ui": {
+          "type": "custom_liquid",
           "settings": {
-            "heading": "Eyes defined from first coffee to last call.",
-            "heading_size": "h0"
+            "custom_liquid": "{{ 'pp-ligne.css' | asset_url | stylesheet_tag }}\n<div id=\"pp-ligne\" data-section=\"{{ section.id }}\" hidden></div>\n<script type=\"application/json\" id=\"pp-variants-{{ section.id }}\">\n{%- capture pp_vmap -%}\n{%- for v in product.variants -%}\n{%- assign q = 1 -%}\n{%- if v.option2 contains '3' -%}{%- assign q = 3 -%}{%- elsif v.option2 contains '2' -%}{%- assign q = 2 -%}{%- endif -%}\n\"{{ v.id }}\":{\"q\":{{ q }},\"s\":{{ v.option1 | json }},\"st\":{{ v.inventory_quantity | default: 0 }}}{%- unless forloop.last -%},{%- endunless -%}\n{%- endfor -%}\n{%- endcapture -%}\n{ {{- pp_vmap -}} }\n</script>\n<script src=\"{{ 'pp-ligne.js' | asset_url }}\" defer></script>"
           }
         },
-        "buttons_pVK3W7": {
-          "type": "buttons",
+        "pp_rating": {
+          "type": "custom_liquid",
           "settings": {
-            "button_label_1": "Shop The Liner 💄",
-            "button_link_1": "shopify://collections/all",
-            "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false,
+            "custom_liquid": "{%- assign r = product.metafields.reviews.rating.value -%}\n{%- if r != blank and r.rating > 0 -%}\n  {%- assign rounded = r.rating | round -%}\n  <div class=\"pp-rating\">\n    <span class=\"pp-rating__stars\" aria-hidden=\"true\">\n      {%- for i in (1..5) -%}{%- if i <= rounded -%}★{%- else -%}☆{%- endif -%}{%- endfor -%}\n    </span>\n    <span>Rated {{ r.rating }} out of {{ r.scale_max | round }}\n      {%- assign c = product.metafields.reviews.rating_count -%}\n      {%- if c > 0 %} · {{ c }} review{% if c != 1 %}s{% endif %}{% endif -%}\n    </span>\n  </div>\n{%- endif -%}"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h1"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {}
+        },
+        "pp_lede": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"pp-lede\">A high-pigment matte liner that glides on smooth, sets in seconds,\nand stays put through heat, humidity and tears &mdash; in seven wearable shades.</p>"
+          }
+        },
+        "pp_ticks": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<ul class=\"pp-ticks\" role=\"list\">\n  <li><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Waterproof, smudge-proof wear</span></li>\n  <li><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Rich matte payoff in one stroke</span></li>\n  <li><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Fine tip for liner or brows</span></li>\n  <li><svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>Save 24% on the 3-pencil pack</span></li>\n</ul>"
+          }
+        },
+        "pp_thumbs": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"pp-thumbs\" id=\"pp-thumbs-{{ section.id }}\" hidden>\n  {%- for m in product.media limit: 8 -%}\n    {%- if m.media_type == 'image' -%}\n      <button type=\"button\" class=\"pp-thumb\" data-full=\"{{ m | image_url: width: 1400 }}\"\n              aria-label=\"Show image {{ forloop.index }}\" aria-current=\"false\">\n        <img src=\"{{ m | image_url: width: 180 }}\" alt=\"\" width=\"68\" height=\"68\" loading=\"lazy\">\n      </button>\n    {%- endif -%}\n  {%- endfor -%}\n</div>"
+          }
+        },
+        "pp_ugc": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"pp-ugc\" id=\"pp-ugc-{{ section.id }}\">\n  <div class=\"pp-ugc__head\">\n    <span class=\"pp-ugc__eyebrow\">as seen on TikTok</span>\n    <span class=\"pp-ugc__nav\">\n      <button type=\"button\" class=\"pp-ugc__arrow\" data-dir=\"-1\" aria-label=\"Previous videos\">&#8249;</button>\n      <button type=\"button\" class=\"pp-ugc__arrow\" data-dir=\"1\" aria-label=\"More videos\">&#8250;</button>\n    </span>\n  </div>\n  <ul class=\"pp-ugc__track\" role=\"list\">\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/2d8a9b7490c749ebba15598beaed95fa.thumbnail.0000000000.jpg?v=1787495913\"\n        src=\"https://cdn.shopify.com/videos/c/vp/2d8a9b7490c749ebba15598beaed95fa/2d8a9b7490c749ebba15598beaed95fa.HD-720p-1.6Mbps-92385254.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/530ccd41f6de4873900c1d2cfa0ce8bd.thumbnail.0000000000.jpg?v=1787495908\"\n        src=\"https://cdn.shopify.com/videos/c/vp/530ccd41f6de4873900c1d2cfa0ce8bd/530ccd41f6de4873900c1d2cfa0ce8bd.HD-720p-1.6Mbps-92385256.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/77550f0c094e4a3d8e1b7a4580b01102.thumbnail.0000000000.jpg?v=1787495924\"\n        src=\"https://cdn.shopify.com/videos/c/vp/77550f0c094e4a3d8e1b7a4580b01102/77550f0c094e4a3d8e1b7a4580b01102.HD-720p-1.6Mbps-92385257.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n    <li class=\"pp-ugc__item\"><button type=\"button\" class=\"pp-ugc__card\" aria-label=\"Play video\">\n      <video class=\"pp-ugc__video\" preload=\"none\" playsinline loop\n        poster=\"https://cdn.shopify.com/s/files/1/0982/6038/5865/files/preview_images/c60e7f893053483792cd8e0c3fa526c5.thumbnail.0000000000.jpg?v=1787495920\"\n        src=\"https://cdn.shopify.com/videos/c/vp/c60e7f893053483792cd8e0c3fa526c5/c60e7f893053483792cd8e0c3fa526c5.HD-720p-1.6Mbps-92385259.mp4\"></video>\n      <span class=\"pp-ugc__play\" aria-hidden=\"true\"></span></button></li>\n  </ul>\n</div>"
+          }
+        },
+        "pp_stock_meter": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"pp-stock\" id=\"pp-stock-{{ section.id }}\" role=\"status\" hidden>\n  <div class=\"pp-stock__bar\"><span class=\"pp-stock__fill\" style=\"width:0%\"></span></div>\n  <span class=\"pp-stock__label\"></span>\n</div>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "swatch_shape": "circle"
+          }
+        },
+        "pp_bundles": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign pack_pos = 0\n  assign shade_pos = 0\n  for o in product.options_with_values\n    if o.name == 'Pack'\n      assign pack_pos = o.position\n    endif\n    if o.name == 'Shade'\n      assign shade_pos = o.position\n      assign shade_opt = o\n    endif\n  endfor\n-%}\n{%- if pack_pos > 0 -%}\n<div class=\"pp-bundles\" id=\"pp-bundles-{{ section.id }}\" data-pack-name=\"Pack-{{ pack_pos }}\">\n  {%- assign seen = '|' -%}\n  {%- for v in product.variants -%}\n    {%- unless seen contains v.option2 -%}\n      {%- assign seen = seen | append: v.option2 | append: '|' -%}\n      {%- if v.option2 contains '3' -%}{%- assign qty = 3 -%}\n      {%- elsif v.option2 contains '2' -%}{%- assign qty = 2 -%}\n      {%- else -%}{%- assign qty = 1 -%}{%- endif -%}\n      <button type=\"button\" class=\"pp-bundle\" data-value=\"{{ v.option2 | escape }}\" data-qty=\"{{ qty }}\" aria-pressed=\"false\">\n        {%- if qty == 2 -%}<span class=\"pp-bundle__ribbon\">Save 11%</span>\n        {%- elsif qty == 3 -%}<span class=\"pp-bundle__ribbon pp-bundle__ribbon--best\">Best Value</span>\n        {%- endif -%}\n        <span class=\"pp-bundle__row\">\n          <span class=\"pp-bundle__qty\" aria-hidden=\"true\">{{ qty }}<small>×</small></span>\n          <span class=\"pp-bundle__text\">\n            <span class=\"pp-bundle__title\">\n              {%- if qty == 1 -%}Buy One{%- elsif qty == 2 -%}Buy Two{%- else -%}Buy Three{%- endif -%}\n            </span>\n            <span class=\"pp-bundle__sub\">\n              {%- if v.compare_at_price > v.price -%}\n                You save {{ v.compare_at_price | minus: v.price | money }}\n              {%- else -%}\n                Single pencil\n              {%- endif -%}\n            </span>\n          </span>\n          <span class=\"pp-bundle__price\">\n            <span class=\"pp-bundle__now\">{{ v.price | money }}</span>\n            {%- if v.compare_at_price > v.price -%}\n              <s class=\"pp-bundle__was\">{{ v.compare_at_price | money }}</s>\n            {%- endif -%}\n          </span>\n        </span>\n        {%- if qty > 1 -%}\n          <span class=\"pp-bundle__note\">\n            <svg width=\"14\" height=\"14\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n            Mix any shades · {{ v.price | divided_by: qty | money }} per pencil\n          </span>\n        {%- endif -%}\n      </button>\n    {%- endunless -%}\n  {%- endfor -%}\n\n  {%- if shade_pos > 0 -%}\n  <div class=\"pp-mix\" id=\"pp-mix-{{ section.id }}\" data-shade-name=\"Shade-{{ shade_pos }}\">\n    <p class=\"pp-mix__head\">Choose your shades <span>— mix and match, one per pencil</span></p>\n    {%- for i in (1..3) -%}\n      <label class=\"pp-mix__row\" data-slot=\"{{ i }}\" hidden>\n        <span class=\"pp-mix__label\">Pencil {{ i }}</span>\n        <select class=\"pp-mix__select\" data-slot=\"{{ i }}\" aria-label=\"Shade for pencil {{ i }}\">\n          {%- for val in shade_opt.values -%}\n            <option value=\"{{ val | escape }}\">{{ val }}</option>\n          {%- endfor -%}\n        </select>\n      </label>\n    {%- endfor -%}\n    <input type=\"hidden\" data-prop=\"2\" name=\"properties[Pencil 2 shade]\" form=\"product-form-{{ section.id }}\" disabled>\n    <input type=\"hidden\" data-prop=\"3\" name=\"properties[Pencil 3 shade]\" form=\"product-form-{{ section.id }}\" disabled>\n  </div>\n  {%- endif -%}\n\n  <p class=\"pp-delivery\">\n    <span class=\"pp-delivery__dot\" aria-hidden=\"true\"></span>\n    Order today for delivery by <strong data-pp-deliver-by>—</strong>\n  </p>\n</div>\n{%- endif -%}"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false,
+            "button_text": "Add To Cart 💄",
+            "sold_out_text": "Sold Out",
+            "unavailable_text": "Unavailable",
+            "button_color": "#5e2a3b",
+            "text_color": "#ffffff",
             "button_rounded_corners": "medium",
-            "button_text_color": "#FFFFFF",
-            "button_background_color": "#5e2a3b",
-            "button_padding_vertical": 20
+            "button_padding_vertical": 20,
+            "button_padding_horizontal": 15
+          }
+        },
+        "pp_lowstock": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p class=\"pp-lowstock\" id=\"pp-lowstock-{{ section.id }}\" role=\"status\" hidden>\n  <span class=\"pp-lowstock__dot\" aria-hidden=\"true\"></span>\n  <span class=\"pp-lowstock__txt\"></span>\n</p>"
+          }
+        },
+        "pp_pay": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- if shop.enabled_payment_types.size > 0 -%}\n<div class=\"pp-pay\">\n  <span class=\"pp-pay__label\">Secure checkout with</span>\n  <ul class=\"pp-pay__list\" role=\"list\">\n    {%- for type in shop.enabled_payment_types -%}\n      <li>{{ type | payment_type_svg_tag: class: 'pp-pay__icon' }}</li>\n    {%- endfor -%}\n  </ul>\n</div>\n{%- endif -%}"
+          }
+        },
+        "pp_trust": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<ul class=\"pp-trust\" role=\"list\">\n  <li><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M1 3h13v13H1zM14 8h4l3 3v5h-7z\"/><circle cx=\"5.5\" cy=\"18.5\" r=\"2\"/><circle cx=\"17.5\" cy=\"18.5\" r=\"2\"/></svg><span>Worldwide shipping</span></li>\n  <li><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l8.8 8.8 8.8-8.8a5.5 5.5 0 0 0 0-7.8z\"/></svg><span>30-day money-back guarantee</span></li>\n  <li><svg width=\"26\" height=\"26\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"m21 16-9 5-9-5V8l9-5 9 5z\"/><path d=\"M3.3 7 12 12l8.7-5M12 22V12\"/></svg><span>Free returns</span></li>\n</ul>"
+          }
+        },
+        "pp_acc": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"pp-acc\">\n  <details><summary>&#128666; Shipping</summary><div class=\"pp-acc__body\"><p>Insured shipping on every order. We process orders within 1&ndash;3 business days before dispatch. After that, expect:</p><ul><li>USA: 3&ndash;7 business days</li><li>UK: 7&ndash;18 business days</li><li>Australia: 7&ndash;18 business days</li><li>Canada: 7&ndash;18 business days</li><li>Europe: 7&ndash;18 business days</li><li>Rest of world: 14&ndash;20 business days</li></ul></div></details>\n  <details><summary>&#128230; Returns</summary><div class=\"pp-acc__body\"><p>If the shade is not right or the wear is not what you expected, return it within 30 days of purchase for a full refund.</p></div></details>\n  <details><summary>&#127941; Money-back guarantee</summary><div class=\"pp-acc__body\"><p>Try it risk-free for 30 days. Not completely happy? Send it back for a full refund.</p></div></details>\n</div>"
           }
         }
       },
       "block_order": [
-        "heading",
-        "buttons_pVK3W7"
+        "pp_ui",
+        "pp_rating",
+        "title",
+        "price",
+        "pp_lede",
+        "pp_ticks",
+        "pp_thumbs",
+        "pp_ugc",
+        "pp_stock_meter",
+        "variant_picker",
+        "pp_bundles",
+        "quantity_selector",
+        "buy_buttons",
+        "pp_lowstock",
+        "pp_pay",
+        "pp_trust",
+        "pp_acc"
       ],
       "settings": {
-        "image": "shopify://shop_images/Sc588de4247e347bab14fc97c051f299bm.webp",
-        "image_overlay_opacity": 50,
-        "image_height": "medium",
-        "desktop_content_position": "middle-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
-        "image_behavior": "none",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "product": "waterproof-matte-eyeliner-brow-pencil",
+        "color_scheme": "scheme-1",
+        "secondary_background": false,
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "media_position": "left",
+        "image_zoom": "none",
+        "hide_variants": false,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
       }
     },
-    "pp_image_with_text_HNW9yr": {
+    "pp_love": {
+      "type": "pp-love",
+      "settings": {}
+    },
+    "pp_image_with_text_BVEaDq": {
       "type": "pp-image-with-text",
       "blocks": {
-        "heading_XBqRa6": {
+        "heading_aFxCRe": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to Ligne — where a single line does the work.",
+            "heading": "Liner and Brow Definition in a Single Pencil",
             "heading_size": "h1",
             "heading_alignment": "left",
-            "heading_mobilealignment": "center",
+            "heading_mobilealignment": "left",
             "heading_color": "#000000"
           }
         },
-        "text_BnFjzQ": {
+        "text_ifpgzE": {
           "type": "text",
           "settings": {
-            "text": "<p>Ligne is built on one idea: the right line changes a face. We make precise, long-wearing eye products in shades you will actually reach for — matte, waterproof, and easy enough to do in a hurry. Shipped across Australia and worldwide, with 30-day returns.</p>",
-            "text_style": "subtitle",
+            "text": "<p>One pencil, two jobs. The fine matte tip draws a crisp line along the lash for definition, then feathers into short strokes that fill and shape the brow. The formula sets waterproof within seconds and resists smudging, so a morning application still reads clean at the end of the day. Choose from Black and Graphite for a defined look, or Bronze, Brown, Chocolate, Plum and Stone for something softer.</p>",
+            "text_style": "body",
             "text_alignment": "left",
-            "text_mobilealignment": "left",
+            "text_mobilealignment": "center",
             "text_color": "#000000"
           }
         },
-        "button_ewqPQY": {
+        "button_cPWTPH": {
           "type": "button",
           "settings": {
-            "button_label": "View Our Story 💄",
-            "button_link": "/pages/about-us",
-            "button_link_newtab": false,
+            "button_label": "Shop Now 💄",
+            "button_link": "",
+            "button_link_newtab": true,
             "button_text_color": "#ffffff",
             "button_background_color": "#5e2a3b",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "full",
             "button_alignment": "left",
-            "button_mobilealignment": "center",
+            "button_mobilealignment": "left",
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
-            "button_padding_horizontal": 25,
-            "button_subtext": "Find out what we stand for",
+            "button_padding_horizontal": 15,
+            "button_subtext": "100% Money Back Guarantee",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
-            "button_action": "link",
+            "button_action": "scroll",
             "button_action_scroll_element": ""
           }
         }
       },
       "block_order": [
-        "heading_XBqRa6",
-        "text_BnFjzQ",
-        "button_ewqPQY"
+        "heading_aFxCRe",
+        "text_ifpgzE",
+        "button_cPWTPH"
       ],
       "settings": {
-        "image": "shopify://shop_images/Sd7aff7adb6104154b61e81d9123129dci.webp",
+        "image": "shopify://shop_images/S223281b50c674761bab3f8f40605f64fQ.webp",
         "desktop_image_width": "large",
         "image_border_radius": 50,
-        "layout": "image_first",
+        "layout": "text_first",
         "mobile_layout": "image_first",
         "gradient": "",
         "padding_top": 0,
         "padding_bottom": 0,
-        "margin_top": 40,
+        "margin_top": 0,
+        "margin_bottom": 32
+      }
+    },
+    "pp_realbenefits": {
+      "type": "pp-realbenefits",
+      "settings": {}
+    },
+    "pp_reviews_story": {
+      "type": "pp-reviews-story",
+      "blocks": {
+        "rev_jennifer": {
+          "type": "review",
+          "settings": {
+            "name": "Jennifer S",
+            "stars": 4,
+            "body": "<p>I didn't realise how much I had stopped trusting my own face until I started avoiding photos.</p><p>It sounds silly until you've done it yourself.</p><p>I'd get ready, spend ages on my eyes, feel really confident walking out the door, then someone would pull out their phone and I'd immediately think about my eyeliner.</p><p>Not the photo.</p><p>Not how I looked.</p><p>My eyeliner.</p><p>Was it still even? Had the corner smudged? Was there black under my eye?</p><p>Eventually I started checking reflective windows and bathroom mirrors without even thinking about it.</p><p>The first few times I thought I was just being picky.</p><p>Then I realised I wasn't enjoying getting dressed up anymore.</p><p>I was managing my makeup.</p><p>Finding something that stayed put changed that more than I expected.</p><p>Now when someone says “let's take a photo,” my first thought isn't “wait.”</p><p>It's actually just “sure.”</p><p>And I didn't realise how much I'd missed that feeling.</p>",
+            "verified": true,
+            "photo": "shopify://shop_images/hf_20260825_182413_b2f4d546-ae0e-4f75-ab85-ca0b19fa11d9.png"
+          }
+        },
+        "rev_holly": {
+          "type": "review",
+          "settings": {
+            "name": "Holly E",
+            "stars": 4.5,
+            "body": "<p>The most annoying thing about bad eyeliner isn't the smudge.</p><p>It's what the smudge does to your confidence.</p><p>I'd leave the house feeling put together and completely forget about my makeup.</p><p>Then I'd see a photo later and suddenly everything I felt good about was gone.</p><p>I wouldn't even notice the outfit anymore.</p><p>I'd zoom straight into my eyes.</p><p>One side looked heavier.</p><p>The wing had softened.</p><p>There was a little black mark underneath that I somehow hadn't felt happen.</p><p>It made me start deleting photos.</p><p>Not because I hated how I looked.</p><p>Because I hated how unpredictable my makeup had become.</p><p>I eventually realised I wasn't trying to find better eyeliner because I loved makeup.</p><p>I was trying to find it because I wanted to stop thinking about my makeup.</p><p>That difference sounds small.</p><p>It isn't.</p><p>Now I can actually get ready and move on with my day instead of wondering when my eyeliner is going to betray me.</p>",
+            "verified": true,
+            "photo": "shopify://shop_images/hf_20260825_182446_b59b21ce-1e7f-44e7-bd32-685e511572af.png"
+          }
+        },
+        "rev_chloe": {
+          "type": "review",
+          "settings": {
+            "name": "Chloe M",
+            "stars": 5,
+            "body": "<p>I used to carry eyeliner everywhere.</p><p>Not because I was obsessed with makeup.</p><p>Because I didn't trust the eyeliner I had on.</p><p>There was always this little voice in my head saying, “You should probably check.”</p><p>So I'd go to the bathroom.</p><p>Look in the mirror.</p><p>Fix the corner.</p><p>Come back.</p><p>An hour later, I'd do it again.</p><p>I didn't realise how exhausting that was until I stopped doing it.</p><p>The first time I went through a full night without checking my eyes, I actually forgot about them completely.</p><p>I was talking.</p><p>Laughing.</p><p>Taking photos.</p><p>Going outside.</p><p>Just living.</p><p>And then I got home and looked in the mirror.</p><p>My makeup still looked like the makeup I'd put on hours earlier.</p><p>That was the moment I realised the problem wasn't that I was “too high maintenance.”</p><p>I just wanted makeup I could put on and stop managing.</p><p>Honestly, that feels so much better.</p>",
+            "verified": true,
+            "photo": "shopify://shop_images/hf_20260825_182508_b80e3667-2f39-490f-ae63-646e7d1f4419.png"
+          }
+        },
+        "rev_emma": {
+          "type": "review",
+          "settings": {
+            "name": "Emma A",
+            "stars": 5,
+            "body": "<p>I almost stopped doing winged eyeliner altogether.</p><p>Not because I stopped liking it.</p><p>I stopped liking what happened after I finished it.</p><p>I'd spend ten minutes getting both wings symmetrical and then spend the rest of the night protecting them.</p><p>Don't touch your eyes.</p><p>Don't rub them.</p><p>Don't get too hot.</p><p>Check before taking a photo.</p><p>Check after taking a photo.</p><p>It became ridiculous.</p><p>Something that was supposed to make me feel more confident had turned into something I was constantly worrying about.</p><p>Then I found an eyeliner that actually stayed looking the way I wanted for much longer.</p><p>And weirdly, the biggest change wasn't my makeup.</p><p>It was me.</p><p>I stopped thinking about my eyes every five minutes.</p><p>I stopped avoiding close-up photos.</p><p>I stopped carrying a backup pencil.</p><p>I just wore the makeup and went about my night.</p><p>Sometimes the thing you want from a makeup product isn't a more dramatic look.</p><p>It's getting your attention back.</p>",
+            "verified": true,
+            "photo": "shopify://shop_images/hf_20260825_182518_e3631620-fe3f-43ce-93ff-361f062d019c.png"
+          }
+        }
+      },
+      "block_order": [
+        "rev_jennifer",
+        "rev_holly",
+        "rev_chloe",
+        "rev_emma"
+      ],
+      "settings": {
+        "product": "waterproof-matte-eyeliner-brow-pencil",
+        "eyebrow": "Real customers",
+        "heading": "In Their Words",
+        "show_chip": true
+      }
+    },
+    "pp_comparison_table_ttamEN": {
+      "type": "pp-comparison-table",
+      "blocks": {
+        "heading_Wjx9pp": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>The Difference in Every Stroke</strong>",
+            "heading_size": "h1",
+            "heading_alignment": "center",
+            "heading_mobilealignment": "center",
+            "heading_color": "#000000"
+          }
+        },
+        "text_4ad9ba": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A matte waterproof formula with a fine tip that works for both liner and brows, in seven shades — where most pencils give you one finish, one job and a line that fades by lunch.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#000000"
+          }
+        },
+        "tableitem_6hMT9z": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Waterproof",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_KNWAfa": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Matte finish",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_jB68ak": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Precise tip",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_CVBp68": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Long wear",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        },
+        "tableitem_6Crhhq": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Seven shades",
+            "checkmark": "us",
+            "button_checkmark_color": "#23c55e",
+            "button_x_color": "#000000"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Wjx9pp",
+        "text_4ad9ba",
+        "tableitem_6hMT9z",
+        "tableitem_KNWAfa",
+        "tableitem_jB68ak",
+        "tableitem_CVBp68",
+        "tableitem_6Crhhq"
+      ],
+      "settings": {
+        "table_headline_secondary": "Others",
+        "table_headline_color": "#000000",
+        "text_color": "#ffffff",
+        "table_color": "#7a4257",
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 52,
+        "margin_top": 0,
         "margin_bottom": 0
       }
     },
-    "pp_image_with_benefits_YnG9hi": {
-      "type": "pp-image-with-benefits",
+    "pp_faq_TtURdM": {
+      "type": "pp-faq",
       "blocks": {
-        "benefit_D6UzNR": {
-          "type": "benefit",
+        "question_UUEbPG": {
+          "type": "question",
           "settings": {
-            "emoji": "🚚",
-            "emoji_size": "medium",
-            "heading": "Fast Shipping",
+            "heading": "Is it really waterproof?",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Dispatched within 1-3 business days, tracked to your door.</p>",
+            "text": "<p>Yes. Once the formula sets it resists water, sweat and humidity, so it holds through workouts, hot weather and teary moments without running.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
         },
-        "benefit_QgKXFK": {
-          "type": "benefit",
+        "question_iwgzRn": {
+          "type": "question",
           "settings": {
-            "emoji": "💸",
-            "emoji_size": "medium",
-            "heading": "Bundle & Save",
+            "heading": "Can I use it on my brows as well as my eyes?",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Two pencils save 11%, three save 24%.</p>",
+            "text": "<p>That is what the fine tip is designed for. Use long strokes along the lash line for liner, and short feathered strokes through the brow to fill sparse areas and shape the arch.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
         },
-        "benefit_47AwEj": {
-          "type": "benefit",
+        "question_gNmdPq": {
+          "type": "question",
           "settings": {
-            "emoji": "↩️",
-            "emoji_size": "medium",
-            "heading": "Easy Returns",
+            "heading": "Which shade should I choose?",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Wrong shade? Send it back within 30 days for a full refund.</p>",
+            "text": "<p>Black and Graphite give the most definition. Brown, Chocolate and Bronze suit lighter hair and a softer daytime look. Plum flatters green and hazel eyes, and Stone works as a subtle everyday brow shade.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
         },
-        "benefit_EKiWTc": {
-          "type": "benefit",
+        "question_NpRfRa": {
+          "type": "question",
           "settings": {
-            "emoji": "💬",
-            "emoji_size": "medium",
-            "heading": "Shade Help",
+            "heading": "Will it smudge or transfer onto my lids?",
             "heading_size": "h3",
             "heading_color": "#000000",
-            "text": "<p>Not sure which to pick? Message us and we will talk you through it.</p>",
+            "text": "<p>The matte formula sets within seconds of application and stays put. Allow a moment to dry before blinking hard or applying other products over the top.</p>",
+            "text_style": "body",
+            "text_color": "#000000"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "How do I remove it?",
+            "heading_size": "h3",
+            "heading_color": "#000000",
+            "text": "<p>Because it is waterproof, water alone will not lift it. Use an oil-based or bi-phase makeup remover on a cotton pad, hold it against the lash line for a few seconds, then wipe gently.</p>",
             "text_style": "body",
             "text_color": "#000000"
           }
         }
       },
       "block_order": [
-        "benefit_D6UzNR",
-        "benefit_QgKXFK",
-        "benefit_47AwEj",
-        "benefit_EKiWTc"
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
       ],
       "settings": {
-        "image": "shopify://shop_images/S2498250e4edf4e50a2f92a2cb62b83e5c.webp",
-        "desktop_image_width": "medium",
-        "image_border_radius": 100,
-        "heading": "Why shop with Ligne",
+        "heading": "Frequently Asked Questions",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
-        "text": "<p>Considered formulas, honest pricing and a returns policy that assumes you are telling the truth.</p>",
+        "text": "",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
         "text_color": "#000000",
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), #f5e9ec 100%)",
-        "padding_top": 52,
-        "padding_bottom": 44,
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#f3e7e9",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#000000",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
         "margin_top": 0,
         "margin_bottom": 0
       }
     },
-    "featured_collection": {
-      "type": "featured-collection",
-      "settings": {
-        "heading": "Bundle & Save Up to 24%",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "description": "<p>One pencil $21.95. Two for $38.95 (save 11%). Three for $49.95 (save 24%).</p>",
-        "show_description": true,
-        "description_style": "subtitle",
-        "collection": "all",
-        "products_to_show": 10,
-        "columns_desktop": 5,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "image_rounded_corners": "high",
-        "color_scheme": "scheme-1",
-        "button_rounded_corners": "medium",
-        "button_width": "fit",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 52,
-        "padding_bottom": 52
-      }
-    },
-    "pp_guarantee_d8zzPK": {
+    "pp_guarantee_NNKyJ6": {
       "type": "pp-guarantee",
       "blocks": {
-        "icon_XHDhV4": {
+        "icon_tVTcmU": {
           "type": "icon",
           "settings": {
             "icon_type": "heart",
@@ -239,32 +468,32 @@
             "icon_color": "#5e2a3b"
           }
         },
-        "heading_CQ6HWW": {
+        "heading_jfhp4z": {
           "type": "heading",
           "settings": {
-            "heading": "30-day money-back guarantee — try risk-free",
+            "heading": "Try It Risk-Free for 30 Days",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
             "heading_color": "#000000"
           }
         },
-        "text_4XnaxC": {
+        "text_N44eGB": {
           "type": "text",
           "settings": {
-            "text": "<p>Shades are hard to judge on a screen. If the one you picked is not right, send it back within 30 days for a full refund — no stress, no fuss, and our team helps every step of the way.</p>",
+            "text": "<p>Line, define and shape with confidence. If the shade is not right or the wear is not what you expected, return it within 30 days for a full refund — no fuss.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
             "text_color": "#000000"
           }
         },
-        "button_nd9nGW": {
+        "button_8tJzYX": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now 💄",
-            "button_link": "/collections/all",
-            "button_link_newtab": false,
+            "button_label": "Buy Now 💄",
+            "button_link": "",
+            "button_link_newtab": true,
             "button_text_color": "#ffffff",
             "button_background_color": "#5e2a3b",
             "button_border_width": 0,
@@ -272,38 +501,41 @@
             "button_width": "fit",
             "button_width_mobile": "full",
             "button_alignment": "center",
-            "button_mobilealignment": "center",
+            "button_mobilealignment": "left",
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 25,
-            "button_subtext": "Enjoy 30-Day Money Back Guarantee",
+            "button_subtext": "100% Money Back Guarantee",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
-            "button_action": "link",
+            "button_action": "scroll",
             "button_action_scroll_element": ""
           }
         }
       },
       "block_order": [
-        "icon_XHDhV4",
-        "heading_CQ6HWW",
-        "text_4XnaxC",
-        "button_nd9nGW"
+        "icon_tVTcmU",
+        "heading_jfhp4z",
+        "text_N44eGB",
+        "button_8tJzYX"
       ],
       "settings": {
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), #f5e9ec 100%)",
-        "padding_top": 64,
-        "padding_bottom": 64,
+        "gradient": "",
+        "padding_top": 32,
+        "padding_bottom": 32,
         "margin_top": 0,
         "margin_bottom": 0
       }
     }
   },
   "order": [
-    "image_banner",
-    "pp_image_with_text_HNW9yr",
-    "pp_image_with_benefits_YnG9hi",
-    "featured_collection",
-    "pp_guarantee_d8zzPK"
+    "main",
+    "pp_love",
+    "pp_image_with_text_BVEaDq",
+    "pp_realbenefits",
+    "pp_reviews_story",
+    "pp_comparison_table_ttamEN",
+    "pp_faq_TtURdM",
+    "pp_guarantee_NNKyJ6"
   ]
 }

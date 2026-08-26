@@ -1,0 +1,40 @@
+{{ 'pp-support.css' | asset_url | stylesheet_tag }}
+<div class="pp-band" id="{{ section.settings.anchor | escape }}">
+  <div class="page-width">
+    <header class="pp-band__head">
+      <p class="pp-band__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="pp-band__title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.sub != blank -%}
+        <p class="pp-band__sub">{{ section.settings.sub }}</p>
+      {%- endif -%}
+    </header>
+    <div class="pp-track">
+      <h3 class="pp-track__title">{{ section.settings.card_title }}</h3>
+      <div class="pp-track__body">{{ section.settings.card_body }}</div>
+      <div class="pp-track__actions">
+        <a class="pp-btn" href="{{ routes.account_url }}">{{ section.settings.button_label }}</a>
+        {%- if shop.email != blank -%}
+          <a class="pp-btn pp-btn--ghost" href="mailto:{{ shop.email }}">Email us instead</a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PP - Track order",
+  "tag": "section",
+  "class": "pp-track-section",
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "track-order" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "TRACK YOUR ORDER" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Waiting on your Ligne order?" },
+    { "type": "text", "id": "sub", "label": "Sub heading", "default": "Here is exactly where your tracking lives." },
+    { "type": "text", "id": "card_title", "label": "Card title", "default": "Where is my tracking number?" },
+    { "type": "richtext", "id": "card_body", "label": "Card body", "default": "<p>Tracking is emailed to you the moment your parcel leaves us.</p>" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "View my orders" }
+  ],
+  "presets": [{ "name": "PP - Track order" }]
+}
+{% endschema %}

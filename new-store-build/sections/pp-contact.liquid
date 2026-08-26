@@ -1,0 +1,86 @@
+{{ 'pp-support.css' | asset_url | stylesheet_tag }}
+<div class="pp-band pp-band--tint" id="{{ section.settings.anchor | escape }}">
+  <div class="page-width">
+    <header class="pp-band__head">
+      <p class="pp-band__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="pp-band__title">{{ section.settings.heading }}</h2>
+      {%- if section.settings.sub != blank -%}
+        <p class="pp-band__sub">{{ section.settings.sub }}</p>
+      {%- endif -%}
+    </header>
+
+    <div class="pp-contact">
+      <div class="pp-contact__form">
+        <h3 class="pp-card__title">{{ section.settings.form_title }}</h3>
+        {%- form 'contact', class: 'pp-form' -%}
+          {%- if form.posted_successfully? -%}
+            <p class="pp-form__ok" role="status">{{ section.settings.success }}</p>
+          {%- endif -%}
+          {%- if form.errors -%}
+            <p class="pp-form__err" role="alert">{{ form.errors | default_errors }}</p>
+          {%- endif -%}
+          <div class="pp-form__row">
+            <div class="pp-form__field">
+              <label class="pp-form__label" for="pp-first">First name</label>
+              <input id="pp-first" type="text" name="contact[First name]" autocomplete="given-name">
+            </div>
+            <div class="pp-form__field">
+              <label class="pp-form__label" for="pp-last">Last name</label>
+              <input id="pp-last" type="text" name="contact[Last name]" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="pp-form__field">
+            <label class="pp-form__label" for="pp-email">Email address</label>
+            <input id="pp-email" type="email" name="contact[email]" autocomplete="email"
+                   required value="{{ form.email }}">
+          </div>
+          <div class="pp-form__field">
+            <label class="pp-form__label" for="pp-phone">Phone number (optional)</label>
+            <input id="pp-phone" type="tel" name="contact[Phone number]" autocomplete="tel">
+          </div>
+          <div class="pp-form__field">
+            <label class="pp-form__label" for="pp-body">How can we help?</label>
+            <textarea id="pp-body" name="contact[body]" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="pp-btn pp-btn--full">{{ section.settings.submit_label }}</button>
+        {%- endform -%}
+      </div>
+
+      <div class="pp-contact__aside">
+        <div class="pp-card">
+          <h3 class="pp-card__title">{{ section.settings.email_title }}</h3>
+          <div class="pp-card__body">{{ section.settings.email_body }}</div>
+          {%- if shop.email != blank -%}
+            <a class="pp-btn pp-btn--dark" href="mailto:{{ shop.email }}">{{ shop.email }}</a>
+          {%- endif -%}
+        </div>
+        <div class="pp-card">
+          <h3 class="pp-card__title">{{ section.settings.hours_title }}</h3>
+          <div class="pp-card__body">{{ section.settings.hours_body }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PP - Contact",
+  "tag": "section",
+  "class": "pp-contact-section",
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "contact-us" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "WE ARE HERE TO HELP" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Reach out to our team" },
+    { "type": "text", "id": "sub", "label": "Sub heading", "default": "Send us a message and a real person will reply." },
+    { "type": "text", "id": "form_title", "label": "Form title", "default": "Send us a message" },
+    { "type": "text", "id": "submit_label", "label": "Submit label", "default": "Send message" },
+    { "type": "text", "id": "success", "label": "Success message", "default": "Thanks. Your message is with us and we will reply by email." },
+    { "type": "text", "id": "email_title", "label": "Email card title", "default": "Email support" },
+    { "type": "richtext", "id": "email_body", "label": "Email card body", "default": "<p>Prefer your own inbox? Write to us directly.</p>" },
+    { "type": "text", "id": "hours_title", "label": "Hours card title", "default": "Support hours" },
+    { "type": "richtext", "id": "hours_body", "label": "Hours card body", "default": "<p>Monday to Friday.</p>" }
+  ],
+  "presets": [{ "name": "PP - Contact" }]
+}
+{% endschema %}

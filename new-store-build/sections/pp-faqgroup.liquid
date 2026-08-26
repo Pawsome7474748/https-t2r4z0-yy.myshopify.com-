@@ -1,0 +1,53 @@
+{{ 'pp-support.css' | asset_url | stylesheet_tag }}
+<div class="pp-band{% if section.settings.dark %} pp-band--dark{% elsif section.settings.tint %} pp-band--tint{% endif %}"
+     id="{{ section.settings.anchor | escape }}">
+  <div class="page-width">
+    <header class="pp-band__head">
+      <p class="pp-band__eyebrow">{{ section.settings.eyebrow }}</p>
+      <h2 class="pp-band__title">{{ section.settings.heading }}</h2>
+    </header>
+    <div class="pp-faqg{% if section.settings.image != blank %} pp-faqg--split{% endif %}">
+      {%- if section.settings.image != blank -%}
+        <img class="pp-faqg__img"
+             src="{{ section.settings.image | image_url: width: 900 }}"
+             alt="" loading="lazy" width="450" height="300">
+      {%- endif -%}
+      <div class="pp-faqg__list">
+        {%- for block in section.blocks -%}
+          <details class="pp-faqg__item" {{ block.shopify_attributes }}>
+            <summary>{{ block.settings.q }}</summary>
+            <div class="pp-faqg__a">{{ block.settings.a }}</div>
+          </details>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PP - FAQ group",
+  "tag": "section",
+  "class": "pp-faqgroup-section",
+  "max_blocks": 12,
+  "settings": [
+    { "type": "text", "id": "anchor", "label": "Anchor id", "default": "faq" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "FAQS" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Questions" },
+    { "type": "image_picker", "id": "image", "label": "Side image" },
+    { "type": "checkbox", "id": "tint", "label": "Blush background", "default": false },
+    { "type": "checkbox", "id": "dark", "label": "Dark background", "default": false }
+  ],
+  "blocks": [
+    {
+      "type": "qa",
+      "name": "Question",
+      "settings": [
+        { "type": "text", "id": "q", "label": "Question", "default": "Question" },
+        { "type": "richtext", "id": "a", "label": "Answer", "default": "<p>Answer</p>" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "PP - FAQ group", "blocks": [{ "type": "qa" }] }]
+}
+{% endschema %}

@@ -496,3 +496,143 @@ stylesheet: four cards render, four columns at 1400px, star fills measure
 80% / 90% / 100% / 100%, long bodies clamp, the toggle flips between "Read more" and
 "Show less", the 15 paragraphs of the first review survive intact, and the page
 throws no errors. All 13 pass.
+
+## Reviews, rebuilt to the reference layout
+
+Photos supplied by the store owner (four files uploaded to Shopify Files) now sit at
+the top of each card, with gold stars, the name, a Verified Buyer badge, the quoted
+review and a product link at the foot — on a dark plum band rather than the store's
+usual blush.
+
+| File | Deployed MD5 | Size |
+| --- | --- | --- |
+| `sections/pp-reviews-story.liquid` | `0d2d7250698ef40575a4f9f441a5b160` | 4,646 b |
+| `assets/pp-ligne.css` | `248d5d384a555a805e7643e6e274b0ef` | 12,739 b |
+
+The pairing of photo to reviewer is by upload order: this environment's network
+policy blocks `cdn.shopify.com`, so the images could not be opened to check. Each
+review block has an `image_picker`, so a wrong pairing is a two-click fix in the
+theme editor.
+
+### The sub heading
+
+It read **"Rated 4.6 out of 5.0"**. `reviews.rating` is Shopify's standard rating
+metafield and stores `scale_max` as a decimal, so printing it raw gives `5.0`. Both
+places it appears now use `| round`.
+
+### Verified Buyer
+
+The badge is in because the reference layout has it, and it is a per-block checkbox.
+It is a factual claim about a purchase: it is only safe to leave on for reviewers
+whose orders exist in Shopify.
+
+### A bug the tests caught
+
+`.pp-rev__photo` set `aspect-ratio:3/4` but no `height`. The `height="1200"`
+attribute Liquid emits maps to a presentational hint that beats `aspect-ratio`, so
+every photo rendered 1200px tall. Fixed with an explicit `height:auto`.
+
+## Scrolling benefits banner
+
+`sections/pp-marquee.liquid` (`25d71de7a1efc002435b061b9b21e84b`, 4,140 b) replaces
+the rotating announcement bar. One track, the item set rendered twice, animated
+`translateX(-50%)` on a linear infinite loop — so the seam never shows. Hover pauses
+it; `prefers-reduced-motion` turns the animation off and leaves a scrollable strip.
+The duplicate set is `aria-hidden`, so screen readers read the items once.
+
+Seven benefit items, plus a low-stock line that renders only when it is true: the
+section walks the product's variants and reports the **lowest** stock among the ones
+still sellable (currently 3, on the 3-pencil packs). Summing all variants would just
+report the whole catalogue and mean nothing.
+
+An eighth item claiming a 2–3 week restock window was cut — nobody has told me what
+the restock time is, and the live stock line already carries the urgency.
+
+## Product page is now the home page
+
+`templates/index.json` (`4451027412e5b8d14c0866568df63dee`, 27,303 b) is built on
+`featured-product` with the product hard-set, carrying the same bundle cards,
+mix-and-match shades, stock meter, delivery estimate, TikTok strip and payment icons
+as the product page, then the same content sections below it.
+
+Two things `featured-product` does not give you, rebuilt here:
+
+- **The gallery.** It calls `product-media-gallery` with `limit: 1`, so only the
+  featured image renders. `pp_thumbs` emits a thumbnail strip that `wireHeroThumbs()`
+  moves into the media column and wires to swap the hero `src`. The stale `srcset`
+  and `sizes` have to be removed or the browser keeps serving the old candidate.
+- **The low-stock line.** There is no `inventory` block, so `setLowStock()` drives
+  `pp_lowstock` from the same variant map that feeds the stock meter.
+
+`/products/...` still works and is unchanged; the home page is a second way in, not
+a replacement.
+
+## About Us page
+
+Rebuilt to the reference: an anchor-pill nav, the brand story (kept — it is still the
+About page), a track-order card, a contact form, and five FAQ groups (Orders &
+Account, Order & Shipping, Product & Safety on a dark band, Quality & Ingredients and
+Returns & Pricing with side images).
+
+| File | Deployed MD5 | Size |
+| --- | --- | --- |
+| `sections/pp-subnav.liquid` | `48c3468ff929f26d32bef567f66ad5c6` | 1,000 b |
+| `sections/pp-track.liquid` | `30a55892b8160a26fba3f8f34f001483` | 1,910 b |
+| `sections/pp-contact.liquid` | `6f5ace4bfbd3105e1c5ee34979f309f6` | 4,391 b |
+| `sections/pp-faqgroup.liquid` | `066b94d7d272b2a98d3cd8346eb6ac9d` | 2,120 b |
+| `assets/pp-support.css` | `8101ba49283655d6b297e265fc8830df` | 5,839 b |
+| `templates/page.aboutus.json` | `77feda246e454c138959e274d53589cf` | 13,351 b |
+
+The contact form is Shopify's own `{% form 'contact' %}`, so submissions land in the
+shop's contact email with no app involved.
+
+### No order-lookup box
+
+The reference has an order-number input with a Track button. Shopify has no guest
+order lookup — the order status page can only be reached through the tokenised link
+in the shipping email — so an input there would be a control that cannot work. The
+card explains where the tracking email is and links to the account orders page
+instead. A real lookup box needs a tracking app.
+
+### Two bugs the tests caught
+
+Dawn has **no global `box-sizing: border-box` reset** (only `details > *` and a
+handful of components). Every rule here with `width:100%` and padding now opts in
+itself, or the form inputs would have overflowed their card. The email button also
+needed `max-width:100%` — as an `inline-flex` element its width came from its
+content, so a long address pushed the page sideways at 375px.
+
+Also worth knowing: a closed `<details>` no longer reports `offsetParent === null` in
+Chromium, because its content is hidden with `content-visibility` rather than
+`display:none`. Visibility assertions against accordions need `checkVisibility()`.
+
+## Testing
+
+Six Chromium harnesses, **109 assertions, all passing**:
+
+| Harness | Assertions | Covers |
+| --- | --- | --- |
+| `test/test-integration.js` | 17 | bundles + mix-and-match against real Dawn `VariantSelects` |
+| `test/test-components.js` | 19 | TikTok carousel, flip cards, benefits grid |
+| `test/test-reviews.js` | 22 | review cards, star fills, clamp, chips, dark band, breakpoints |
+| `test/test-support.js` | 22 | anchor nav, contact form, FAQ groups, overflow at four widths |
+| `test/test-home.js` | 18 | thumbnail swap, low-stock line, accordion |
+| `test/test-marquee.js` | 11 | seamless loop, motion, reduced-motion |
+
+`test-integration.js` needs the theme's own scripts: run it as
+`REPO=/path/to/repo node test/test-integration.js`.
+
+`test-mix.js` and `test-initial.js` were removed. They were jsdom harnesses built
+before the code moved into `assets/` — `test-initial.js` still read a `ui.test.js`
+that no longer exists — and they had been failing for that reason. jsdom is the wrong
+tool here anyway: it disagrees with real browsers on the cascade, which is what let
+the original bundle bug through. Their coverage is in `test-integration.js`.
+
+## Still needs your input
+
+- **Ingredients and origin.** The Quality & Ingredients FAQ answers point to the
+  carton rather than list anything, and there is no cruelty-free or country-of-origin
+  question, because I have no source for those. Send me the real details and I will
+  add them.
+- **Support hours** say "Monday to Friday" with no times or timezone.
+- **Verified Buyer** — see above.
