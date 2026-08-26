@@ -4,7 +4,13 @@
     assign p = product
   endif
   assign r = p.metafields.reviews.rating.value
-  assign rc = p.metafields.reviews.rating_count
+  comment
+    The rating metafield hands back its numbers as strings, so comparing
+    them to 0 raises a Liquid error. plus coerces and leaves 0 when blank.
+  endcomment
+  assign rnum = r.rating | plus: 0.0
+  assign smax = r.scale_max | plus: 0.0 | round
+  assign rc = p.metafields.reviews.rating_count.value | plus: 0
 -%}
 <div class="pp-revwrap">
   <div class="page-width">
@@ -13,14 +19,14 @@
         <p class="pp-rev__eyebrow">{{ section.settings.eyebrow }}</p>
       {%- endif -%}
       <h2 class="pp-rev__title">{{ section.settings.heading }}</h2>
-      {%- if r != blank and r.rating > 0 -%}
-        {%- assign pct = r.rating | times: 20.0 -%}
+      {%- if rnum > 0 -%}
+        {%- assign pct = rnum | times: 20.0 -%}
         <p class="pp-rev__agg">
-          <span class="pp-rev__stars" role="img" aria-label="{{ r.rating }} out of {{ r.scale_max | round }} stars">
+          <span class="pp-rev__stars" role="img" aria-label="{{ r.rating }} out of {{ smax }} stars">
             <span class="pp-rev__stars-fill" style="width:{{ pct }}%">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
           </span>
           <span class="pp-rev__aggtxt">
-            <strong>{{ r.rating }}</strong> out of {{ r.scale_max | round }}
+            <strong>{{ r.rating }}</strong> out of {{ smax }}
             {%- if rc > 0 %} &middot; {{ rc }} verified review{% if rc != 1 %}s{% endif %}{% endif -%}
           </span>
         </p>

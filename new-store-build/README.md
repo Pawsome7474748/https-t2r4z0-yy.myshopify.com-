@@ -685,3 +685,52 @@ author, the Advertorial label is present, one `h1`, every source line renders in
 order with nothing missing, added or empty, subheads and quotes are in place, the CTA
 is the last element and links to the product page below every paragraph, and no
 sideways scroll at 1280 / 700 / 375px.
+
+## Fix: Liquid error above the product title
+
+The buy box rendered
+
+> Liquid error (sections/main-product line 2): comparison of String with 0 failed
+
+in place of the star rating. Line 2 of the `pp_rating` block was
+`{%- if r != blank and r.rating > 0 -%}`. Shopify's **rating metafield returns its
+numbers as strings** — `{"scale_min":"1.0","scale_max":"5.0","value":"4.6"}` — so
+comparing `r.rating` to `0` raises. The same construct was in
+`sections/pp-reviews-story.liquid`.
+
+Fixed by coercing before comparing, which also handles the unrated case (nil becomes
+0, so the block renders nothing instead of erroring):
+
+```liquid
+assign rnum = r.rating | plus: 0.0
+assign smax = r.scale_max | plus: 0.0 | round
+assign c = product.metafields.reviews.rating_count.value | plus: 0
+```
+
+| File | Deployed MD5 | Size |
+| --- | --- | --- |
+| `templates/product.220.json` | `29e0cd0953bd4a2b1acdbe584cc8ebd3` | 26,793 b |
+| `templates/index.json` | `7c53373e477455188433b83915b7e78f` | 27,534 b |
+| `sections/pp-reviews-story.liquid` | `aa7b8df9ffc0837b21cbd76258b00470` | 4,865 b |
+
+### Why this got out
+
+Shopify validates the schema of a `.liquid` section on upload, but **not the Liquid
+inside a JSON template's `custom_liquid` setting** — so a bad expression there is
+invisible until the page renders, and this environment cannot load the storefront to
+look. `test/test-liquid.js` closes that gap: it parses every section with `liquidjs`
+and renders the rating block against the metafield values as the strings Shopify
+actually returns, plus the blank case. 14 assertions.
+
+## Navigation
+
+The main menu is now a single item — **Contact**, pointing at `/pages/about-us`, which
+is the support page with the contact form and FAQ groups. The old `/pages/contact` is
+unpublished rather than deleted, so it can be brought back.
+
+The About Us page is retitled **Contact** so its heading matches the nav; the handle
+stays `about-us` so existing links keep working.
+
+The way back to the product is the **logo**, which links to the home page — and the
+home page is the product buy box. There is no other nav link to it by design, since
+the menu was asked to hold Contact alone.
