@@ -639,51 +639,49 @@ the original bundle bug through. Their coverage is in `test-integration.js`.
 
 ## Presell pages
 
-`sections/pp-presell.liquid` (`54f54588d170545d47f90b4286a5f067`, 4,055 b) and
-`assets/pp-presell.css` (`2978089ed339edbdab2edbdb330e812a`, 3,668 b) are the reusable
-advertorial format: disclosure label, headline, standfirst, byline, hero image, the
-article body, then a product card with the link. One section per page — drop it on a
-new page template, paste the body, pick the product.
+Three advertorials, one page each, all built on the same section:
+`sections/pp-presell.liquid` (`54f54588d170545d47f90b4286a5f067`) and
+`assets/pp-presell.css` (`2978089ed339edbdab2edbdb330e812a`). Disclosure label,
+headline, standfirst, byline, hero, article body, then a product card whose button is
+a plain `<a>` to the product page, last element on the page.
 
-660px measure, 17.5px body type, the opening line set larger to carry the hook, `h2`
-subheads to break up the run of one-line paragraphs, and a pull-quote style for the
-lines worth landing on.
+| Page | Author | Template | Deployed MD5 | Live at |
+| --- | --- | --- | --- | --- |
+| Eleven eyeliners | Katie | `page.presell-01.json` | `d2c9a58793ef9fed78d67dad981304fb` | `/pages/eleven-eyeliners` |
+| That photo from the night before | Susie | `page.presell-02.json` | `f649141f3d4732098481dd7c7f78c616` | `/pages/the-photo-from-last-night` |
+| I stopped wearing eyeliner on important days | Angel | `page.presell-03.json` | `9b4aeae2828568d014ba05377cda02ef` | `/pages/eyeliner-that-stays` |
 
-### Page 1
+Page ids `704861241417`, `704861274185`, `704861208649`. All published.
 
-| File | Deployed MD5 | Size |
-| --- | --- | --- |
-| `templates/page.presell-01.json` | `97c2c6dec7a431ca26e356bdea6dbeea` | 11,019 b |
+660px measure, 17.5px body type, the opening line set larger to carry the hook. The
+copy is written as one short line per paragraph, so each page gets 8–9 `h2` subheads
+and 3 pull quotes to break up the run — inserted between lines, never replacing one.
 
-Page created at `/pages/eyeliner-that-stays` (Page id `704861208649`), published.
-Source copy kept in `copy/presell-01-body.html` — 160 paragraphs, 8 subheads, 2 pull
-quotes, every line of the original preserved.
+### Source of truth
 
-The closing CTA is a plain `<a>` to
-`/products/waterproof-matte-eyeliner-brow-pencil`, and it is the last element on the
-page, below every paragraph — which is what the brief asked for.
+`copy/drafts/draft-0{1,2,3}.txt` hold the drafts verbatim, one line per paragraph.
+`copy/draft-0{1,2,3}-body.html` are generated from them. The build asserts that every
+subhead and quote anchor matched and that the paragraph count equals the source line
+count, so a silent drop fails the build rather than shipping.
+
+Two things were changed from what was sent: draft 1's opening line was missing its
+first letter ("t took me…"), and the sign-offs on drafts 2 and 3 were normalised
+("If your interested" → "If you're interested"). Draft 1's trailing `[Shop Ligne →]`
+placeholder is dropped, since the CTA card supplies that button.
 
 ### The disclosure label
 
-Every page carries an **Advertorial** pill above the headline, and the byline reads
-"A Ligne customer story" rather than naming a person. The copy is written in the
-first person and sits on the seller's own domain, so it needs to be identifiable as
-marketing — that is the FTC endorsement guides and the UK CAP code. Both are section
-settings, so a real author's name can replace the byline whenever there is one.
+Each page carries an **Advertorial** pill above the headline, with the byline as
+"By Katie / Susie / Angel" and "Ligne customer story" beside it. First-person copy on
+the seller's own domain has to be identifiable as marketing — the FTC endorsement
+guides and the UK CAP code. Both are section settings if you want them worded
+differently.
 
 ### Testing
 
-`test/test-presell.js` — 19 assertions in Chromium: paragraph count matches the
-source with no empty ones, subheads and pull quotes render, the opening line is set
-larger, the CTA is the last element and sits below every paragraph, the button is a
-real link to the product page, the reading measure stays in the readable band, no
-sideways scroll at 1280 / 900 / 700 / 375px, and the CTA stacks on mobile.
-
-### Pages 2 and 3 are blocked
-
-Only one of the three drafts sent is still recoverable. The other two were in the
-part of the conversation that was compacted away, and this project's transcript on
-disk begins at the compaction summary, so the full text of
-"It took me eleven eyeliners…" and "You know that moment when someone sends you a
-photo from the night before…" is gone. They need to be re-sent; the format above then
-takes about a minute each.
+`test/test-presell.js` — 48 assertions across the three pages, run as
+`REPO=/path/to/repo node test/test-presell.js`. Per page: the byline names the right
+author, the Advertorial label is present, one `h1`, every source line renders in
+order with nothing missing, added or empty, subheads and quotes are in place, the CTA
+is the last element and links to the product page below every paragraph, and no
+sideways scroll at 1280 / 700 / 375px.
