@@ -1,46 +1,73 @@
 {%- liquid
-  assign r = product.metafields.reviews.rating.value
-  assign rc = product.metafields.reviews.rating_count
+  assign p = section.settings.product
+  if p == blank
+    assign p = product
+  endif
+  assign r = p.metafields.reviews.rating.value
+  assign rc = p.metafields.reviews.rating_count
 -%}
-<div class="pp-html" style="padding:56px 0;background:linear-gradient(180deg,#f5e9ec,#ffffff)">
+<div class="pp-revwrap">
   <div class="page-width">
-    <div class="pp-rev">
-      <header class="pp-rev__head">
-        <h2 class="pp-rev__title">In their words</h2>
-        {%- if r != blank and r.rating > 0 -%}
-          {%- assign pct = r.rating | times: 20.0 -%}
-          <p class="pp-rev__agg">
-            <span class="pp-rev__stars" role="img" aria-label="{{ r.rating }} out of {{ r.scale_max }} stars">
-              <span class="pp-rev__stars-fill" style="width:{{ pct }}%">★★★★★</span>
-            </span>
-            <span>{{ r.rating }} out of {{ r.scale_max }}{% if rc > 0 %} · {{ rc }} review{% if rc != 1 %}s{% endif %}{% endif %}</span>
-          </p>
-        {%- endif -%}
-      </header>
+    <header class="pp-rev__head">
+      {%- if section.settings.eyebrow != blank -%}
+        <p class="pp-rev__eyebrow">{{ section.settings.eyebrow }}</p>
+      {%- endif -%}
+      <h2 class="pp-rev__title">{{ section.settings.heading }}</h2>
+      {%- if r != blank and r.rating > 0 -%}
+        {%- assign pct = r.rating | times: 20.0 -%}
+        <p class="pp-rev__agg">
+          <span class="pp-rev__stars" role="img" aria-label="{{ r.rating }} out of {{ r.scale_max | round }} stars">
+            <span class="pp-rev__stars-fill" style="width:{{ pct }}%">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </span>
+          <span class="pp-rev__aggtxt">
+            <strong>{{ r.rating }}</strong> out of {{ r.scale_max | round }}
+            {%- if rc > 0 %} &middot; {{ rc }} verified review{% if rc != 1 %}s{% endif %}{% endif -%}
+          </span>
+        </p>
+      {%- endif -%}
+    </header>
 
-      <div class="pp-rev__grid">
-        {%- for block in section.blocks -%}
-          {%- assign stars = block.settings.stars -%}
-          {%- assign spct = stars | times: 20.0 -%}
-          <article class="pp-rev__card" {{ block.shopify_attributes }}>
-            {%- if block.settings.photo != blank -%}
-              <img class="pp-rev__photo" src="{{ block.settings.photo | image_url: width: 640 }}"
-                   alt="" loading="lazy" width="320" height="320">
+    <div class="pp-rev__grid">
+      {%- for block in section.blocks -%}
+        {%- assign stars = block.settings.stars -%}
+        {%- assign spct = stars | times: 20.0 -%}
+        <article class="pp-rev__card" {{ block.shopify_attributes }}>
+          {%- if block.settings.photo != blank -%}
+            <img class="pp-rev__photo"
+                 src="{{ block.settings.photo | image_url: width: 760 }}"
+                 srcset="{{ block.settings.photo | image_url: width: 380 }} 380w,
+                         {{ block.settings.photo | image_url: width: 760 }} 760w"
+                 sizes="(min-width:1100px) 23vw, (min-width:601px) 46vw, 92vw"
+                 alt="{{ block.settings.name | escape }}" loading="lazy"
+                 width="{{ block.settings.photo.width }}" height="{{ block.settings.photo.height }}">
+          {%- endif -%}
+          <span class="pp-rev__stars" role="img" aria-label="{{ stars }} out of 5 stars">
+            <span class="pp-rev__stars-fill" style="width:{{ spct }}%">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </span>
+          <p class="pp-rev__who">
+            {%- if block.settings.photo == blank -%}
+              <span class="pp-rev__avatar" aria-hidden="true">{{ block.settings.name | slice: 0 }}</span>
             {%- endif -%}
-            <span class="pp-rev__stars" role="img" aria-label="{{ stars }} out of 5 stars">
-              <span class="pp-rev__stars-fill" style="width:{{ spct }}%">★★★★★</span>
-            </span>
-            <p class="pp-rev__name">
-              {%- unless block.settings.photo != blank -%}
-                <span class="pp-rev__avatar" aria-hidden="true">{{ block.settings.name | slice: 0 }}</span>
-              {%- endunless -%}
-              {{ block.settings.name }}
-            </p>
-            <div class="pp-rev__body" data-pp-clamp>{{ block.settings.body }}</div>
-            <button type="button" class="pp-rev__more" hidden>Read more</button>
-          </article>
-        {%- endfor -%}
-      </div>
+            <span class="pp-rev__name">{{ block.settings.name }}</span>
+            {%- if block.settings.verified -%}
+              <span class="pp-rev__badge">&#10003; Verified Buyer</span>
+            {%- endif -%}
+          </p>
+          <div class="pp-rev__body" data-pp-clamp>{{ block.settings.body }}</div>
+          <button type="button" class="pp-rev__more" hidden>Read more</button>
+          {%- if p != blank and section.settings.show_chip -%}
+            <a class="pp-rev__chip" href="{{ p.url }}">
+              {%- if p.featured_image != blank -%}
+                <img src="{{ p.featured_image | image_url: width: 96 }}" alt="" width="48" height="48" loading="lazy">
+              {%- endif -%}
+              <span class="pp-rev__chip-txt">
+                <span class="pp-rev__chip-name">{{ p.title }}</span>
+                <span class="pp-rev__chip-price">{{ p.price | money }}</span>
+              </span>
+            </a>
+          {%- endif -%}
+        </article>
+      {%- endfor -%}
     </div>
   </div>
 </div>
@@ -51,6 +78,12 @@
   "tag": "section",
   "class": "pp-reviews-story-section",
   "max_blocks": 12,
+  "settings": [
+    { "type": "product", "id": "product", "label": "Product shown on each card" },
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Real customers" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "In Their Words" },
+    { "type": "checkbox", "id": "show_chip", "label": "Show product link on each card", "default": true }
+  ],
   "blocks": [
     {
       "type": "review",
@@ -58,6 +91,7 @@
       "settings": [
         { "type": "text", "id": "name", "label": "Reviewer name", "default": "Name" },
         { "type": "range", "id": "stars", "label": "Stars", "min": 1, "max": 5, "step": 0.5, "default": 5 },
+        { "type": "checkbox", "id": "verified", "label": "Show Verified Buyer badge", "default": true },
         { "type": "image_picker", "id": "photo", "label": "Reviewer photo" },
         { "type": "richtext", "id": "body", "label": "Review" }
       ]
