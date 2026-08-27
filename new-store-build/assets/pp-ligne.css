@@ -1,4 +1,4 @@
-:root{--pp-plum:#5e2a3b;--pp-plum2:#7a4257;--pp-blush:#f5e9ec;--pp-red:#dc2626;--pp-gold:#e8b64c}
+:root{--pp-plum:#5e2a3b;--pp-plum2:#7a4257;--pp-blush:#f5e9ec;--pp-red:#dc2626;--pp-gold:#f5c518}
   .pp-opt-hidden{display:none !important}
   /* author display rules outrank the UA [hidden] rule, so restate it */
   .pp-mix[hidden],.pp-mix__row[hidden],.pp-stock[hidden],
