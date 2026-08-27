@@ -4,6 +4,7 @@
   var SID=root.dataset.section;
   var DELIVERY_DAYS=7;
   var STOCK_SCALE=10, STOCK_SHOW_AT=10;
+  var LOW_STOCK_AT=8;   /* matches the product page's inventory threshold */
 
   function $(s,r){return (r||document).querySelector(s);}
   function $$(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s));}
@@ -215,13 +216,16 @@
     if(thumbs[0]) select(thumbs[0]);
   }
 
-  /* the home page has no Dawn inventory block, so drive our own line */
+  /* The home page has no Dawn inventory block, so mirror what it prints on
+     the product page: green "N in stock", red and flashing once stock is low. */
   function setLowStock(){
     var el=document.getElementById('pp-lowstock-'+SID); if(!el) return;
     var v=current(); var q=v?v.st:undefined;
-    if(typeof q!=='number'||q<=0||q>STOCK_SHOW_AT){el.hidden=true;return;}
+    if(typeof q!=='number'||q<=0){el.hidden=true;return;}
     el.hidden=false;
-    $('.pp-lowstock__txt',el).textContent='Almost out of stock';
+    var low=q<=LOW_STOCK_AT;
+    el.classList.toggle('is-low',low);
+    $('.pp-lowstock__txt',el).textContent = low ? 'Almost out of stock' : (q+' in stock');
   }
 
   function setStock(){

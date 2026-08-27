@@ -56,24 +56,35 @@ const html=`<!doctype html><html><head><style>html{font-size:62.5%}body{margin:0
   t('active state follows the click', await p.$$eval('.pp-thumb',
       e=>e.filter(x=>x.classList.contains('is-active')).length===1 && e[2].classList.contains('is-active')));
 
-  /* low stock: variant 11 has 10 left, at the threshold */
-  t('low-stock line shows at 10 left', await vis('#pp-lowstock-'+SID));
-  t('and reads Almost out of stock',
-     (await p.$eval('.pp-lowstock__txt',e=>e.textContent))==='Almost out of stock');
-  t('the dot flashes', (await p.$eval('.pp-lowstock__dot',e=>getComputedStyle(e).animationName))==='ppFlash');
+  /* the home stock line must read like the product page's: green "N in stock"
+     until stock is actually low, then red and flashing */
+  t('stock line shows', await vis('#pp-lowstock-'+SID));
+  t('at 10 left it reads "10 in stock"',
+     (await p.$eval('.pp-lowstock__txt',e=>e.textContent))==='10 in stock',
+     await p.$eval('.pp-lowstock__txt',e=>e.textContent));
+  t('and is green, not flashing', await p.$eval('.pp-lowstock',e=>{
+      const cs=getComputedStyle(e), dot=getComputedStyle(e.querySelector('.pp-lowstock__dot'));
+      const [r,g,b]=cs.color.match(/\d+/g).map(Number);
+      return g>r && g>b && dot.animationName==='none';}));
   t('stock meter shows Only 10 left', (await p.$eval('.pp-stock__label',e=>e.textContent))==='Only 10 left in stock');
 
   /* switch to a well-stocked variant */
   await p.evaluate(()=>{const i=document.querySelector('input[name="id"]');
     i.value='12'; i.dispatchEvent(new Event('change',{bubbles:true}));});
   await p.waitForTimeout(150);
-  t('line hides when stock is healthy', !(await vis('#pp-lowstock-'+SID)));
-  t('meter hides too', !(await vis('#pp-stock-'+SID)));
+  t('healthy variant still shows a green count', await vis('#pp-lowstock-'+SID) &&
+     (await p.$eval('.pp-lowstock__txt',e=>e.textContent))==='40 in stock');
+  t('meter hides once stock is healthy', !(await vis('#pp-stock-'+SID)));
 
   await p.evaluate(()=>{const i=document.querySelector('input[name="id"]');
     i.value='31'; i.dispatchEvent(new Event('change',{bubbles:true}));});
   await p.waitForTimeout(150);
-  t('comes back for the 3-pack at 3 left', await vis('#pp-lowstock-'+SID));
+  t('3-pack at 3 left turns it red and flashing', await p.$eval('.pp-lowstock',e=>{
+      const cs=getComputedStyle(e), dot=getComputedStyle(e.querySelector('.pp-lowstock__dot'));
+      const [r,g,b]=cs.color.match(/\d+/g).map(Number);
+      return e.classList.contains('is-low') && r>g && r>b && dot.animationName==='ppFlash';}));
+  t('and reads Almost out of stock',
+     (await p.$eval('.pp-lowstock__txt',e=>e.textContent))==='Almost out of stock');
   t('meter follows the variant', (await p.$eval('.pp-stock__label',e=>e.textContent))==='Only 3 left in stock');
 
   /* the accordion is native <details>, but the +/- marker must be ours */

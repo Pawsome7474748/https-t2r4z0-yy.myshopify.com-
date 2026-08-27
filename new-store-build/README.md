@@ -734,3 +734,51 @@ stays `about-us` so existing links keep working.
 The way back to the product is the **logo**, which links to the home page — and the
 home page is the product buy box. There is no other nav link to it by design, since
 the menu was asked to hold Contact alone.
+
+## Which theme is which
+
+Three themes carry a product template, and only one is current. Checked by checksum:
+
+| Theme | id | `templates/product.220.json` | Header |
+| --- | --- | --- | --- |
+| **PagePilot.ai Theme — Eyeliner build (draft) 1** | `190326308937` | `29e0cd09…` current | marquee |
+| Copy of PagePilot.ai Theme — Eyeliner build (dr… | `190397317193` | `a66326be…` **pre-Liquid-fix** | old announcement bar |
+| PagePilot.ai Theme *(live)* | `188951003209` | *absent* | its own original |
+
+The "Copy of…" theme still holds the template from before the rating fix and the
+announcement bar from before the marquee, so previewing it shows the Liquid error and
+the old banner — exactly the symptoms of a page that "still looks the same". Only
+`190326308937` is current. Preview it with `?preview_theme_id=190326308937`.
+
+## Nothing was removed from the product page
+
+Block order in `templates/product.220.json`, top to bottom, against the screenshot:
+
+1. rating line · 2. title · 3. price · 4. bold lede · 5. four tick benefits ·
+6. AS SEEN ON TIKTOK · 7. red stock bar · 8. bundles + shade dropdowns + delivery date ·
+9. quantity · 10. Add To Cart · 11. green "N in stock" · 12. payment icons ·
+13. shipping/guarantee/returns icons · 14. the three accordions
+
+Every element in the screenshot is present, in the same order. The only thing that
+changed on that page is the rating line, which was printing a Liquid error and now
+prints the stars.
+
+### Where the home page still differs
+
+`featured-product` cannot render two things `main-product` does, so the home page
+substitutes:
+
+| Product page | Home page | Why |
+| --- | --- | --- |
+| full media gallery with thumbnails | hero + `pp_thumbs` strip | `product-media-gallery` is called with `limit: 1` |
+| Dawn `inventory` block | `pp_lowstock` | `featured-product` has no `inventory` block |
+
+`pp_lowstock` now mirrors what the product page prints: green **"N in stock"** until
+stock reaches the same threshold the product page uses (8), then red and flashing
+**"Almost out of stock"**. `test/test-home.js` covers both states and the switch
+between them.
+
+## Navigation
+
+Main menu: **Shop** → the product page, **Contact** → the support page. The logo also
+goes home, and home is the buy box.
