@@ -29,7 +29,8 @@ const BLANK={product:{metafields:{reviews:{}}}};
     const e=new Liquid();
     try {
       const out=(await e.render(e.parse(src),STRINGS)).replace(/\s+/g,' ').trim();
-      t(`${tpl}: rating renders from string metafields`, out.includes('Rated 4.6 out of 5') && out.includes('4 reviews'), out);
+      t(`${tpl}: rating renders from string metafields`,
+        out.includes('Rated 4.6') && out.includes('4 Verified Review') && out.includes('pp-rating2__avatars'), out);
       const empty=(await e.render(e.parse(src),BLANK)).trim();
       t(`${tpl}: renders nothing when unrated`, empty==='', JSON.stringify(empty));
     } catch(err) { t(`${tpl}: rating block`, false, err.message); }

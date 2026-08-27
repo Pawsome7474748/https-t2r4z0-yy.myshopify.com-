@@ -818,3 +818,51 @@ Applied to `pp_ui`, `pp_rating`, `pp_thumbs` and `pp_bundles` in
 `test/test-liquid.js` now renders every product-driven home block with **no** global
 product in context and fails if any of them comes back empty — which is exactly what
 was shipping.
+
+## Presell pages: already active on this theme
+
+Checked directly rather than assuming: all three are published Shopify pages, and
+theme `190326308937` (the one everything else in this session lives on) still holds
+their sections, assets and templates, byte-for-byte matching what was deployed
+earlier. Nothing was missing here — they go live the moment the theme is published,
+same as everything else.
+
+## Rating line redesigned: bigger, yellow stars, reviewer avatars
+
+Replaced the small single-line rating (`★★★★★ Rated 4.6 out of 5 · 4 reviews`) with a
+bigger version matching the requested reference layout: larger star row, the rating
+and review count, and a row of overlapping circular reviewer photos — using the same
+four photos already on the review cards further down the page, so the same four
+people back up the same number.
+
+| File | Deployed MD5 | Size |
+| --- | --- | --- |
+| `assets/pp-ligne.css` | `c7051634045b346ac2e8f180b1a45930` | 15,928 b |
+| `templates/product.220.json` | `497794fcb4794e0711152077deead97e` | 28,111 b |
+| `templates/index.json` | `1b2375506c322dd6915ef53b47755d1f` | 29,965 b |
+
+### Yellow, not green
+
+`.pp-rating2__stars{color:#f5c518}` — a clear, saturated yellow, distinct from the
+green in the reference and from the gold (`#e8b64c`) used in the reviews section
+further down, so the top-of-page rating reads as its own accent.
+
+### What the copy says, and why it isn't "Thousands of 5-Star Reviews"
+
+The reference text ("Rated 4.9 · Thousands of 5-Star Reviews") doesn't match this
+store: the real metafields are **4.6** from **4** reviews. The block prints
+`Rated {rating} · {count} Verified Review(s)` from those metafields, not fixed text —
+so it updates on its own as real reviews are added, and never claims more than the
+store actually has.
+
+### Testing
+
+`test/test-rating2.js` — 10 assertions in Chromium: stars render and are the correct
+yellow (not the old orange or the reference's green), the text reads the real rating
+and count, four avatars render as overlapping circles, everything sits on one row at
+520px and doesn't wrap, and it still fits at 360px. `test/test-liquid.js` covers the
+render-from-string-metafields and renders-nothing-when-unrated cases for both
+templates, and the home-page no-global-product case for all four product-driven
+blocks (extended from the file-missing-blocks fix earlier).
+
+Full suite: 192 assertions across ten Chromium/Liquid harnesses, all passing.
