@@ -34,6 +34,28 @@ const BLANK={product:{metafields:{reviews:{}}}};
       t(`${tpl}: renders nothing when unrated`, empty==='', JSON.stringify(empty));
     } catch(err) { t(`${tpl}: rating block`, false, err.message); }
   }
+  /* The home page has no global product, and featured-product's own
+     assign does not reach a custom_liquid setting. Every product-driven
+     block there must resolve the product itself or it renders empty. */
+  const PROD={title:'Waterproof Matte Eyeliner & Brow Pencil',url:'/products/x',media:[],
+    variants:[{id:1,option1:'Black',option2:'1 Pencil',price:2195,inventory_quantity:10}],
+    options_with_values:[{name:'Shade',position:1,values:['Black']},
+                         {name:'Pack',position:2,values:['1 Pencil']}],
+    metafields:{reviews:{rating:{value:{rating:'4.6',scale_max:'5.0'}},rating_count:{value:'4'}}}};
+  const home=JSON.parse(fs.readFileSync(path.join(B,'templates','index.json'),'utf8'));
+  const hb=home.sections.main.blocks;
+  for (const k of Object.keys(hb)) {
+    const src=hb[k].settings && hb[k].settings.custom_liquid;
+    if (!src || !src.includes('product.')) continue;
+    const e=new Liquid();
+    let out='';
+    try {
+      out=await e.render(e.parse(src),
+        {all_products:{'waterproof-matte-eyeliner-brow-pencil':PROD},section:{id:'s'},shop:{}});
+    } catch(err){ t(`home ${k}: renders without a global product`, false, err.message); continue; }
+    t(`home ${k}: renders without a global product`, out.trim().length>0, 'rendered empty');
+  }
+
   console.log(`\n${pass} passed, ${fail} failed`);
   process.exit(fail?1:0);
 })();

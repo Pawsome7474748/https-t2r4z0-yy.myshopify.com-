@@ -782,3 +782,39 @@ between them.
 
 Main menu: **Shop** → the product page, **Contact** → the support page. The logo also
 goes home, and home is the buy box.
+
+## Fix: the home page buy box rendered half-empty
+
+On the home page the rating, thumbnails, bundle cards, shade dropdowns, delivery date
+and stock bar were all absent, while the lede, ticks, TikTok strip, payment icons and
+accordions rendered fine.
+
+Cause: `featured-product.liquid` does
+
+```liquid
+{%- liquid assign product = section.settings.product -%}
+```
+
+in **its own scope**, then renders a block with `{{ block.settings.custom_liquid }}`.
+A `liquid` setting is evaluated in a **fresh scope**, so that local `product` is not
+visible inside it — and on the home page there is no global `product` either, since
+that only exists on product templates. Every block reading `product.` therefore
+rendered an empty string, silently. The stock bar and low-stock line were collateral:
+they are static markup unhidden by JS, and the JS gets its variant map from `pp_ui`,
+which was itself rendering empty.
+
+Fixed by having each product-driven block resolve the product itself, guarded so the
+identical text still works on the product page where `product` is already set:
+
+```liquid
+if product == blank
+  assign product = all_products['waterproof-matte-eyeliner-brow-pencil']
+endif
+```
+
+Applied to `pp_ui`, `pp_rating`, `pp_thumbs` and `pp_bundles` in
+`templates/index.json` (`cb019b39a93cd315aa107c5e6ccb4fdc`, 29,018 b).
+
+`test/test-liquid.js` now renders every product-driven home block with **no** global
+product in context and fails if any of them comes back empty — which is exactly what
+was shipping.
