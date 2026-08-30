@@ -15,11 +15,12 @@
       <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
     {%- endunless -%}
 
+    {%- assign brand_name = 'Shirt Happens' -%}
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ", " }}"{% endif -%}
       {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
-      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+      {%- unless page_title contains brand_name %} &ndash; {{ brand_name }}{% endunless -%}
     </title>
 
     {% if page_description %}
@@ -378,6 +379,7 @@
 
     {%- if settings.cart_type == "drawer" -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
+      <script src="{{ 'cart-addons.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
 </html>

@@ -33,7 +33,67 @@
     {%- if section.settings.show_social and social_icons -%}
       {%- render 'social-icons' -%}
     {%- endif -%}
-    {%- if section.blocks.size == 1 -%}
+    {%- if section.settings.enable_marquee and section.blocks.size > 1 -%}
+      <div class="announcement-bar announcement-bar--marquee" role="region" aria-label="{{ 'sections.header.announcement' | t }}">
+        <div class="announcement-marquee__track">
+          {%- for i in (1..2) -%}
+            <div class="announcement-marquee__group" aria-hidden="{% if i == 2 %}true{% else %}false{% endif %}">
+              {%- for block in section.blocks -%}
+                <span class="announcement-marquee__item" style="color: {{ block.settings.text_color }};" {{ block.shopify_attributes }}>
+                  {{ block.settings.text | escape }}
+                </span>
+              {%- endfor -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+      <style>
+        .announcement-bar--marquee {
+          overflow: hidden;
+          width: 100%;
+          padding: 1rem 0;
+        }
+        .announcement-marquee__track {
+          display: flex;
+          width: max-content;
+          animation: announcement-marquee 32s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .announcement-marquee__track {
+            animation: none;
+          }
+        }
+        .announcement-marquee__group {
+          display: flex;
+          align-items: center;
+          flex-shrink: 0;
+        }
+        .announcement-marquee__item {
+          white-space: nowrap;
+          font-size: 1.3rem;
+          font-weight: 600;
+          letter-spacing: 0.03em;
+          padding: 0 2.5rem;
+          position: relative;
+        }
+        .announcement-marquee__item:after {
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: currentColor;
+          opacity: 0.5;
+        }
+        @keyframes announcement-marquee {
+          from { transform: translateX(0); }
+          to { transform: translateX(-50%); }
+        }
+      </style>
+    {%- elsif section.blocks.size == 1 -%}
       <div
         class="announcement-bar{% if section.settings.show_social %} announcement-bar--one-announcement{% endif %}"
         role="region"
@@ -187,6 +247,13 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_marquee",
+      "default": false,
+      "label": "Scroll all messages continuously (marquee)",
+      "info": "Shows every message in one continuously scrolling line instead of rotating through them one at a time."
     },
     {
       "type": "header",

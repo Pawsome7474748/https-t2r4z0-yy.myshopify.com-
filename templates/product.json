@@ -47,8 +47,8 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
-            "button_text": "Add to cart 👉🏻",
-            "sold_out_text": "Sold Out 😭",
+            "button_text": "Add to cart \ud83d\udc49\ud83c\udffb",
+            "sold_out_text": "Sold Out \ud83d\ude2d",
             "unavailable_text": "Unavailable",
             "button_color": "#000000",
             "text_color": "#ffffff",
@@ -66,14 +66,47 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "inventory": {
+          "type": "inventory",
+          "settings": {
+            "text_style": "body",
+            "inventory_threshold": 15,
+            "show_inventory_quantity": false
+          }
+        },
+        "reviews_number": {
+          "type": "reviews-number",
+          "settings": {
+            "reviews_text": "4.5 out of 5 &middot; 5 Verified Reviews",
+            "reviews_text_style": "body",
+            "reviews_text_color": "#16213E",
+            "reviews_stars_size": "sm",
+            "reviews_stars_color": "#facc15",
+            "reviews_stars_number": 5,
+            "reviews_alignment": "start",
+            "reviews_mobilealignment": "start",
+            "reviews_border_top": 0,
+            "reviews_padding_top": 0,
+            "reviews_padding_bottom": 8
+          }
+        },
+        "bundle_box": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"bundle-box\">\n  <button type=\"button\" class=\"bundle-box__tier is-selected\" data-bundle-qty=\"1\">\n    <span class=\"bundle-box__radio\"></span>\n    <span class=\"bundle-box__label\"><strong>Buy One</strong><br><span class=\"bundle-box__sub\">Single tee</span></span>\n    <span class=\"bundle-box__price\">{{ product.selected_or_first_available_variant.price | money }}</span>\n  </button>\n  <button type=\"button\" class=\"bundle-box__tier bundle-box__tier--highlight\" data-bundle-qty=\"2\">\n    <span class=\"bundle-box__badge\">Save 15%</span>\n    <span class=\"bundle-box__radio\"></span>\n    <span class=\"bundle-box__label\"><strong>Buy Two</strong><br><span class=\"bundle-box__sub\">Mix and match designs</span></span>\n    <span class=\"bundle-box__price\">{{ product.selected_or_first_available_variant.price | times: 2 | times: 0.85 | money }}</span>\n  </button>\n  <button type=\"button\" class=\"bundle-box__tier\" data-bundle-qty=\"3\">\n    <span class=\"bundle-box__badge bundle-box__badge--best\">Best Value</span>\n    <span class=\"bundle-box__radio\"></span>\n    <span class=\"bundle-box__label\"><strong>Buy Three</strong><br><span class=\"bundle-box__sub\">Save 15%, mix and match</span></span>\n    <span class=\"bundle-box__price\">{{ product.selected_or_first_available_variant.price | times: 3 | times: 0.85 | money }}</span>\n  </button>\n</div>\n<style>\n  .bundle-box { display: flex; flex-direction: column; gap: 0.8rem; margin: 1.2rem 0; }\n  .bundle-box__tier {\n    display: flex; align-items: center; gap: 1.2rem;\n    width: 100%; text-align: left; position: relative;\n    border: 1px solid rgba(22,33,62,0.2); border-radius: 8px;\n    padding: 1.2rem 1.4rem; background: rgb(var(--color-background));\n    cursor: pointer; font-family: inherit; font-size: 1.4rem;\n  }\n  .bundle-box__tier.is-selected { border-color: #A6293D; border-width: 2px; background: rgba(166,41,61,0.04); }\n  .bundle-box__tier--highlight { border-color: rgba(166,41,61,0.4); }\n  .bundle-box__radio {\n    width: 1.8rem; height: 1.8rem; border-radius: 50%;\n    border: 2px solid rgba(22,33,62,0.35); flex-shrink: 0; position: relative;\n  }\n  .bundle-box__tier.is-selected .bundle-box__radio { border-color: #A6293D; }\n  .bundle-box__tier.is-selected .bundle-box__radio:after {\n    content: ''; position: absolute; inset: 3px; border-radius: 50%; background: #A6293D;\n  }\n  .bundle-box__label { flex: 1; line-height: 1.4; }\n  .bundle-box__sub { font-size: 1.2rem; opacity: 0.7; }\n  .bundle-box__price { font-weight: 700; white-space: nowrap; }\n  .bundle-box__badge {\n    position: absolute; top: -0.9rem; left: 1.2rem;\n    background: #A6293D; color: #fff; font-size: 1.05rem; font-weight: 700;\n    padding: 0.2rem 0.8rem; border-radius: 999px; letter-spacing: 0.02em;\n  }\n</style>\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    var tiers = document.querySelectorAll('.bundle-box__tier');\n    var qtyInput = document.getElementById('Quantity-{{ section.id }}');\n    if (!qtyInput) return;\n    tiers.forEach(function (tier) {\n      tier.addEventListener('click', function () {\n        tiers.forEach(function (t) { t.classList.remove('is-selected'); });\n        tier.classList.add('is-selected');\n        qtyInput.value = tier.getAttribute('data-bundle-qty');\n        qtyInput.dispatchEvent(new Event('change', { bubbles: true }));\n      });\n    });\n  });\n</script>"
+          }
         }
       },
       "block_order": [
         "vendor",
         "title",
+        "reviews_number",
         "price",
         "variant_picker",
+        "bundle_box",
         "quantity_selector",
+        "inventory",
         "buy_buttons",
         "description",
         "share"
@@ -126,53 +159,53 @@
         "benefit_7DWPAB": {
           "type": "benefit",
           "settings": {
-            "emoji": "👁️",
+            "emoji": "\ud83d\ude02",
             "emoji_size": "medium",
-            "heading": "Bubble Window",
+            "heading": "Guaranteed Reactions",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Your Pet Can See Outside</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Wear it once, you'll see</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "benefit_hxwCgx": {
           "type": "benefit",
           "settings": {
-            "emoji": "💨",
+            "emoji": "\ud83d\udca8",
             "emoji_size": "medium",
-            "heading": "Breathable",
+            "heading": "Breathable Polyester",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Keep Pets Cool & Comfy</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Comfortable all day, every season</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "benefit_6KDDhQ": {
           "type": "benefit",
           "settings": {
-            "emoji": "🎒",
+            "emoji": "\ud83c\udfa8",
             "emoji_size": "medium",
-            "heading": "Hands-Free Carry",
+            "heading": "6 Illusion Designs",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Awesome benefit goes here</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Mix and match across the pack</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "benefit_rBnLP7": {
           "type": "benefit",
           "settings": {
-            "emoji": "✨",
+            "emoji": "\ud83e\uddfa",
             "emoji_size": "medium",
-            "heading": "Fashionable",
+            "heading": "Machine Washable",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Trendy Astronaut Design</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Print won't crack or peel</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         }
       },
@@ -186,7 +219,7 @@
       "settings": {
         "desktop_image_width": "large",
         "image_border_radius": 100,
-        "heading": "Why Pet Parents Love This!",
+        "heading": "Why Shirt Happens Fans Keep Buying Them",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
@@ -209,7 +242,7 @@
         "heading_EYKJby": {
           "type": "heading",
           "settings": {
-            "heading": "Perfect For Traveling",
+            "heading": "Actually 3D Printed, Not Iron-On",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
@@ -219,7 +252,7 @@
         "text_36RU9f": {
           "type": "text",
           "settings": {
-            "text": "<p>Whether you're taking a road trip, visiting the vet, or exploring new places, this carrier makes travel easy and comfortable for both you and your pet. The lightweight design and hands-free backpack style mean you can keep your hands free for whatever adventure awaits.</p>",
+            "text": "<p>Most novelty tees use a cheap iron-on transfer that cracks and peels after a few washes. Ours is 3D printed directly into the fabric using a high-definition process, so the illusion stays sharp wash after wash. Machine wash cold, inside out, and it holds up.</p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -229,7 +262,7 @@
         "button_mmXMxG": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
+            "button_label": "Shop The Tee",
             "button_link": "",
             "button_link_newtab": true,
             "button_text_color": "#FFFFFF",
@@ -242,7 +275,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 15,
-            "button_subtext": "30-Day Money Back Guarantee",
+            "button_subtext": "15-Day Money Back Guarantee",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
             "button_action": "scroll",
@@ -274,7 +307,7 @@
         "heading_HWEeMN": {
           "type": "heading",
           "settings": {
-            "heading": "Built for durability",
+            "heading": "Built the way a good tee should be",
             "heading_size": "h1",
             "heading_alignment": "left",
             "heading_mobilealignment": "left",
@@ -284,12 +317,12 @@
         "percent_FqjgK3": {
           "type": "percent",
           "settings": {
-            "percent_value": 99,
+            "percent_value": 100,
             "percent_filled_color": "#000000",
             "percent_unfilled_color": "#C7C7C7",
             "percent_text_color": "#000000",
             "percent_background_color": "#ffffff",
-            "text": "<p>Scratch-resistant bubble window stays clear and crack-free, even with daily paws-on curiosity.<br/><br/></p>",
+            "text": "<p>Polyester construction. Lightweight and breathable so the print doesn't come at the cost of comfort.<br/><br/></p>",
             "text_style": "body",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -301,12 +334,12 @@
         "percent_6yArKQ": {
           "type": "percent",
           "settings": {
-            "percent_value": 97,
+            "percent_value": 100,
             "percent_filled_color": "#000000",
             "percent_unfilled_color": "#C7C7C7",
             "percent_text_color": "#000000",
             "percent_background_color": "#ffffff",
-            "text": "<p>Weatherproof PU leather shell keeps your pet dry and comfortable, rain or shine, all seasons.<br/><br/></p>",
+            "text": "<p>Machine washable. Cold, inside out, tumble dry low &mdash; no special care required.<br/><br/></p>",
             "text_style": "body",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -318,12 +351,12 @@
         "percent_fVWfEm": {
           "type": "percent",
           "settings": {
-            "percent_value": 96,
+            "percent_value": 100,
             "percent_filled_color": "#000000",
             "percent_unfilled_color": "#C7C7C7",
             "percent_text_color": "#000000",
             "percent_background_color": "#ffffff",
-            "text": "<p>Reinforced stitching at every stress point holds firm under your pet's full weight, trip after trip.<br/><br/></p>",
+            "text": "<p>Backed by our 15-day money-back guarantee. Not laughing? Send it back.<br/><br/></p>",
             "text_style": "body",
             "text_alignment": "left",
             "text_mobilealignment": "left",
@@ -348,7 +381,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 15,
-            "button_subtext": "30-Day Money Back Guarantee",
+            "button_subtext": "15-Day Money Back Guarantee",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
             "button_action": "scroll",
@@ -383,21 +416,21 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Sarah M.",
+            "author_text": "Chris M.",
             "author_style": "subtitle",
-            "author_color": "#000000",
+            "author_color": "#16213E",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "My cat actually likes getting in it now. The window keeps her calm on car rides.",
+            "review_text": "Funniest shirt ever \u2014 These are ridiculous in the best way. Took them on holiday and it instantly became my favourite shirt. Every time I wore it someone had something to say. Definitely not the kind of shirt you can wear unnoticed.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
             "review_border_radius": "low"
           }
@@ -406,21 +439,21 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Daniel R.",
+            "author_text": "Gary T.",
             "author_style": "subtitle",
-            "author_color": "#000000",
+            "author_color": "#16213E",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Sturdy build and surprisingly comfortable to wear on long airport walks.",
+            "review_text": "Everyone noticed \u2014 Me and the guys wore these to the beach club thinking we'd get a few laughs. Ended up getting compliments from complete strangers all afternoon. My wife was laughing the entire time too. Worth it just for the reactions.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
             "review_border_radius": "low"
           }
@@ -429,21 +462,21 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Priya K.",
+            "author_text": "Anthony B.",
             "author_style": "subtitle",
-            "author_color": "#000000",
+            "author_color": "#16213E",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
-            "stars_number": 5,
+            "stars_number": 4,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Great airflow, no overheating even on warmer days. Highly recommend.",
+            "review_text": "Main attraction \u2014 Wore this around the city on holiday and I swear everyone was looking at me. Got compliments, laughs and a few people asking where I got it. Definitely felt like the main attraction that day.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
             "review_border_radius": "low"
           }
@@ -452,21 +485,21 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Tom H.",
+            "author_text": "Layla T.",
             "author_style": "subtitle",
-            "author_color": "#000000",
+            "author_color": "#16213E",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Zippers feel premium and the straps are padded enough for a full day out.",
+            "review_text": "He LOVES it \u2014 Bought these for my husband and his friends before our holiday and he thought they were hilarious. Now they wear them everywhere. Easily the funniest thing I've bought them.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
             "review_border_radius": "low"
           }
@@ -475,136 +508,21 @@
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Megan L.",
+            "author_text": "Mckenzie M.",
             "author_style": "subtitle",
-            "author_color": "#000000",
+            "author_color": "#16213E",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
-            "stars_number": 5,
+            "stars_number": 4,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Looks even better in person. My vet asked where I got it.",
+            "review_text": "Best gift \u2014 Got these for my husband as a joke and now he won't stop wearing them. We went to the beach and he literally had people commenting on it all day. Definitely got more attention than I expected.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_9czTLt": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Alex P.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Buyer",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Fits my 5kg cat with room to spare. Easy to clean inside too.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_XP4GAR": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Jess W.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Buyer",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Held up great through a 6-hour road trip. No complaints from my dog either.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_Ajy4wY": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Carlos B.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Buyer",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Shipping was fast and packaging was solid. Backpack itself feels premium.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_TRFHip": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Nina F.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Buyer",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Bought one for each cat. Worth every dollar for stress-free vet visits.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_xcCHyH": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Owen T.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Buyer",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Comfortable straps and the bubble window is clearer than I expected.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
             "review_border_radius": "low"
           }
@@ -615,12 +533,7 @@
         "review_9pbDiT",
         "review_3TWFaK",
         "review_qGNrUR",
-        "review_GjjMPQ",
-        "review_9czTLt",
-        "review_XP4GAR",
-        "review_Ajy4wY",
-        "review_TRFHip",
-        "review_xcCHyH"
+        "review_GjjMPQ"
       ],
       "name": "PP - Reviews",
       "settings": {
@@ -629,12 +542,12 @@
         "stars_alignment": "center",
         "stars_mobilealignment": "center",
         "heading_stars_number": 5,
-        "heading": "Loved by pet parents everywhere",
+        "heading": "Loved by people who like a reaction",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
         "heading_color": "#000000",
-        "text": "<p>Real reviews from real customers who travel everywhere with their cats and small dogs in the Astronaut Pet Carrier Backpack.<br/><br/></p>",
+        "text": "<p>Real reviews from real customers wearing the tee out in public.<br/><br/></p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
@@ -654,7 +567,7 @@
         "button_rounded_corners": "medium",
         "button_padding_vertical": 15,
         "button_padding_horizontal": 15,
-        "button_subtext": "30-Day Money Back Guarantee",
+        "button_subtext": "15-Day Money Back Guarantee",
         "button_subtext_style": "body",
         "button_subtext_color": "#000000",
         "button_action": "scroll",
@@ -671,7 +584,7 @@
         "heading_DCqkDF": {
           "type": "heading",
           "settings": {
-            "heading": "Why ours is the better carrier",
+            "heading": "Why ours beats a generic novelty tee",
             "heading_size": "h1",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
@@ -681,7 +594,7 @@
         "text_aitc8f": {
           "type": "text",
           "settings": {
-            "text": "<p>A clear bubble window, padded straps, and breathable airflow set the Astronaut Pet Carrier Backpack apart from generic carriers that leave your pet hidden and uncomfortable.</p>",
+            "text": "<p>A lot of illusion tees online use a flat iron-on transfer that fades and peels. Ours is 3D printed into the fabric itself.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
@@ -691,7 +604,7 @@
         "tableitem_DnKtRB": {
           "type": "tableitem",
           "settings": {
-            "text": "Bubble window visibility",
+            "text": "3D printed illusion, not iron-on",
             "checkmark": "us",
             "button_checkmark_color": "#23c55e",
             "button_x_color": "#000000"
@@ -700,7 +613,7 @@
         "tableitem_LwzwAp": {
           "type": "tableitem",
           "settings": {
-            "text": "Breathable mesh airflow",
+            "text": "6 designs, mix and match",
             "checkmark": "us",
             "button_checkmark_color": "#23c55e",
             "button_x_color": "#000000"
@@ -709,7 +622,7 @@
         "tableitem_TUBVYV": {
           "type": "tableitem",
           "settings": {
-            "text": "Padded, adjustable straps",
+            "text": "Sizes XXS to 6XL",
             "checkmark": "us",
             "button_checkmark_color": "#23c55e",
             "button_x_color": "#000000"
@@ -718,7 +631,7 @@
         "tableitem_9JfJGq": {
           "type": "tableitem",
           "settings": {
-            "text": "Reinforced stitching",
+            "text": "15-day money-back guarantee",
             "checkmark": "us",
             "button_checkmark_color": "#23c55e",
             "button_x_color": "#000000"
@@ -727,7 +640,7 @@
         "tableitem_y3Pja9": {
           "type": "tableitem",
           "settings": {
-            "text": "Weatherproof exterior",
+            "text": "Breathable, machine washable polyester",
             "checkmark": "us",
             "button_checkmark_color": "#23c55e",
             "button_x_color": "#000000"
@@ -772,7 +685,7 @@
         "heading_gc4gfH": {
           "type": "heading",
           "settings": {
-            "heading": "Travel with peace of mind",
+            "heading": "Wear it with confidence",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
@@ -782,7 +695,7 @@
         "text_LLQAeq": {
           "type": "text",
           "settings": {
-            "text": "<p>If your Astronaut Pet Carrier Backpack doesn't hold up to daily adventures, send it back within 30 days for a full refund. No questions asked.<br/></p>",
+            "text": "<p>If you're not getting the reactions you were hoping for, send it back within 15 days of delivery for a full refund. No questions asked.<br/></p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
@@ -806,7 +719,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 15,
-            "button_subtext": "30-Day Money Back Guarantee",
+            "button_subtext": "15-Day Money Back Guarantee",
             "button_subtext_style": "body",
             "button_subtext_color": "#000000",
             "button_action": "scroll",
@@ -833,7 +746,7 @@
       "type": "featured-collection",
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
-        "heading": "Featured Collection",
+        "heading": "You Might Also Like",
         "heading_size": "h1",
         "heading_alignment": "left",
         "heading_mobilealignment": "center",
@@ -863,17 +776,108 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "pp_faq_shirt01": {
+      "type": "pp-faq",
+      "blocks": {
+        "question_UUEbPG": {
+          "type": "question",
+          "settings": {
+            "heading": "Is the design actually 3D printed, or is it an iron-on sticker?",
+            "heading_size": "h3",
+            "heading_color": "#16213E",
+            "text": "<p>It's printed directly into the fabric with a high-definition 3D print process, not a transfer stuck on top. That's why it doesn't crack or peel in the wash the way iron-on tees do.</p>",
+            "text_style": "body",
+            "text_color": "#16213E"
+          }
+        },
+        "question_iwgzRn": {
+          "type": "question",
+          "settings": {
+            "heading": "What sizes do you carry?",
+            "heading_size": "h3",
+            "heading_color": "#16213E",
+            "text": "<p>XXS through 6XL. If you're between sizes, or want a more relaxed fit, size up &mdash; a closer fit shows the illusion print off best.</p>",
+            "text_style": "body",
+            "text_color": "#16213E"
+          }
+        },
+        "question_gNmdPq": {
+          "type": "question",
+          "settings": {
+            "heading": "Can I mix designs in one order?",
+            "heading_size": "h3",
+            "heading_color": "#16213E",
+            "text": "<p>Yes. There are 6 designs, and the Buy Two and Buy Three bundles let you pick a different design for each shirt.</p>",
+            "text_style": "body",
+            "text_color": "#16213E"
+          }
+        },
+        "question_NpRfRa": {
+          "type": "question",
+          "settings": {
+            "heading": "How do I wash it without damaging the print?",
+            "heading_size": "h3",
+            "heading_color": "#16213E",
+            "text": "<p>Machine wash cold, inside out, tumble dry low. Avoid ironing directly on the print.</p>",
+            "text_style": "body",
+            "text_color": "#16213E"
+          }
+        },
+        "question_cwFiY9": {
+          "type": "question",
+          "settings": {
+            "heading": "What if I'm not happy with it?",
+            "heading_size": "h3",
+            "heading_color": "#16213E",
+            "text": "<p>You've got 15 days from delivery to send it back for a full refund, no questions asked.</p>",
+            "text_style": "body",
+            "text_color": "#16213E"
+          }
+        }
+      },
+      "block_order": [
+        "question_UUEbPG",
+        "question_iwgzRn",
+        "question_gNmdPq",
+        "question_NpRfRa",
+        "question_cwFiY9"
+      ],
+      "name": "PP - FAQ",
+      "settings": {
+        "heading": "Frequently Asked Questions",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#16213E",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#16213E",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#F2EAD3",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#16213E",
+        "gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
     }
   },
   "order": [
     "main",
-    "related-products",
     "pp_image_with_benefits_7jKKKP",
     "pp_image_with_text_aVCYVi",
     "pp_image_with_percentage_bWi6Ak",
     "pp_reviews_Mb9Ney",
     "pp_comparison_table_zkkEGP",
+    "pp_faq_shirt01",
     "pp_guarantee_qmGNEC",
+    "related-products",
     "featured_collection_4JUPnn"
   ]
 }
