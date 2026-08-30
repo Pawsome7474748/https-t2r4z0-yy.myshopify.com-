@@ -1,0 +1,53 @@
+{%- assign v = product.selected_or_first_available_variant -%}
+{%- if v.compare_at_price > v.price -%}
+  {%- assign saved = v.compare_at_price | minus: v.price -%}
+  {%- assign pct = saved | times: 100.0 | divided_by: v.compare_at_price | round -%}
+  <div class="sh-priceline">
+    <span class="sh-save">SAVE {{ saved | money }} · {{ pct }}% OFF</span>
+  </div>
+{%- endif -%}
+
+<div class="sh-timer" data-sh-timer>
+  <div class="sh-timer__label">
+    ⚡ Launch offer ends in
+    <small>Price returns to {{ v.compare_at_price | money }} when the timer hits zero</small>
+  </div>
+  <div class="sh-timer__clock">
+    <div class="sh-timer__unit"><span class="sh-timer__num" data-sh-h>--</span><span class="sh-timer__cap">Hrs</span></div>
+    <div class="sh-timer__unit"><span class="sh-timer__num" data-sh-m>--</span><span class="sh-timer__cap">Min</span></div>
+    <div class="sh-timer__unit"><span class="sh-timer__num" data-sh-s>--</span><span class="sh-timer__cap">Sec</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var KEY='sh_offer_deadline', WINDOW=24*60*60*1000;
+  function read(){try{return parseInt(localStorage.getItem(KEY),10)||0}catch(e){return 0}}
+  function write(v){try{localStorage.setItem(KEY,String(v))}catch(e){}}
+  function deadline(){
+    var d=read();
+    if(!d||d<=Date.now()){d=Date.now()+WINDOW;write(d);}
+    return d;
+  }
+  var end=deadline();
+  var root=document.querySelector('[data-sh-timer]');
+  if(!root)return;
+  var h=root.querySelector('[data-sh-h]'),m=root.querySelector('[data-sh-m]'),s=root.querySelector('[data-sh-s]');
+  function pad(n){return n<10?'0'+n:''+n}
+  function tick(){
+    var left=end-Date.now();
+    if(left<=0){end=Date.now()+WINDOW;write(end);left=WINDOW;}
+    var t=Math.floor(left/1000);
+    h.textContent=pad(Math.floor(t/3600));
+    m.textContent=pad(Math.floor(t%3600/60));
+    s.textContent=pad(t%60);
+  }
+  tick();setInterval(tick,1000);
+})();
+</script>
+
+<div class="sh-stock">
+  <span class="sh-dot"></span>
+  Almost out of stock — selling fast in this design
+</div>
+<div class="sh-stock__bar"><div class="sh-stock__fill"></div></div>

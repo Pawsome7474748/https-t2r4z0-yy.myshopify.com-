@@ -1,0 +1,15 @@
+<div class="sh-trust">
+  <div class="sh-trust__grid">
+    <div class="sh-trust__item"><span>🛡️</span><b>15-Day Returns</b>Not laughing? Money back</div>
+    <div class="sh-trust__item"><span>🚚</span><b>Tracked Shipping</b>Dispatched in 24 hours</div>
+    <div class="sh-trust__item"><span>🇺🇸</span><b>6 Flag Designs</b>Mix and match any size</div>
+  </div>
+  <div class="sh-secure">
+    <div class="sh-secure__cap">Secure checkout with</div>
+    <div class="sh-secure__icons">
+      {%- for type in shop.enabled_payment_types limit: 8 -%}
+        {{ type | payment_type_svg_tag: class: 'payment-icon' }}
+      {%- endfor -%}
+    </div>
+  </div>
+</div>

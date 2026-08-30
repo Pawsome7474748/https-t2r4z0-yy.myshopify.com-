@@ -1,0 +1,11 @@
+{%- assign now_s = 'now' | date: '%s' | plus: 0 -%}
+{%- assign from_s = now_s | plus: 864000 -%}
+{%- assign to_s = now_s | plus: 1296000 -%}
+<div class="sh-deliver">
+  <span class="sh-deliver__dot"></span>
+  <span>
+    Order today and get it between
+    <b>{{ from_s | date: '%a %-d %b' }}</b> and <b>{{ to_s | date: '%a %-d %b' }}</b>.<br>
+    Ships within 24 hours · Tracked delivery on every order
+  </span>
+</div>

@@ -1,0 +1,71 @@
+{%- assign v = product.selected_or_first_available_variant -%}
+{%- assign p1 = v.price -%}
+{%- assign p2 = v.price | times: 2 | times: 0.85 | round -%}
+{%- assign p3 = v.price | times: 3 | times: 0.85 | round -%}
+{%- assign w2 = v.price | times: 2 -%}
+{%- assign w3 = v.price | times: 3 -%}
+{%- assign e2 = p2 | divided_by: 2 -%}
+{%- assign e3 = p3 | divided_by: 3 -%}
+
+<div class="sh-bundle">
+  <div class="sh-bundle__head">
+    <span class="sh-bundle__title">Choose your bundle</span>
+    <span class="sh-bundle__hint">🔥 78% pick 2 or more</span>
+  </div>
+
+  <button type="button" class="sh-tier" data-sh-qty="1">
+    <span class="sh-tier__radio"></span>
+    <span class="sh-tier__main">
+      <span class="sh-tier__name">Buy 1 — Just Testing</span>
+      <span class="sh-tier__sub">Single tee, one design</span>
+    </span>
+    <span class="sh-tier__right">
+      <span class="sh-tier__now">{{ p1 | money }}</span>
+      <span class="sh-tier__was">{{ v.compare_at_price | money }}</span>
+    </span>
+  </button>
+
+  <button type="button" class="sh-tier is-on" data-sh-qty="2">
+    <span class="sh-tier__flag">Most popular · Save 15%</span>
+    <span class="sh-tier__radio"></span>
+    <span class="sh-tier__main">
+      <span class="sh-tier__name">Buy 2 — Mix &amp; Match</span>
+      <span class="sh-tier__sub">Two designs, one for a mate</span>
+    </span>
+    <span class="sh-tier__right">
+      <span class="sh-tier__now">{{ p2 | money }}</span>
+      <span class="sh-tier__was">{{ w2 | money }}</span>
+      <span class="sh-tier__each">{{ e2 | money }} each</span>
+    </span>
+  </button>
+
+  <button type="button" class="sh-tier" data-sh-qty="3">
+    <span class="sh-tier__flag sh-tier__flag--best">Best value · Save 15% + Free Shipping</span>
+    <span class="sh-tier__radio"></span>
+    <span class="sh-tier__main">
+      <span class="sh-tier__name">Buy 3 — The Group Pack</span>
+      <span class="sh-tier__sub">Three designs, free shipping</span>
+    </span>
+    <span class="sh-tier__right">
+      <span class="sh-tier__now">{{ p3 | money }}</span>
+      <span class="sh-tier__was">{{ w3 | money }}</span>
+      <span class="sh-tier__each">{{ e3 | money }} each</span>
+    </span>
+  </button>
+</div>
+
+<script>
+(function(){
+  var tiers=document.querySelectorAll('.sh-tier');
+  var qty=document.getElementById('Quantity-{{ section_id }}');
+  if(!tiers.length)return;
+  tiers.forEach(function(t){
+    t.addEventListener('click',function(){
+      tiers.forEach(function(x){x.classList.remove('is-on')});
+      t.classList.add('is-on');
+      if(qty){qty.value=t.getAttribute('data-sh-qty');qty.dispatchEvent(new Event('change',{bubbles:true}));}
+    });
+  });
+  if(qty){qty.value='2';qty.dispatchEvent(new Event('change',{bubbles:true}));}
+})();
+</script>
