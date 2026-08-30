@@ -17,8 +17,8 @@
         "text_aRtVUk": {
           "type": "text",
           "settings": {
-            "heading": "<strong>About PawPatrol<\/strong>",
-            "subtext": "<p>PawPatrol brings simple, reliable pet essentials to busy pet owners. From comfy beds to playful toys and grooming tools, every product is pet-tested and owner-approved. Shop with confidence and join a friendly community that cares for pets like family.<\/p>"
+            "heading": "<strong>About Shirt Happens<\/strong>",
+            "subtext": "<p>Shirt Happens makes the internet's favorite illusion tee — a photo-real \"fake abs\" print that looks unreal until you see it in person. Every design is printed on soft, breathable polyester and built to survive the wash. Wear it with confidence.<\/p>"
           }
         },
         "link_list_LVMieL": {
@@ -39,7 +39,7 @@
           "type": "text",
           "settings": {
             "heading": "<strong>Contact Us<\/strong>",
-            "subtext": "<p><strong>📞 Phone:<\/strong> +1 777 777 7777<br\/><br\/><strong>💌 Email: <\/strong>youremail@gmail.com<\/p>"
+            "subtext": "<p><strong>📬 Email: <\/strong>support@shirthappens.com<br\/><br\/>Backed by our 15-Day Money-Back Guarantee.<\/p>"
           }
         }
       },
@@ -50,7 +50,7 @@
         "text_QETYcC"
       ],
       "settings": {
-        "gradient": "linear-gradient(180deg, #ffe8e1, #ffe8e1 100%)",
+        "gradient": "linear-gradient(180deg, #16213E, #16213E 100%)",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": false,

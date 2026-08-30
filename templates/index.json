@@ -15,22 +15,22 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Everything your pet needs — reliable, stylish, and made for happy tails and wagging hearts.",
+            "heading": "The Illusion Tee Everyone's Talking About",
             "heading_size": "h0"
           }
         },
         "buttons_pVK3W7": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "View Collection 👉🏻",
-            "button_link_1": "shopify://collections/all",
+            "button_label_1": "Shop Shirt Happens 👉🏻",
+            "button_link_1": "/products/novelty-funny-fake-abs-chest-t-shirt-men-3d-print-american-flag-tank-top-illusion-skin-print-short-sleeve-holiday-party-top",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false,
             "button_rounded_corners": "medium",
-            "button_text_color": "#ffffff",
-            "button_background_color": "#f8663b",
+            "button_text_color": "#F2EAD3",
+            "button_background_color": "#A6293D",
             "button_padding_vertical": 20
           }
         }
@@ -40,13 +40,13 @@
         "buttons_pVK3W7"
       ],
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2026-06-21_at_2.13.40_PM.png",
+        "image": "shopify://shop_images/Sb563e02be15b4f7b939b058fec833c3df.webp",
         "image_overlay_opacity": 40,
         "image_height": "medium",
         "desktop_content_position": "middle-center",
         "show_text_box": false,
         "desktop_content_alignment": "center",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-2",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
         "stack_images_on_mobile": false,
@@ -59,31 +59,31 @@
         "heading_XBqRa6": {
           "type": "heading",
           "settings": {
-            "heading": "Welcome to Pawsome Pet Essentials That Make Life Easier And Pets Happier.",
+            "heading": "Actually 3D Printed, Not Iron-On",
             "heading_size": "h1",
             "heading_alignment": "left",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#16213E"
           }
         },
         "text_BnFjzQ": {
           "type": "text",
           "settings": {
-            "text": "<p> Welcome to Pawsome We create  toys, beds, collars, and grooming made for everyday pet joy.</p>",
+            "text": "<p>No cracked decal, no peeling print. Our photo-real chest and abs graphic is 3D printed directly into soft, breathable polyester so it moves — and washes — with you.</p>",
             "text_style": "subtitle",
             "text_alignment": "left",
             "text_mobilealignment": "left",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "button_ewqPQY": {
           "type": "button",
           "settings": {
-            "button_label": "View Our Story 👉🏻",
-            "button_link": "/pages/about-us",
+            "button_label": "Shop Now 👉🏻",
+            "button_link": "/products/novelty-funny-fake-abs-chest-t-shirt-men-3d-print-american-flag-tank-top-illusion-skin-print-short-sleeve-holiday-party-top",
             "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#f8663b",
+            "button_text_color": "#F2EAD3",
+            "button_background_color": "#A6293D",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "full",
@@ -92,9 +92,9 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 25,
-            "button_subtext": "Find out what's our mission and goals",
+            "button_subtext": "Buy 2+ and save 15% automatically",
             "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
+            "button_subtext_color": "#16213E",
             "button_action": "link",
             "button_action_scroll_element": ""
           }
@@ -106,9 +106,9 @@
         "button_ewqPQY"
       ],
       "settings": {
-        "image": "shopify://shop_images/theme_image_149_5_14.webp",
+        "image": "shopify://shop_images/S629637a05657476cb1920cf9b859007fL.webp",
         "desktop_image_width": "large",
-        "image_border_radius": 50,
+        "image_border_radius": 24,
         "layout": "image_first",
         "mobile_layout": "image_first",
         "gradient": "",
@@ -124,53 +124,53 @@
         "benefit_D6UzNR": {
           "type": "benefit",
           "settings": {
-            "emoji": "🚚",
+            "emoji": "😲",
             "emoji_size": "medium",
-            "heading": "Fast shipping",
+            "heading": "Guaranteed reactions",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Faster than your dog at dinnertime. Gear's at your door before the next walk.</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Double-takes, laughs, and compliments — this shirt gets noticed everywhere it goes.</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "benefit_QgKXFK": {
           "type": "benefit",
           "settings": {
-            "emoji": "🛡️",
+            "emoji": "🎽",
             "emoji_size": "medium",
-            "heading": "Quality first",
+            "heading": "Breathable polyester",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Strong, safe, vet-reviewed materials built to handle real life — mud, chewing, and all.</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Lightweight, soft, and comfortable enough to wear all day, every day.</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "benefit_47AwEj": {
           "type": "benefit",
           "settings": {
-            "emoji": "💬",
+            "emoji": "🎨",
             "emoji_size": "medium",
-            "heading": "Friendly support",
+            "heading": "6 illusion designs",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Not sure about sizing? We've fitted thousands of various good dogs — happy to help with yours.</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Old Glory, Liberty, Patriot, Stars & Stripes, Independence, and Freedom — pick your favorite.</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "benefit_EKiWTc": {
           "type": "benefit",
           "settings": {
-            "emoji": "🔁",
+            "emoji": "🧺",
             "emoji_size": "medium",
-            "heading": "Easy returns",
+            "heading": "Machine washable",
             "heading_size": "h3",
-            "heading_color": "#000000",
-            "text": "<p>Hassle-free 30-day returns if it’s not a perfect fit.</p>",
+            "heading_color": "#16213E",
+            "text": "<p>Toss it in with the rest of the laundry — the print won't crack, fade, or peel.</p>",
             "text_style": "body",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         }
       },
@@ -181,20 +181,20 @@
         "benefit_EKiWTc"
       ],
       "settings": {
-        "image": "shopify://shop_images/Screenshot_2026-06-21_at_5.37.06_PM.png",
+        "image": "shopify://shop_images/hf_20260830_101404_344ff640-4301-49bf-982b-347e0e28ec51.png",
         "desktop_image_width": "large",
         "image_border_radius": 100,
-        "heading": "Why choose us",
+        "heading": "Why choose Shirt Happens",
         "heading_size": "h0",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "text": "<p>PawPatrol makes pet care simple with quality gear, fast shipping, and friendly support for every pet family.</p>",
+        "heading_color": "#16213E",
+        "text": "<p>A novelty tee built for laughs first — and comfort so it actually gets worn.</p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
-        "text_color": "#000000",
-        "gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(255, 232, 225, 1) 100%)",
+        "text_color": "#16213E",
+        "gradient": "linear-gradient(180deg, rgba(242, 234, 211, 1), rgba(242, 234, 211, 1) 100%)",
         "padding_top": 52,
         "padding_bottom": 44,
         "margin_top": 0,
@@ -204,11 +204,11 @@
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
-        "heading": "Discover Our Collection",
+        "heading": "Shop All Designs",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
+        "heading_color": "#16213E",
         "description": "",
         "show_description": false,
         "description_style": "body",
@@ -238,368 +238,133 @@
     "pp_reviews_EXpLcn": {
       "type": "pp-reviews",
       "blocks": {
-        "review_dtNXc1": {
+        "review_YgdzNx": {
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Mia R.",
+            "author_text": "Chris M.",
             "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
+            "author_color": "#16213E",
+            "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Love PawPatrol! The bed I bought arrived fast and my cat snores on it every night. Great quality and cute design. Customer service helped me pick the right size.",
+            "review_text": "Funniest shirt ever — These are ridiculous in the best way. Took them on holiday and it instantly became my favourite shirt. Every time I wore it someone had something to say. Definitely not the kind of shirt you can wear unnoticed.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low"
+            "review_border_radius": "low",
+            "image": "shopify://shop_images/hf_20260830_093121_c95556f9-8797-45c0-a3b1-dd1f6696bdea.png"
           }
         },
-        "review_dtNXc2": {
+        "review_9pbDiT": {
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Ethan S.",
+            "author_text": "Gary T.",
             "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
+            "author_color": "#16213E",
+            "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "soooo good 😍 my pup LOVES the chew toy. No joke, it lasted weeks and still looks new. lowkey obsessed, will buy again.",
+            "review_text": "Everyone noticed — Me and the guys wore these to the beach club thinking we'd get a few laughs. Ended up getting compliments from complete strangers all afternoon. My wife was laughing the entire time too. Worth it just for the reactions.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low"
+            "review_border_radius": "low",
+            "image": "shopify://shop_images/hf_20260830_093305_6dce4bb2-48a1-4af9-804d-f910942d82c5.png"
           }
         },
-        "review_dtNXc3": {
+        "review_3TWFaK": {
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Sophia L.",
+            "author_text": "Anthony B.",
             "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
+            "author_color": "#16213E",
+            "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
-            "stars_number": 5,
+            "stars_number": 4,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Amazing service and fast delivery. The leash is strong and the handle is comfy. Worth every penny.",
+            "review_text": "Main attraction — Wore this around the city on holiday and I swear everyone was looking at me. Got compliments, laughs and a few people asking where I got it. Definitely felt like the main attraction that day.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low"
+            "review_border_radius": "low",
+            "image": "shopify://shop_images/hf_20260830_093401_303a3d81-9471-470f-a211-62844dfc4afa.png"
           }
         },
-        "review_dtNXc4": {
+        "review_qGNrUR": {
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Noah J.",
+            "author_text": "Layla T.",
             "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
+            "author_color": "#16213E",
+            "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "best store!!",
+            "review_text": "He LOVES it — Bought these for my husband and his friends before our holiday and he thought they were hilarious. Now they wear them everywhere. Easily the funniest thing I've bought them.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low"
+            "review_border_radius": "low",
+            "image": "shopify://shop_images/hf_20260830_094144_fc05e353-4a5e-485b-942f-10a524656590.png"
           }
         },
-        "review_dtNXc5": {
+        "review_GjjMPQ": {
           "type": "review",
           "settings": {
             "image_border_radius": "low",
-            "author_text": "Ava M.",
+            "author_text": "Mckenzie M.",
             "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
+            "author_color": "#16213E",
+            "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
+            "author_badge_text_color": "#ffffff",
+            "author_badge_color": "#16213E",
             "stars_size": "sm",
             "stars_color": "#facc15",
-            "stars_number": 5,
+            "stars_number": 4,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Bought a grooming kit — works well, small brushes are great for my rescue dog. Shipping was quick, packaging neat. Support answered my q's fast. Happy customer.",
+            "review_text": "Best gift — Got these for my husband as a joke and now he won't stop wearing them. We went to the beach and he literally had people commenting on it all day. Definitely got more attention than I expected.",
             "review_text_style": "body",
-            "review_text_color": "#000000",
+            "review_text_color": "#16213E",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc6": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Lucas T.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "omg this collar is FIRE 🔥 my dog looks so cute. fits perfect, no rubbing. legit 10/10.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc7": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Isabella P.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "The play mat is perfect for my kitten. Soft, washable, and the colors are nice. It arrived earlier than expected. Very pleased.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc8": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Mason H.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Pretty happy with the bowl set. Non-slip and easy to clean. Would order more for gifts.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc9": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Emma K.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Nice quality, good price. No complaints.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc10": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Oliver B.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "I bought a travel carrier for my cat. It’s lightweight and solid. Zippers are strong and the padding is nice. The vet visit was calm thanks to PawPatrol’s carrier. Very impressed with the product build and how easy it is to clean. Support guided me on measurements before I ordered, which helped a lot. Will recommend to friends who travel with pets.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc11": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Charlotte W.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "luv it lol 😻",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc12": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "James F.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "PawPatrol’s toy bundle kept my lab busy for days. Durable, not cheap plastic, and the squeaker still works. My pup usually destroys toys fast but these hold up. Packaging was cute and smelled nice. Quick reply from support when I asked about replacements.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc13": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Amelia G.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Excellent experience. The puppy training pads absorb well and arrived earlier than expected. Great value, will reorder.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc14": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Benjamin C.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "ok good",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
-          }
-        },
-        "review_dtNXc15": {
-          "type": "review",
-          "settings": {
-            "image_border_radius": "low",
-            "author_text": "Harper N.",
-            "author_style": "subtitle",
-            "author_color": "#000000",
-            "author_badge_text": "Verified Purchase",
-            "author_badge_text_style": "body",
-            "author_badge_text_color": "#000000",
-            "author_badge_color": "#2993f1",
-            "stars_size": "sm",
-            "stars_color": "#facc15",
-            "stars_number": 5,
-            "stars_alignment": "start",
-            "stars_mobilealignment": "start",
-            "review_text": "Absolutely thrilled. PawPatrol’s dog bed changed our nights — no more floor sleeping. The foam is comfy and cover washes easy. Customer support helped exchange size with no fuss. Fast shipping, great price, and a big happy pup.",
-            "review_text_style": "body",
-            "review_text_color": "#000000",
-            "review_background_color": "#ffffff",
-            "review_border_radius": "low"
+            "review_border_radius": "low",
+            "image": "shopify://shop_images/hf_20260830_094208_2e9f9952-11a8-4b3b-84b3-27bcb4cb9f25.png"
           }
         }
       },
       "block_order": [
-        "review_dtNXc1",
-        "review_dtNXc2",
-        "review_dtNXc3",
-        "review_dtNXc4",
-        "review_dtNXc5",
-        "review_dtNXc6",
-        "review_dtNXc7",
-        "review_dtNXc8",
-        "review_dtNXc9",
-        "review_dtNXc10",
-        "review_dtNXc11",
-        "review_dtNXc12",
-        "review_dtNXc13",
-        "review_dtNXc14",
-        "review_dtNXc15"
+        "review_YgdzNx",
+        "review_9pbDiT",
+        "review_3TWFaK",
+        "review_qGNrUR",
+        "review_GjjMPQ"
       ],
       "settings": {
         "heading_stars_size": "lg",
@@ -607,22 +372,22 @@
         "stars_alignment": "center",
         "stars_mobilealignment": "center",
         "heading_stars_number": 5,
-        "heading": "People love our products!",
+        "heading": "Loved by people who like a reaction",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "text": "<p>Rated 4.9/5 by 5,000+ Happy Customers</p>",
+        "heading_color": "#16213E",
+        "text": "<p>Real reviews from real customers wearing the tee out in public.</p>",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
-        "text_color": "#000000",
+        "text_color": "#16213E",
         "gradient": "",
         "button_label": "",
         "button_link": "",
         "button_link_newtab": true,
         "button_text_color": "#ffffff",
-        "button_background_color": "#f8663b",
+        "button_background_color": "#A6293D",
         "button_border_width": 0,
         "button_border_color": "#000000",
         "button_width": "fit",
@@ -649,41 +414,41 @@
         "icon_XHDhV4": {
           "type": "icon",
           "settings": {
-            "icon_type": "heart",
+            "icon_type": "shield",
             "icon_size": 65,
             "icon_alignment": "center",
             "icon_mobilealignment": "center",
-            "icon_color": "#f8663b"
+            "icon_color": "#A6293D"
           }
         },
         "heading_CQ6HWW": {
           "type": "heading",
           "settings": {
-            "heading": "30-Day Money-Back Guarantee — Try Risk-Free",
+            "heading": "15-Day Money-Back Guarantee — Try Risk-Free",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#16213E"
           }
         },
         "text_4XnaxC": {
           "type": "text",
           "settings": {
-            "text": "<p>We believe you and your pet will love PawPatrol products. If you’re not satisfied within 30 days, return for a full refund. No fuss — just our promise to you and your pet.</p>",
+            "text": "<p>Wear it with confidence. If Shirt Happens isn't for you, send it back within 15 days for a full refund — no fuss, no risk.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
-            "text_color": "#000000"
+            "text_color": "#16213E"
           }
         },
         "button_nd9nGW": {
           "type": "button",
           "settings": {
             "button_label": "Shop Now 👉🏻",
-            "button_link": "/collections/all",
+            "button_link": "/products/novelty-funny-fake-abs-chest-t-shirt-men-3d-print-american-flag-tank-top-illusion-skin-print-short-sleeve-holiday-party-top",
             "button_link_newtab": false,
-            "button_text_color": "#ffffff",
-            "button_background_color": "#f8663b",
+            "button_text_color": "#F2EAD3",
+            "button_background_color": "#A6293D",
             "button_border_width": 0,
             "button_border_color": "#000000",
             "button_width": "fit",
@@ -693,9 +458,9 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 15,
             "button_padding_horizontal": 15,
-            "button_subtext": "Enjoy 30-Day Money Back Guarantee",
+            "button_subtext": "15-Day Money Back Guarantee",
             "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
+            "button_subtext_color": "#16213E",
             "button_action": "link",
             "button_action_scroll_element": ""
           }
