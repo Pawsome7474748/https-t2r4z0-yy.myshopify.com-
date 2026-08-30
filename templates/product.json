@@ -75,22 +75,6 @@
             "show_inventory_quantity": false
           }
         },
-        "reviews_number": {
-          "type": "reviews-number",
-          "settings": {
-            "reviews_text": "4.5 out of 5 &middot; 5 Verified Reviews",
-            "reviews_text_style": "body",
-            "reviews_text_color": "#16213E",
-            "reviews_stars_size": "sm",
-            "reviews_stars_color": "#facc15",
-            "reviews_stars_number": 5,
-            "reviews_alignment": "start",
-            "reviews_mobilealignment": "start",
-            "reviews_border_top": 0,
-            "reviews_padding_top": 0,
-            "reviews_padding_bottom": 8
-          }
-        },
         "bundle_box": {
           "type": "custom_liquid",
           "settings": {
@@ -101,7 +85,6 @@
       "block_order": [
         "vendor",
         "title",
-        "reviews_number",
         "price",
         "variant_picker",
         "bundle_box",
