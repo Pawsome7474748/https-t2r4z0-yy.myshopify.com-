@@ -17,48 +17,56 @@
         "announcement-bar-0": {
           "type": "announcement",
           "settings": {
-            "text": "🔥 Buy 2, Save 15% — mix and match designs",
-            "text_color": "#F2EAD3",
+            "text": "⏳ LAUNCH OFFER — 24% OFF EVERY TEE, ENDS TONIGHT",
+            "text_color": "#FFFFFF",
             "link": ""
           }
         },
         "announcement-bar-1": {
           "type": "announcement",
           "settings": {
-            "text": "✅ 15-Day Money-Back Guarantee",
-            "text_color": "#F2EAD3",
+            "text": "🔥 100+ ordered in the last 24 hours",
+            "text_color": "#FFFFFF",
             "link": ""
           }
         },
         "announcement-bar-2": {
           "type": "announcement",
           "settings": {
-            "text": "📦 Dispatched in 1-3 business days",
-            "text_color": "#F2EAD3",
+            "text": "🇺🇸 BUY 2 SAVE 15% · BUY 3 SAVE 20%",
+            "text_color": "#FFFFFF",
             "link": ""
           }
         },
         "announcement-bar-3": {
           "type": "announcement",
           "settings": {
-            "text": "⭐ Rated 4.5/5 by real customers",
-            "text_color": "#F2EAD3",
+            "text": "🚚 Dispatched within 24 hours · Tracked delivery",
+            "text_color": "#FFFFFF",
             "link": ""
           }
         },
         "announcement-bar-4": {
           "type": "announcement",
           "settings": {
-            "text": "🇺🇸 6 illusion designs to choose from",
-            "text_color": "#F2EAD3",
+            "text": "🛡️ 15-Day Money-Back Guarantee",
+            "text_color": "#FFFFFF",
             "link": ""
           }
         },
         "announcement-bar-5": {
           "type": "announcement",
           "settings": {
-            "text": "🚚 Free shipping over $50",
-            "text_color": "#F2EAD3",
+            "text": "⭐ 4.6/5 from verified buyers",
+            "text_color": "#FFFFFF",
+            "link": ""
+          }
+        },
+        "announcement-bar-6": {
+          "type": "announcement",
+          "settings": {
+            "text": "⚠️ Low stock on several designs",
+            "text_color": "#FFFFFF",
             "link": ""
           }
         }
@@ -69,10 +77,11 @@
         "announcement-bar-2",
         "announcement-bar-3",
         "announcement-bar-4",
-        "announcement-bar-5"
+        "announcement-bar-5",
+        "announcement-bar-6"
       ],
       "settings": {
-        "gradient": "#16213E",
+        "gradient": "linear-gradient(90deg, #B31942 0%, #8E1436 50%, #B31942 100%)",
         "show_line_separator": false,
         "enable_marquee": true,
         "show_social": false,
@@ -80,15 +89,6 @@
         "change_slides_speed": 5,
         "enable_country_selector": false,
         "enable_language_selector": false
-      }
-    },
-    "social-proof-strip": {
-      "type": "social-proof-strip",
-      "settings": {
-        "color_scheme": "scheme-2",
-        "orders_text": "100+ orders in the last 24h",
-        "rating_value": 4.5,
-        "review_count": 5
       }
     },
     "header": {
@@ -106,14 +106,13 @@
         "enable_customer_avatar": false,
         "mobile_logo_position": "center",
         "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
+        "padding_top": 18,
+        "padding_bottom": 18
       }
     }
   },
   "order": [
     "announcement-bar",
-    "social-proof-strip",
     "header"
   ]
 }

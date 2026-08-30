@@ -1,22 +1,17 @@
 /*
- * ------------------------------------------------------------
+ * ---------------------------------------------------------
  * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
+ * ---------------------------------------------------------
  */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "blocks": {
-        "vendor": {
-          "type": "text",
+        "sh_topbar": {
+          "type": "custom_liquid",
           "settings": {
-            "text": "{{ product.vendor }}",
-            "text_style": "uppercase"
+            "custom_liquid": "<style>\n  :root{\n    --sh-navy:#0A3161; --sh-red:#B31942; --sh-cream:#F7F3E8;\n    --sh-gold:#FFC72C; --sh-green:#1B8A4B; --sh-ink:#0A3161;\n  }\n  .sh-toprow{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem 1.6rem;margin:0 0 1rem}\n  .sh-orders{display:inline-flex;align-items:center;gap:.7rem;font-size:1.35rem;font-weight:700;color:var(--sh-navy)}\n  .sh-avatars{display:flex}\n  .sh-avatars span{width:2.4rem;height:2.4rem;border-radius:50%;background:var(--sh-navy);color:#fff;\n    font-size:.95rem;font-weight:700;display:flex;align-items:center;justify-content:center;\n    border:2px solid #fff;margin-left:-.7rem;letter-spacing:.02em}\n  .sh-avatars span:first-child{margin-left:0}\n  .sh-rating{display:inline-flex;align-items:center;gap:.5rem;font-size:1.3rem;color:var(--sh-navy)}\n  .sh-stars{color:var(--sh-gold);letter-spacing:.1em;font-size:1.45rem;line-height:1}\n  .sh-rating a{color:inherit;text-decoration:underline;text-underline-offset:2px}\n\n  /* ---- price + savings ---- */\n  .sh-save{display:inline-flex;align-items:center;gap:.6rem;background:var(--sh-red);color:#fff;\n    font-weight:800;font-size:1.25rem;letter-spacing:.03em;padding:.45rem 1rem;border-radius:999px}\n  .sh-priceline{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin:.2rem 0 1rem}\n\n  /* ---- countdown ---- */\n  .sh-timer{background:linear-gradient(90deg,var(--sh-navy),#12447F);color:#fff;border-radius:10px;\n    padding:1.1rem 1.3rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin:0 0 1.2rem}\n  .sh-timer__label{font-size:1.25rem;font-weight:700;line-height:1.3}\n  .sh-timer__label small{display:block;font-weight:500;opacity:.85;font-size:1.1rem}\n  .sh-timer__clock{margin-left:auto;display:flex;gap:.5rem}\n  .sh-timer__unit{background:rgba(255,255,255,.14);border-radius:6px;padding:.5rem .7rem;text-align:center;min-width:4.4rem}\n  .sh-timer__num{display:block;font-size:1.9rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}\n  .sh-timer__cap{display:block;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;opacity:.8;margin-top:.2rem}\n\n  /* ---- stock alert ---- */\n  .sh-stock{display:flex;align-items:center;gap:.75rem;font-size:1.3rem;font-weight:700;\n    color:var(--sh-red);margin:0 0 1rem}\n  .sh-dot{width:1rem;height:1rem;border-radius:50%;background:var(--sh-red);position:relative;flex:0 0 auto}\n  .sh-dot:after{content:\"\";position:absolute;inset:0;border-radius:50%;background:var(--sh-red);\n    animation:shPulse 1.4s ease-out infinite}\n  @keyframes shPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(2.6);opacity:0}}\n  .sh-stock__bar{height:6px;border-radius:3px;background:rgba(179,25,66,.15);overflow:hidden;margin:.5rem 0 1.2rem}\n  .sh-stock__fill{height:100%;width:17%;background:linear-gradient(90deg,var(--sh-red),#E0364F)}\n\n  /* ---- bundle box ---- */\n  .sh-bundle{display:flex;flex-direction:column;gap:.9rem;margin:1.4rem 0}\n  .sh-bundle__head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem}\n  .sh-bundle__title{font-size:1.35rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;color:var(--sh-navy)}\n  .sh-bundle__hint{font-size:1.15rem;color:var(--sh-red);font-weight:700}\n  .sh-tier{position:relative;display:flex;align-items:center;gap:1.1rem;width:100%;text-align:left;\n    border:2px solid rgba(10,49,97,.18);border-radius:10px;padding:1.25rem 1.3rem;background:#fff;\n    cursor:pointer;font-family:inherit;font-size:1.4rem;transition:border-color .15s,box-shadow .15s}\n  .sh-tier:hover{border-color:rgba(10,49,97,.45)}\n  .sh-tier.is-on{border-color:var(--sh-red);box-shadow:0 0 0 3px rgba(179,25,66,.12);background:#FFF8F9}\n  .sh-tier__radio{width:2rem;height:2rem;border-radius:50%;border:2px solid rgba(10,49,97,.35);flex:0 0 auto;position:relative}\n  .sh-tier.is-on .sh-tier__radio{border-color:var(--sh-red)}\n  .sh-tier.is-on .sh-tier__radio:after{content:\"\";position:absolute;inset:4px;border-radius:50%;background:var(--sh-red)}\n  .sh-tier__main{flex:1;line-height:1.35}\n  .sh-tier__name{font-weight:800;color:var(--sh-navy);display:block}\n  .sh-tier__sub{font-size:1.15rem;opacity:.75;display:block}\n  .sh-tier__right{text-align:right;white-space:nowrap;line-height:1.3}\n  .sh-tier__now{font-weight:800;font-size:1.55rem;color:var(--sh-navy);display:block}\n  .sh-tier__was{font-size:1.15rem;opacity:.6;text-decoration:line-through;display:block}\n  .sh-tier__each{font-size:1.05rem;color:var(--sh-green);font-weight:700;display:block}\n  .sh-tier__flag{position:absolute;top:-1rem;left:1.2rem;background:var(--sh-red);color:#fff;\n    font-size:1rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:.25rem .75rem;border-radius:999px}\n  .sh-tier__flag--best{background:var(--sh-green)}\n\n  /* ---- delivery ---- */\n  .sh-deliver{display:flex;align-items:flex-start;gap:.8rem;font-size:1.3rem;color:var(--sh-navy);\n    background:var(--sh-cream);border-radius:10px;padding:1rem 1.2rem;margin:1.2rem 0}\n  .sh-deliver b{color:var(--sh-red)}\n  .sh-deliver__dot{width:.9rem;height:.9rem;border-radius:50%;background:var(--sh-green);margin-top:.45rem;flex:0 0 auto}\n\n  /* ---- animated ATC ---- */\n  .product-form__submit{position:relative;overflow:hidden;font-weight:800!important;letter-spacing:.04em;\n    animation:shBeat 2.6s ease-in-out infinite}\n  .product-form__submit:after{content:\"\";position:absolute;top:0;left:-60%;width:40%;height:100%;\n    background:linear-gradient(120deg,transparent,rgba(255,255,255,.45),transparent);\n    animation:shShine 3.4s ease-in-out infinite}\n  @keyframes shBeat{0%,88%,100%{transform:scale(1)}92%{transform:scale(1.025)}96%{transform:scale(1)}}\n  @keyframes shShine{0%{left:-60%}55%,100%{left:120%}}\n  @media (prefers-reduced-motion:reduce){\n    .product-form__submit,.product-form__submit:after,.sh-dot:after{animation:none}\n  }\n\n  /* ---- trust row ---- */\n  .sh-trust{margin:1.4rem 0 0}\n  .sh-trust__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-bottom:1.2rem}\n  .sh-trust__item{text-align:center;font-size:1.1rem;line-height:1.35;color:var(--sh-navy)}\n  .sh-trust__item span{display:block;font-size:2rem;margin-bottom:.25rem}\n  .sh-trust__item b{display:block;font-weight:700}\n  .sh-secure{text-align:center;border-top:1px solid rgba(10,49,97,.12);padding-top:1.1rem}\n  .sh-secure__cap{font-size:1.1rem;opacity:.7;margin-bottom:.6rem;color:var(--sh-navy)}\n  .sh-secure__icons{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem}\n  .sh-secure__icons img,.sh-secure__icons svg{height:2.4rem;width:auto;border-radius:4px}\n</style>\n\n<div class=\"sh-toprow\">\n  <span class=\"sh-orders\">\n    <span class=\"sh-avatars\"><span>CM</span><span>GT</span><span>AB</span><span>LT</span><span>MM</span></span>\n    🔥 100+ orders in the last 24h\n  </span>\n  <span class=\"sh-rating\">\n    <span class=\"sh-stars\">★★★★★</span>\n    <strong>4.6</strong> · <a href=\"#sh-reviews\">5 verified reviews</a>\n  </span>\n</div>\n\n<style>.product-form__quantity{display:none!important}</style>\n"
           }
         },
         "title": {
@@ -25,10 +20,12 @@
         },
         "price": {
           "type": "price",
+          "settings": {}
+        },
+        "sh_offer": {
+          "type": "custom_liquid",
           "settings": {
-            "price_text_color": "#000000",
-            "pricecomparedat_text_color": "#af032a",
-            "price_show_badge": false
+            "custom_liquid": "{%- assign v = product.selected_or_first_available_variant -%}\n{%- if v.compare_at_price > v.price -%}\n  {%- assign saved = v.compare_at_price | minus: v.price -%}\n  {%- assign pct = saved | times: 100.0 | divided_by: v.compare_at_price | round -%}\n  <div class=\"sh-priceline\">\n    <span class=\"sh-save\">SAVE {{ saved | money }} · {{ pct }}% OFF</span>\n  </div>\n{%- endif -%}\n\n<div class=\"sh-timer\" data-sh-timer>\n  <div class=\"sh-timer__label\">\n    ⚡ Launch offer ends in\n    <small>Price returns to {{ v.compare_at_price | money }} when the timer hits zero</small>\n  </div>\n  <div class=\"sh-timer__clock\">\n    <div class=\"sh-timer__unit\"><span class=\"sh-timer__num\" data-sh-h>--</span><span class=\"sh-timer__cap\">Hrs</span></div>\n    <div class=\"sh-timer__unit\"><span class=\"sh-timer__num\" data-sh-m>--</span><span class=\"sh-timer__cap\">Min</span></div>\n    <div class=\"sh-timer__unit\"><span class=\"sh-timer__num\" data-sh-s>--</span><span class=\"sh-timer__cap\">Sec</span></div>\n  </div>\n</div>\n\n<script>\n(function(){\n  var KEY='sh_offer_deadline', WINDOW=24*60*60*1000;\n  function read(){try{return parseInt(localStorage.getItem(KEY),10)||0}catch(e){return 0}}\n  function write(v){try{localStorage.setItem(KEY,String(v))}catch(e){}}\n  function deadline(){\n    var d=read();\n    if(!d||d<=Date.now()){d=Date.now()+WINDOW;write(d);}\n    return d;\n  }\n  var end=deadline();\n  var root=document.querySelector('[data-sh-timer]');\n  if(!root)return;\n  var h=root.querySelector('[data-sh-h]'),m=root.querySelector('[data-sh-m]'),s=root.querySelector('[data-sh-s]');\n  function pad(n){return n<10?'0'+n:''+n}\n  function tick(){\n    var left=end-Date.now();\n    if(left<=0){end=Date.now()+WINDOW;write(end);left=WINDOW;}\n    var t=Math.floor(left/1000);\n    h.textContent=pad(Math.floor(t/3600));\n    m.textContent=pad(Math.floor(t%3600/60));\n    s.textContent=pad(t%60);\n  }\n  tick();setInterval(tick,1000);\n})();\n</script>\n\n<div class=\"sh-stock\">\n  <span class=\"sh-dot\"></span>\n  Almost out of stock — selling fast in this design\n</div>\n<div class=\"sh-stock__bar\"><div class=\"sh-stock__fill\"></div></div>\n"
           }
         },
         "variant_picker": {
@@ -38,358 +35,67 @@
             "swatch_shape": "circle"
           }
         },
+        "sh_bundle": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign v = product.selected_or_first_available_variant -%}\n{%- assign p1 = v.price -%}\n{%- assign p2 = v.price | times: 2 | times: 0.85 | round -%}\n{%- assign p3 = v.price | times: 3 | times: 0.80 | round -%}\n{%- assign w2 = v.price | times: 2 -%}\n{%- assign w3 = v.price | times: 3 -%}\n{%- assign e2 = p2 | divided_by: 2 -%}\n{%- assign e3 = p3 | divided_by: 3 -%}\n\n<div class=\"sh-bundle\">\n  <div class=\"sh-bundle__head\">\n    <span class=\"sh-bundle__title\">Choose your bundle</span>\n    <span class=\"sh-bundle__hint\">🔥 78% pick 2 or more</span>\n  </div>\n\n  <button type=\"button\" class=\"sh-tier\" data-sh-qty=\"1\">\n    <span class=\"sh-tier__radio\"></span>\n    <span class=\"sh-tier__main\">\n      <span class=\"sh-tier__name\">Buy 1 — Just Testing</span>\n      <span class=\"sh-tier__sub\">Single tee, one design</span>\n    </span>\n    <span class=\"sh-tier__right\">\n      <span class=\"sh-tier__now\">{{ p1 | money }}</span>\n      <span class=\"sh-tier__was\">{{ v.compare_at_price | money }}</span>\n    </span>\n  </button>\n\n  <button type=\"button\" class=\"sh-tier is-on\" data-sh-qty=\"2\">\n    <span class=\"sh-tier__flag\">Most popular · Save 15%</span>\n    <span class=\"sh-tier__radio\"></span>\n    <span class=\"sh-tier__main\">\n      <span class=\"sh-tier__name\">Buy 2 — Mix &amp; Match</span>\n      <span class=\"sh-tier__sub\">Two designs, one for a mate</span>\n    </span>\n    <span class=\"sh-tier__right\">\n      <span class=\"sh-tier__now\">{{ p2 | money }}</span>\n      <span class=\"sh-tier__was\">{{ w2 | money }}</span>\n      <span class=\"sh-tier__each\">{{ e2 | money }} each</span>\n    </span>\n  </button>\n\n  <button type=\"button\" class=\"sh-tier\" data-sh-qty=\"3\">\n    <span class=\"sh-tier__flag sh-tier__flag--best\">Best value · Save 20%</span>\n    <span class=\"sh-tier__radio\"></span>\n    <span class=\"sh-tier__main\">\n      <span class=\"sh-tier__name\">Buy 3 — The Group Pack</span>\n      <span class=\"sh-tier__sub\">Three designs, free shipping</span>\n    </span>\n    <span class=\"sh-tier__right\">\n      <span class=\"sh-tier__now\">{{ p3 | money }}</span>\n      <span class=\"sh-tier__was\">{{ w3 | money }}</span>\n      <span class=\"sh-tier__each\">{{ e3 | money }} each</span>\n    </span>\n  </button>\n</div>\n\n<script>\n(function(){\n  var tiers=document.querySelectorAll('.sh-tier');\n  var qty=document.getElementById('Quantity-{{ section.id }}');\n  if(!tiers.length)return;\n  tiers.forEach(function(t){\n    t.addEventListener('click',function(){\n      tiers.forEach(function(x){x.classList.remove('is-on')});\n      t.classList.add('is-on');\n      if(qty){qty.value=t.getAttribute('data-sh-qty');qty.dispatchEvent(new Event('change',{bubbles:true}));}\n    });\n  });\n  if(qty){qty.value='2';qty.dispatchEvent(new Event('change',{bubbles:true}));}\n})();\n</script>\n"
+          }
+        },
         "quantity_selector": {
           "type": "quantity_selector",
           "settings": {}
+        },
+        "sh_deliver": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{%- assign now_s = 'now' | date: '%s' | plus: 0 -%}\n{%- assign from_s = now_s | plus: 864000 -%}\n{%- assign to_s = now_s | plus: 1296000 -%}\n<div class=\"sh-deliver\">\n  <span class=\"sh-deliver__dot\"></span>\n  <span>\n    Order today and get it between\n    <b>{{ from_s | date: '%a %-d %b' }}</b> and <b>{{ to_s | date: '%a %-d %b' }}</b>.<br>\n    Ships within 24 hours · Tracked delivery on every order\n  </span>\n</div>\n"
+          }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true,
-            "button_text": "Add to cart \ud83d\udc49\ud83c\udffb",
-            "sold_out_text": "Sold Out \ud83d\ude2d",
-            "unavailable_text": "Unavailable",
-            "button_color": "#000000",
-            "text_color": "#ffffff",
-            "button_rounded_corners": "medium",
-            "button_padding_vertical": 15,
-            "button_padding_horizontal": 15
+            "show_gift_card_recipient": false
+          }
+        },
+        "sh_trust": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"sh-trust\">\n  <div class=\"sh-trust__grid\">\n    <div class=\"sh-trust__item\"><span>🛡️</span><b>15-Day Returns</b>Not laughing? Money back</div>\n    <div class=\"sh-trust__item\"><span>🚚</span><b>Tracked Shipping</b>Dispatched in 24 hours</div>\n    <div class=\"sh-trust__item\"><span>🇺🇸</span><b>6 Flag Designs</b>Mix and match any size</div>\n  </div>\n  <div class=\"sh-secure\">\n    <div class=\"sh-secure__cap\">Secure checkout with</div>\n    <div class=\"sh-secure__icons\">\n      {%- for type in shop.enabled_payment_types limit: 8 -%}\n        {{ type | payment_type_svg_tag: class: 'payment-icon' }}\n      {%- endfor -%}\n    </div>\n  </div>\n</div>\n"
           }
         },
         "description": {
           "type": "description",
           "settings": {}
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        },
-        "inventory": {
-          "type": "inventory",
-          "settings": {
-            "text_style": "body",
-            "inventory_threshold": 15,
-            "show_inventory_quantity": false
-          }
-        },
-        "bundle_box": {
-          "type": "custom_liquid",
-          "settings": {
-            "custom_liquid": "<div class=\"bundle-box\">\n  <button type=\"button\" class=\"bundle-box__tier is-selected\" data-bundle-qty=\"1\">\n    <span class=\"bundle-box__radio\"></span>\n    <span class=\"bundle-box__label\"><strong>Buy One</strong><br><span class=\"bundle-box__sub\">Single tee</span></span>\n    <span class=\"bundle-box__price\">{{ product.selected_or_first_available_variant.price | money }}</span>\n  </button>\n  <button type=\"button\" class=\"bundle-box__tier bundle-box__tier--highlight\" data-bundle-qty=\"2\">\n    <span class=\"bundle-box__badge\">Save 15%</span>\n    <span class=\"bundle-box__radio\"></span>\n    <span class=\"bundle-box__label\"><strong>Buy Two</strong><br><span class=\"bundle-box__sub\">Mix and match designs</span></span>\n    <span class=\"bundle-box__price\">{{ product.selected_or_first_available_variant.price | times: 2 | times: 0.85 | money }}</span>\n  </button>\n  <button type=\"button\" class=\"bundle-box__tier\" data-bundle-qty=\"3\">\n    <span class=\"bundle-box__badge bundle-box__badge--best\">Best Value</span>\n    <span class=\"bundle-box__radio\"></span>\n    <span class=\"bundle-box__label\"><strong>Buy Three</strong><br><span class=\"bundle-box__sub\">Save 15%, mix and match</span></span>\n    <span class=\"bundle-box__price\">{{ product.selected_or_first_available_variant.price | times: 3 | times: 0.85 | money }}</span>\n  </button>\n</div>\n<style>\n  .bundle-box { display: flex; flex-direction: column; gap: 0.8rem; margin: 1.2rem 0; }\n  .bundle-box__tier {\n    display: flex; align-items: center; gap: 1.2rem;\n    width: 100%; text-align: left; position: relative;\n    border: 1px solid rgba(22,33,62,0.2); border-radius: 8px;\n    padding: 1.2rem 1.4rem; background: rgb(var(--color-background));\n    cursor: pointer; font-family: inherit; font-size: 1.4rem;\n  }\n  .bundle-box__tier.is-selected { border-color: #A6293D; border-width: 2px; background: rgba(166,41,61,0.04); }\n  .bundle-box__tier--highlight { border-color: rgba(166,41,61,0.4); }\n  .bundle-box__radio {\n    width: 1.8rem; height: 1.8rem; border-radius: 50%;\n    border: 2px solid rgba(22,33,62,0.35); flex-shrink: 0; position: relative;\n  }\n  .bundle-box__tier.is-selected .bundle-box__radio { border-color: #A6293D; }\n  .bundle-box__tier.is-selected .bundle-box__radio:after {\n    content: ''; position: absolute; inset: 3px; border-radius: 50%; background: #A6293D;\n  }\n  .bundle-box__label { flex: 1; line-height: 1.4; }\n  .bundle-box__sub { font-size: 1.2rem; opacity: 0.7; }\n  .bundle-box__price { font-weight: 700; white-space: nowrap; }\n  .bundle-box__badge {\n    position: absolute; top: -0.9rem; left: 1.2rem;\n    background: #A6293D; color: #fff; font-size: 1.05rem; font-weight: 700;\n    padding: 0.2rem 0.8rem; border-radius: 999px; letter-spacing: 0.02em;\n  }\n</style>\n<script>\n  document.addEventListener('DOMContentLoaded', function () {\n    var tiers = document.querySelectorAll('.bundle-box__tier');\n    var qtyInput = document.getElementById('Quantity-{{ section.id }}');\n    if (!qtyInput) return;\n    tiers.forEach(function (tier) {\n      tier.addEventListener('click', function () {\n        tiers.forEach(function (t) { t.classList.remove('is-selected'); });\n        tier.classList.add('is-selected');\n        qtyInput.value = tier.getAttribute('data-bundle-qty');\n        qtyInput.dispatchEvent(new Event('change', { bubbles: true }));\n      });\n    });\n  });\n</script>"
-          }
         }
       },
       "block_order": [
-        "vendor",
+        "sh_topbar",
         "title",
         "price",
+        "sh_offer",
         "variant_picker",
-        "bundle_box",
+        "sh_bundle",
         "quantity_selector",
-        "inventory",
+        "sh_deliver",
         "buy_buttons",
-        "description",
-        "share"
+        "sh_trust",
+        "description"
       ],
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
         "media_size": "large",
-        "image_rounded_corners": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
         "gallery_layout": "stacked",
+        "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
-        "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 12,
-        "mobile_padding_top": 12,
-        "mobile_padding_bottom": 0
-      }
-    },
-    "related-products": {
-      "type": "related-products",
-      "disabled": true,
-      "settings": {
-        "heading": "You may also like",
-        "heading_size": "h2",
-        "heading_alignment": "center",
-        "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "color_scheme": "scheme-1",
-        "image_ratio": "square",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "columns_mobile": "2",
-        "padding_top": 36,
-        "padding_bottom": 28,
-        "gradient": ""
-      }
-    },
-    "pp_image_with_benefits_7jKKKP": {
-      "type": "pp-image-with-benefits",
-      "blocks": {
-        "benefit_7DWPAB": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "\ud83d\ude02",
-            "emoji_size": "medium",
-            "heading": "Guaranteed Reactions",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>Wear it once, you'll see</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "benefit_hxwCgx": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "\ud83d\udca8",
-            "emoji_size": "medium",
-            "heading": "Breathable Polyester",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>Comfortable all day, every season</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "benefit_6KDDhQ": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "\ud83c\udfa8",
-            "emoji_size": "medium",
-            "heading": "6 Illusion Designs",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>Mix and match across the pack</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "benefit_rBnLP7": {
-          "type": "benefit",
-          "settings": {
-            "emoji": "\ud83e\uddfa",
-            "emoji_size": "medium",
-            "heading": "Machine Washable",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>Print won't crack or peel</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        }
-      },
-      "block_order": [
-        "benefit_7DWPAB",
-        "benefit_hxwCgx",
-        "benefit_6KDDhQ",
-        "benefit_rBnLP7"
-      ],
-      "name": "PP - Image With Benefits",
-      "settings": {
-        "desktop_image_width": "large",
-        "image_border_radius": 100,
-        "heading": "Why Shirt Happens Fans Keep Buying Them",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "text": "",
-        "text_style": "subtitle",
-        "text_alignment": "center",
-        "text_mobilealignment": "center",
-        "text_color": "#000000",
-        "gradient": "",
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "margin_top": 20,
-        "margin_bottom": 20
-      }
-    },
-    "pp_image_with_text_aVCYVi": {
-      "type": "pp-image-with-text",
-      "blocks": {
-        "heading_EYKJby": {
-          "type": "heading",
-          "settings": {
-            "heading": "Actually 3D Printed, Not Iron-On",
-            "heading_size": "h1",
-            "heading_alignment": "center",
-            "heading_mobilealignment": "center",
-            "heading_color": "#000000"
-          }
-        },
-        "text_36RU9f": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Most novelty tees use a cheap iron-on transfer that cracks and peels after a few washes. Ours is 3D printed directly into the fabric using a high-definition process, so the illusion stays sharp wash after wash. Machine wash cold, inside out, and it holds up.</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#000000"
-          }
-        },
-        "button_mmXMxG": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop The Tee",
-            "button_link": "",
-            "button_link_newtab": true,
-            "button_text_color": "#FFFFFF",
-            "button_background_color": "#000000",
-            "button_border_width": 0,
-            "button_border_color": "#000000",
-            "button_width": "full",
-            "button_alignment": "left",
-            "button_mobilealignment": "center",
-            "button_rounded_corners": "medium",
-            "button_padding_vertical": 15,
-            "button_padding_horizontal": 15,
-            "button_subtext": "15-Day Money Back Guarantee",
-            "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
-            "button_action": "scroll",
-            "button_action_scroll_element": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_EYKJby",
-        "text_36RU9f",
-        "button_mmXMxG"
-      ],
-      "name": "PP - Image With Text",
-      "settings": {
-        "desktop_image_width": "large",
-        "image_border_radius": 50,
-        "layout": "text_first",
-        "mobile_layout": "text_first",
-        "gradient": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "pp_image_with_percentage_bWi6Ak": {
-      "type": "pp-image-with-percentage",
-      "blocks": {
-        "heading_HWEeMN": {
-          "type": "heading",
-          "settings": {
-            "heading": "Built the way a good tee should be",
-            "heading_size": "h1",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "left",
-            "heading_color": "#000000"
-          }
-        },
-        "percent_FqjgK3": {
-          "type": "percent",
-          "settings": {
-            "percent_value": 100,
-            "percent_filled_color": "#000000",
-            "percent_unfilled_color": "#C7C7C7",
-            "percent_text_color": "#000000",
-            "percent_background_color": "#ffffff",
-            "text": "<p>Polyester construction. Lightweight and breathable so the print doesn't come at the cost of comfort.<br/><br/></p>",
-            "text_style": "body",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#000000",
-            "border_size": 1,
-            "border_color": "#d0d5dd"
-          }
-        },
-        "percent_6yArKQ": {
-          "type": "percent",
-          "settings": {
-            "percent_value": 100,
-            "percent_filled_color": "#000000",
-            "percent_unfilled_color": "#C7C7C7",
-            "percent_text_color": "#000000",
-            "percent_background_color": "#ffffff",
-            "text": "<p>Machine washable. Cold, inside out, tumble dry low &mdash; no special care required.<br/><br/></p>",
-            "text_style": "body",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#000000",
-            "border_size": 1,
-            "border_color": "#d0d5dd"
-          }
-        },
-        "percent_fVWfEm": {
-          "type": "percent",
-          "settings": {
-            "percent_value": 100,
-            "percent_filled_color": "#000000",
-            "percent_unfilled_color": "#C7C7C7",
-            "percent_text_color": "#000000",
-            "percent_background_color": "#ffffff",
-            "text": "<p>Backed by our 15-day money-back guarantee. Not laughing? Send it back.<br/><br/></p>",
-            "text_style": "body",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#000000",
-            "border_size": 1,
-            "border_color": "#d0d5dd"
-          }
-        },
-        "button_rwbHf9": {
-          "type": "button",
-          "settings": {
-            "button_label": "Shop Now",
-            "button_link": "",
-            "button_link_newtab": true,
-            "button_text_color": "#FFFFFF",
-            "button_background_color": "#000000",
-            "button_border_width": 0,
-            "button_border_color": "#000000",
-            "button_width": "full",
-            "button_alignment": "left",
-            "button_mobilealignment": "left",
-            "button_rounded_corners": "medium",
-            "button_padding_vertical": 15,
-            "button_padding_horizontal": 15,
-            "button_subtext": "15-Day Money Back Guarantee",
-            "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
-            "button_action": "scroll",
-            "button_action_scroll_element": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_HWEeMN",
-        "percent_FqjgK3",
-        "percent_6yArKQ",
-        "percent_fVWfEm",
-        "button_rwbHf9"
-      ],
-      "name": "PP - Image With Percent",
-      "settings": {
-        "desktop_image_width": "large",
-        "image_border_radius": 50,
-        "layout": "image_first",
-        "mobile_layout": "image_first",
-        "gradient": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0
+        "padding_top": 24,
+        "padding_bottom": 12
       }
     },
     "pp_reviews_Mb9Ney": {
@@ -398,121 +104,121 @@
         "review_YgdzNx": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/hf_20260830_093121_c95556f9-8797-45c0-a3b1-dd1f6696bdea.png",
             "image_border_radius": "low",
             "author_text": "Chris M.",
             "author_style": "subtitle",
-            "author_color": "#16213E",
+            "author_color": "#0A3161",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#ffffff",
-            "author_badge_color": "#16213E",
+            "author_badge_text_color": "#B31942",
+            "author_badge_color": "#0A3161",
             "stars_size": "sm",
-            "stars_color": "#facc15",
+            "stars_color": "#FFC72C",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Funniest shirt ever \u2014 These are ridiculous in the best way. Took them on holiday and it instantly became my favourite shirt. Every time I wore it someone had something to say. Definitely not the kind of shirt you can wear unnoticed.",
+            "review_text": "<p><strong>Funniest shirt ever.</strong></p><p>These are ridiculous in the best way. Took them on holiday and it instantly became my favourite shirt.</p><p>Every time I wore it someone had something to say.</p><p>Definitely not the kind of shirt you can wear unnoticed.</p>",
             "review_text_style": "body",
-            "review_text_color": "#16213E",
+            "review_text_color": "#0A3161",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low",
-            "image": "shopify://shop_images/hf_20260830_093121_c95556f9-8797-45c0-a3b1-dd1f6696bdea.png"
+            "review_border_radius": "low"
           }
         },
         "review_9pbDiT": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/hf_20260830_093305_6dce4bb2-48a1-4af9-804d-f910942d82c5.png",
             "image_border_radius": "low",
             "author_text": "Gary T.",
             "author_style": "subtitle",
-            "author_color": "#16213E",
+            "author_color": "#0A3161",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#ffffff",
-            "author_badge_color": "#16213E",
+            "author_badge_text_color": "#B31942",
+            "author_badge_color": "#0A3161",
             "stars_size": "sm",
-            "stars_color": "#facc15",
+            "stars_color": "#FFC72C",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Everyone noticed \u2014 Me and the guys wore these to the beach club thinking we'd get a few laughs. Ended up getting compliments from complete strangers all afternoon. My wife was laughing the entire time too. Worth it just for the reactions.",
+            "review_text": "<p><strong>Everyone noticed.</strong></p><p>Me and the guys wore these to the beach club thinking we'd get a few laughs.</p><p>Ended up getting compliments from complete strangers all afternoon.</p><p>My wife was laughing the entire time too. Worth it just for the reactions.</p>",
             "review_text_style": "body",
-            "review_text_color": "#16213E",
+            "review_text_color": "#0A3161",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low",
-            "image": "shopify://shop_images/hf_20260830_093305_6dce4bb2-48a1-4af9-804d-f910942d82c5.png"
+            "review_border_radius": "low"
           }
         },
         "review_3TWFaK": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/hf_20260830_093401_303a3d81-9471-470f-a211-62844dfc4afa.png",
             "image_border_radius": "low",
             "author_text": "Anthony B.",
             "author_style": "subtitle",
-            "author_color": "#16213E",
+            "author_color": "#0A3161",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#ffffff",
-            "author_badge_color": "#16213E",
+            "author_badge_text_color": "#B31942",
+            "author_badge_color": "#0A3161",
             "stars_size": "sm",
-            "stars_color": "#facc15",
+            "stars_color": "#FFC72C",
             "stars_number": 4,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Main attraction \u2014 Wore this around the city on holiday and I swear everyone was looking at me. Got compliments, laughs and a few people asking where I got it. Definitely felt like the main attraction that day.",
+            "review_text": "<p><strong>Main attraction.</strong></p><p>Wore this around the city on holiday and I swear everyone was looking at me.</p><p>Got compliments, laughs and a few people asking where I got it.</p><p>Definitely felt like the main attraction that day.</p>",
             "review_text_style": "body",
-            "review_text_color": "#16213E",
+            "review_text_color": "#0A3161",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low",
-            "image": "shopify://shop_images/hf_20260830_093401_303a3d81-9471-470f-a211-62844dfc4afa.png"
+            "review_border_radius": "low"
           }
         },
         "review_qGNrUR": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/hf_20260830_094144_fc05e353-4a5e-485b-942f-10a524656590.png",
             "image_border_radius": "low",
             "author_text": "Layla T.",
             "author_style": "subtitle",
-            "author_color": "#16213E",
+            "author_color": "#0A3161",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#ffffff",
-            "author_badge_color": "#16213E",
+            "author_badge_text_color": "#B31942",
+            "author_badge_color": "#0A3161",
             "stars_size": "sm",
-            "stars_color": "#facc15",
+            "stars_color": "#FFC72C",
             "stars_number": 5,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "He LOVES it \u2014 Bought these for my husband and his friends before our holiday and he thought they were hilarious. Now they wear them everywhere. Easily the funniest thing I've bought them.",
+            "review_text": "<p><strong>He LOVES it.</strong></p><p>Bought these for my husband and his friends before our holiday and he thought they were hilarious.</p><p>Now they wear them everywhere.</p><p>Easily the funniest thing I've bought them.</p>",
             "review_text_style": "body",
-            "review_text_color": "#16213E",
+            "review_text_color": "#0A3161",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low",
-            "image": "shopify://shop_images/hf_20260830_094144_fc05e353-4a5e-485b-942f-10a524656590.png"
+            "review_border_radius": "low"
           }
         },
         "review_GjjMPQ": {
           "type": "review",
           "settings": {
+            "image": "shopify://shop_images/hf_20260830_094208_2e9f9952-11a8-4b3b-84b3-27bcb4cb9f25.png",
             "image_border_radius": "low",
             "author_text": "Mckenzie M.",
             "author_style": "subtitle",
-            "author_color": "#16213E",
+            "author_color": "#0A3161",
             "author_badge_text": "Verified Buyer",
             "author_badge_text_style": "body",
-            "author_badge_text_color": "#ffffff",
-            "author_badge_color": "#16213E",
+            "author_badge_text_color": "#B31942",
+            "author_badge_color": "#0A3161",
             "stars_size": "sm",
-            "stars_color": "#facc15",
+            "stars_color": "#FFC72C",
             "stars_number": 4,
             "stars_alignment": "start",
             "stars_mobilealignment": "start",
-            "review_text": "Best gift \u2014 Got these for my husband as a joke and now he won't stop wearing them. We went to the beach and he literally had people commenting on it all day. Definitely got more attention than I expected.",
+            "review_text": "<p><strong>Best gift.</strong></p><p>Got these for my husband as a joke and now he won't stop wearing them.</p><p>We went to the beach and he literally had people commenting on it all day.</p><p>Definitely got more attention than I expected.</p>",
             "review_text_style": "body",
-            "review_text_color": "#16213E",
+            "review_text_color": "#0A3161",
             "review_background_color": "#ffffff",
-            "review_border_radius": "low",
-            "image": "shopify://shop_images/hf_20260830_094208_2e9f9952-11a8-4b3b-84b3-27bcb4cb9f25.png"
+            "review_border_radius": "low"
           }
         }
       },
@@ -525,134 +231,379 @@
       ],
       "name": "PP - Reviews",
       "settings": {
-        "heading_stars_size": "lg",
-        "heading_stars_color": "#facc15",
-        "stars_alignment": "center",
-        "stars_mobilealignment": "center",
-        "heading_stars_number": 5,
-        "heading": "Loved by people who like a reaction",
+        "eyebrow": "REAL CUSTOMERS",
+        "eyebrow_color": "#B31942",
+        "heading": "In Their Words",
         "heading_size": "h1",
         "heading_alignment": "center",
         "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "text": "<p>Real reviews from real customers wearing the tee out in public.<br/><br/></p>",
+        "heading_color": "#0A3161",
+        "text_color": "#0A3161",
+        "verified_color": "#B31942",
+        "rating_value": "4.6",
+        "heading_stars_color": "#FFC72C",
+        "heading_stars_size": "lg",
+        "stars_alignment": "center",
+        "stars_mobilealignment": "center",
+        "heading_stars_number": 5,
+        "text": "",
         "text_style": "subtitle",
         "text_alignment": "center",
         "text_mobilealignment": "center",
-        "text_color": "#000000",
-        "gradient": "",
-        "button_label": "Shop Now",
-        "button_link": "",
-        "button_link_newtab": true,
-        "button_text_color": "#FFFFFF",
-        "button_background_color": "#000000",
-        "button_border_width": 0,
-        "button_border_color": "#000000",
-        "button_width": "fit",
-        "button_width_mobile": "full",
-        "button_alignment": "center",
-        "button_mobilealignment": "center",
-        "button_rounded_corners": "medium",
-        "button_padding_vertical": 15,
-        "button_padding_horizontal": 15,
-        "button_subtext": "15-Day Money Back Guarantee",
-        "button_subtext_style": "body",
-        "button_subtext_color": "#000000",
-        "button_action": "scroll",
-        "button_action_scroll_element": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "gradient": "linear-gradient(180deg, rgba(247,243,232,1), rgba(247,243,232,1) 100%)",
+        "padding_top": 56,
+        "padding_bottom": 56,
         "margin_top": 0,
         "margin_bottom": 0
       }
     },
-    "pp_comparison_table_zkkEGP": {
+    "pp_benefits": {
+      "type": "pp-image-with-benefits",
+      "blocks": {
+        "benefit_7DWPAB": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "😲",
+            "emoji_size": "medium",
+            "heading": "Guaranteed Reactions",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>Double-takes, laughs and questions everywhere you wear it.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "benefit_hxwCgx": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "💨",
+            "emoji_size": "medium",
+            "heading": "Breathable Polyester",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>Light enough for the beach, soft enough to sleep in.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "benefit_6KDDhQ": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🇺🇸",
+            "emoji_size": "medium",
+            "heading": "6 Flag Designs",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>Old Glory, Liberty, Patriot, Stars & Stripes, Independence, Freedom.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "benefit_rBnLP7": {
+          "type": "benefit",
+          "settings": {
+            "emoji": "🧺",
+            "emoji_size": "medium",
+            "heading": "Machine Washable",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>3D printed into the fabric — it won't crack, fade or peel.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_7DWPAB",
+        "benefit_hxwCgx",
+        "benefit_6KDDhQ",
+        "benefit_rBnLP7"
+      ],
+      "name": "PP - Image With Benefits",
+      "settings": {
+        "heading": "Why people keep buying a second one",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#0A3161",
+        "text": "<p>It started as a joke shirt. It turned into the one they actually reach for.</p>",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#0A3161",
+        "desktop_image_width": "large",
+        "image_border_radius": 16,
+        "gradient": "",
+        "padding_top": 56,
+        "padding_bottom": 40,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_story": {
+      "type": "pp-image-with-text",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "heading": "Actually 3D Printed, Not Iron-On",
+            "heading_size": "h1",
+            "heading_alignment": "left",
+            "heading_mobilealignment": "center",
+            "heading_color": "#0A3161"
+          }
+        },
+        "t": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Most novelty tees are a cheap transfer pressed on top of the fabric. Three washes later it's cracked down the middle and in the bin.</p><p>Ours is printed <strong>into</strong> the fibres in high definition, so the illusion stays sharp for the life of the shirt. Wash it cold, inside out, and it keeps working.</p>",
+            "text_style": "subtitle",
+            "text_alignment": "left",
+            "text_mobilealignment": "left",
+            "text_color": "#0A3161"
+          }
+        },
+        "b": {
+          "type": "button",
+          "settings": {
+            "button_label": "Grab Mine — 24% Off",
+            "button_link": "",
+            "button_link_newtab": false,
+            "button_text_color": "#FFFFFF",
+            "button_background_color": "#B31942",
+            "button_border_width": 0,
+            "button_border_color": "#B31942",
+            "button_width": "fit",
+            "button_alignment": "left",
+            "button_mobilealignment": "center",
+            "button_rounded_corners": "medium",
+            "button_padding_vertical": 16,
+            "button_padding_horizontal": 26,
+            "button_subtext": "15-Day Money-Back Guarantee",
+            "button_subtext_style": "body",
+            "button_subtext_color": "#0A3161",
+            "button_action": "scroll",
+            "button_action_scroll_element": ""
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "t",
+        "b"
+      ],
+      "name": "PP - Image With Text",
+      "settings": {
+        "desktop_image_width": "large",
+        "image_border_radius": 16,
+        "layout": "image_first",
+        "mobile_layout": "image_first",
+        "gradient": "linear-gradient(180deg, rgba(247,243,232,1), rgba(247,243,232,1) 100%)",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_compare": {
       "type": "pp-comparison-table",
       "blocks": {
         "heading_DCqkDF": {
           "type": "heading",
           "settings": {
-            "heading": "Why ours beats a generic novelty tee",
+            "heading": "Shirt Happens vs. a $9 novelty tee",
             "heading_size": "h1",
-            "heading_alignment": "left",
+            "heading_alignment": "center",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#0A3161"
           }
         },
         "text_aitc8f": {
           "type": "text",
           "settings": {
-            "text": "<p>A lot of illusion tees online use a flat iron-on transfer that fades and peels. Ours is 3D printed into the fabric itself.</p>",
+            "text": "<p>You've seen the knock-offs. Here's what you're actually paying for.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
-            "text_color": "#000000"
+            "text_color": "#0A3161"
           }
         },
-        "tableitem_DnKtRB": {
+        "t1": {
           "type": "tableitem",
           "settings": {
-            "text": "3D printed illusion, not iron-on",
+            "text": "3D printed into the fabric, not an iron-on",
             "checkmark": "us",
-            "button_checkmark_color": "#23c55e",
-            "button_x_color": "#000000"
+            "button_checkmark_color": "#1B8A4B",
+            "button_x_color": "#8A94A6"
           }
         },
-        "tableitem_LwzwAp": {
+        "t2": {
           "type": "tableitem",
           "settings": {
-            "text": "6 designs, mix and match",
+            "text": "Survives the wash without cracking",
             "checkmark": "us",
-            "button_checkmark_color": "#23c55e",
-            "button_x_color": "#000000"
+            "button_checkmark_color": "#1B8A4B",
+            "button_x_color": "#8A94A6"
           }
         },
-        "tableitem_TUBVYV": {
+        "t3": {
           "type": "tableitem",
           "settings": {
-            "text": "Sizes XXS to 6XL",
+            "text": "6 designs you can mix and match",
             "checkmark": "us",
-            "button_checkmark_color": "#23c55e",
-            "button_x_color": "#000000"
+            "button_checkmark_color": "#1B8A4B",
+            "button_x_color": "#8A94A6"
           }
         },
-        "tableitem_9JfJGq": {
+        "t4": {
+          "type": "tableitem",
+          "settings": {
+            "text": "Full size range, XXS to 6XL",
+            "checkmark": "us",
+            "button_checkmark_color": "#1B8A4B",
+            "button_x_color": "#8A94A6"
+          }
+        },
+        "t5": {
           "type": "tableitem",
           "settings": {
             "text": "15-day money-back guarantee",
             "checkmark": "us",
-            "button_checkmark_color": "#23c55e",
-            "button_x_color": "#000000"
+            "button_checkmark_color": "#1B8A4B",
+            "button_x_color": "#8A94A6"
           }
         },
-        "tableitem_y3Pja9": {
+        "t6": {
           "type": "tableitem",
           "settings": {
-            "text": "Breathable, machine washable polyester",
+            "text": "Tracked shipping on every order",
             "checkmark": "us",
-            "button_checkmark_color": "#23c55e",
-            "button_x_color": "#000000"
+            "button_checkmark_color": "#1B8A4B",
+            "button_x_color": "#8A94A6"
           }
         }
       },
       "block_order": [
         "heading_DCqkDF",
         "text_aitc8f",
-        "tableitem_DnKtRB",
-        "tableitem_LwzwAp",
-        "tableitem_TUBVYV",
-        "tableitem_9JfJGq",
-        "tableitem_y3Pja9"
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
       ],
       "name": "PP - Comparison Table",
       "settings": {
-        "table_headline_secondary": "Others",
-        "table_headline_color": "#000000",
-        "text_color": "#ffffff",
-        "table_color": "#000000",
+        "table_headline_secondary": "The cheap ones",
+        "table_headline_color": "#FFFFFF",
+        "text_color": "#FFFFFF",
+        "table_color": "#0A3161",
         "gradient": "",
-        "padding_top": 40,
-        "padding_bottom": 40,
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "margin_top": 0,
+        "margin_bottom": 0
+      }
+    },
+    "pp_faq_shirt01": {
+      "type": "pp-faq",
+      "blocks": {
+        "q1": {
+          "type": "question",
+          "settings": {
+            "heading": "Is it actually 3D printed, or just an iron-on sticker?",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>Printed straight into the fabric with a high-definition process &mdash; not a transfer sitting on top. That's why it doesn't crack or peel like the cheap ones do.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "q2": {
+          "type": "question",
+          "settings": {
+            "heading": "Will people really think it's real?",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>From across a room or in a photo, most people do a double-take. Up close it's obviously a print &mdash; that's the joke, and that's when the laughing starts.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "q3": {
+          "type": "question",
+          "settings": {
+            "heading": "What size should I order?",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>We run XXS to 6XL. Order your usual size for a normal fit. If you're between sizes or want it looser, size up &mdash; a closer fit shows the illusion off best.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "q4": {
+          "type": "question",
+          "settings": {
+            "heading": "How do I wash it?",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>Machine wash cold, inside out, tumble dry low. Don't iron directly on the print. That's it.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "q5": {
+          "type": "question",
+          "settings": {
+            "heading": "How long does shipping take?",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>We dispatch within 24 hours and delivery lands 10&ndash;15 days from your order, tracked the whole way.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        },
+        "q6": {
+          "type": "question",
+          "settings": {
+            "heading": "What if I don't like it?",
+            "heading_size": "h3",
+            "heading_color": "#0A3161",
+            "text": "<p>Send it back within 15 days of delivery for a full refund. No forms, no questions.</p>",
+            "text_style": "body",
+            "text_color": "#0A3161"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "name": "PP - FAQ",
+      "settings": {
+        "heading": "Questions, answered",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "heading_mobilealignment": "center",
+        "heading_color": "#0A3161",
+        "text": "",
+        "text_style": "subtitle",
+        "text_alignment": "center",
+        "text_mobilealignment": "center",
+        "text_color": "#0A3161",
+        "border_size": "small",
+        "rounded_corners": "medium",
+        "border_color": "#E3DCCB",
+        "question_background_color": "#ffffff",
+        "arrow_color": "#B31942",
+        "gradient": "linear-gradient(180deg, rgba(247,243,232,1), rgba(247,243,232,1) 100%)",
+        "padding_top": 56,
+        "padding_bottom": 56,
         "margin_top": 0,
         "margin_bottom": 0
       }
@@ -667,49 +618,49 @@
             "icon_size": 65,
             "icon_alignment": "center",
             "icon_mobilealignment": "center",
-            "icon_color": "#000000"
+            "icon_color": "#B31942"
           }
         },
         "heading_gc4gfH": {
           "type": "heading",
           "settings": {
-            "heading": "Wear it with confidence",
+            "heading": "Wear it out. If nobody laughs, we'll refund you.",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
-            "heading_color": "#000000"
+            "heading_color": "#0A3161"
           }
         },
         "text_LLQAeq": {
           "type": "text",
           "settings": {
-            "text": "<p>If you're not getting the reactions you were hoping for, send it back within 15 days of delivery for a full refund. No questions asked.<br/></p>",
+            "text": "<p>Take it to the beach, the bar, the barbecue. If it doesn't get the reaction you were hoping for, send it back within 15 days of delivery for a full refund. No forms, no questions.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
-            "text_color": "#000000"
+            "text_color": "#0A3161"
           }
         },
         "button_Ja3nGK": {
           "type": "button",
           "settings": {
-            "button_label": "Shop Now",
+            "button_label": "Claim The 24% Launch Offer",
             "button_link": "",
-            "button_link_newtab": true,
+            "button_link_newtab": false,
             "button_text_color": "#FFFFFF",
-            "button_background_color": "#000000",
+            "button_background_color": "#B31942",
             "button_border_width": 0,
-            "button_border_color": "#000000",
+            "button_border_color": "#B31942",
             "button_width": "fit",
             "button_width_mobile": "full",
             "button_alignment": "center",
             "button_mobilealignment": "center",
             "button_rounded_corners": "medium",
-            "button_padding_vertical": 15,
-            "button_padding_horizontal": 15,
-            "button_subtext": "15-Day Money Back Guarantee",
+            "button_padding_vertical": 17,
+            "button_padding_horizontal": 28,
+            "button_subtext": "Offer resets daily · 15-Day Money-Back Guarantee",
             "button_subtext_style": "body",
-            "button_subtext_color": "#000000",
+            "button_subtext_color": "#0A3161",
             "button_action": "scroll",
             "button_action_scroll_element": ""
           }
@@ -724,133 +675,8 @@
       "name": "PP - Guarantee",
       "settings": {
         "gradient": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "margin_top": 0,
-        "margin_bottom": 0
-      }
-    },
-    "featured_collection_4JUPnn": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "heading": "You Might Also Like",
-        "heading_size": "h1",
-        "heading_alignment": "left",
-        "heading_mobilealignment": "center",
-        "heading_color": "#000000",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "",
-        "products_to_show": 4,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "solid",
-        "enable_desktop_slider": false,
-        "image_rounded_corners": "medium",
-        "color_scheme": "",
-        "button_rounded_corners": "medium",
-        "button_width": "fit",
-        "image_ratio": "adapt",
-        "image_shape": "default",
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "none",
-        "columns_mobile": "2",
-        "swipe_on_mobile": false,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
-    "pp_faq_shirt01": {
-      "type": "pp-faq",
-      "blocks": {
-        "question_UUEbPG": {
-          "type": "question",
-          "settings": {
-            "heading": "Is the design actually 3D printed, or is it an iron-on sticker?",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>It's printed directly into the fabric with a high-definition 3D print process, not a transfer stuck on top. That's why it doesn't crack or peel in the wash the way iron-on tees do.</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "question_iwgzRn": {
-          "type": "question",
-          "settings": {
-            "heading": "What sizes do you carry?",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>XXS through 6XL. If you're between sizes, or want a more relaxed fit, size up &mdash; a closer fit shows the illusion print off best.</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "question_gNmdPq": {
-          "type": "question",
-          "settings": {
-            "heading": "Can I mix designs in one order?",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>Yes. There are 6 designs, and the Buy Two and Buy Three bundles let you pick a different design for each shirt.</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "question_NpRfRa": {
-          "type": "question",
-          "settings": {
-            "heading": "How do I wash it without damaging the print?",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>Machine wash cold, inside out, tumble dry low. Avoid ironing directly on the print.</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        },
-        "question_cwFiY9": {
-          "type": "question",
-          "settings": {
-            "heading": "What if I'm not happy with it?",
-            "heading_size": "h3",
-            "heading_color": "#16213E",
-            "text": "<p>You've got 15 days from delivery to send it back for a full refund, no questions asked.</p>",
-            "text_style": "body",
-            "text_color": "#16213E"
-          }
-        }
-      },
-      "block_order": [
-        "question_UUEbPG",
-        "question_iwgzRn",
-        "question_gNmdPq",
-        "question_NpRfRa",
-        "question_cwFiY9"
-      ],
-      "name": "PP - FAQ",
-      "settings": {
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "heading_mobilealignment": "center",
-        "heading_color": "#16213E",
-        "text": "",
-        "text_style": "subtitle",
-        "text_alignment": "center",
-        "text_mobilealignment": "center",
-        "text_color": "#16213E",
-        "border_size": "small",
-        "rounded_corners": "medium",
-        "border_color": "#F2EAD3",
-        "question_background_color": "#ffffff",
-        "arrow_color": "#16213E",
-        "gradient": "",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 56,
+        "padding_bottom": 64,
         "margin_top": 0,
         "margin_bottom": 0
       }
@@ -858,14 +684,11 @@
   },
   "order": [
     "main",
-    "pp_image_with_benefits_7jKKKP",
-    "pp_image_with_text_aVCYVi",
-    "pp_image_with_percentage_bWi6Ak",
     "pp_reviews_Mb9Ney",
-    "pp_comparison_table_zkkEGP",
+    "pp_benefits",
+    "pp_story",
+    "pp_compare",
     "pp_faq_shirt01",
-    "pp_guarantee_qmGNEC",
-    "related-products",
-    "featured_collection_4JUPnn"
+    "pp_guarantee_qmGNEC"
   ]
 }
