@@ -28,33 +28,22 @@
             "custom_liquid": "{% render 'sh-offer' %}"
           }
         },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
         "sh_bundle": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'sh-bundle', section_id: section.id %}"
+            "custom_liquid": "{% render 'sh-bundle' %}"
           }
         },
-        "quantity_selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "sh_deliver": {
+        "sh_timeline": {
           "type": "custom_liquid",
           "settings": {
-            "custom_liquid": "{% render 'sh-deliver' %}"
+            "custom_liquid": "{% render 'sh-timeline' %}"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": false
           }
         },
@@ -63,10 +52,6 @@
           "settings": {
             "custom_liquid": "{% render 'sh-trust' %}"
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         }
       },
       "block_order": [
@@ -74,13 +59,10 @@
         "title",
         "price",
         "sh_offer",
-        "variant_picker",
         "sh_bundle",
-        "quantity_selector",
-        "sh_deliver",
+        "sh_timeline",
         "buy_buttons",
-        "sh_trust",
-        "description"
+        "sh_trust"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -291,10 +273,10 @@
           "settings": {
             "emoji": "🇺🇸",
             "emoji_size": "medium",
-            "heading": "6 Flag Designs",
+            "heading": "Stars &amp; Stripes",
             "heading_size": "h3",
             "heading_color": "#0A3161",
-            "text": "<p>Old Glory, Liberty, Patriot, Stars & Stripes, Independence, Freedom.</p>",
+            "text": "<p>The one design everybody asks about.</p>",
             "text_style": "body",
             "text_color": "#0A3161"
           }
@@ -379,7 +361,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 16,
             "button_padding_horizontal": 26,
-            "button_subtext": "15-Day Money-Back Guarantee",
+            "button_subtext": "15-Day Money-Back Guarantee available at checkout",
             "button_subtext_style": "body",
             "button_subtext_color": "#0A3161",
             "button_action": "scroll",
@@ -450,7 +432,7 @@
         "t3": {
           "type": "tableitem",
           "settings": {
-            "text": "6 designs you can mix and match",
+            "text": "Photo-real illusion print",
             "checkmark": "us",
             "button_checkmark_color": "#1B8A4B",
             "button_x_color": "#8A94A6"
@@ -468,7 +450,7 @@
         "t5": {
           "type": "tableitem",
           "settings": {
-            "text": "15-day money-back guarantee",
+            "text": "Money-back guarantee available",
             "checkmark": "us",
             "button_checkmark_color": "#1B8A4B",
             "button_x_color": "#8A94A6"
@@ -571,7 +553,7 @@
             "heading": "What if I don't like it?",
             "heading_size": "h3",
             "heading_color": "#0A3161",
-            "text": "<p>Send it back within 15 days of delivery for a full refund. No forms, no questions.</p>",
+            "text": "<p>Add the 15-Day Money-Back Guarantee at checkout and you can send it back within 15 days of delivery for a full refund. No forms, no questions.</p>",
             "text_style": "body",
             "text_color": "#0A3161"
           }
@@ -625,7 +607,7 @@
         "heading_gc4gfH": {
           "type": "heading",
           "settings": {
-            "heading": "Wear it out. If nobody laughs, we'll refund you.",
+            "heading": "Wear it out. If nobody laughs, send it back.",
             "heading_size": "h1",
             "heading_alignment": "center",
             "heading_mobilealignment": "center",
@@ -635,7 +617,7 @@
         "text_LLQAeq": {
           "type": "text",
           "settings": {
-            "text": "<p>Take it to the beach, the bar, the barbecue. If it doesn't get the reaction you were hoping for, send it back within 15 days of delivery for a full refund. No forms, no questions.</p>",
+            "text": "<p>Take it to the beach, the bar, the barbecue. Add the 15-Day Money-Back Guarantee to your order and if it doesn't get the reaction you were hoping for, send it back within 15 days of delivery for a full refund.</p>",
             "text_style": "subtitle",
             "text_alignment": "center",
             "text_mobilealignment": "center",
@@ -659,7 +641,7 @@
             "button_rounded_corners": "medium",
             "button_padding_vertical": 17,
             "button_padding_horizontal": 28,
-            "button_subtext": "Offer resets daily · 15-Day Money-Back Guarantee",
+            "button_subtext": "Offer resets daily",
             "button_subtext_style": "body",
             "button_subtext_color": "#0A3161",
             "button_action": "scroll",
