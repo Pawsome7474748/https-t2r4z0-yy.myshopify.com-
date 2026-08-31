@@ -8,8 +8,6 @@
 {%- assign s1 = w1 | minus: p1 -%}
 {%- assign s2 = w2 | minus: p2 -%}
 {%- assign s3 = w3 | minus: p3 -%}
-{%- assign e2 = p2 | divided_by: 2 -%}
-{%- assign e3 = p3 | divided_by: 3 -%}
 {%- assign pct1 = s1 | times: 100.0 | divided_by: w1 | round -%}
 {%- assign pct2 = s2 | times: 100.0 | divided_by: w2 | round -%}
 {%- assign pct3 = s3 | times: 100.0 | divided_by: w3 | round -%}
@@ -24,92 +22,75 @@
 
 <div class="shb" data-shb>
 
-  <button type="button" class="shb-tier" data-qty="1">
-    <span class="shb-tier__top">
-      <span class="shb-tier__radio"></span>
-      <span class="shb-tier__name">Buy 1</span>
-      <span class="shb-tier__save">You save {{ pct1 }}%</span>
-      <span class="shb-tier__prices">
-        <span class="shb-tier__now">{{ p1 | money }}</span>
-        <span class="shb-tier__was">{{ w1 | money }}</span>
-      </span>
-    </span>
-    <span class="shb-tier__body">
-      <span class="shb-tier__label">Choose your size</span>
-      <span class="shb-row">
-        {%- if product.featured_image -%}
-          <img src="{{ product.featured_image | image_url: width: 120 }}" alt="{{ product.title | escape }}" width="48" height="48">
-        {%- endif -%}
-        <select class="shb-select" data-shb-size aria-label="Size for shirt 1">{{ size_options }}</select>
-      </span>
-    </span>
-  </button>
+  {%- for tier in (1..3) -%}
+    {%- case tier -%}
+      {%- when 1 -%}
+        {%- assign t_now = p1 -%}{%- assign t_was = w1 -%}{%- assign t_pct = pct1 -%}
+        {%- assign t_flag = '' -%}{%- assign t_on = '' -%}
+      {%- when 2 -%}
+        {%- assign t_now = p2 -%}{%- assign t_was = w2 -%}{%- assign t_pct = pct2 -%}
+        {%- assign t_flag = 'Most Popular' -%}{%- assign t_on = ' is-on' -%}
+      {%- when 3 -%}
+        {%- assign t_now = p3 -%}{%- assign t_was = w3 -%}{%- assign t_pct = pct3 -%}
+        {%- capture t_flag -%}Best Value · Save {{ pct3 }}% + Free Shipping{%- endcapture -%}
+        {%- assign t_on = '' -%}
+    {%- endcase -%}
 
-  <button type="button" class="shb-tier is-on" data-qty="2">
-    <span class="shb-flag shb-flag--pop">Most Popular</span>
-    <span class="shb-tier__top">
-      <span class="shb-tier__radio"></span>
-      <span class="shb-tier__name">Buy 2</span>
-      <span class="shb-tier__save">You save {{ pct2 }}%</span>
-      <span class="shb-tier__prices">
-        <span class="shb-tier__now">{{ p2 | money }}</span>
-        <span class="shb-tier__was">{{ w2 | money }}</span>
-      </span>
-    </span>
-    <span class="shb-tier__body">
-      <span class="shb-tier__label">Choose your sizes</span>
-      {%- for i in (1..2) -%}
-        <span class="shb-row">
-          {%- if product.featured_image -%}
-            <img src="{{ product.featured_image | image_url: width: 120 }}" alt="{{ product.title | escape }}" width="48" height="48">
-          {%- endif -%}
-          <select class="shb-select" data-shb-size aria-label="Size for shirt {{ i }}">{{ size_options }}</select>
+    <div class="shb-tier{{ t_on }}" role="button" tabindex="0" aria-pressed="{% if t_on != blank %}true{% else %}false{% endif %}" data-qty="{{ tier }}">
+      {%- if t_flag != blank -%}
+        <span class="shb-flag{% if tier == 3 %} shb-flag--best{% endif %}">{{ t_flag }}</span>
+      {%- endif -%}
+
+      <div class="shb-tier__top">
+        <span class="shb-tier__radio"></span>
+        <span class="shb-tier__name">Buy {{ tier }}</span>
+        <span class="shb-tier__save">You save {{ t_pct }}%</span>
+        <span class="shb-tier__prices">
+          <span class="shb-tier__now">{{ t_now | money }}</span>
+          <span class="shb-tier__was">{{ t_was | money }}</span>
         </span>
-      {%- endfor -%}
-    </span>
-  </button>
+      </div>
 
-  <button type="button" class="shb-tier" data-qty="3">
-    <span class="shb-flag shb-flag--best">Best Value · Save {{ pct3 }}% + Free Shipping</span>
-    <span class="shb-tier__top">
-      <span class="shb-tier__radio"></span>
-      <span class="shb-tier__name">Buy 3</span>
-      <span class="shb-tier__save">You save {{ s3 | money }}</span>
-      <span class="shb-tier__prices">
-        <span class="shb-tier__now">{{ p3 | money }}</span>
-        <span class="shb-tier__was">{{ w3 | money }}</span>
-      </span>
-    </span>
-    <span class="shb-tier__body">
-      <span class="shb-tier__label">Choose your sizes</span>
-      {%- for i in (1..3) -%}
-        <span class="shb-row">
-          {%- if product.featured_image -%}
-            <img src="{{ product.featured_image | image_url: width: 120 }}" alt="{{ product.title | escape }}" width="48" height="48">
-          {%- endif -%}
-          <select class="shb-select" data-shb-size aria-label="Size for shirt {{ i }}">{{ size_options }}</select>
+      <div class="shb-tier__body">
+        <span class="shb-tier__label">
+          {%- if tier == 1 -%}Choose your size{%- else -%}Choose your sizes{%- endif -%}
         </span>
-      {%- endfor -%}
-    </span>
-  </button>
+        {%- for i in (1..tier) -%}
+          <div class="shb-row">
+            {%- if product.featured_image -%}
+              <img src="{{ product.featured_image | image_url: width: 120 }}" alt="{{ product.title | escape }}" width="48" height="48">
+            {%- endif -%}
+            <select class="shb-select" data-shb-size aria-label="Size for shirt {{ i }}">{{ size_options }}</select>
+          </div>
+        {%- endfor -%}
 
-  <div class="shb-addons">
-    <label class="shb-addon" for="ShbAddon-Ship">
-      <input type="checkbox" id="ShbAddon-Ship" data-shb-addon="49165504643242" checked>
-      <span class="shb-addon__icon" aria-hidden="true">📦</span>
-      <span class="shb-addon__name">+ Shipping Protection</span>
-      <span class="shb-addon__price">$6.95</span>
-    </label>
-    <label class="shb-addon" for="ShbAddon-Guarantee">
-      <input type="checkbox" id="ShbAddon-Guarantee" data-shb-addon="49165504708778" checked>
-      <span class="shb-addon__icon" aria-hidden="true">🛡️</span>
-      <span class="shb-addon__name">+ 15-Day Money-Back Guarantee</span>
-      <span class="shb-addon__price">$8.95</span>
-    </label>
-  </div>
+        <div class="shb-addons">
+          <label class="shb-addon" for="ShbShip-{{ tier }}">
+            <input type="checkbox" id="ShbShip-{{ tier }}" data-shb-addon="49165504643242" checked>
+            <span class="shb-addon__icon" aria-hidden="true">📦</span>
+            <span class="shb-addon__name">+ Shipping Protection</span>
+            <span class="shb-addon__price">$6.95</span>
+          </label>
+          <label class="shb-addon" for="ShbGuar-{{ tier }}">
+            <input type="checkbox" id="ShbGuar-{{ tier }}" data-shb-addon="49165504708778" checked>
+            <span class="shb-addon__icon" aria-hidden="true">🛡️</span>
+            <span class="shb-addon__name">+ 15-Day Money-Back Guarantee</span>
+            <span class="shb-addon__price">$8.95</span>
+          </label>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
 
   <p class="shb-error" data-shb-error hidden></p>
 </div>
+
+<style>
+  .shb-tier__body .shb-addons{margin:1.2rem -1.5rem -1.4rem;border-radius:0 0 10px 10px;overflow:hidden}
+  .shb-tier__body .shb-addon:first-child{border-radius:0}
+  .shb-tier__body .shb-addon:last-child{border-radius:0 0 10px 10px}
+  .shb-tier:focus-visible{outline:3px solid var(--sh-blue);outline-offset:2px}
+</style>
 
 <script>
 (function () {
@@ -118,11 +99,26 @@
   var tiers = root.querySelectorAll('.shb-tier');
   var err = root.querySelector('[data-shb-error]');
 
+  function select(tier) {
+    tiers.forEach(function (t) {
+      t.classList.remove('is-on');
+      t.setAttribute('aria-pressed', 'false');
+    });
+    tier.classList.add('is-on');
+    tier.setAttribute('aria-pressed', 'true');
+  }
+
   tiers.forEach(function (tier) {
     tier.addEventListener('click', function (e) {
+      // Let the size dropdowns and the add-on checkboxes work on their own.
       if (e.target.closest('select') || e.target.closest('.shb-addon')) return;
-      tiers.forEach(function (t) { t.classList.remove('is-on'); });
-      tier.classList.add('is-on');
+      select(tier);
+    });
+    tier.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      if (e.target.closest('select') || e.target.closest('.shb-addon')) return;
+      e.preventDefault();
+      select(tier);
     });
   });
 
@@ -131,6 +127,7 @@
   function buildItems() {
     var tier = activeTier();
     if (!tier) return null;
+
     var counts = {};
     tier.querySelectorAll('[data-shb-size]').forEach(function (sel) {
       counts[sel.value] = (counts[sel.value] || 0) + 1;
@@ -138,7 +135,9 @@
     var items = Object.keys(counts).map(function (id) {
       return { id: Number(id), quantity: counts[id] };
     });
-    root.querySelectorAll('[data-shb-addon]').forEach(function (cb) {
+
+    // Only the selected tier's add-on checkboxes count.
+    tier.querySelectorAll('[data-shb-addon]').forEach(function (cb) {
       if (cb.checked) items.push({ id: Number(cb.getAttribute('data-shb-addon')), quantity: 1 });
     });
     return items;
