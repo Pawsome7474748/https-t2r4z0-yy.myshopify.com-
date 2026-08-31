@@ -220,6 +220,9 @@
     if (!painted) painted = paint(state);
     if (!painted) { window.location = cartRoot() + 'cart'; return; }
 
+    // Restart the cart drawer's two minute hold on the new contents.
+    if (typeof window.shcResetCartTimer === 'function') window.shcResetCartTimer(1);
+
     // renderContents opens on a timeout of its own; these only step in when
     // the drawer is somehow still shut.
     force(drawer);
