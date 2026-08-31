@@ -124,18 +124,22 @@
 
   function activeTier() { return root.querySelector('.shb-tier.is-on'); }
 
-  function buildItems() {
+  function shirtItems() {
     var tier = activeTier();
-    if (!tier) return null;
-
+    if (!tier) return [];
     var counts = {};
     tier.querySelectorAll('[data-shb-size]').forEach(function (sel) {
       counts[sel.value] = (counts[sel.value] || 0) + 1;
     });
-    var items = Object.keys(counts).map(function (id) {
+    return Object.keys(counts).map(function (id) {
       return { id: Number(id), quantity: counts[id] };
     });
+  }
 
+  function addonItems() {
+    var tier = activeTier();
+    if (!tier) return [];
+    var items = [];
     // Only the selected tier's add-on checkboxes count.
     tier.querySelectorAll('[data-shb-addon]').forEach(function (cb) {
       if (cb.checked) items.push({ id: Number(cb.getAttribute('data-shb-addon')), quantity: 1 });
@@ -151,33 +155,56 @@
     return ['cart-drawer', 'cart-icon-bubble'];
   }
 
+  function cartRoot() {
+    return (window.Shopify && window.Shopify.routes && window.Shopify.routes.root) || '/';
+  }
+
+  function post(items) {
+    return fetch(cartRoot() + 'cart/add.js', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/javascript' },
+      body: JSON.stringify({ items: items, sections: sectionsToRender() })
+    }).then(function (r) { return r.json(); });
+  }
+
+  function show(state) {
+    var drawer = document.querySelector('cart-drawer');
+    if (drawer && drawer.renderContents) {
+      drawer.renderContents(state);
+    } else {
+      window.location = cartRoot() + 'cart';
+    }
+  }
+
   function addToCart(btn) {
-    var items = buildItems();
-    if (!items || !items.length) return;
+    var shirts = shirtItems();
+    if (!shirts.length) return;
+    var addons = addonItems();
+
     btn.setAttribute('aria-busy', 'true');
     btn.classList.add('is-loading');
     if (err) { err.hidden = true; err.textContent = ''; }
 
-    fetch(window.Shopify.routes.root + 'cart/add.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/javascript' },
-      body: JSON.stringify({ items: items, sections: sectionsToRender() })
-    })
-      .then(function (r) { return r.json(); })
+    post(shirts.concat(addons))
       .then(function (state) {
-        if (state.status) {
-          if (err) { err.textContent = state.description || state.message; err.hidden = false; }
-          return;
-        }
-        var drawer = document.querySelector('cart-drawer');
-        if (drawer && drawer.renderContents) {
-          drawer.renderContents(state);
-        } else {
-          window.location = window.Shopify.routes.root + 'cart';
-        }
+        if (!state.status) return show(state);
+        // /cart/add.js is all-or-nothing, so one unavailable add-on would
+        // otherwise block the shirts. Fall back to the shirts alone.
+        if (!addons.length) throw new Error(state.description || state.message);
+        return post(shirts).then(function (retry) {
+          if (retry.status) throw new Error(retry.description || retry.message);
+          show(retry);
+          if (err) {
+            err.textContent = 'Added, but the extras are unavailable right now.';
+            err.hidden = false;
+          }
+        });
       })
-      .catch(function () {
-        if (err) { err.textContent = 'Something went wrong. Please try again.'; err.hidden = false; }
+      .catch(function (e) {
+        if (err) {
+          err.textContent = (e && e.message) || 'Something went wrong. Please try again.';
+          err.hidden = false;
+        }
       })
       .finally(function () {
         btn.removeAttribute('aria-busy');
