@@ -167,14 +167,74 @@
     }).then(function (r) { return r.json(); });
   }
 
-  function show(state) {
-    var drawer = document.querySelector('cart-drawer');
-    if (drawer && drawer.renderContents) {
-      drawer.renderContents(state);
-    } else {
-      window.location = cartRoot() + 'cart';
+  function inner(html, selector) {
+    if (!html) return null;
+    var el = new DOMParser().parseFromString(html, 'text/html').querySelector(selector);
+    return el ? el.innerHTML : null;
+  }
+
+  function paint(state) {
+    // Swap the drawer and the cart bubble ourselves, so a <cart-drawer> that
+    // never got upgraded into its custom element can't stop the cart updating.
+    var sections = state.sections || {};
+    var box = document.querySelector('#CartDrawer');
+    var html = inner(sections['cart-drawer'], '#CartDrawer');
+    if (!box || html === null) return false;
+    box.innerHTML = html;
+
+    var bubble = document.getElementById('cart-icon-bubble');
+    var bubbleHtml = inner(sections['cart-icon-bubble'], '.shopify-section');
+    if (bubble && bubbleHtml !== null) bubble.innerHTML = bubbleHtml;
+    return true;
+  }
+
+  function closeDrawer(drawer) {
+    if (typeof drawer.close === 'function') {
+      try { drawer.close(); return; } catch (e) {}
+    }
+    drawer.classList.remove('active');
+    document.body.classList.remove('overflow-hidden');
+  }
+
+  function force(drawer) {
+    // The cart has items now, so the empty-state styling has to come off.
+    drawer.classList.remove('is-empty');
+    if (drawer.classList.contains('active')) return;
+    if (typeof drawer.open === 'function') {
+      try { drawer.open(); } catch (e) {}
+    }
+    if (!drawer.classList.contains('active')) {
+      drawer.classList.add('animate', 'active');
+      document.body.classList.add('overflow-hidden');
     }
   }
+
+  function show(state) {
+    var drawer = document.querySelector('cart-drawer');
+    if (!drawer) { window.location = cartRoot() + 'cart'; return; }
+
+    var painted = false;
+    if (typeof drawer.renderContents === 'function') {
+      try { drawer.renderContents(state); painted = true; } catch (e) { painted = false; }
+    }
+    if (!painted) painted = paint(state);
+    if (!painted) { window.location = cartRoot() + 'cart'; return; }
+
+    // renderContents opens on a timeout of its own; these only step in when
+    // the drawer is somehow still shut.
+    force(drawer);
+    setTimeout(function () { force(drawer); }, 80);
+  }
+
+  // The drawer's close button and overlay call methods on the custom element.
+  // If it never upgraded those calls throw, so close it by hand instead.
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest) return;
+    var hit = e.target.closest('cart-drawer .drawer__close, cart-drawer #CartDrawer-Overlay');
+    if (!hit) return;
+    var drawer = hit.closest('cart-drawer');
+    if (drawer && typeof drawer.close !== 'function') closeDrawer(drawer);
+  });
 
   function addToCart(btn) {
     var shirts = shirtItems();
