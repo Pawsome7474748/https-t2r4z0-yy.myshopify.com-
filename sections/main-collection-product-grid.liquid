@@ -38,6 +38,16 @@
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
+    {%- comment -%}
+      Add-on products (shipping protection, money-back guarantee) are only ever added to the
+      cart alongside a shirt, so they stay out of the catalog listing.
+    {%- endcomment -%}
+    {%- assign sh_visible_count = 0 -%}
+    {%- for sh_product in collection.products -%}
+      {%- unless sh_product.tags contains 'addon' -%}
+        {%- assign sh_visible_count = sh_visible_count | plus: 1 -%}
+      {%- endunless -%}
+    {%- endfor -%}
     {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
     {%- if section.settings.enable_sorting and section.settings.filter_type == "vertical" -%}
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide">
@@ -122,7 +132,7 @@
           data-cascade
         {% endif %}
       >
-        {%- if collection.products.size == 0 -%}
+        {%- if sh_visible_count == 0 -%}
           <div class="collection collection--empty page-width" id="product-grid" data-id="{{ section.id }}">
             <div class="loading-overlay gradient"></div>
             <div class="title-wrapper center">
@@ -152,6 +162,9 @@
             >
               {% assign skip_card_product_styles = false %}
               {%- for product in collection.products -%}
+                {%- if product.tags contains 'addon' -%}
+                  {%- continue -%}
+                {%- endif -%}
                 {% assign lazy_load = false %}
                 {%- if forloop.index > 2 -%}
                   {%- assign lazy_load = true -%}

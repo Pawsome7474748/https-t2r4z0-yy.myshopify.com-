@@ -12,6 +12,26 @@
   {% render 'facets', results: collection, enable_filtering: true, enable_sorting: true, filter_type: 'vertical', paginate: paginate %}
 {% endcomment %}
 
+{%- comment -%}
+  Add-on products (shipping protection, money-back guarantee) are cart-only and are never
+  listed in a product grid, so discount them here to keep the "N products" counts in step
+  with what the grid actually renders.
+{%- endcomment -%}
+{%- assign sh_hidden_count = 0 -%}
+{%- for sh_item in results.products -%}
+  {%- if sh_item.tags contains 'addon' -%}
+    {%- assign sh_hidden_count = sh_hidden_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- for sh_item in results.results -%}
+  {%- if sh_item.object_type == 'product' and sh_item.tags contains 'addon' -%}
+    {%- assign sh_hidden_count = sh_hidden_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign sh_products_count = results.products_count | minus: sh_hidden_count -%}
+{%- assign sh_all_products_count = results.all_products_count | minus: sh_hidden_count -%}
+{%- assign sh_results_count = results.results_count | minus: sh_hidden_count -%}
+
 {{ 'component-show-more.css' | asset_url | stylesheet_tag }}
 {{ 'component-swatch-input.css' | asset_url | stylesheet_tag }}
 {{ 'component-swatch.css' | asset_url | stylesheet_tag }}
@@ -431,13 +451,13 @@
             <h2 class="product-count__text text-body">
               <span id="ProductCountDesktop">
                 {%- if results.results_count -%}
-                  {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+                  {{ 'templates.search.results_with_count' | t: terms: results.terms, count: sh_results_count }}
                 {%- elsif results.products_count == results.all_products_count -%}
-                  {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+                  {{ 'products.facets.product_count_simple' | t: count: sh_products_count }}
                 {%- else -%}
                   {{
                     'products.facets.product_count'
-                    | t: product_count: results.products_count, count: results.all_products_count
+                    | t: product_count: sh_products_count, count: sh_all_products_count
                   }}
                 {%- endif -%}
               </span>
@@ -495,13 +515,13 @@
                 </h2>
                 <p class="mobile-facets__count">
                   {%- if results.results_count -%}
-                    {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+                    {{ 'templates.search.results_with_count' | t: terms: results.terms, count: sh_results_count }}
                   {%- elsif results.products_count == results.all_products_count -%}
-                    {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+                    {{ 'products.facets.product_count_simple' | t: count: sh_products_count }}
                   {%- else -%}
                     {{
                       'products.facets.product_count'
-                      | t: product_count: results.products_count, count: results.all_products_count
+                      | t: product_count: sh_products_count, count: sh_all_products_count
                     }}
                   {%- endif -%}
                 </p>
@@ -887,13 +907,13 @@
     <h2 class="product-count__text text-body">
       <span id="ProductCount">
         {%- if results.results_count -%}
-          {{ 'templates.search.results_with_count' | t: terms: results.terms, count: results.results_count }}
+          {{ 'templates.search.results_with_count' | t: terms: results.terms, count: sh_results_count }}
         {%- elsif results.products_count == results.all_products_count -%}
-          {{ 'products.facets.product_count_simple' | t: count: results.products_count }}
+          {{ 'products.facets.product_count_simple' | t: count: sh_products_count }}
         {%- else -%}
           {{
             'products.facets.product_count'
-            | t: product_count: results.products_count, count: results.all_products_count
+            | t: product_count: sh_products_count, count: sh_all_products_count
           }}
         {%- endif -%}
       </span>

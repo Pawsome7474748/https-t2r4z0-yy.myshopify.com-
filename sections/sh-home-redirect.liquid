@@ -1,0 +1,47 @@
+{% comment %}
+  The store is a single-product funnel, so there is no separate home page: anyone landing
+  on the root URL is sent straight to the product. The redirect is skipped inside the theme
+  editor so this template stays selectable and editable.
+{% endcomment %}
+
+{%- assign target = section.settings.redirect_url -%}
+{%- if target == blank -%}
+  {%- assign target = routes.all_products_collection_url -%}
+{%- endif -%}
+
+{%- unless request.design_mode -%}
+  <script>window.location.replace({{ target | json }});</script>
+  <noscript>
+    <meta http-equiv="refresh" content="0; url={{ target }}">
+  </noscript>
+{%- endunless -%}
+
+<div class="sh-redirect">
+  <p class="sh-redirect__text">Taking you to the shop&hellip;</p>
+  <a class="sh-redirect__link" href="{{ target }}">Continue &rarr;</a>
+</div>
+
+<style>
+  .sh-redirect{display:flex;flex-direction:column;align-items:center;justify-content:center;
+    gap:1.4rem;min-height:50vh;padding:4rem 2rem;text-align:center}
+  .sh-redirect__text{margin:0;font-size:1.6rem;font-weight:700;color:#0A3161}
+  .sh-redirect__link{font-size:1.5rem;font-weight:800;color:#B31942;text-decoration:underline;
+    text-underline-offset:3px}
+</style>
+
+{% schema %}
+{
+  "name": "SH - Home Redirect",
+  "settings": [
+    {
+      "type": "url",
+      "id": "redirect_url",
+      "label": "Send visitors to",
+      "info": "Leave blank to fall back to the catalog."
+    }
+  ],
+  "presets": [
+    { "name": "SH - Home Redirect" }
+  ]
+}
+{% endschema %}
