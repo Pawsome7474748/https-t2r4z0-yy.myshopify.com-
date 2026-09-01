@@ -18,7 +18,7 @@
       </h2>
       <p class="shr__summary" style="color:{{ section.settings.text_color }};">
         <span class="shr__stars" style="color:{{ section.settings.heading_stars_color }};">★★★★★</span>
-        <span class="shr__count">({{ section.blocks.size }} Verified Review{% if section.blocks.size != 1 %}s{% endif %})</span>
+        <span class="shr__count">({{ section.settings.review_count_display }} Verified Reviews)</span>
       </p>
     </div>
 
@@ -133,6 +133,7 @@
     { "type": "color", "id": "text_color", "label": "Summary text color", "default": "#0A3161" },
     { "type": "color", "id": "verified_color", "label": "Accent / verified color", "default": "#B31942" },
     { "type": "text", "id": "rating_value", "default": "4.6", "label": "Rating value" },
+    { "type": "text", "id": "review_count_display", "default": "10,784", "label": "Verified review count (displayed text)" },
     { "type": "color", "id": "heading_stars_color", "label": "Star color", "default": "#FFC72C" },
     { "type": "select", "id": "heading_stars_size", "options": [{"value":"sm","label":"Small"},{"value":"lg","label":"Large"}], "default": "lg", "label": "Star size" },
     { "type": "select", "id": "stars_alignment", "options": [{"value":"start","label":"Left"},{"value":"center","label":"Center"}], "default": "center", "label": "Star alignment" },

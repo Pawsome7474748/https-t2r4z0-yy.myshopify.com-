@@ -1,0 +1,151 @@
+{% assign gradient_style = '' %}
+{% if section.settings.gradient != blank %}
+  {% assign gradient_style = 'background: ' | append: section.settings.gradient | append: ';' %}
+{% endif %}
+
+{%- assign size_rows = section.blocks | where: 'type', 'size_row' -%}
+
+<div class="pp-section psg page-width" style="{{ gradient_style }} padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">
+
+  {%- if section.settings.logo_image != blank -%}
+    <div class="psg__logo">
+      {{ section.settings.logo_image | image_url: width: 320 | image_tag: alt: section.settings.logo_alt, loading: 'lazy' }}
+    </div>
+  {%- endif -%}
+
+  <div class="psg__row">
+    <div class="psg__diagram">
+      <svg viewBox="0 0 260 300" fill="none" aria-hidden="true">
+        <path d="M70 40 L100 22 Q130 8 160 22 L190 40 L215 68 L192 90 L175 76 L175 275 L85 275 L85 76 L68 90 L45 68 Z"
+          stroke="{{ section.settings.diagram_color }}" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
+        <line x1="100" y1="18" x2="160" y2="18" stroke="{{ section.settings.diagram_color }}" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="130" y="10" text-anchor="middle" class="psg__label">Shoulder</text>
+
+        <line x1="88" y1="140" x2="172" y2="140" stroke="{{ section.settings.diagram_color }}" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="130" y="135" text-anchor="middle" class="psg__label">Chest</text>
+
+        <line x1="196" y1="70" x2="196" y2="275" stroke="{{ section.settings.diagram_color }}" stroke-width="1.5" stroke-dasharray="4 3"/>
+        <text x="232" y="172" text-anchor="middle" class="psg__label" transform="rotate(90 232 172)">Length</text>
+      </svg>
+    </div>
+
+    <div class="psg__table-wrap">
+      <table class="psg__table">
+        <thead>
+          <tr>
+            <th>Size</th>
+            <th>Shoulder</th>
+            <th>Chest</th>
+            <th>Length</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for block in size_rows -%}
+            <tr {{ block.shopify_attributes }}>
+              <td class="psg__size">{{ block.settings.size }}</td>
+              <td>{{ block.settings.shoulder }}</td>
+              <td>{{ block.settings.chest }}</td>
+              <td>{{ block.settings.length }}</td>
+            </tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+      <p class="psg__unit-note">{{ section.settings.unit_note }}</p>
+    </div>
+  </div>
+
+  {%- if section.settings.tip_text != blank -%}
+    <div class="psg__tip">
+      <span class="psg__tip-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18h6M10 22h4M12 2a6 6 0 0 0-4 10.5c.6.55 1 1.36 1 2.2V16h6v-1.3c0-.84.4-1.65 1-2.2A6 6 0 0 0 12 2Z"/>
+        </svg>
+      </span>
+      <div class="psg__tip-body">
+        <b>{{ section.settings.tip_heading }}</b>
+        <div class="rte">{{ section.settings.tip_text }}</div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+<style>
+  .psg__logo{display:flex;justify-content:center;margin-bottom:2rem}
+  .psg__logo img{max-width:180px;height:auto}
+
+  .psg__row{display:grid;grid-template-columns:1fr;gap:2.4rem;align-items:center;margin-bottom:2.4rem}
+  @media screen and (min-width:750px){.psg__row{grid-template-columns:auto 1fr;gap:4rem}}
+
+  .psg__diagram{display:flex;justify-content:center}
+  .psg__diagram svg{width:100%;max-width:220px;height:auto}
+  .psg__label{font-size:11px;font-weight:700;fill:{{ section.settings.diagram_color }};font-family:inherit}
+
+  .psg__table-wrap{width:100%;overflow-x:auto}
+  .psg__table{width:100%;border-collapse:collapse;font-size:1.4rem}
+  .psg__table thead th{background:{{ section.settings.table_header_color }};color:{{ section.settings.table_header_text_color }};
+    font-weight:800;padding:1rem 1.2rem;text-align:center}
+  .psg__table thead th:first-child{border-radius:8px 0 0 0}
+  .psg__table thead th:last-child{border-radius:0 8px 0 0}
+  .psg__table tbody td{padding:1rem 1.2rem;text-align:center;font-weight:700;color:{{ section.settings.table_text_color }};
+    border-bottom:1px solid rgba(10,49,97,.12)}
+  .psg__table tbody tr:nth-child(even){background:rgba(10,49,97,.04)}
+  .psg__table .psg__size{font-weight:800}
+  .psg__unit-note{margin:.8rem 0 0;font-size:1.15rem;font-weight:600;color:var(--sh-mute,#6B7280);text-align:right}
+
+  .psg__tip{display:flex;gap:1.4rem;align-items:flex-start;border:2px solid {{ section.settings.tip_border_color }};
+    border-radius:14px;padding:1.8rem 2rem}
+  .psg__tip-icon{flex:0 0 auto;color:{{ section.settings.tip_border_color }};margin-top:.2rem}
+  .psg__tip-icon svg{width:2.6rem;height:2.6rem}
+  .psg__tip-body b{display:block;font-size:1.3rem;font-weight:800;letter-spacing:.06em;color:{{ section.settings.tip_heading_color }};margin-bottom:.6rem}
+  .psg__tip-body .rte{font-size:1.4rem;font-style:italic;line-height:1.6;color:{{ section.settings.tip_text_color }}}
+  .psg__tip-body .rte p{margin:0 0 .3em}
+</style>
+
+{% schema %}
+{
+  "name": "PP - Size Guide",
+  "settings": [
+    { "type": "image_picker", "id": "logo_image", "label": "Logo image" },
+    { "type": "text", "id": "logo_alt", "default": "Shirt Happens", "label": "Logo alt text" },
+    { "type": "color", "id": "diagram_color", "label": "Diagram line color", "default": "#0A3161" },
+    { "type": "color", "id": "table_header_color", "label": "Table header background", "default": "#0A3161" },
+    { "type": "color", "id": "table_header_text_color", "label": "Table header text", "default": "#FFFFFF" },
+    { "type": "color", "id": "table_text_color", "label": "Table text color", "default": "#0A3161" },
+    { "type": "text", "id": "unit_note", "default": "All measurements in inches", "label": "Unit note" },
+    { "type": "text", "id": "tip_heading", "default": "PRO TIP", "label": "Tip heading" },
+    { "type": "richtext", "id": "tip_text", "default": "<p>Order your <strong>REGULAR</strong> size for the best illusion. Too tight = the print stretches and the joke falls flat. Too loose = it looks like a costume, not like skin. When in doubt, size up.</p>", "label": "Tip text" },
+    { "type": "color", "id": "tip_border_color", "label": "Tip box border/icon color", "default": "#D4AF37" },
+    { "type": "color", "id": "tip_heading_color", "label": "Tip heading color", "default": "#0A3161" },
+    { "type": "color", "id": "tip_text_color", "label": "Tip text color", "default": "#0A3161" },
+    { "type": "color_background", "id": "gradient", "label": "Background color" },
+    { "type": "range", "id": "padding_top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 56, "label": "Top padding" },
+    { "type": "range", "id": "padding_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 56, "label": "Bottom padding" },
+    { "type": "range", "id": "margin_top", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 0, "label": "Top margin" },
+    { "type": "range", "id": "margin_bottom", "min": 0, "max": 200, "step": 4, "unit": "px", "default": 0, "label": "Bottom margin" }
+  ],
+  "blocks": [
+    {
+      "type": "size_row",
+      "name": "Size row",
+      "settings": [
+        { "type": "text", "id": "size", "default": "M", "label": "Size" },
+        { "type": "text", "id": "shoulder", "default": "19.0 / 48.3", "label": "Shoulder (in / cm)" },
+        { "type": "text", "id": "chest", "default": "20.5 / 52.1", "label": "Chest (in / cm)" },
+        { "type": "text", "id": "length", "default": "28.0 / 71.1", "label": "Length (in / cm)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "PP - Size Guide",
+      "blocks": [
+        {"type":"size_row"},
+        {"type":"size_row"},
+        {"type":"size_row"},
+        {"type":"size_row"},
+        {"type":"size_row"}
+      ]
+    }
+  ]
+}
+{% endschema %}

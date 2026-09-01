@@ -223,6 +223,7 @@
         "text_color": "#0A3161",
         "verified_color": "#B31942",
         "rating_value": "4.6",
+        "review_count_display": "10,784",
         "heading_stars_color": "#FFC72C",
         "heading_stars_size": "lg",
         "stars_alignment": "center",
@@ -323,64 +324,75 @@
       }
     },
     "pp_story": {
-      "type": "pp-image-with-text",
+      "type": "pp-size-guide",
       "blocks": {
-        "h": {
-          "type": "heading",
+        "size_s": {
+          "type": "size_row",
           "settings": {
-            "heading": "Actually 3D Printed, Not Iron-On",
-            "heading_size": "h1",
-            "heading_alignment": "left",
-            "heading_mobilealignment": "center",
-            "heading_color": "#0A3161"
+            "size": "S",
+            "shoulder": "18.0 / 45.7",
+            "chest": "19.5 / 49.5",
+            "length": "27.0 / 68.6"
           }
         },
-        "t": {
-          "type": "text",
+        "size_m": {
+          "type": "size_row",
           "settings": {
-            "text": "<p>Most novelty tees are a cheap transfer pressed on top of the fabric. Three washes later it's cracked down the middle and in the bin.</p><p>Ours is printed <strong>into</strong> the fibres in high definition, so the illusion stays sharp for the life of the shirt. Wash it cold, inside out, and it keeps working.</p>",
-            "text_style": "subtitle",
-            "text_alignment": "left",
-            "text_mobilealignment": "left",
-            "text_color": "#0A3161"
+            "size": "M",
+            "shoulder": "19.0 / 48.3",
+            "chest": "20.5 / 52.1",
+            "length": "28.0 / 71.1"
           }
         },
-        "b": {
-          "type": "button",
+        "size_l": {
+          "type": "size_row",
           "settings": {
-            "button_label": "Grab Mine — 24% Off",
-            "button_link": "",
-            "button_link_newtab": false,
-            "button_text_color": "#FFFFFF",
-            "button_background_color": "#B31942",
-            "button_border_width": 0,
-            "button_border_color": "#B31942",
-            "button_width": "fit",
-            "button_alignment": "left",
-            "button_mobilealignment": "center",
-            "button_rounded_corners": "medium",
-            "button_padding_vertical": 16,
-            "button_padding_horizontal": 26,
-            "button_subtext": "15-Day Money-Back Guarantee available at checkout",
-            "button_subtext_style": "body",
-            "button_subtext_color": "#0A3161",
-            "button_action": "scroll",
-            "button_action_scroll_element": ""
+            "size": "L",
+            "shoulder": "20.0 / 50.8",
+            "chest": "21.5 / 54.6",
+            "length": "29.0 / 73.7"
+          }
+        },
+        "size_xl": {
+          "type": "size_row",
+          "settings": {
+            "size": "XL",
+            "shoulder": "21.0 / 53.3",
+            "chest": "22.5 / 57.2",
+            "length": "30.0 / 76.2"
+          }
+        },
+        "size_xxl": {
+          "type": "size_row",
+          "settings": {
+            "size": "2XL",
+            "shoulder": "22.0 / 55.9",
+            "chest": "23.5 / 59.7",
+            "length": "31.0 / 78.7"
           }
         }
       },
       "block_order": [
-        "h",
-        "t",
-        "b"
+        "size_s",
+        "size_m",
+        "size_l",
+        "size_xl",
+        "size_xxl"
       ],
-      "name": "PP - Image With Text",
+      "name": "PP - Size Guide",
       "settings": {
-        "image": "shopify://shop_images/S629637a05657476cb1920cf9b859007fL.webp",
-        "desktop_image_width": "large",
-        "image_border_radius": 16,
-        "layout": "image_first",
-        "mobile_layout": "image_first",
+        "logo_image": "shopify://shop_images/hf_20260830_101404_344ff640-4301-49bf-982b-347e0e28ec51.png",
+        "logo_alt": "Shirt Happens",
+        "diagram_color": "#0A3161",
+        "table_header_color": "#0A3161",
+        "table_header_text_color": "#FFFFFF",
+        "table_text_color": "#0A3161",
+        "unit_note": "All measurements in inches / cm",
+        "tip_heading": "PRO TIP",
+        "tip_text": "<p>Order your <strong>REGULAR</strong> size for the best illusion.</p><p>Too tight = the print stretches and the joke falls flat.</p><p>Too loose = it looks like a costume, not like skin.</p><p>When in doubt, size up.</p>",
+        "tip_border_color": "#D4AF37",
+        "tip_heading_color": "#0A3161",
+        "tip_text_color": "#0A3161",
         "gradient": "linear-gradient(180deg, rgba(247,243,232,1), rgba(247,243,232,1) 100%)",
         "padding_top": 56,
         "padding_bottom": 56,
