@@ -4,12 +4,25 @@
 {% endif %}
 
 <div class="pp-section pp-benefits-section page-width" style="{{ gradient_style }} padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px; margin-top: {{ section.settings.margin_top }}px; margin-bottom: {{ section.settings.margin_bottom }}px;">
+
+  {%- if section.settings.logo_image != blank -%}
+    <div class="pp-logo-container">
+      {{ section.settings.logo_image | image_url: width: 120 | image_tag: alt: 'Brand Logo', class: 'pp-logo' }}
+    </div>
+  {%- endif -%}
+
   {%- if section.settings.heading != blank -%}
     <h2 class="{{ section.settings.heading_size }}" style="text-align: {{ section.settings.heading_alignment }}; color: {{ section.settings.heading_color }};">{{ section.settings.heading }}</h2>
   {%- endif -%}
+
   {%- if section.settings.text != blank -%}
     <div class="rte" style="text-align: {{ section.settings.text_alignment }}; color: {{ section.settings.text_color }};">{{ section.settings.text }}</div>
   {%- endif -%}
+
+  {%- if section.settings.product_info != blank -%}
+    <div class="pp-product-info" style="color: {{ section.settings.product_info_color }};">{{ section.settings.product_info }}</div>
+  {%- endif -%}
+
   <div class="pp-benefits-grid">
     {%- for block in section.blocks -%}
       {%- if block.type == 'benefit' -%}
@@ -25,6 +38,12 @@
 
 <style>
   .pp-benefits-section { text-align: center; }
+
+  .pp-logo-container { margin-bottom: 1.5rem; }
+  .pp-logo { max-width: 120px; height: auto; }
+
+  .pp-product-info { font-size: 1.1rem; font-weight: 700; margin: 1rem 0 2rem; letter-spacing: 0.05em; }
+
   .pp-benefits-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -32,7 +51,7 @@
     margin-top: 2rem;
   }
   @media screen and (min-width: 750px) {
-    .pp-benefits-grid { grid-template-columns: repeat(4, 1fr); }
+    .pp-benefits-grid { grid-template-columns: repeat(2, 1fr); }
   }
   .pp-benefit-card { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
   .pp-benefit-emoji { font-size: 3.6rem; line-height: 1; }
@@ -42,16 +61,19 @@
 {
   "name": "PP - Image With Benefits",
   "settings": [
+    { "type": "image_picker", "id": "logo_image", "label": "Logo image" },
     { "type": "inline_richtext", "id": "heading", "default": "Why customers love it", "label": "Heading" },
     { "type": "select", "id": "heading_size", "options": [{"value":"h2","label":"Small"},{"value":"h1","label":"Medium"},{"value":"h0","label":"Large"}], "default": "h1", "label": "Heading size" },
     { "type": "select", "id": "heading_alignment", "options": [{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}], "default": "center", "label": "Alignment" },
     { "type": "select", "id": "heading_mobilealignment", "options": [{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}], "default": "center", "label": "Mobile alignment" },
     { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#000000" },
-    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "richtext", "id": "text", "label": "Description text" },
     { "type": "select", "id": "text_style", "options": [{"value":"body","label":"Small"},{"value":"subtitle","label":"Large"}], "default": "subtitle", "label": "Text size" },
     { "type": "select", "id": "text_alignment", "options": [{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}], "default": "center", "label": "Alignment" },
     { "type": "select", "id": "text_mobilealignment", "options": [{"value":"left","label":"Left"},{"value":"center","label":"Center"},{"value":"right","label":"Right"}], "default": "center", "label": "Mobile alignment" },
     { "type": "color", "id": "text_color", "label": "Text color", "default": "#000000" },
+    { "type": "richtext", "id": "product_info", "label": "Product info (subtitle)" },
+    { "type": "color", "id": "product_info_color", "label": "Product info color", "default": "#0A3161" },
     { "type": "select", "id": "desktop_image_width", "options": [{"value":"small","label":"Small"},{"value":"medium","label":"Medium"},{"value":"large","label":"Large"}], "default": "large", "label": "Image width" },
     { "type": "range", "id": "image_border_radius", "min": 0, "max": 100, "step": 2, "unit": "px", "default": 0, "label": "Image corner radius" },
     { "type": "color_background", "id": "gradient", "label": "Background color" },
@@ -65,12 +87,12 @@
       "type": "benefit",
       "name": "Benefit",
       "settings": [
-        { "type": "text", "id": "emoji", "default": "😂", "label": "Emoji" },
-        { "type": "select", "id": "emoji_size", "options": [{"value":"small","label":"Small"},{"value":"medium","label":"Medium"},{"value":"large","label":"Large"}], "default": "medium", "label": "Emoji size" },
+        { "type": "text", "id": "emoji", "default": "😂", "label": "Icon/emoji" },
+        { "type": "select", "id": "emoji_size", "options": [{"value":"small","label":"Small"},{"value":"medium","label":"Medium"},{"value":"large","label":"Large"}], "default": "medium", "label": "Icon size" },
         { "type": "inline_richtext", "id": "heading", "default": "Benefit", "label": "Heading" },
         { "type": "select", "id": "heading_size", "options": [{"value":"h4","label":"Small"},{"value":"h3","label":"Medium"},{"value":"h2","label":"Large"}], "default": "h3", "label": "Heading size" },
         { "type": "color", "id": "heading_color", "label": "Heading color", "default": "#000000" },
-        { "type": "richtext", "id": "text", "default": "<p>Benefit text</p>", "label": "Text" },
+        { "type": "richtext", "id": "text", "default": "<p>Benefit text</p>", "label": "Description" },
         { "type": "select", "id": "text_style", "options": [{"value":"body","label":"Small"},{"value":"subtitle","label":"Large"}], "default": "body", "label": "Text size" },
         { "type": "color", "id": "text_color", "label": "Text color", "default": "#000000" }
       ]
