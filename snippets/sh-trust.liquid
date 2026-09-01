@@ -1,10 +1,5 @@
 <div class="sh-trust">
-  <div class="sh-trust__grid">
-    <div class="sh-trust__item"><span>🇺🇸</span><b>Stars &amp; Stripes</b>The original illusion print</div>
-    <div class="sh-trust__item"><span>🚚</span><b>Tracked Shipping</b>Dispatched in 24 hours</div>
-    <div class="sh-trust__item"><span>📏</span><b>XXS – 6XL</b>A size for everyone</div>
-  </div>
-  <div class="sh-secure">
+  <div class="sh-secure sh-secure--atc">
     <div class="sh-secure__cap">Secure checkout with</div>
     <div class="sh-secure__icons">
       {%- for type in shop.enabled_payment_types limit: 8 -%}
@@ -12,4 +7,21 @@
       {%- endfor -%}
     </div>
   </div>
+
+  <div class="sh-trust__grid">
+    <div class="sh-trust__item"><span>🇺🇸</span><b>Stars &amp; Stripes</b>The original illusion print</div>
+    <div class="sh-trust__item"><span>🚚</span><b>Tracked Shipping</b>Dispatched in 24 hours</div>
+    <div class="sh-trust__item"><span>📏</span><b>XXS – 6XL</b>A size for everyone</div>
+  </div>
 </div>
+
+<style>
+  /* The payment row sits immediately under the add-to-cart button, trust badges below it. */
+  .sh-secure--atc{border-top:0;padding-top:0;margin-bottom:1.6rem}
+  .sh-secure--atc .sh-secure__cap{font-size:1.2rem;font-weight:600;color:#6B7280;margin-bottom:.8rem}
+  .sh-secure--atc .sh-secure__icons{gap:.6rem}
+  .sh-secure--atc .sh-secure__icons svg,
+  .sh-secure--atc .sh-secure__icons img{height:2.8rem;width:auto;border-radius:5px;
+    background:#fff;border:1px solid rgba(10,49,97,.12)}
+  .sh-trust .sh-trust__grid{border-top:1px solid rgba(10,49,97,.12);padding-top:1.3rem}
+</style>

@@ -132,6 +132,10 @@
   .shc-pay{display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem;margin-top:1.2rem}
   .shc-pay svg,.shc-pay img{height:2.6rem;width:auto;border-radius:5px}
 
+  /* express wallet buttons (Apple Pay, Shop Pay, Google Pay) */
+  .shc-wallets{margin-top:1rem}
+  .shc-wallets [data-shopify-buttoncontainer]{justify-content:center;gap:.8rem}
+
   .shc-note{margin:1rem 0 0;font-size:1.3rem;font-weight:800;color:var(--shc-red);text-align:center}
 
   @media (prefers-reduced-motion:reduce){
@@ -315,6 +319,13 @@
                 {%- endif -%}
                 {{ settings.cartdrawer_button_text | default: 'CONTINUE TO CHECKOUT' }} &bull; {{ cart.total_price | money }}
               </button>
+
+              {%- comment -%} Apple Pay / Shop Pay / Google Pay express buttons. {%- endcomment -%}
+              {%- if additional_checkout_buttons -%}
+                <div class="shc-wallets additional-checkout-buttons">
+                  {{ content_for_additional_checkout_buttons }}
+                </div>
+              {%- endif -%}
             </form>
 
             <button type="button" class="shc-continue" data-shc-close>continue shopping</button>
